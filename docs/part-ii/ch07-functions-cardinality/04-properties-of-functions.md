@@ -1,0 +1,328 @@
+---
+title: Properties of Functions
+---
+
+# Properties of Functions
+
+Definition
+<div class="def-definition" markdown>
+**Definition 7.4.1. Let A, B be sets and let f : A →B be a function. We say f**
+</div>
+is a surjective function if and only if Imf(A) = B. Equivalently, we just say "f is surjective" (adjectival form), or that "f is a surjection" (nounal form). (The word "onto" is a fairly commonly used synonym for this term, so we will mention it here but won't use it again. This is just in case you've seen this word somewhere else.) Referring back to the definition of image, we can state this property equivalently in the form of a quantified statement: f is surjective ⇐⇒∀b ∈B. ∃a ∈A. f(a) = b That is, f is surjective if and only if every output has at least one corresponding input. Think for a minute about why the second form of this definition is really the same as the first one. The property that Imf(A) = B is a statement about sets. We already know that, by definition, Imf(A) ⊆B (nothing in the image can fall "outside" of the codomain), so this further property means that B ⊆Imf(A), as well. This is precisely what the second form of the definition says: every element of the codomain satisfies the defining property of being an element of the image. Also, notice that nothing about the definition says the a we find to correspond to a b must be unique! All this property requires is that, for every b ∈B, we can identify at least one a ∈A that satisfies f(a) = b. There might be more than one, there might be exactly one. It doesn't matter, as long as there aren't none. What does the property of being a surjection mean in terms of a schematic diagram? Since every element of the codomain is "hit" by the function, this means that every dot on the right-hand side of the schematic has an incoming arrow. (Remember: this type of heuristic language is fine to keep in mind--- we are using it to help describe these concepts, after all---but this does not constitute a proof. Any sentence of this sort that you use in a proof should be accompanied by a more rigorous statement, using mathematical language and/or logical symbols.) Why would we care about such a property? In general, it can be difficult to declare exactly what the image of a function is, and we might (at first) be able to only declare what the codomain is. Proving that, in fact, all of the codomain elements are outputs of the function can be additiona, helpful information! Negating the Definition Typically, we will define a function and then ask: is this a surjection or not? If we believe a function is a surjection, we should prove that by showing the
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+codomain and image are the same set. If we believe it is not a surjection, we should prove that by finding a counterexample. Let's look at the logical negation of the statement that defines a surjective function: ¬(∀b ∈B. ∃a ∈A. f(a) = b) ⇐⇒∃b ∈B. ∀a ∈A. f(a) ̸= b That is, to prove a function f is not a surjection, we must find an element of the codomain that is not an element of the image. This involves some scratch work and intuition to identify such a b. From there, we must somehow show that no possible a satisfies f(a) = b. We might argue this directly by taking an arbitrary a ∈A and explaining why f(a) ̸= b. Alternatively, we might argue this by contradiction: assuming that there is an a ∈A such that f(a) = b, we seek a contradiction. Either of these appraoches is reasonable, and they are logically equivalent.
+Examples
+Let's see these techniques in action with a few examples. For some of them, we might be able to use some graphical intuition or try a few test cases to figure out a guess, but ultimately we need to settle in and prove some logical statements to validate our claims.
+Example 7.4.2. Consider p : N × N →N defined by p(a, b) = ab. Is p surjective?
+Yes, it is! It looks like we can just allow a to be 1, so that the function outputs whatever b is. Let's make this observation more formal with a proof:
+<div class="def-proof" markdown>
+*Proof.* Let n ∈N be arbitrary and fixed. Define (a, b) = (1, n).
+</div>
+Notice that (1, n) ∈N × N and p(1, n) = 1 · n = n. Since n was arbitrary, this shows p is surjective.
+Example 7.4.3. Let C be the set of all cars in the United States. Let S be the
+set of all strings of letters and digits that are of length at most 7 (i.e. these are the potential strings you might see on a car's license plate). Let f : C →S be defined by inputting a car and outputting its license plate string. Is the function f a surjection? No, definitely not! In case you weren't aware, curse words are disallowed on license plates! So certainly, there exist many strings of letters that you will never see on a license plate in the United States. (We'll let you provide some examples on your own . . . ) Because we have exhibited an element of S that is not an element of Imf(C)---or, at least, you thought of an example---we have shown that f is not a surjection.
+Example 7.4.4. Let d : N × N →Z be the function defined by
+∀(a, b) ∈N × N. d(a, b) = a −b
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Let's determine whether d is a surjection and prove our claim. We might start by trying some "small values" for the input variables a and b. In the table below, the left column is a and the top row is b, and the entries are d(a, b) = a −b:
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+It looks like all of the integers z ∈Z will appear in this table. However, they don't all appear in one particular row or column. Rather, it looks like all the non-negative integers appear in the first column, while all the non-positive integers appear in the first row. Let's use these observations to write a proof. We'll take an arbitrary integer z ∈Z and consider two cases; if z ≥0, we will do one thing, and if z < 0, we will do something else. As long as we succeed in both cases, we will have proven that d is a surjection.
+<div class="def-proof" markdown>
+*Proof.* We claim d is a surjection. Let z ∈Z be arbitrary and fixed. WWTS
+</div>
+∃(a, b) ∈N × N. d(a, b) = z. To do this, we consider two cases: (1) Suppose z ≥0. Then define (a, b) = (z + 1, 1). Since z ≥0, we know z + 1 ≥1 and so z + 1 ∈N. This guarantees (z + 1, 1) ∈N × N. Also, notice that d(z + 1, 1) = (z + 1) −1 = z. (2) Suppose z < 0. Then define (a, b) = (1, −z + 1). Since z < 0, we know −z > 0 and so −z +1 ≥2, meaning −z +1 ∈N. This guarantees (1, −z + 1) ∈N × N. Also, notice that d(1, −z + 1) = 1 −(−z + 1) = z. In either case, we are able to define (a, b) ∈N × N. d(a, b) = z. Since z ∈Z was arbitrary, this proves that d is surjective.
+Example 7.4.5. Let g : R −{−1} →R be the function defined by
+∀x ∈R. g(x) = x 1 + x (Notice why we have removed −1 from the domain. This ensures g is a welldefined function!) Let's determine whether g is a surjection and prove our claim. As mentioned before, we can do some scratch work to figure out our claim: we could try plugging in some values of x, testing "extreme cases" by letting x get very close to −1 or letting x grow larger and larger . . . All of this can help us plot a graph of the function, or we can just use some graphing software:
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Regardless, none of this proves anything! What it does do is help us observe that this function g is not surjective. There seems to be a horizontal asymptote at y = 1. That is, the function g never "reaches" 1, but rather gets infinitely close. In terms of our new definition of surjectivity, this is decidedly a NO answer! Try to prove this now. How can you show that the element −1 ∈R is not an element of the image Img(R)? Try it! Then read on for our proof. We will actually present two proofs here, for you to compare and contrast. They both accomplish the same goal---showing g is not surjective---but one does so by a contradiction method and the other by a direct method (using cases). Which do you think is better? Did you come up with one of these? Which is easier to read? We have no definitive opinion on these questions; they are both equally valid proofs! Proof 1 (Direct). Let x ∈R−{−1} be arbitrary and fixed. WWTS that g(x) ̸= 1. We consider two cases: • Suppose x > −1. This means x + 1 > 0, and so
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+x+1 > 0. We also know x + 1 > x (which is true for every x ∈R.) By multiplying this inequality by the positive term
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+x+1, we deduce that 1 > x x+1. Certainly, then, g(x) = x x+1 ̸= 1. • Suppose x < −1. This means x + 1 < 0, and so
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+x+1 < 0. We also know x + 1 > x. By multiplying this inequality by the negative term
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+x+1 and switching the sign, we deduce that 1 < x x+1. Certainly, then, g(x) = x x+1 ̸= 1. In either case g(x) ̸= 1. These cases cover all possibilities because x ∈R−{−1} was arbitrary (and we need not consider x = −1). This shows 1 /∈Img(R −{−1}) so g is not a surjection.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Notice that this first proof proves an interesting qualitative observation about the graph: that the function lies above the horizonatal asymptote to the left of x = −1 and above the asymptote to the right of x = −1. Proof 2 (Contradiction). AFSOC that g is surjective. This means ∀y ∈R. y ∈Img(R −{−1}) In particular, then, we know 1 ∈Img(R −{−1}), so ∃x ∈R −{−1}. g(x) = 1. Let such an x be given. This means g(x) = x x+1 = 1. Multiplying both sides, we find x = x + 1. Subtracting, we find 0 = 1, clearly a contradiction ×××× Therefore, 1 /∈Img(R −{−1}), so g is not a surjection. Notice that this second proof does prove that g is not a surjection, but it doesn't add any other information about how the function behaves (like the previous proof did). Let's move on from surjections and talk about a closley related property of functions.
+### 7.4.2 Injective (1-to-1) Functions When trying to prove a function is surjective, we took an arbitrary element of the codomain and had to find at least one element of the domain that corresponded to the original element. Sometimes there is exactly one such element, sometimes there are many, and sometimes there are none. What we will do now is consider those functions that fall into the "exactly one" case. We won't be presuming here that functions are already surjective. Rather, we are imposing this condition: we want there to be no more than one input for any given output. There might be exactly one or there might be none, but there certainly aren't two or more. These types of functions are special enough that we give them a name.
+Definition
+<div class="def-definition" markdown>
+**Definition 7.4.6. Let A, B be sets and let f : A →B be a function. We say f**
+</div>
+is an injective function if and only if it has the property that ∀a1, a2 ∈A. a1 ̸= a2 =⇒f(a1) ̸= f(a2) Equivalently, we just say "f is injective" (adjectival form), or that "f is an injection" (nounal form). (The term "1-to-1"---sometimes written "1-1"---is a fairly commonly used synonym for this word, so we will mention it here but won't use it again. This is just in case you've seen this term somewhere else.) In other words, this defining property requires that "distinct inputs yield distinct
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+outputs". Also, remembering that the contrapositive of a statement is logically equivalent, we can express this property as ∀a1, a2 ∈A. f(a1) = f(a2) =⇒a1 = a2 This expresses the equivalent notion that "if two outputs are equal, they must come from the same input". Think about how this definition conveys the notion we described above. Say we have an injective function f : A →B, and let's say we are given an element b ∈B. Does this definition say that there is at most one element x ∈A such that f(x) = b? What possibilities does the definition allow? Motivation Let's motivate this by a particular application of functions. Think of a function as a code-word machine for you to send and receive secret messages with a friend. Your friend writes down a secret message, puts it in the encoder, and out pops a scrambled code that he sends to you. Later, you receive this scrambled code. You would really like to know that this code only came from at most one input phrase. What if you try to decode it and it comes out with both I HATE YOU and I LOVE YOU? What are you supposed to think then? Did your friend mean to sedn you both messages? What a terrible code system you've designed if both of those conflicting messages are encoded as the same scrambled message! In this context, it would be much nicer to have an encoding function where two distinct inputs can't possibly give the same output. This is presicely the defining property of being an injection. Negating the Definition It might be helpful to think about the property of being an injection in terms of a schematic diagram, and in terms of the negation of the definition. Let's find that negation first: ¬  ∀a1, a2 ∈A. a1 ̸= a2 =⇒f(a1) ̸= f(a2)  ⇐⇒  ∃a1, a2 ∈A. a1 ̸= a2 ∧f(a1) = f(a2)  (Remember that the negation of P =⇒Q is P ∧¬Q!) This says a function is not injective if and only if we can find two distinct domain elements that output the same codomain element. With that in mind, here are canonical examples of an injective and non-injective function:
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+f : A →B injective A B f : A →B NOT injective The non-injective function has two distinct domain elements that output the same codomain element, whereas the injective function avoids this situation. It might feel a little odd to phrase a property in this kind of negative sense---a function is only injective if it doesn't have . . . ---but this is actually somewhat common in mathematics. (We will even see this idea later on when we talk about infinite sets, which are just . . . sets that are not finite!) This negative formulation is easy enough to remember, and we can always relate it to another, positive formulation: an injective function has only 0 or 1 inputs corresponding to any given output.
+Examples
+Let's think about how to prove/disprove the injectivity of functions. As you might guess, the first two versions of the definition given above are useful when trying to show a function is injective: take two distinct elements of the domain and show their outputs are different, or take two equal outputs and show they came from equal inputs. The negation can also be used to show a function is injective via a proof by contradiction. Also, the third version is useful when proving a function is not injective: a counterexample amounts to finding two distinct inputs with the same output. Let's see these techniques in action with a few examples. In fact, we will use some of the same examples we looked at in the previous section about surjections!
+Example 7.4.7. Consider p : N × N →N defined by p(a, b) = ab. Is p injective?
+By trying some particular values of (a, b), we can see that p is definitely not an injection. Pick any number that has two different factorizations, like 12 = 3 · 4 = 2 · 6. By letting (a, b) = (3, 4) and (c, d) = (2, 6), we can easily prove this claim. But we can do this even more easily, by noting that the order of the coordinates of an element like (a, b) matters!
+<div class="def-proof" markdown>
+*Proof.* This function is not injective.
+</div>
+Let (a, b) = (1, 2) and (c, d) = (2, 1). Notice that (a, b) ̸= (c, d) because 1 ̸= 2. Also, notice that p(a, b) = 1 · 2 = 2 and p(c, d) = 2 · 1 = 2. Thus, p(a, b) = p(c, d). This shows that p is not injective.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Example 7.4.8. Let C be the set of all cars in the United States. Let S be the
+set of all strings of letters and digits that are of length at most 7 (i.e. these are the potential strings you might see on a car's license plate). Let f : C →S be defined by inputting a car and outputting its license plate string. Is the function f an injection? No, we don't think so! The same license plate string could appear on different cars that are registered in different states. Now, we don't have any examples of this on hand, so this isn't a totally formal proof, but hopefully you see the idea. Could we amend the function definition to make it an injection? Sure, we could try! Consider also defining S to be the set of U.S. states. Let the function g : C →L × S be defined by inputting a car and outputting the order pair of that car's license plate string and home state. This will be an injection, because no two cars in the same state can have the same plate. (Again, this is not really a formal proof; we are just trying to illustrate the concept of injectivity with a non-numerical example.)
+Example 7.4.9. Let d : N × N →Z be the function defined by d(a, b) = a −b.
+Determine whether d is an injection and prove your claim. It turns out d is not an injection! Notice that a −b = (a + 1) −(b + 1). We can use this to find a counterexample: Consider the pairs (2, 1) ∈N × N and (3, 2) ∈N × N. Notice that d(2, 1) = 1 and d(3, 2) = 1. Since (2, 1) ̸= (3, 2) and yet d(2, 1) = d(3, 2), we conclude that d is not an injection.
+Example 7.4.10. Let F : P(N) →P(Z) be defined by
+∀X ∈P(N). F(X) = [ a∈X {a, −a} Do you see what this function does? (Can you explain why it's even a welldefined function?) Let's show you a few examples to give you an idea: F  {1}  = [ a∈{1} {a, −a} = {−1, 1} F  {1, 3, 5}  = [ a∈{1,3,5} {a, −a} = {−1, 1} ∪{−3, 3} ∪{−5, 5} = {−5, −3, −1, 1, 3, 5} F(∅) = [ a∈∅ {−a, a} = ∅ F(N) = Z −{0} We claim that F is an injection. Think about how to prove this before reading our proof. In particular, think about the different strategies we might employ here, based on the formal definition of injectivity. Might one strategy be more fruitful than another?
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+<div class="def-proof" markdown>
+*Proof.* WWTS F is an injection. Let X, Y ∈P(N).
+</div>
+Suppose that X ̸= Y . WWTS F(X) ̸= F(Y ). Since X ̸= Y , we have two cases: either X ̸⊆Y or Y ̸⊆X (or both). Suppose X ̸⊆Y . This means ∃n ∈X. n /∈Y . Let such an n be given. Since n ∈{−n, n} and n ∈X, we see that n ∈F(X), by the definition of F. However, since n /∈Y , we see that ∀a ∈Y. n /∈{−a, a}. This follows because n /∈Y , as well as the fact that n ∈N and Y ⊆N, so ∀a ∈Y. n ̸= −a ∈Z. Accordingly, n /∈F(Y ). This shows that F(X) ̸= F(Y ). In the other case, where Y ̸⊆X, we can follow the exact same argument with the roles reversed (i.e. switching X and Y in every step). This shows that F(Y ) ̸= F(X). Together, we have shown that ∀X, Y ∈P(N). X ̸= Y =⇒ F(X) ̸= F(Y ). This shows F is an injection. Think about how this proof might go if we used a different technique. Say we started by assuming X, Y ∈P(N) and that F(X) = F(Y ). Can we deduce that X = Y ?
+### 7.4.3 Proof Techniques for Jections Let's summarize the concepts of this section so far by presenting some proof templates. These can be used when you are trying to prove/disprove that a function is injective/surjective. We like using the shorthand "Jections" to refer to these two function properties together. Prove that f is surjective 1. Let b ∈B be arbitrary and fixed. 2. Define a = . 3. Show that a ∈A. 4. Show that f(a) = b. 5. This shows that b ∈Imf(A). Thus, Imf(A) = B, so f is surjective. Prove that f is not surjective 1. Define b = . 2. Show that b ∈B. 3. Let a ∈A be arbitrary and fixed.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+4. Show that f(a) ̸= b. (Alternatively, suppose f(a) = b and find a contradiction.) 5. This shows that ∃b ∈B. b /∈Imf(A), so f is not surjective. Prove that f is injective 1. Let x, y ∈A be arbitrary and fixed. 2. Suppose that f(x) = f(y). 3. Deduce that x = y. Alternatively: 1. Let x, y ∈A be arbitrary and fixed. 2. Suppose that x ̸= y. 3. Deduce that f(x) ̸= f(y). Prove that f is not injective 1. Define x = and define y = . 2. Show that x ∈A and y ∈A. 3. Show that x ̸= y. 4. Show that f(x) = f(y). Prove that f is bijective 1. Prove that f is injective. 2. Prove that f is surjective.
+### 7.4.4 Bijections You might have guessed what we have been building towards here. Think about the two main properties of functions we just studied: surjectivity and injectivity. What happens when a function has both of these properties? What if a function has the property that, for every element of the codomain, there is at least one corresponding element in the domain (surjectivity) and there is also at most one such element (injectivity)? That's right: for every output, there is exactly one input! This is an incredibly nice property to have, and will be the foundation for our forthcoming discussion of cardinality (i.e. the size of a set). Let's make a definition and then discuss some examples.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Definition
+<div class="def-definition" markdown>
+**Definition 7.4.11. Let A, B be sets and let f : A →B be a function. We say**
+</div>
+f is a bijective function if and only if f is both injective and surjective. Equivalently, we just say "f is bijective" (adjectival form), or that "f is a bijection" (nounal form). We will sometimes say that f is a bijection between the sets A and B, instead of saying "from A to B". (The reason for this will become clear in the next section!) Notice that this definition is, logically speaking, an AND statement. For the moment, anyway, the only technique we have to prove a function is bijective is to just prove it is surjective and prove it is injective. Similarly, to prove a function is not bijective, we need to prove it is either not surjective or not injective. (It might be that both properties fail, but one such proof is sufficient to show a function is not bijective.) Rather than go over these same techniques (which are nicely summarized right before this section), we will just point out whether some of the examples we have seen thus far are bijections are not.
+Example 7.4.12.
+(a) Let p : N × N →N be the function defined by p(a, b) = ab. We proved that p is surjective but not injective, so it is not a bijection. (b) Let d : N × N →Z be the function defined by d(a, b) = a −b. We proved that d is surjective but not injective, so it is not a bijection. (c) Let g : R −{−1} →R be the function defined by ∀x ∈R. g(x) = x 1 + x We proved that g is not surjective. (Specifically, we showed 1 /∈Img(R − {−1}).) We will ask you in this section's exercises to prove that g is an injection, though. Together this means g is not a bijection. However, consider defining h : R −{−1} →R −{1} by the same "rule" as g, i.e. ∀x ∈R −{1}. h(x) = x 1+x. We asked you to prove in the exercises of Section 7.3.5 that this function satisfies Imh(R −{−1}) = R −{1}. This shows that h is a surjection. Furthermore, we will ask you to prove in this section's exercises that a function defined in this way---by taking an injection, using the same "rule", and redefining the codomain to be the image---produces a bijection. Together, all of this proves that h is a bijection from R−{−1} to R−{1}.
+Example 7.4.13. Let's look at one new example, specifically chosen to preview
+some of the main ideas coming up ahead. Define E ⊆N to be the set of all even
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+natural numbers; that is, E = {e ∈N | ∃k ∈N. e = 2k} Define the function d : N →E by d(n) = 2n. We claim d is a bijection.
+<div class="def-proof" markdown>
+*Proof.* First, let's prove d is a surjection. Let e ∈E be given.
+</div>
+By the definition of E, ∃k ∈N such that e = 2k. Let such a k be given. This tells us d(k) = 2k = e. Since e was arbitrary, we conclude that d is a surjection. Second, let's prove d is an injection. Let m, n ∈N and assume d(m) = d(n). This means 2m = 2n. Canceling the 2s from both sides, we find that m = n. Thus, d is an injection. Together, this proves that d is a bijection. We'll motivate some future considerations by posing some questions: Does it seem a little strange to you that there is a bijection between N and E, a set that is a proper subset of N? Is it always possible to find a bijection between a set and a subset of itself? Have we seen other examples of this situation before? Motivation The main idea behind a bijection f : A →B is that we can pair up the elements of A and B and identify them with each other, one by one. This idea follows from the definitions of both surjectivity and injectivity: every output has exactly one corresponding input. Furthermore, think more carefully about what we show in the proofs of such properties. In proving f is surjective, we show we can "move" from the codomain back to the domain in at least one way, and then in proving f is injective, we show that this is the only way to do it. In a sense, we are showing how to "undo" the function f and reverse its action. In fact, we are implicitly defining a new function from B back to A. Have you previously talked about the inverse of a function? That is precisely what we are rediscovering now! To make this notion of "moving back from the codomain to the domain" rigorous enough, we need to have a brief discussion about how to "combine" functions appropriately. Right after that, we will be able to give a precise definition of what we mean by the inverse of a function, and relate this to bijections. All of this happens in the next section.
+### 7.4.5 Questions & Exercises
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+can confidently answer these before moving on will help your understanding and memory! (1) Write down a definition of surjective in terms of an image. Then, write down a definition of surjective in terms of quantifiers. (2) Describe two different ways of proving that a function is injective. (3) Can a function be both injective and surjective? If so, give an example. (4) Can a function be neither injective nor surjective? If so, give an example. (5) Consider the following schematic diagrams. For each one, declare whether or not it is a function; and, if it is, declare whether or not it is (a) an injection and (b) a surjection. Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Suppose f : R →R is an increasing function; that is, suppose ∀x, y ∈R. x < y =⇒f(x) < f(y) Prove that f must be injective. Then, prove that f need not be surjective by defining an increasing function that is not surjective. (2) Let g : R −{−1} →R be the function defined by ∀x ∈R. g(x) = x 1 + x Is g injective or not? Prove your claim. (3) Give an example of a function f : P(N) →N that is surjective. Prove that it is. (Hint: Be careful about the fact that ∅∈P(N). Also, consider looking at Section 5.5.2 for some inspiration . . . ) (4) Give an example of a function F : N →P(N) that is injective. Prove that it is. Then, prove that your function F is not surjective. (Note: Yes, we are asking you to prove your function is not surjective without knowing what function you defined. We know we are right! You will learn about our trick later in this chapter . . . )
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(5) Suppose f : A →B and g : B →C are surjective functions. Prove that g ◦f : A →C is also surjective. (6) Let f : A →B be an injective function. Define g : A →Imf(A) by setting ∀x ∈A. g(x) = f(x). Prove that g is a bijection. (7) Define F : R×R →R×R by F(x, y) = (x+y, 2x−y). Prove F is bijective. (Hint: In your scratch work, you should try to solve a system of two equations. See Section 1.3.2 for some suggestions about how to do that.) (8) Let A, B be sets. Let g : A →B be an injection. Let X ⊆A. Let h : X →B be the function defined by ∀x ∈X. h(x) = g(x). (That is, h is defined by the same "rule" as g, but on a "restricted domain".) Prove that h is also an injection.
+## 7.5 Compositions and Inverses
+### 7.5.1 Composition of Functions Motivation Let's think about the schematic interpretation of functions for a moment. Imagine that we have a function f : A →B and we also have a function g : B →C, defined like this: A f : A →B B B C g : B →C In a heuristic sense, f is like a "map" that gives us a particular route from elements of A to elements of B, while g is like a "map" from elements of B to elements of C. What would happen if we were to simply follow the "maps" one after the other? That is, let's combine the two by overlaying them,
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+g : B →C A f : A →B B and then simply travel from A all the way to C, cutting out the middle man: A C g ◦f : A →C This seems like a reasonable thing to do, right? Yes, of course it is! Whenever we have mathematical objects at our disposal, we're always curious about how we can resonably combine them and manipulate them and generalize them. In the case of functions, we call this combination a composition of functions. You might notice that such a composition really only makes sense if the codomain of the "first" function and the domain of the "second" function are the same. This is incorporated in the following definition.
+Definition
+<div class="def-definition" markdown>
+**Definition 7.5.1. Let A, B, C be sets, and let f : A →B and g : B →C be**
+</div>
+functions. Consider the function h : A →C defined by ∀a ∈A. h(a) = g(f(a)) We say that h is the composition of g with f and we write h = g ◦f. We also shorten this terminology and say h is "g composed with f". This incorporates all the ideas we mentioned above. It requires that the codomain of f (the "first" function applied) to be the domain of g (the "second" function applied). Another intuitive idea is to think of a function as a machine or a black box. Elements of the domain go in and elements of the codomain come out. We don't necessarily know what the machine does; we only see what comes out. Now,
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+think of hooking up two machines, one for f and one for g; take the output of f's machine and plug it into g's machine. What comes out is an element of C. We can take the work of these two machines and think of it as the work of one bigger machine. This is what the composition g ◦f does; it's one larger machine that takes the operations of two machines and does them in a specified order. Notation Notice the ordering of the notation g ◦f and how it compares to the order in which we apply the functions: f comes first, and then g, i.e. g(f(a)). In words, we would read "g(f(a))" as "g of f of a". In fact, if you find yourself having trouble remembering this order, here's a recommendation: read the "◦" out loud as "after". Thus, h = g ◦f would mean "g after f", because we take an element of a, apply f first, and then apply g. It is also important to remember the notation of composed functions and to distinguish the function g ◦f itself from an application of the function g ◦f to some element x ∈A. For instance, to write "g of f of x" using the "◦" notation, we would write (g ◦f)(x) because we are "hitting" the element x with the function g ◦f. However, the following notation make no sense because it mixes up the ideas of functions and elements: g ◦f(x) Do you see the difference? The object f(x) is an element of B, the codomain of f. But g is a function. What does it mean to compose a function with an element of a set? This doesn't work. Be careful with this, in general! This distinction will be especially important when we have to compose several functions together, like (h ◦(g ◦k) ◦f)(z), where z is an element of f's domain, and f, g, h, k are functions.
+Examples
+Example 7.5.2. Let C : R →R be defined by
+∀x ∈R. C(x) = x −273.15 Let F : R →R be defined by ∀x ∈R. F(x) = 9 5x + 32 The function C converts a temperature from degrees Kelvin to degrees Celsisus. The function F converts from degrees Celsius to degrees Fahrenheit. Then the function F ◦C converts from degrees Kelvin to degrees Fahrenheit
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+directly. We can compose the "rules" for the functions and find a formula for this direct conversion: ∀x ∈R. (F ◦C)(x) = F(C(x)) = F(x −273.15) = 9 5 ·  x −273.15) + 32 = 9 5x −459.67
+Example 7.5.3. Let f : R →Z be the function defined by
+∀x ∈R. f(x) = ⌊x⌋ (Recall that ⌊x⌋is the floor of x: it is the largest integer z ∈Z that satisfies z ≤x. Let g : Z →N be the function defined by ∀z ∈Z. g(z) = ( −z if z < 0 z + 1 if z ≥0 Let's find g ◦f. Notice that whenever x ∈R satisfies x < 0, we will have ⌊x⌋x < 0, as well. Similarly, whenever x ∈R satisfies x ≥0, we will have ⌊x⌋≥0. This tells us that the composition g ◦f will also be a piece-wise function: ∀x ∈R. (g ◦f)(x) = ( −⌊x⌋ if x < 0 ⌊x⌋+ 1 if x ≥0
+Questions: Is this function injective? Surjective? Try to prove your claims!
+Example 7.5.4. Define f : N →N and g : N →N and h : N →N by
+∀n ∈N. f(n) = n + 3 ∀n ∈N. g(n) = n2 ∀n ∈N. h(n) = 2n −1 (Question: Are you sure these are well-defined functions? Why?) We can find "rules" for the compositions g ◦f and h ◦f: ∀n ∈N. (g ◦f)(n) = g(f(n)) = g(n + 3) = (n + 3)2 = n2 + 6n + 9 ∀n ∈N. (h ◦g)(n) = h(g(n)) = h(n2) = 2n2 −1 We can then use these to find a rule for a further composition, like h ◦(g ◦f): ∀n ∈N.  h ◦(g ◦f)  (n) = h  (g ◦f)(n)  = h  n2 + 6n + 9  = 2(n2 + 6n + 9) −1 = 2n2 + 12n + 17 Likewise, we can use these to find a rule for (h ◦g) ◦f: ∀n ∈N.  (h ◦g) ◦f  (n) =  h ◦g)(f(n)) = (h ◦g)(n + 3) = 2(n + 3)2 −1 = 2(n2 + 6n + 9) −1 = 2n2 + 12n + 17
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Look at that, they're the same rule! That is, we just proved that (h ◦g) ◦f = h ◦(g ◦f) in the sense of functions by showing that they yield the same output on every allowable input. Composition is Associative There was nothing particularly special about the functions f, g, h used in the previous example. The result we obtained is actually true in general. The following theorem and its proof will show this. We are proving that function composition is associative. This means that whenever we have a string of compositions, we can move the parentheses around at will; we know that the order in which we apply the parentheses doesn't matter.
+<div class="def-theorem" markdown>
+**Theorem 7.5.5. Let A, B, C, D be any sets. Let f : A →B and g : B →C**
+</div>
+and h : C →D be functions. Then, h ◦(g ◦f) = (h ◦g) ◦f
+<div class="def-proof" markdown>
+*Proof.* WWTS that the outputs of the two functions h ◦(g ◦f) and (h ◦g) ◦f
+</div>
+are the same, for every possible input. Let x ∈A be given. Applying the definition of composition, we see that [h ◦(g ◦f)](x) = h  g ◦f)(x)  = h  g(f(x))  and [(h ◦g) ◦f](x) =  h ◦g  (f(x)) = h  g(f(x))  Compositions and Jections Here's something interesting to ponder now: What happens if we take the composition of two functions with a shared property? Does that property "carry over", as well? For instance, if we compose two injections, do we get another injection? Does only one of the composed functions need to be an injection to guarantee the composition is an injection? Similarly, let's say we have a composition of two functions. If we know the composition is a surjection, can we necessarily deduce that one of the functions we composed is also a surjection? Do they both need to be? We will state and prove some claims about questions like these in this short section. We will let you prove some related facts (or find appropriate counterexamples, as the case may be) in the exericses, both for this section and at the end of the chapter.
+Proposition 7.5.6. Let A, B, C be sets and let f : A →B and g : B →C be
+functions. If g ◦f is injective, then f is necessarily injective.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(Notice that this doesn't assume any properties of g; it doesn't even have to be injective, necessarily! As an exercise, try to find an example of functions f : A →B and g : B →C such that g ◦f is injective and g is injective, and also an example where g ◦f is injective but g is not injective.)
+<div class="def-proof" markdown>
+*Proof.* Let x, y ∈A be given. Suppose f(x) = f(y). WWTS x = y.
+</div>
+Since g is a well-defined function, g(f(x)) = g(f(y)). This means (g ◦f)(x) = (g ◦f)(y). Since g ◦f is injective, x = y. This was our goal, so the claim is proven. It turns out that the converse of the claim we just proved is False. Since that claim is one about all functions, disproving it requires us to produce a counterexample.
+Proposition 7.5.7. Let A, B, C be sets and let f : A →B and g : B →C be
+functions. Suppose f is injective. Then it is not necessarily the case that g ◦f is injective. Try doing some scratch work on your own to come up with a counterexample before reading about ours. Remember that you don't need to find the most interesting or complicated one, nor do you necessarily need one defined by a rule; you just need to be able to define one!
+<div class="def-proof" markdown>
+*Proof.* We will exhibit a counterexample.
+</div>
+Define A = {1, 2} and B = {♥, ♦} and C = {⋆}. Define f by setting f(1) = ♥and f(2) = ♦. Notice f is injective because f(1) ̸= f(2). Define g by setting g(1) = g(2) = ⋆. Notice g ◦f is defined by (g ◦f)(1) = ⋆and (g ◦f)(2) = ⋆. This shows g ◦f is not injective, because (g ◦f)(1) = (g ◦f)(2) but 1 ̸= 2.
+### 7.5.2 Inverses Motivation As we said before, a bijection f : A →B has a very nice property, in that f "pairs off" the elements of the two sets, A and B. Given an element a ∈A, there is exactly one element b ∈B that satisfies f(a) = b. This is because f is a well-defined function. But we also know that a is the only domain element associated with b in this way. This is because f is a bijection. Because of this unique association in both directions, we can think of "reversing" the action of f. Given an element b ∈B, identify the a that would produce that b. This is what an inverse function does. Here, we will define it in terms of function composition and identity functions. This is also the reason we say a bijection
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+is between two sets as opposed to just from one set to the other; as soon as we have it one way, we know we can have it the other way, too! Before we see the definition, let's quickly recall the definition of the identity function that we saw before. It plays an important role in the forthcoming definition of inverse.
+Definition: Given a set X, the identity function IdX : X →X
+is defined by ∀z ∈X. IdX(z) = z.
+Definition
+Notice that this definition doesn't say anything about the functions being bijections. This is purely a formal definition of what an inverse function means. Afterwards, we will have to prove any claims about hwo inverses and bijections are related.
+<div class="def-definition" markdown>
+**Definition 7.5.8. Let f : A →B be a function. Suppose there is a function**
+</div>
+g : B →A such that f ◦g : A →A satisfies f ◦g = IdA and g ◦f : B →B satisfies g ◦f = IdB. Then we say g is the inverse of f and write g = f −1. (Notice that some conditions are implicitly stated by the assumptions and conclusions in the definition above. Specifically, it must be that B = Imf(A), to make sure g is a function. Likewise, A = Img(B).)
+Example
+Let's look back at a function we saw before when we discussed bijections. With your help in the exercises, we learned that this function is a bijection. Here, we will find its inverse.
+Example 7.5.9. Let h : R −{−1} →R −{1} be defined by
+∀x ∈R −{−1}. h(x) = x 1 + x To find a candidate function that will be the inverse of h, it usually helps to set the "rule" for h equal to some new variable, and then solve for x. Here, let's say h(x) = y. How can we "reverse" this process and identify what x is, in terms of y? Observe that we can make some algebraic steps, as follows: h(x) = y ⇐⇒ x 1 + x = y ⇐⇒(1 + x)y = x ⇐⇒xy + y = x ⇐⇒y = x(1 −y) ⇐⇒x = y 1 −y
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+This scratch work has given us a candidate for the inverse of h. We haven't proven anything with these observations! What we have to do now is make a claim and then demonstrate, for the reader, all of the essential facts. Notice that we took care to define a new function H, and used it to prove that H = h−1, in fact. It would be presumptuous and erroneous to define h−1 and then work with it. We are trying to show h has an inverse, so we can't just declare it has one at the beginning of our proof!
+<div class="def-proof" markdown>
+*Proof.* Define S = R −{−1} and T = R −{1} for convenient shorthand, so
+</div>
+h : S →T. Let H : T →S be the function defined by ∀y ∈T. H(y) = y 1−y. First, let's show that H is a well-defined function. For every y ∈T, we know y ̸= 1, so 1 −y ̸= 0. Thus, the fraction y 1−y is a well-defined real number. Furthermore, we can argue that y 1−y ̸= −1. AFSOC that y 1−y = −1. Then multiplying through by 1 −y tells us y = y −1, a clear contradiction. Second, let's show that H ◦h = IdS. Let x ∈S be given. Observe that (H ◦h)(x) = H(h(x)) = H  x 1 + x  = x 1+x 1 − x 1+x · 1 + x 1 + x = x (1 + x) −x = x 1 = x Third, let's show that h ◦H = IdT . Let y ∈T be given. Observe that (h ◦H)(y) = h(H(y)) = h  y 1 −y  = y 1−y 1 + y 1−y · 1 −y 1 −y = y (1 + y) −y = y 1 = y Therefore, by the definition of inverse, H = h−1. Checking Both Directions Let's say f : A →B is a function, and you have made a claim about f having an inverse by defining a function g : B →A. It is extremely important that you show both compositions yield the identity function; that is, you must show both f ◦g = IdB and g ◦f = IdA You might occasionally forget to do so, or you just might not see why this is necessary. To help you understand this importance, we have included Exercise
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+2 in Section 7.5.4 below. It asks you to find an example where "one way" yields the identity function but the "other way" does not, so that the proposed function is actually not an inverse. Try to find several examples, if you can. The more striking you make this point, the better!
+### 7.5.3 Bijective ⇐⇒Invertible As we have been hinting at all along, a bijective function has an inverse. This claim's converse holds, as well, so we can state and prove this if and only if statement. The word in the section heading here---invertible---is often used to mean "has an inverse".
+<div class="def-theorem" markdown>
+**Theorem 7.5.10. Let A, B be any sets. Let f : A →B be a function. Then,**
+</div>
+f is bijective ⇐⇒f has an inverse f −1 : B →A
+<div class="def-proof" markdown>
+*Proof.* ( =⇒) Assume f is bijective. This means f is surjective and injective.
+</div>
+We need to define an inverse function for f. Let's define g : B →A as follows: Let b ∈B be given. Since f is surjective, we know ∃a ∈A. f(a) = b. Let such an a be given. Since f is injective, we know that ∀x ∈A. x ̸= a =⇒f(x) ̸= f(a) = b That is, we know this a is the unique element of A that satisfies f(a) = b. Let's define g(b) = a. This is a well-defined function because of these observations. Next, observe that (f ◦g)(b) = f(g(b)) = f(a) = b, so f ◦g = IdB. Also, observe that (g ◦f)(a) = g(f(a)) = g(b) = a, so g ◦f = IdA. Therefore, g = f −1, so f has an inverse. (⇐=) Assume f has an inverse function, f −1 : B →A. First, let's show f is injective. Let a1, a2 ∈A be given. Observe that f(a1) = f(a2) =⇒f −1(f(a1)) = f −1(f(a2)) f −1 : B →A is a function =⇒(f −1 ◦f)(a1) = (f −1 ◦f)(a2) definition of composition =⇒IdA(a1) = IdA(a2) definition of identity =⇒a1 = a2 definition of identity Thus, f is injective. Second, let's show f surjective. Let b ∈B be given. Since f −1 is a function, we know ∃a ∈A. f −1(b) = a. Let such an a be given. Then observe thatf −1(b) =
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+a. f −1(b) = a =⇒f(f −1(b)) = f(a) f : A →B is a function =⇒(f ◦f −1)(b) = f(a) definition of composition =⇒IdB(b) = f(a) definition of identity =⇒b = f(a) definition of identity Proving a Function is Bijective This helpful theorem now provides us with another technique for proving that a given function f : A →B is a bijection. Rather than proving f is an injection and a surjection, we can just define a new function g : B →A and prove that it is the inverse of f, i.e. g = f −1. Then, this theorem applies and tells us that f is a bijection! Depending on the context, one or the other of these strategies might be easier to apply, or you might just be more comfortable with one of them. Keep in mind that both strategies are viable, though! Inverse of an Inverse The following corollary follows immediately from the theorem above. We call it a corollary and not its own theorem because it doesn't really assert anything amazingly new; rather, its conclusion comes from applying the theorem above, as you'll see in the proof.
+<div class="def-theorem" markdown>
+**Corollary 7.5.11. Let A, B be any sets. Let f : A →B be a function.**
+</div>
+If f is a bijection, then f −1 exists and it is also a bijection. Furthermore,  f −1−1 = f.
+<div class="def-proof" markdown>
+*Proof.* Suppose f has an inverse, f −1 : B →A. This means f ◦f −1 = IdB and
+</div>
+f −1 ◦f = IdA, by the definition of inverse. These are precisely the conditions that show  f −1 = f, again by the definition of inverse! This shows f −1 has an inverse (namely, f itself) so the theorem above tells us that f −1 must be a bijection. Inverse of a Composition Before we move on to some exercises and the next section, let's get your help in putting together the main ideas of this chapter so far. Specifically, we are going to state two results here. The proofs are left for you in the chapter exercises. By working through those proofs, you will (a) solidify your understanding of many of the concepts introduced so far---functions, jections, compositions, inverses--- and (b) obtain a helpful result about how to define the inverse of a composition of functions!
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Proposition 7.5.12. Let f : A →B and g : B →C be bijective functions.
+Define h : A →C to be h = g ◦f. Then h is also bijective.
+<div class="def-proof" markdown>
+*Proof.* Left for the reader as Problem 7.8.9.
+</div>
+Proposition 7.5.13. Let f : A →B and g : B →C be bijective functions.
+Define h : A →C to be h = g ◦f. Then h is invertible and h−1 = f −1 ◦g−1.
+<div class="def-proof" markdown>
+*Proof.* Left for the reader as Problem 7.8.10
+</div>
+### 7.5.4 Questions & Exercises
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) Is the composition of functions associative? (That is, does the order of parentheses matter?) Why or why not? (2) Is the composition of functions commutative? (That is, can we reverse the order?) Why or why not? (3) Suppose f : A →B and g : B →A are functions. How do we prove that g = f −1? (4) Suppose f : A →B is a bijection. Is its inverse also a bijection? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Let O be the set of odd natural numbers and let E be the set of even natural numbers. Define a function f : O →E that is a bijection and prove that it is so by finding its inverse. (2) In this problem, we want you to construct an example that shows the importance of verifying both compositions yield the identity function when we're trying to find the inverse of a function. Define sets A, B and functions f : A →B and g : B →A such that ∀x ∈A. g(f(x)) = x
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+but ∃y ∈B. f(g(y)) ̸= y (Suggestion: You might find an example where A and B both only have one or two elements . . . Or, you might find an example where A = B = N.) (3) Let U = {y ∈R | −1 < y < 1} and I = {y ∈R | −6 < y < 12}. Let g : U →I be the function defined by ∀x ∈U. g(x) = 9x + 3. Prove that g is a bijection by finding g−1. (4) Define the function f : Z →N by ∀z ∈Z. f(z) = ( −2z + 2 if z ≤0 2z −1 if z > 0 Prove that f is a bijection by finding f −1. (Hint: Your proposed inverse function will also be piece-wise defined. Be careful about the cases that will then come up in your proof.) (5) Challenge: Define I = {y ∈R | −1 < y < 1}. Find a function f : I →R that is a bijection and prove that it is. (Hint: You do not need to use any trigonometric functions. Consider using |x| somewhere in your expression . . . )
+## 7.6 Cardinality
+### 7.6.1 Motivation and Definition One important reason for caring about bijections is that they allow us to compare the sizes of sets! This is a notion for which you have some intuitition. For example, it's pretty clear that the set {1, 2, 3, 4, 5} has 5 elements. It is finite. However, the set N = {1, 2, 3, 4, 5, . . . } is infinite. We also understand that Z is an infinite set. So are Q and R. What are their sizes? Can we even compare them? How could we do so mathematically? What does it really mean to be an infinite set? Are there "different infinities"?
+
+
+> 🇨🇳 TODO: 待翻译
+
+

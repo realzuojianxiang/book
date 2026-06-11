@@ -1,0 +1,237 @@
+---
+title: Basic Counting Principles
+---
+
+# Basic Counting Principles
+
+the size of their union is the sum of their individual sizes. This makes intuitive sense for finite sets, and we proved the result mathematically using A bijection. This result forms the basis for the first, fundamentally useful principle of combinatorics. Notice that this grounds us firmly in the principles of set theory. Partitions We start by recalling Definition 3.6.9, which was introduced in our discussion of sets.
+<div class="def-definition" markdown>
+**Definition 8.2.1. Let A be a set. A partition of A is a collection of sets that**
+</div>
+are pairwise disjoint and whose union is A. That is, a partition is formed by an index set I and non-empty sets Si (defined for every i ∈I) that satisfy the following conditions: (1) For every i ∈I, Si ⊆A. (2) For every i, j ∈I with i ̸= j, we have Si ∩Sj = ∅. (3) [ i∈I Si = A Essentially, a partition is a way of breaking a set into smaller sets that do not overlap. Let's look at a couple of examples before moving on.
+Example 8.2.2. Let A be the set of people in the room currently. Let I = {1, 2},
+and let S1 be the set of left-handed people and let S2 be the set of right-handed people. Then S = {S1, S2} is a partition of A. Notice the distinction between writing "{S1, S2} partition A", which is correct, and "S1, S2 partition A", which is not correct. What does it mean to say S1, S2 in this context? We really mean that those two sets, taken together as a collection, form a partition of A. This is why we must remember to write the elements S between brackets. To be rigorous, we should prove why S is a partition of A. To do this, we point out that S1 ∩S2 = ∅because everyone here is either left- or right-handed but not both. (Let's presume there are no "outlying cases" here, like truly ambidextrous people or people with no hands. If any such people are present, include them in a set S3 and include that in our partition set S.) We also point out that S1 ∪S2 = A because everyone in the room must be either left- or right-handed, so there cannot exist an element x ∈A that satisfies x /∈S1 and x /∈S2. This shows why S is a partition. What if we wanted to partition the set of people in this room by separating them based on the first letter of their first name? Try to define this partition using mathematical notation like the previous example.
+Example 8.2.3. Now, let's see a non-finite partition. Consider the set A = N
+and the index set I = N. For every i ∈N, define the set Si = {2i −1, 2i}
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Is the set S = {Si | i ∈N} a partition of N? We think so; let's investigate why. We could start by writing out what the first few sets look like (indeed, this is usually a good first strategy: just write out the first few cases and see what happens): S1 = {1, 2} S2 = {3, 4} S3 = {5, 6} ... and so on. This looks like a partition of N so far, doesn't it? Let's prove that it truly is! First, let's show that the sets Si are pairwise-disjoint (i.e., any two of the sets share no elements). We prove this by contradiction. AFSOC that ∃i, j ∈N with i ̸= j such that Si ∩Sj ̸= ∅. This means that (at least) one element of Si is also an element of Sj; we find there are four possible cases for this situation: 1. 2i −1 = 2j −1 2. 2i −1 = 2j 3. 2i = 2j −1 4. 2i = 2j The first and fourth cases immediately imply that i = j, by some simple algebra, which contradicts our given condition that i ̸= j. The second and third cases are contradictions themselves because they involve an odd natural number and an even natural number being equal. In any case, we find a contradiction. Therefore, ∀i, j ∈N with i ̸= j, it's the case that Si ∩Sj = ∅. Second, let's show that the union of all of the Si sets is N. That is, let's prove [ i∈N Si = N Remember that the set on the left-hand side consists of all of the elements x such that ∃i ∈I that satisfies x ∈Si. (Think about why this makes sense, even though I is infinite. This just means the union contains all of the elements that belong to at least one of the sets Si.) Notice that for every i ∈N, the elements 2i −1, 2i ∈Si are both natural numbers. Thus, N ⊇ [ i∈I Si Next, we prove the reverse set containment. Let n ∈N. We have two cases to consider. (1) If n is even, then ∃k ∈N such that n = 2k. Thus, n ∈Sk. (2) If n is odd, then ∃ℓ∈N such that n = 2ℓ−1. Thus, n ∈Sℓ. In either case, we have shown that n ∈ [ i∈I Si. Therefore, S is a partition of N. In particular, it is an infinite partition.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Now we have seen an example of a finite and infinite partition. (Challenge question: Can you identify an infinite partition of N such that all of the component sets of the partition are also infinite?) Statement For the remainder of the chapter, we will only consider finite partitions of finite sets. In particular, the Rule of Sum only applies in this specific case.
+Proposition 8.2.4. Let A be a finite set, let n ∈N, and let S = {Si | i ∈[n]}
+be a finite partition of A. The Rule of Sum states that |A| = X i∈[n] |Si| The Rule of Sum tells us that the size of a set can be found by partitioning it into a finite number of smaller sets and summing their sizes. Notice that this is precisely Corollary 7.6.10 that we saw last chapter in our discussion of finite sets! There, we asked you to prove this claim by induction, in Exercise 2 in Section 7.6.5. With this result in hand, we'll move on to see some examples.
+Examples
+Example 8.2.5. At Unique Activity University, every student is required to par-
+ticipate in exactly one varsity sport each year. Playing more than one would be too much of a time commitment, and not playing at all would make them lazy, so everyone plays exactly one of the following non-traditional-but-still-sports sports: golf, cricket, badminton, and chess. The athletic department released the following statistics about the rosters for each sport this year: • Golf: 12 players • Cricket: 18 players • Badminton: 23 players • Chess: 33 players How many students attend UAU? Okay, this is an easy example because we made sure to stipulate that the sports offered by the university form a partition of the set of students. (Compare that to the sentence, "The set of sports offered by the university is a partition of the set of students." Both are correct.) Thus, we can find the cardinality of S, the set of all students, by adding; |S| = 12 + 18 + 23 + 33 = 86 A small university, indeed, as well as a bizarre one. Don't go there.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+More interesting examples of applying the Rule of Sum will appear when we combine it with other counting principles. For now, it's a simple idea that governs how to count sets that can be broken into disjoint parts. In general, the hardest part about using the Rule of Sum is deciding which partition to apply it to, and being creative about that. The next counting principle is just as, if not more, helpful but a little more intricate to define and prove.
+### 8.2.2 The Rule of Product Motivation We'll motivate this principle via an example.
+Example 8.2.6. Let's say we have three people in the room. We also have three
+stickers bearing the numbers 1, 2, and 3 on them (with one distinct number on each sticker). How many ways can we place these stickers on the three people? For the sake of argument, let's say the people are named Andy, Brendan, and Carl, conveniently abbreviated as A, B, and C. To answer this question, we can simply write out all of the sticker assignments in an organized manner to make sure we don't miss any. Specifically, we'll rank them in increasing order by Andy's assignment, then Brendan's, then Carl's: we have (A, B, C) = 1. (1, 2, 3) 2. (1, 3, 2) 3. (2, 1, 3) 4. (2, 3, 1) 5. (3, 1, 2) 6. (3, 2, 1) Thus, there are 6 total ways to assign the stickers. What if we have four people--Andy, Brendan, Carl, and Dave--and four stickers? Can we list all of those assignments? Sure, why not? (1, 2, 3, 4) (1, 2, 4, 3) (1, 3, 2, 4) (1, 3, 4, 2) (1, 4, 2, 3) (1, 4, 3, 2) (2, 1, 3, 4) (2, 1, 4, 3) (2, 3, 1, 4) (2, 3, 4, 1) (2, 4, 1, 3) (2, 4, 3, 1) (3, 1, 2, 4) (3, 1, 4, 2) (3, 2, 1, 4) (3, 2, 4, 1) (3, 4, 1, 2) (3, 4, 2, 1) (4, 1, 2, 3) (4, 1, 3, 2) (4, 2, 1, 3) (4, 2, 3, 1) (4, 3, 1, 2) (4, 3, 2, 1) Okay, so there are 24 total ways to assign the stickers. What about with five people? I don't know about you, but my arm is getting tired writing out all of these assignments. There must be a better way to do this! Yes! This is where
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+the Rule of Product comes in to save the day. (Side note: You might notice a pattern to our list above; can you infer how we made sure we actually listed all possibilities? Could you write a little computer program that would generate all the possibilities, for any number of elements? Try it!) Statement We will actually make two separate statements of the Rule of Product. The first is an intuitive statement of when and how it applies and what it claims. The second is a more rigorous, mathematical statement that is rooted in the kind of set-theoretic language that we have been using all along. We emphasize that both definitions should, ideally, be understood; however, truly understanding the first one is more important, and the second is presented mostly because it is the one that can and will be rigorously proven.
+Proposition 8.2.7. Consider a process that is completed in n distinct steps.
+Assume that the i-th step, for every i ∈[n], has exactly wi different ways to be completed; moreover, assume that this number wi ∈N does not depend on the choices made in the previous steps. Also, assume that no two distinct choices at any step yield the same outcome. Then the Rule of Product states that the total number of outcomes, N, of this n-step process is N = Y i∈[n] wi Let's relate this statement back to the previous example with the people and stickers before moving on and stating the Rule of Product more rigorously.
+Example 8.2.8. We can think of assigning the stickers to Andy, Brendan, and
+Carl as a three-step process. Let's line up the three gentlemen in alphabetical order, left to right, then move along the row. At each step, we will place a sticker on the gentleman in front of us by choosing one that hasn't been assigned yet. In the first step, we approach Andy and have 3 possible stickers to place on him. In the second step, we approach Brendan and have 2 possible stickers to place on him. Notice that this is true no matter what sticker was chosen for Andy. We don't actually care which sticker was chosen for Andy---be it 1, or 2, or 3---merely that the number of choices we have when we face Brendan is always 2. In the third step, we approach Carl and find that we have only 1 sticker option, regardless of the previous two choices. The Rule of Product tells us that the number of ways to complete this process is the product of those numbers of options at each step: 3 · 2 · 1 = 6. This agrees with our "exhaustive list" procedure. Hooray! What about with 4 people? Using the same kind of logic, we can see that there are 4·3·2·1 = 24 possible ways to complete the sticker-assignment process. Again, this agrees with our previous procedure. Double hooray! What about with 5 people? Well, 5 · 4 · 3 · 2 · 1 = 120. We figured out something we didn't know yet. Triple hooray! With 6 people? With 7 people?
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+With n people, where n ∈N? We can answer all of these questions very easily and precisely now, thanks to the Rule of Product. Infinite hooray! Tree Diagrams An interesting and helpful interpretation of the Rule of Product is evidenced by a tree diagram. The concept of a tree arises in the branch of mathematics known as graph theory, which studies mathematical objects consisting of vertices (dots) connected by edges (lines between the dots, where we only care about whether or not a line is present, and not on what it "looks like" when drawn on a piece of paper). A tree is a particular type of graph, and it arises commonly in computer science, as well, when studying branching processes. Within our context, we can use a tree to represent the decision points of a procedure whose end products will be counted by the Rule of Product. Furthermore, this method will provide some insight into the mathematically rigorous statement and proof of the Rule of Product. (We will leave these ultimate goals to the exercises, but for those of you who are interested and motivated to attempt them, we strongly encourage reading this section, as well; it will give you some intuition and guide you through those exercises.)
+Example 8.2.9. Let's illustrate tree diagrams and how they relate to the Rule
+of Product via an example. Let's say we are planning our schedule for next semester. Based on our major and time constraints (and personal interests, of course), we must take exactly one class from each of three departments: mathematics, computer science, and philosophy. The number of courses available for us to take in each department does not depend on the selection we make in any other department; specifically, we have 4 mathematics courses to choose from, 3 computer science courses, and 2 philosophy courses, and any combination of courses will fit our schedule (provided each department is represented exactly once). How might we apply the Rule of Product to our situation? We would need to define a process and the steps of that process, and then identify how many choices are available at each step. Naturally, the overall process here is identifying our course schedule for next semester. Since we are constrained to select (exactly) one course from each department, let us identify three steps: (1) select a mathematics course; (2) select a computer science course; (3) select a philosophy course. (Note: Does the order of these steps matter? What if we select a philosophy course first, instead? Will our process be fundamentally different? We think not, but make sure you see why before reading on.) Next, let's represent the choices we can make at each step. Let's say the set of 4 mathematics courses available to take is M = {M1, M2, M3, M4}, the set of 3 computer science courses is C = {C1, C2, C3}, and the set of 2 philosophy courses is P = {P1, P2}. This immediately identifies for us the number of choices available at each step: (1) there are |M| = 4 choices; (2) there are |C| = 3 choices; (3) there are |P| = 2 choices. Thus, the Rule of Product tells us there are 24 total course schedules we could create for next semester. But,
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+really, why is this true? What are those schedules? Let's represent them by a tree diagram! M2 M2 M3 M4 M1, C2 M1, C3 M2, C1 M1, C1 M2, C2 M2, C3 M3, C1 M3, C2 M3, C3 M4, C1 M4, C2 M4, C3 M1, C1, P1 M1, C1, P2 M1, C2, P1 M1, C2, P2 M1, C3, P1 M1, C3, P2 M2, C1, P1 M2, C1, P2 M2, C2, P1 M2, C2, P2 M3, C3, P1 M3, C3, P2 M4, C1, P1 M4, C1, P2 M4, C2, P1 M4, C2, P2 M4, C3, P1 M4, C3, P2 M3, C1, P1 M3, C1, P2 M3, C2, P1 M3, C2, P2 M3, C3, P1 M3, C3, P2 Reading left to right in the diagram, we are following this three step procedure we established. The single vertex (or node) at the far left represents the start of our process---no decisions have been made---and the four edges (or branches) emerging from that vertex represent the four mathematics courses from which we can choose. We have labeled each edge with one of the elements of M. No matter which one of those edges we follow (i.e. no matter which mathematics course we select), there are three edges emerging from the next vertex (i.e. we still have three computer science courses from which we can choose). We have labeled all of those edges with corresponding elements from C. Following the same idea, every vertex in that column has two emerging edges which are labeled by corresponding elements from P. The benefit of this diagram is that we can see exactly what the 24 outcomes of this process are by following the labels on the edges. For instance, look at the vertex on the top of the far right column. This corresponds to selecting M1 and
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+C1 and P1; alternatively, we can represent this as the ordered triple (M1, C1, P1). Further down that column, we see a vertex corresponding to the ordered triple (M2, C3, P1), for example. Every vertex has an ordered triple representation! What we are really doing when we apply the Rule of Product is identifying the cardinality of some set that is a Cartesian product of several constituent sets. The process corresponds to identifying elements of the constituent sets and arranging them in an ordered tuple. The Rule of Product tells us how many ways we can do this by identifying the cardinality of the product set consisting of all such tuples. In this specific example, we have |M × C × P| = |M| · |C| · |P| = 4 · 3 · 2 = 24 Does this make more sense, now? Does this provide you any insight into how the Rule of Product actually works? More Formal Statement See Exercise 8.9.1, which asks for a proof of the following theorem. This is a more formal statement of what the Rule of Product is, mathematically. After the statement, we'll describe how it relates to the previous version.
+<div class="def-theorem" markdown>
+**Theorem 8.2.10. Rule of Product (Set-Theoretic Version)**
+</div>
+Let n ∈N. Suppose that ∀i ∈N. Ti is a finite set. Then,
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+= |T1 × T2 × · · · × Tn| = |T1| · |T2| · · · |Tn| = Y i∈[n] |Ti| The relationship with the previously-stated rule of product is as follows. The elements of the set T1 are the choices that can be made in Step 1 of the process. For every element of T1, we define the set T2 to be the set of choices that can be made in Step 2 of the process after that choice made in Step 1. By assumption, there is an equal number of such choices, regardless of the choice made in Step 1. Thus, it makes sense that the conclusion of the Theorem only incorporates |T2|, since this value is well-defined. Likewise, T3 is the set of choices for Step 3 that can follow the choices made in Steps 1 and 2, and by assumption, |T3| is well-defined. In the end, we can describe an outcome of this process by an ordered n-tuple, where coordinate i is an element of the set Ti. Indeed, what that element could be does depend on what the previous coordinates are, but the number of choices for this element is independent of those prior choices. Since, in the end, we really only care about the number of possible outcomes, the result makes sense. Actually listing all of the outcomes would require a careful analysis of each step, seeing how a particular choice affects the choices in the next step (and the steps thereafter), but that's not the point of the result. This is why, essentially, the result amounts to proving that the size of a product of finite sets is equal to the product of their sizes.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Example: Applying the Rules of Sum and Product (Together)
+Let's practice using these two combinatorics Rules. You'll also notice that we'll start abbreviating these rules as ROS and ROP, so that we can cite them easily. And yes, we do need to cite them when we use them!
+Example 8.2.11. License Plates:
+Suppose a license plate string consists of 6 or 7 positions, each of which is filled with a letter (from A to Z) or a digit (from 0 to 9). (1) How many license plates are there? We must partition based on the length of the string, whether it is 6 or 7. Within each part, we have a 6 or 7 step process. At step i, we fill Position i in the string with one of the 36 options (there are 26 letters and 10 digits). By ROP, then, there are 366 strings of length 6 and 367 strings of length 7. By ROS, then, there are 366 + 367 total license plate strings. (2) How many license plates have at most 1 digit? We must partition based on whether there are 0 digits or 1 digit. With 0 digits, each step in our process places a letter in the corresponding position. We either have 6 letters---yielding 266 possibilities---or 7 letters--- yielding 267 possibilities, by ROP. By ROS, there are 366 or 367 such outcomes. With 1 digit, step 1a chooses which of the positions is filled with a digit, step 1b chooses the digit for that position, and the rest of the steps fill the remaining positions with letters only. There are 6 choices for which position is a digit, then 10 choices for how to fill that position (wherever it is), and 26 choices each for the other positions. Applying ROS and ROP, we find there are 6 · 10 · 365 or 7 · 10 · 366 such outcomes. In total, by ROS, there are (366 + 6 · 10 · 365) + (367 + 7 · 10 · 366) total outcomes. (3) How many license plates have at least 2 digits? We could follow the same method we used with the previous question, and partition this set of license plates into those with 3 digits, 4 digits, 5 digits, 6 digits, and 7 digits. We would then need to count each such set and add their sizes. But how many license plates have, say, 4 digits? With 6 positions to be filled, how many ways are there to choose 4 positions to be digits? This is where binomial coefficients will be helpful, soon enough
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(after we have defined them and derived a formula). Instead, let's take advantage of the work we just did! Let's partition the set of all license plates (call this set Y ) into those with at most 1 digit (call this set X1) and those with at least 2 digits (call this set X2). Notice that this is a partition, so ROS tells us |Y | = |X1| + |X2|. Subtracting algebraically, this tells us the expression we want is |X2| = |Y | −|X1| = (366 + 367) −  (366 + 6 · 10 · 365) + (367 + 7 · 10 · 366)  by just substituting in the expressions we've already derived. How convenient! In general, this is a good strategy: to count a set, we can count its complement (i.e. all of the "other" elements outside the set) and remove that count from the "total". However, remember that we only have a Rule of Sum at our disposal, not a rule of Subtraction, so we should always be careful (for now, at least) to phrase such a step in terms of a partition and a sum. After that, we can subtract numbers or algebraic variables. Eventually, once we are more mathematically mature, we can easily skip this formality and just talk about "subtracting out" a count; for now, though, we want to emphasize the underpinnings of these counting arguments, so we will require this careful phrasing and application of the Rule of Sum. (4) How many license plates have no vowels and no even digits? This condition just limits the number of choices at each step. There are only 21 letters and 5 digits to choose from, so we get 266 + 267 total outcomes, by ROP and ROS.
+### 8.2.3 Fundamental Counting Objects and Formulas Let's return to our motivating example of counting poker hands. Remember that we want to know how many of each type of hand there are, how many ways we could be dealt a flush, say, from a freshly-shuffled deck of 52 cards. Let's start by answering a related, but simpler, question: how many total poker hands are there? Another way of phrasing the question--one that will actually hint at our method of answering it--is as follows: how many ways are there to shuffle the entire deck of 52 cards, and how many of those yield the same poker hand among the top 5 cards? That is, let's identify how many distinct (i.e. totally different) ways there are to shuffle the deck; let's call these ways shufflings. Then, let's think of a specific hand, say T♣J♣Q♣K♣A♣, and count how many shufflings have the property that the top 5 cards of the deck comprise that specific hand in any order (because we don't care how we receive the 5 card we're dealt, we just care what we're holding!).
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+What do we have at our disposal? That's right, the Rules of Sum and Product. That's pretty much it, other than our mathematical wit and intuition, so let's dive right in. How does shuffling a deck of cards correspond to a partition, or a multi-step process? Well, the interesting thing is that we don't actually care how the deck is shuffled, we only care about the number of outcomes of the process. What actually matters about a deck of cards? Right, the order of the cards from top to bottom. With that in mind, let's think about constructing an arbitrary shuffling by assigning the order of the cards. Let's create a shuffling by taking a deck of cards in our hands and, one by one, placing a card face down on a stack in front of us. At the first step, we have 52 cards in our hands and no stack, so we have 52 choices. At the second step, we have 51 cards remaining in our hands to choose from, no matter what that first card was. (Remember: this is the important part of the Rule of Product, that the number of choices is independent of the actual choices made.) In the third step, we have 50 cards remaining, and so on. Eventually, in the 52nd step, we have only 1 card in our hands to place on the stack of 51 cards on the table. After that step is completed, we have a shuffling of the deck sitting in front of us, with the cards stacked face-down. The card from the 1st step is on the bottom, and the card from the last step is on the top. Moreover, we see that for any arbitrary shuffling, there is exactly one sequence of choices that produces that shuffling. (This satisfies that other part of the Rule of Product about having distinct outcomes. Think about this carefully and why it's required.) These observations allow us to directly cite the Rule of Product to answer the question: how many shufflings of a standard deck of cards are there? The number is . . . 52 · 51 · 50 · · · 3 · 2 · 1 = Y k∈[52] k = 8.06581752 × 1067 Yowza! That's a big number. For the sake of comparison, Avogadro's Constant (the number of atoms in a mole) is on the order of 1023. There is a much better notation for this kind of product that says "multiply all the natural numbers from 52 down to 1", and you've probably seen it before, but we'll define it now.
+<div class="def-definition" markdown>
+**Definition 8.2.12. Let n ∈N. The natural number n!, read as n factorial, is**
+</div>
+given by n! = Y k∈[n] k = k · (k −1) · (k −2) · · · 3 · 2 · 1 By definition, 0! = 1. (Recall that we used computing factorials as an example of applying the principle of induction to recursive programming, way back in Section 2.5.1. Read that section again!) Let's think about what we've accomplished, in fact. What was special about the number 52 in this case? Besides it being the number of cards in our deck, nothing! What if we had posed the question: how many ways are there to put the elements of [n] into an ordered list? If we replace n with 52, this is actually
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+the same questions as before! (We could just come up with a natural bijection between the set of cards and the set [52]. Can you do this? Do you see why this shows the questions are equivalent?) Permutations This type of question---how many ways are there to arrange n objects into an ordered list---is so common that we have a specific term for these ordered lists. We define them rigorously in terms of functions, but note their relationship to other mathematical objects (ordered list, for instance).
+<div class="def-definition" markdown>
+**Definition 8.2.13. Let n ∈N. A permutation of [n] is a function f : [n] →**
+</div>
+[n] that is a bijection. Equivalently, a permuation of [n] is an ordered n-tuple of elements from [n] such that every element appears exactly once.
+Proposition 8.2.14. Let n ∈N. Let S be the set of all permuations on [n].
+Then |S| = n!.
+<div class="def-proof" markdown>
+*Proof.* We construct an arbitrary permutation of [n] by selecting which element
+</div>
+appears first in the ordered list. There are n options. Then, from all the elements except that one already chosen, select one to appear second in the list. There are n−1 options. In general, at step k, we choose from the n−(k−1) = n−k+1 elements not already chosen and pick one to appear next. This goes until step n−1, where we only have 1 option. By ROP, there are n(n−1)(n−2) · · · 2·1 = n! total outcomes. (Note: this motivates the convention of choosing to define 0! as 1. Since n! represents the number of ways to permute n objects, and there is exactly 1 way to permute all of the elements of the empty set---there, we just did it!---it makes sense that 0! = 1. This idea will return when we define binomial coefficients shortly; it will be very helpful to have 0! = 1 for the corresponding formula.) Selections This mathematically proves a general version of our observation about shuffling cards, and it brings us closer to answering our original question about ranking poker hands. Remember that we hope to identify how many distinct shufflings of the deck yield a certain type of five card hand among the top five cards, so let's attack a slightly more general problem, first. Think of a specific five card hand, five particular cards. We're thinking of T♣J♣Q♣K♣A♣, so let's use that. Now, let's count how many deck shufflings place this specific hand among the top five cards. How could we have such a situation? We don't care about the order in which we receive the cards in our hand, and we don't care about the order of the other 47 cards in the deck. All that matters is whether those specific cards are on the top. So let's follow the same idea we used before and construct a shuffling
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+with this property. We want to use the Rule of Product, so we need to identify a particular process that constructs a shuffling with the desired property. How can we do this? There are really only two properties we need to satisfy, so let's identify a two step process that ensures those properties hold. The first step should place the 47 cards not from our hand on the bottom of the deck in some order. The second step should place the five cards from our hand on top of that pile in some order. The Rule of Product applies because no matter how we shuffle the bottom 47 cards, this doesn't affect the number of ways we can shuffle the top five cards. (In general, be careful to note why the Rule of Product applies in a given situation before applying it; this is often subtle and not obvious!) Now, we just need to count the number of ways to perform each step. The first step involves creating a permutation of 47 cards. Proposition 8.2.14 tells us there are 47! ways to do this. The second step involves creating a permutation of five cards. Proposition 8.2.14 tells us there are 5! ways to do this. Then, the Rule of Product tells us the number of ways to complete these steps in succession is 47! · 5!. That's it! What was special about our choice of T♣J♣Q♣K♣A♣in this case? That's right, nothing! By applying the Rule of Product again, this fact will tell us something more about the number of shufflings of the deck. Specifically, let's say X is the number of ways to select a set of five cards as a poker hand. Now, consider the three step process of taking five particular cards from the deck, arranging them in some order, and then arranging the other 47 cards below it. The Rule of Product applies here because the number of ways to perform each step doesn't depend on the choices made in the previous steps. Furthermore, every shuffling of the deck arises from exactly one particular instance of this procedure. (Think about why this is true. Consider an arbitrary shuffling of the deck. The top five cards determine which hand we chose in the first step, the order of them determines how the second step was performed, and the order of the others determines how the third step was performed.) Thus, we have found two particular formulas for counting the same set of objects--that is, the shufflings of a deck of cards--and so it must be true that X · 5! · 47! = 52! and therefore X = 52! 5! · 47! Think about what this formula tells us. We let X designate the number of ways to choose a set of five cards from a set of 52 cards. What was special about five or 52? Again, that's right, nothing! We have essentially derived a formula for the number of ways to select any number of objects from a larger set of objects. It might not seem like it, but we are now very close to solving the poker hands problem. Before we finish that project, let's make one comment. First, the type of argument we just made is a common and extremely useful proof technique in combinatorics. It is known as counting in two ways. What
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+we did was identify a particular set of objects--in this case, the set of shufflings of a deck of cards--and then describe two different procedures that allowed us to count the size of that set. Each procedure led to a different formula, and because we were counting the same set of objects, we know those formulas are equal. We will explore this type of argument more explicitly and see many examples in Section 8.4. For now, we hope that you can see why it is a valid argument type, especially because we will expect you to use it to prove Proposition 8.2.16 below! In doing so, you will be generalizing the argument we presented here. For illustration's sake, let's summarize what we did: Argument Summary: We seek an expression for the number of ways to draw 5 cards from a deck of 52 cards. Let N be this number we are looking for. We will identify two different formulas for expressions that involve N. This will allow us to solve these algebraic expressions for a formula for N. (1) Select an arbitrary and fixed five card hand. We will identify the number of ways to shuffle a deck of cards such that the top five cards are that fixed five card hand, in any order. Note that there are N ways to do this step. We seek a formula for N. (2) Count the number of permutations of the entire deck of 52 cards. (3) Count the number of permutations of the deck that yield those fixed five cards on the top. This is split into three steps: (i) Count the number of ways to permute those five cards. (ii) Count the number of ways to permute the other 47 cards. (iii) Count the number of ways to put those 5 permuted cards on top of those 47 permuted cards. (Note: There is only one way to do this, but it's important to point out as a separate step.) (4) Overall, notice that we have counted the number of permutations (i.e. shufflings) of the deck in two separate ways, so they must be the same number. (5) Simplify the expression (which involves N) to find a formula for N. Now, let's generalize the formula we just derived. First, we make a definition and introduce some notation, and then we state a formula.
+<div class="def-definition" markdown>
+**Definition 8.2.15. Let k, n ∈N with n ≥k. A k-selection from [n] is an**
+</div>
+unordered set of k elements from [n]. The number of k-selections from [n] is represented by  n k  . This is known as a binomial coefficient, and is read as "n choose k".
+Proposition 8.2.16. Let k, n ∈N with n ≥k. The number of k-selections
+from [n] is given by n k  = n! k! · (n −k)!
+<div class="def-proof" markdown>
+*Proof.* Left for the reader as Exercise 2 in Section 8.2.4
+</div>
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Binomial Coefficients One thing you might find surprising about the above formula is that the fraction is actually a natural number, no matter what k and n are! This is proven by the fact that it represents a number of ways to complete a procedure, as described in the proof, and this must be a natural number. We want to point out one special case of this formula which may not occur to you. What if k = 0, say? What number should  n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+ be? You might be surprised to find out that  n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+ = 1. Why does this make sense? Intuitively, we think of  n k  as the number of ways to select k objects from a set of n objects; so, how many ways can we select 0 objects from, say, 3 objects? Put 3 pens on your desk. Now, select none of them. There! You just did it! That was one way---and the only way---to select none of the objects. This argument works just as well when n = 0, even! Put no pens on your desk. Now, select none of them. There! You just did it in one way again. Thus, ∀n ∈N ∪{0}. n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+ = 1 There are "better", more mathematical reasons for this result, and we will point these out in the next section when we prove Pascal's Identity. For now, we hope that this heuristic explanation with selections makes sense and can convince you of this result. Another fact is that   n K  = 0 whenever K > n. This is because there are no ways to choose, for instance, 5 objects from a set of only 3 objects. This fact is borne out by our derivation above, because in one of the steps, we would be trying to (impossibly) draw more cards for a hand than there are cards in that deck, and there are 0 ways to do this. Then, when we apply ROP, the product would evaluate to 0. If you play around with some values of k and n, you'll notice that the values of  n k  obeys a so-called unimodal distribution. That is, if we fix n and let k increase from 0 to n, we find the numbers going up, reaching a peak at  n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+ (notice these are the same if n is even) and then decreasing again. Furthermore, the distribution is symmetric around that middle! Can you prove that these properties hold? Try it! Arrangements We now have all of the tools necessary to count poker hands (and plenty of other objects, for that matter). We know how many ways there are to permute the elements of a set, and we know how many ways there are to choose a subset of a certain size from a larger set. Between these two tools, we know how to count any combinations of cards. For instance, to count an ordered subset of cards, we can count the number of ways to choose the subset and then permute its elements, applying the Rule of Product to this two-step process. In fact, this idea is common enough that we will give it a defined name.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+<div class="def-definition" markdown>
+**Definition 8.2.17. Let k, n ∈N with n ≥k. A k-arrangement from [n] is**
+</div>
+an ordered k-tuple of elements from [n] with no repeated elements. Equivalently, a k-arrangement from [n] is a function f : [k] →[n] that is an injection.
+Proposition 8.2.18. Let k, n ∈N with n ≥k. The number of k-arrangements
+from [n] is given by  n k  · k! = n! (n−k)!.
+<div class="def-proof" markdown>
+*Proof.* Left for the reader as Exercise 3 in Section 8.2.4
+</div>
+Repetition Before we go on and count those poker hands, actually, we should point out that all of the standard counting formulas we have seen in this section only consider procedures where objects are not allowed to be repeated. That is, when we choose a five card hand from a deck, we can't have two A♣s, for instance. There are situations where we will want to allow objects to be selected multiple times. Look back at the License Plates example in the previous section. We were allowed to repeat any digit/letter; for instance, 111AAA is a valid license plate. Let's see one more example here:
+Example 8.2.19. Consider a standard, fair, two-sided coin. Flip the coin 6 times
+in a row and write down the outcomes, either H or T for each flip.
+Question: How many possible sequences of outcomes are there?
+To answer this question, we note that there are 2 possible outcomes on each flip, regardless of the outcomes on the previous flips. Thus, the Rule of Product applies, and we can say there are 2·2·2·2 = 24 = 16 possible sequences of flips. The reason this idea is related to selections and arrangements (beside using the Rule of Product, of course) is that we can also represent these sequences as arrangements of 4 objects from the set {H, T} where objects are allowed to appear more than once. (There is a natural correspondence between {H, T} and [2], so it is like we are arranging 4 objects from [2], where the objects can occur more than once.) This general idea is conveyed by this definition:
+<div class="def-definition" markdown>
+**Definition 8.2.20. Let k, n ∈N. A k-arrangement with repetition from**
+</div>
+[n] is a k-tuple of elements from [n] where elements are allowed to appear more than once. Notice that there is no restriction on k because we are allowing elements to appear multiple times. Before, with k-arrangements without repetition, it wouldn't make sense to choose 10 objects from 8 objects if we couldn't repeat any! Here, though, this is allowed, so k and n can be any natural numbers.
+Proposition 8.2.21. Let k, n ∈N. The number of k-arrangements with repe-
+tition from [n] is given by nk.
+<div class="def-proof" markdown>
+*Proof.* Left for the reader as Exercise 4 in Section 8.2.4.
+</div>
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+You might anticipate a definition and proposition for k-selections with repetition that are similar to the ones for arrangements with repetition. We will discuss these in Section 8.5, but the techniques used to count them are more advanced than the ones we have now, so we will address this later. Summarizing Counting Formulas Let's summarize the standard counting objects and formulas we have defined and derived thus far: Say we have n objects and we want to select k of them. How many ways can we do this? The answer depends on two questions: • Are repeats allowed? • Does order distinguish the outcome? Each of these questions can be answer with Yes or No, and each of the four ways to answer them yields a different formulation of the original question. Repeats? Yes No Yes nk n! (n −k)! Order Matters? No ??? n k  (Note: Sometimes, the roles of n and k are reversed in a problem. Be careful about this! We'll try to stick to these conventions but, in general, the letters aren't important; it's what they represent.) Combinatorics Definitions in terms of Functions Remember there are also equivalent formulations of these counting ideas in terms of functions, and it's helpful to have this in mind. Perhaps representing a problem in terms of functions will help us solve it. At the very least, it's a good mental exercise to work through and make sure you understand the relationship between, for instance, permutations and bijections. We will just state each of these formulations (and some corresponding formulas) and ask you to think about them on your own. Try to see exactly why and how the notions are related; try to explain them to a friend who only knows one of the interpretations; work with your classmates to perhaps come up with a different formulation! • A permutation of n elements is a bijection f : [n] →[n]. There are n! possible bijections from the set [n] to itself.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+• An arrangement of k elements from n elements is an injection f : [k] → [n]. There are n! (n−k)! injections from [k] to [n]. • An arrangement with repetition of k elements from n elements is a function f : [k] →[n]. There are nk possible functions from [k] to [n].
+### 8.2.4 Questions & Exercises
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What is the difference between a selection and an arrangement? (2) How might a permutation be defined in terms of selections and arrangements? (3) What is  10
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+ ? (4) How is a permutation related to the concept of a bijection? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Verify algebraically that  n k  =   n n−k  . (2) Prove Proposition 8.2.16, i.e. prove that n k  = n! k!(n −k)! Do this by adapting the argument we used for counting the number of 5 card hands from a standard deck. (3) Prove Proposition 8.2.18. That is, prove there are n! (n −k)! possible k-arrangements from [n].
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(4) Prove Proposition 8.2.21. That is, prove there are nk possible k-arrangements with repetition from [n].
+## 8.3 Counting Arguments Now we are fully ready to address the motivating problem of this chapter! We will employ the counting techniques we have developed--the Rules of Product and Sum--as well as the formulas for selections and arrangements. Importantly, we will show you some standard counting arguments and proof strategies. We will point out some general guidelines and proof techniques as we go, motivating and implementing these with several examples. These are the types of techniques we will expect you to use in the future.
+### 8.3.1 Poker Hands
+Example 8.3.1. One Pair
+Let's start near the bottom of the ranks and count the number of poker hands that correspond to one pair. We emphasize that we only want to count hands with exactly one pair, and exclude two pairs, three of a kinds, full houses and four of a kinds. This idea will surface soon enough in our counting argument. (It also hints at why counting "high card" hands is actually quite difficult, far more intricate than just selecting five random cards! How can we guarantee that a hand has no matching cards, isn't a straight, and isn't a flush? We will address this question later in this section.) In this example--and in every other example we will explicate here, and every other exercise you will complete (do you get the sense this is important?)--we seek a process wherein we construct an object (in this case, a poker hand) with the desired properties (in this case, having exactly one pair and no other matching cards). By counting the number of options at each step in the process, and ensuring that every desired object can only be obtained via one set of options in the process, we can apply the Rule of Product and identify the number of objects with the desired properties! Here's a useful strategy for coming up with these processes: pretend your friend is holding one of the objects you're counting in his/her hands, but you can't see it. What questions would you ask to identify the particular propeties of the object he/she is holding? These can be yes/no questions or, more often than not, queries about the particular properties the object has. In our specific case, counting one-pair hands, we would likely ask the following questions: (1) "What are the two cards in the pair?" and (2) "What are the three cards not in the pair?" With the answers to those questions, we could fully specify the hand our friend is holding. Unfortunately, it's too hard to count the number of answers to those questions as they are posed. We should be more specific and
+
+
+> 🇨🇳 TODO: 待翻译
+
+

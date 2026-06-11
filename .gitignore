@@ -1,0 +1,14 @@
+site/
+.cache/
+*.pyc
+__pycache__/
+.venv/
+*.egg-info/
+dist/
+
+# Source PDF (too large for git, provide separately)
+*.pdf
+
+# Extraction scripts (utility, not site content)
+extract_pdf.py
+extract_pdf_v2.py

@@ -1,0 +1,186 @@
+/* ============================================================
+   Bilingual Reading Styles — EYAWKTMATH
+   双语对照阅读样式
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   Translation block: blockquote with 🇨🇳 marker
+   中文译文块样式
+   --------------------------------------------------------- */
+.md-content__inner blockquote.translation {
+  position: relative;
+  margin: 0.6em 0 1em 0;
+  padding: 0.8em 1.2em 0.8em 2.4em;
+  border-left: 4px solid var(--md-primary-fg-color--light);
+  border-radius: 4px;
+  background-color: var(--md-default-bg-color--lightest);
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+
+.md-content__inner blockquote.translation::before {
+  content: "🇨🇳";
+  position: absolute;
+  left: 0.6em;
+  top: 0.8em;
+  font-size: 1.1em;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] blockquote.translation {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--md-primary-fg-color);
+}
+
+/* ---------------------------------------------------------
+   Bilingual toggle: hide/show translations
+   双语切换按钮
+   --------------------------------------------------------- */
+.bilingual-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.bilingual-toggle button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.2s, transform 0.2s;
+  opacity: 0.85;
+}
+
+.bilingual-toggle button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.bilingual-toggle button.active {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* When translations are hidden */
+body.hide-translations blockquote.translation {
+  display: none;
+}
+
+/* ---------------------------------------------------------
+   Side-by-side layout for wide screens (optional)
+   宽屏并排布局（可选增强）
+   --------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .bilingual-side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    align-items: start;
+  }
+
+  .bilingual-side-by-side .en {
+    grid-column: 1;
+  }
+
+  .bilingual-side-by-side .zh {
+    grid-column: 2;
+    border-left: 4px solid var(--md-primary-fg-color--light);
+    padding-left: 1em;
+    background-color: var(--md-default-bg-color--lightest);
+    border-radius: 4px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Definition / Theorem / Proof environments
+   定义/定理/证明环境
+   --------------------------------------------------------- */
+.def-theorem,
+.def-definition,
+.def-proof {
+  margin: 1.2em 0;
+  padding: 1em 1.2em;
+  border-radius: 4px;
+}
+
+.def-definition {
+  border-left: 4px solid #4caf50;
+  background-color: rgba(76, 175, 80, 0.08);
+}
+
+.def-theorem {
+  border-left: 4px solid #2196f3;
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+.def-proof {
+  border-left: 4px solid #ff9800;
+  background-color: rgba(255, 152, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .def-definition {
+  background-color: rgba(76, 175, 80, 0.12);
+}
+
+[data-md-color-scheme="slate"] .def-theorem {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+[data-md-color-scheme="slate"] .def-proof {
+  background-color: rgba(255, 152, 0, 0.08);
+}
+
+/* Proof end marker (QED) */
+.def-proof .qed::after {
+  content: " ∎";
+  font-size: 1.1em;
+}
+
+/* ---------------------------------------------------------
+   Section numbering
+   章节编号增强
+   --------------------------------------------------------- */
+.md-content__inner h2 {
+  counter-reset: h3-counter;
+}
+
+.md-content__inner h3 {
+  counter-increment: h3-counter;
+}
+
+/* ---------------------------------------------------------
+   Reading progress bar
+   阅读进度条
+   --------------------------------------------------------- */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+/* ---------------------------------------------------------
+   Print styles
+   打印样式
+   --------------------------------------------------------- */
+@media print {
+  .bilingual-toggle { display: none; }
+  .reading-progress { display: none; }
+  blockquote.translation {
+    border-left: 2px solid #999;
+    background: none;
+  }
+}

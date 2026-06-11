@@ -1,0 +1,36 @@
+/* ============================================================
+   Math rendering styles — MathJax enhancements
+   数学公式渲染增强
+   ============================================================ */
+
+/* Block math: center and add subtle background */
+.MathJax_Display {
+  margin: 1em 0 !important;
+  padding: 0.5em;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Inline math: slight padding for readability */
+mjx-container[justify="true"] {
+  padding: 0 0.15em;
+}
+
+/* Math in dark mode */
+[data-md-color-scheme="slate"] .MathJax svg {
+  fill: #e0e0e0;
+}
+
+/* Definition/theorem math: slightly larger */
+.def-definition .MathJax_Display,
+.def-theorem .MathJax_Display {
+  font-size: 1.05em;
+}
+
+/* Equation numbering (if enabled) */
+.eqno {
+  float: right;
+  margin-left: 1em;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9em;
+}

@@ -1,0 +1,276 @@
+---
+title: Proofs Involving Sets
+---
+
+# Proofs Involving Sets
+
+means that A and B have the same elements in them"---but this is not the type of language/ideas we want to use in a rigorous proof. To prove a statement like A = B, we need you to appeal to the definition of "=" in the context of sets: A = B if and only if A ⊆B and B ⊆A. This is what we mean when we say "satisfy a definition" or "appeal to a definition": to prove that some mathematical object has a certain property, you must demonstrate that the object satisfies the formal definition of that property. If you aren't familiar with that definition, or have forgotten how to state it precisely . . . by all means, go look it up! We realize this is a lot of new information to ingest, and there's nothing wrong with forgetting something when it's still new to you. By doing this, you'll start to internalize these ideas more quickly and more solidly. You'll see how we use the definitions of, for instance, "⊆" and "=" and "∩" and so on in the examples below. For each proposition/lemma, we will end up writing a formal proof, but we will also write a little bit about how we would approach coming up with such a proof. Oftentimes this is the difficult part! We think you'll notice that many of those explanations will amount to just recalling a relevant definition and thinking about what it means and how it applies in the given situation. In a way, that's what a lot of mathematics is. We just allow our definitions we use to get more and more complicated.
+### 3.9.2 Proving "⊆" Recall the definition of subset, because we will use it frequently here:
+<div class="def-definition" markdown>
+**Definition 3.9.1. Given two sets A and B, if every element of A is also an**
+</div>
+element of B, then we say A is a subset of B. Say we are presented with the following problem: Let A be the set . . . and let B be the set . . . Prove that A ⊆B. How can we satisfy the definition of A ⊆B to prove this claim? Yes, the intuitive idea is that "every element of A is also an element of B", but we shouldn't just try to dance around the issue and try to make that sentence our conclusion. Rather, we need to verify that every element of A is also necesarily an element of B. This is where the wonderful phrase "arbitrary and fixed" will come in handy! The Phrase "Arbitrary and Fixed" How can we talk about all possible elements of A all at once? Of course, we might not need to do this if A has only, say, 3 elements; then, we can just work with them one by one. But what if A has 100 elements? Or 1 million? Or infinitely many? How can we prove something about all of them at once in a reasonable way? What we will do is introduce an arbitrary and fixed element of A so we have something to work with. This element will be arbitrary in the sense that
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+we make no extra assumptions about what it is or what properties it has, only that it is an element of A. This element will be fixed in the sense that we will assign it some variable name (usually a letter, like a or x or t or something) and this letter will represent the same object throughout the remainder of our proof. As long as we can prove our goal for this element, then we will have simultaneously proven something about all elements of A. Voil`a!
+Examples
+Let's see this process in action to really get the point across. We'll begin with the statement to be proven, then describe our thought processes in coming up with a proof, and then present our formal, written proof.
+<div class="def-theorem" markdown>
+**Lemma 3.9.2. Let A, B, X be any sets.**
+</div>
+If X ⊆A and X ⊆B, then X ⊆A ∩B. Intuition: Consider drawing a Venn diagram to represent this situation. To make sure the assumptions X ⊆A and X ⊆B both hold true, we need to make the set X "lie inside" both A and B. Accordingly, this means X must lie entirely "inside" where A and B overlap, which is what A ∩B represents. This helps us realize that this statement is, indeed, True. But it doesn't prove anything! To prove the statement, we will introduce an arbitrary and fixed element x ∈X. What do we know about it? Well, we assumed that X ⊆A. The definition of "⊆" means that any element of X is also an element of A. But we know x is an element of X; this means it is also an element of A. How convenient! We can make some similar statements about x and X and B that will tell us x ∈B. What does this mean, overall? Oh hey, the definition of "∩" applies, and tells us x ∈A ∩B. Brilliant! Now, let's write it up.
+<div class="def-proof" markdown>
+*Proof.* Let x ∈X be arbitrary and fixed.
+</div>
+By assumption X ⊆A, so x ∈A, as well, by the definition of ⊆. Similarly, by assumption X ⊆B, so x ∈B, as well. Since x ∈A and x ∈B, this means that x ∈A ∩B, by the definition of ∩. Overall, we have shown that whenever x ∈X, it is also true that x ∈A ∩B. Since x ∈X was arbitrary, we conclude that X ⊆A ∩B. Not so bad, right? Let's try another one, a slightly harder one, even.
+Proposition 3.9.3. Let A and B be any sets. Then, P(A)∩P(B) ⊆P(A∩B).
+Whoa, is this really true? Look back at Problem 6 in Section 3.5, and you'll see an example. This claim states that it is true, in general, and not just for that example. Let's figure out why, and then prove it. Intuition: There are several layers of definitions at work here. In particular, the power set operation might be confusing to you. The key is to just remember
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+that definition: P(A) is the set of all subsets of A. Now, the main claim here is one of a subset relationship: whatever the set P(A) ∩P(B) is (we'll analyze it later, but it's important that you recognize immediately what type of object it is: a set), it is supposed to be a subset of whatever the set P(A ∩B) is. That's it, and it's important to notice that this is really motivates the overarching form of the forthcoming proof. Without even having to think about what P(A) ∩P(B) means, we can be sure that our proof will start with "Let X ∈P(A) ∩P(B) be arbitrary and fixed". This is because we need to satisfy the definition of "⊆" by taking any old element of the set on the left and deducing that it is also an element of the set on the right. This is what we mean by the structure of the proof. What does an element X ∈P(A) ∩P(B) "look like"? It's a set, and it's an element of both P(A) and P(B). This means . . . well, we're actually going to skip ahead and jump right into the formal proof now, because we'll just find ourselves repeating the same words down below anyway. But before going ahead to read ours, we think you should go offand try to write your own proof. Then, when you're done, you can compare and see whether you are correct, whether it has the same steps as ours, whether it's written clearly, and so on. See what you can do!
+<div class="def-proof" markdown>
+*Proof.* Let X ∈P(A) ∩P(B) be arbitrary and fixed.
+</div>
+By the definition of ∩, this means X ∈P(A) and X ∈P(B). Since X ∈P(A), we know X ⊆A, by the definition of power set. Similarly, since X ∈P(B), we know X ⊆B. Since X ⊆A and X ⊆B, we know that X ⊆A ∩B by Lemma 3.9.2 that we just proved. Now, since X ⊆A ∩B, we know X ∈P(A ∩B), by the definition of power set. Since X was arbitrary, we conclude that P(A) ∩P(B) ⊆P(A ∩B). Did you do what we did? Did you also cite the previous lemma? Did you instead prove that result all over again without realizing it? Consider that a lesson learned! One of the major benefits of proving results is that we get to use them in later proofs! There's nothing technically wrong with proving the previous result again in the middle of this proof; it just might save a little bit of time and writing to not do so. If you find yourself working on a problem and thinking, "Hey, this feels familiar . . . ", go back and look for related theorems or lemmas or examples. Maybe you can use some already-acquired knowledge to your advantage.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+### 3.9.3 Proving "=" Double-Containment Proofs Again, we will need to recall the definition of "=" (in the context of sets), since we will be using it frequently here.
+<div class="def-definition" markdown>
+**Definition 3.9.4. We say two sets, A and B, are equal, and write A = B, if**
+</div>
+and only if A ⊆B and B ⊆A. That's it! It's completely built up from a previous definition, that of "⊆" (since that of "⊇" is completely equivalent). Thus, this isn't really a new technique, per se, because it's really a repeated application of a previous technique. That is to say, to prove A = B, we just need to use the technique used in the last subsection and prove A ⊆B and then prove B ⊆A. This technique is so common, in fact, that it is given a name: doublecontainment. When we prove two sets are subsets of each other, both ways, and conclude that they are equal, we call this a double-containment proof.
+Examples
+Let's see an example of this double-containment technique in action.
+<div class="def-theorem" markdown>
+**Lemma 3.9.5. Let A and B be any sets. Then, A −(A ∩B) = A −B.**
+</div>
+Intuition: As usual, we could draw a Venn diagram to convince ourselves of this truth, but that doesn't prove anything. Instead, we will follow a doublecontainment proof. If we take an element x ∈A −(A ∩B), we can apply the definition of "−" first, and then "∩", to deduce something about x. Hopefully, it will tell us that x ∈A −B. Then, if we take an element y ∈A −B, we can apply some definitions to hopefully deduce that x ∈A −(A ∩B). Maybe we aren't sure yet exactly how to do so, but by looking at that Venn diagram and using the definitions, we can surely figure it out. Why don't you try to do it first, then read our proof!
+<div class="def-proof" markdown>
+*Proof.* We will show A −(A ∩B) = A −B by a double-containment proof.
+</div>
+("⊆") First, let x ∈A −(A ∩B) be arbitrary and fixed. By the definition of "−", we know that x ∈A and x /∈A ∩B. This means it is not true that x is an element of both A and B. We already know x ∈A, so we deduce that x /∈B. Thus, x ∈A and x /∈B, so by the definition of "−", we deduce that x ∈A −B. This shows A −(A ∩B) ⊆A −B. ("⊇") Second, let y ∈A −B be arbitrary and fixed. By the definition of "−", this means y ∈A and y /∈B. Now, since y is not an element of B, this means that certainly y is not an element of both A and B. That is, y /∈A ∩B, by the definition of "∩". Since we know y ∈A and y /∈A ∩B, we deduce that y ∈A −(A ∩B). This
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+shows A −B ⊆A −(A ∩B). Overall, a double-containment proof has shown that A −(A ∩B) = A −B. Look at the overall structure of this proof. We knew there would be two parts to it, since it is a double-containment proof, but we were also kind enough to point this out ahead of time for our intrepid reader, and separate those two sections appropriately. It would be technically correct to ignore this and just dive right in to the proof, but this might leave a reader confused. The whole point of a proof is to convince someone else of a truth that you have already figured out, so you might as well make it as easy as possible for them to follow what you're doing. Let's see another example of proving two sets are equal. This one will be a little different, because one of the parts of the double-containment will make use of the complement operation. As a preview, spend a minute now thinking about why the statements A ⊆B and B ⊆A are equivalent (supposing there is some universal set A, B ⊆U). Draw a Venn diagram and try some examples. Try to prove it, even!
+Proposition 3.9.6.
+ x ∈N | x + 8 x ≤6  = {2, 3, 4}
+<div class="def-proof" markdown>
+*Proof.* Let's define A =
+</div>
+ x ∈N | x + 8 x ≤6
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+, and B = {2, 3, 4}. To show A = B, we will show A ⊆B and B ⊆A. First, we will show B ⊆A. We can consider each of the three elements separately, and verify that they satisfy the defining inequality of B: 2 + 8 2 = 6 ≤6 3 + 8 3 = 17 3 ≤6 4 + 8 4 = 6 ≤6 Since 2, 3, 4 ∈N, we deduce that 2 ∈A and 3 ∈A and 4 ∈A, so B ⊆A. Next, to show A ⊆B, we will show that B ⊆A, where the complement is taken in the context of N. That is, we will show that all of the natural numbers 1, 5, 6, 7, . . . are not elements of A. To show this, we will verify that the defining inequality of A is not satisfied by any of those elements. The first two cases can be considered easily: 1 + 8 1 = 9 ̸≤6 and 5 + 8 5 = 33 5 ̸≤6. To consider the other cases, we can take an arbitrary and fixed x ∈N with x ≥6. Notice, then, that x + 8 x ≥6 + 8 x > 6, since 8 x > 0.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+This shows that only 2,3,4 satisfy the defining inequality of A. Overall, by a double-containment argument, we have proven that A = B. Think carefully, again, about why the method employed in the second half of the proof is valid. (It is actually an instance of using the contrapositive of a conditional statement, but we haven't yet defined any of those terms; we will do so in the next chapter on logic.) Let's see another example of proving set equality. This one is only slightly different in that we are proving some set is actually the empty set and, to do so, we will prove that it has no elements.
+Proposition 3.9.7. For every n ∈N, define Sn = N −[n]. Then
+\ n∈N Sn = ∅ We suggest you play around with this statement first, if it doesn't make sense. For instance, try identifying the element of the sets S1, and S1 ∩S2, and S1 ∩S2 ∩S3, and so on. Try to come up with a candidate element of the big intersection on the left, and then figure out why it actually is not an element of that set. After that, try to figure out a formal proof and write it out; then, look at ours below!
+<div class="def-proof" markdown>
+*Proof.* Let's define T =
+</div>
+\ n∈N Sn, so we can refer to it later. To prove T = ∅, we will show that T does not contain any elements. Notice that T is formed by an intersection of many sets of natural numbers, so it's clear that the only possibilities for elements of T are natural numbers. Consider an arbitrary and fixed x ∈N. We want to show that x /∈T. Observe that x ∈[x] = {1, 2, . . . , x}. Thus, x /∈N −[x], by the definition of "−". By definition, T contains the elements that belong to all of the sets of the form N −[n]. We have identified (at least) one set, N −[x], of the intersection such that x does not belong to that set. Accordingly, x cannot be an element of T, since it does not belong to all such sets. Therefore, x /∈T. Since x ∈N was arbitrary, we have proven that T contains no natural numbers as elements, and therefore it has no elements at all. Summary: Let's make one more statement about why this technique works. We showed that there are no elements of T, i.e. that T ⊆∅. This completes the entire process, because it is trivially true, as well, that ∅⊆T. (This claim holds for any set.) Thus, one of the parts of the double-containment argument is already achieved, and we can conclude T = ∅. Alright, one more example. We want to include this one because it gives us further practice in working with indexed set operations. You will find many
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+similar problems in the exercises for this section. We encourage you to work on as many of them as you can!
+Proposition 3.9.8. For every n ∈N, define An =
+ x ∈R | 0 ≤x < 1 n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+. Then, \ n∈N An = {0} Think about what this claim means. Draw a picture of the An sets on a number line. What does the "T" intersection accomplish? Why does it work out that 0 is an element of that intersection? Why is it the only element? The definition of T will be crucial in this proof, so let's recall the definition here. The key phrase is for every:
+<div class="def-definition" markdown>
+**Definition 3.9.9. The intersection of a collection of sets Ai indexed by the set**
+</div>
+I is \ i∈I Ai = {x ∈U | x ∈Ai for every i ∈I} where we assume there is a set U such that Ai ⊆U for every i ∈I. That is, remember that the indexed intersection of several sets collects together the elements that belong to all of the constituent sets. Thus, in our proof below, you will see that we need to prove that (1) 0 is, indeed, an element of all of the An sets, and (2) no other number is an element of all of them, i.e. for every nonzero real number, we can identify at least one of the An sets such that the number is not an element of that set.
+<div class="def-proof" markdown>
+*Proof.* First, we will prove that
+</div>
+{0} ⊆ \ n∈N An This requires us to show that 0 ∈An for every n ∈N. Let n ∈N be arbitrary and fixed. Notice that the inequality 0 ≤0 < 1 n does, indeed hold. (Note: You might be worried because "in the limit" 0 is not less than every fraction
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+n "all at once", but that is not the point! Think of it this way: Is 0 ∈A1? Yes, 0 ≤0 < 1. Is 0 ∈A2? Yes, 0 ≤0 < 1 2. Is 0 ∈A3? Yes, 0 ≤0 < 1 3. And so on. The inequality holds for every n ∈N individually, so 0 is an element of every such set. If you weren't worried about this, never mind! Move right along!) Thus, 0 ∈An for every n ∈N, and so 0 ∈ \ n∈N An, by the definition of "T". This shows that {0} ⊆ \ n∈N An.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Second, we will prove that \ n∈N An ⊆{0} We will do this by considering the complements of these sets, in the context of R. Specifically, we will show that {0} ⊆ \ n∈N An which means we will show that every nonzero real number is not an element of every An. Let x ∈R be arbitrary and fixed, with the property that x ̸= 0. Either x > 0 or x < 0, then, so let's consider each case separately. Case 1: Suppose x > 0. Consider the number 1 x ∈R. Since the natural numbers are infinite and unbounded in R, we can choose a natural number M that is bigger than that real number. That is, we can choose M ∈N such that M > 1 x. (Note: Think about why this works. We haven't proven that N is infinite, or that the numbers "go on forever" along the number line of R, but we hope these ideas make sense to you, intuitively.) Take such an M ∈N with M > 1 x. Since x > 0, we can multiply the inequality on both sides by x; since M > 0 (so
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+M > 0) we can then multiply again by
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+M . This yields x >
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+M . Accordingly x /∈AM, because −1 M < x <
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+M is False. Since x /∈AM, then surely x is not an element of all such sets. Therefore, x /∈ \ n∈N An. Case 2: Next, suppose that x < 0. We will make a similar argument as the previous case; this time, we will just consider −x, since −x > 0. Using the same logic as above, we can surely identify a natural number M ∈N that satisfies M >
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+−x = −1 x. Manipulating the inequality tells us that x < −1 M . Thus, x /∈AM, and so x /∈ \ n∈N An. Therefore, we have shown that any x ∈R with x ̸= 0 is not an element of at least one of the An sets, so any such x is not an element of their intersection. Thus, {0} ⊆ \ n∈N An, and we have proven the claim by a double-containment argument. This proof is harder than the other ones, we think, so make sure to read it a couple times to make sure you see what happens in every step. In particular, think about how we came up with the step where we chose M ∈N that satisfies M > 1 x. Do you think we magically intuited that choice? Or do we think we recognized that we wanted x <
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+M to be true for some M, and manipulated the inequality backwards to figure out how to make that happen?
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+### 3.9.4 Disproving Claims Motivating Example Consider the following proposed claim: For any sets F, G, H, if F ⊆G ∪H, then either F ⊆G or F ⊆H. Is this claim True? If so, how would we prove it? Well, we'd take an arbitrary and fixed element x ∈F. Since F ⊆G ∪H, this would tell us x ∈G ∪H, as well. Accordingly, either x ∈G or x ∈H. Is that it? Are we done with the proof? We hope you recognize that this does not work! In particular, we have not satisfied the definition of "⊆" at the end. If our goal is to prove "either F ⊆G or F ⊆H", then we should conclude that one or the other of those claims holds: that every element of F is also an element of G, or else every element of F is also an element of H. What we found was that every element of F is itself either an element of G or H, but we cannot decide collectively that all elements of F are elements of one or the other, G or H. Read through these last two paragraphs again to make sure you follow that logical observation. It might be easy to actually write up a "proof" for this claim and not realize that you've made a false step! Identifying Errors This recognition of an error is one of the skills we are developing, and it will be helpful in several ways. You'll notice that many exercises (some thus far, but many more as we move onwards) ask you to find the flaw in a proposed "proof" of some claim. By pointing out that there exists a flaw, we are perhaps helping you to find it (or them, as the case may be). Reading a proposed proof for logical, factual, and clarity errors is an essential skill. What's more, this careful reading of others' writing will necessarily make you a more critical reader of your own writing, and it will help you to catch potential errors like the one in the preceding paragraphs. Do not worry if you didn't catch it; now that you've seen it, you'll be on the lookout for similar mistakes in the future! Like we said, as well, this skill is ongoing development, and by the end of this book, you will be a great reader of mathematical proofs, as well as a great writer. Counterexamples So, now what do we do? We just recognized that our "proof" above did not work. Does this mean the claim is actually False? Actually, all this means (so far) is that our attempt at a proof failed. Maybe some other logical route will magically take us to the elusive conclusion. Or, maybe the claim really is False. How could we show that? Think about the logical form of the claim: it says some statement holds true for any sets F, G, H. It says that the assumption F ⊂G ∪H will always imply, necessarily,
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+that F ⊆G or F ⊆H. To show that this does not always happen, we need to find what's called a counterexample. We will discuss all of these ideas again in the next chapter, when we formalize logic, but what you need to know for now is this: a counterexample is a specific, detailed, and described example that illustrates how a statement about "every . . . " or "any . . . " or "all possible . . . " does not actually hold for every case. A counterexample amounts to disproving a statement that a whole class of objects has a certain property, by exhibiting one object in that class without that property.
+Example
+Let's see how the process of finding and stating a counterexample would work for our example above.
+Example 3.9.10. Recall the claim:
+For any sets F, G, H, if F ⊆G ∪H, then either F ⊆G or F ⊆H. This claim is supposed to work for any sets F, G, H, so when we describe our counterexample, we better describe exactly what those three sets are going to be. We can't just explain our way around the issue and argue about how there might exist three sets out there with a certain property. Nope, we have to tell a reader exactly what they are by explicitly defining them. This is what the first line of our disproof of the claim will be, but we can't just jump right into that, because we don't know how to define them yet! This is where the fun/work is: we need to play around with the desired properties of these sets to help us come up with an example. Recall that we want these sets to satisfy some properties: we should make sure the assumption F ⊆G ∪H holds True, but we want the conclusion---that either F ⊆G or F ⊆H---to be False. What does this mean? Well, we think you'll agree that, logically speaking, the "opposite" or "negation" of a statement like that would be "both F ̸⊆G and F ̸⊆H". (This concept of logical negation will return in the next chapter; for now, we think you can understand it by applying the logical principles that guide your daily life. Soon, we will formalize this idea.) We now have a specific goal: to find three sets F, G, H that satisfy all three of the following: F ⊆G ∪H F ̸⊆G F ̸⊆H One thing left to consider is what "̸⊆′′ means. We have a definition of "⊆", so what is the "opposite" or "negation" of that? For F ⊆G to be true, we require that every element of F is also an element of G; so, if this fails, then we must have at least one element of F that is not an element of G. The same
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+observation applies to F ̸⊆H. Now, we can restate our goals in a helpful way, by applying definitions: Every element of F is an element of either G or H There is at least one element of F that is not an element of G There is at least one element of F that is not an element of H This will be incredibly helpful in finally finding our counterexample! We've boiled down all the essential parts of the claim and have restated the properties in a more intuitive way. The rest of the work is to just play around on some scratch paper and see what we can come up with. One approach is to draw a sort of "empty" Venn diagram, for F and G and H and their potential "overlaps", and then fill in enough elements so that the three above properties are satisfied. The first condition requires the set F to "lie inside" both G and H, entirely; but, the second and third conditions require the existence of two elements of F, one of whom is not an element of G and the other of whom is not an element of H. That's all we need! A simple example, you might say, but an effective one, we say. Let's jump in and write up our disproof now:
+<div class="def-proof" markdown>
+*Proof.* The following claim is False:
+</div>
+For any sets F, G, H, if F ⊆G ∪H, then either F ⊆G or F ⊆H. We will disprove it with a counterexample. Define F = {1, 2} and G = {1} and H = {2}. Notice that G∪H = {1, 2}. Since F = G∪H, then certainly F ⊆G∪H. Thus, the hypothesis of the claim holds true. However, notice that 2 ∈F but 2 /∈G. Thus, F ̸⊆G. Likewise, notice that 1 ∈F but 1 /∈H. Thus, F ̸⊆H. Therefore, the claim is False. One important lesson from this example is the following: Tour counterexample does not have to be the most interesting or complicated one, nor do you somehow need to characterize all possible counterexamples. We just need to see one counterexample, and we need to see how it works. That's it! This is exactly what we did in the above proof: we defined all of the important objects (the three sets F, G, H), and then we pointed out and described all the relevant properties they had. We did not leave it to the reader to check that the counterexample works; we showed them the details. We did not argue that some such sets exist somewhere out there in the universe; we defined them explicitly. This is important, and we expect your counterexamples to have similar proof structure to ours above. Most of the work will go on "behind the scenes", before
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+the proof starts, when you try to come up with your examples. Once you have it, though, just write it up much like we did.
+### 3.9.5 Questions & Exercises
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What is the definition of ⊆? How do we use it to prove A ⊆B? (2) What does it mean for two sets to be equal? (3) What is a double-containment proof? (4) What is a counterexample? (5) Suppose A, B, U are sets and A, B ⊆U. Why can we prove B ⊆A to prove that A ⊆B? Try to convince a friend that this is a valid technique. Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) First, prove the following claim: For any sets A, B, C, the subset relationship A −(B −C) ⊆(A − B) ∪C holds. Second, find a counterexample to the claim that those sets are actually always equal. (2) Suppose A, B, C are sets and A ⊆B. Prove that A × C ⊆B × C. (3) Suppose A ⊆C and B ⊆D. Prove that A × B ⊆C × D. (4) Let A = {x ∈R | x2 > 2x + 8} and B = {x ∈R | x > 4}. For each of the following claims, either prove it is correct or provide a counterexample to show it is False. (a) A ⊆B (b) B ⊆A
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(5) Let A, B, U be sets with A, B ⊆U. Prove that A −B = A ∩B by a double-containment argument. (6) Let S = {x ∈R | −2 < x < 5} and T = {x ∈R | −4 ≤x ≤3}. What is S ∩T, in the context of R? Identify a set and then prove it is correct, using a double-containment argument. (7) Prove the following claim: If A ⊆B, then P(A) ⊆P(B). (8) For every n ∈N let Sn =  x ∈R | −1 n < x < 1 n
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+. Prove that \ n∈N Sn = {0} (9) Let I = {x ∈R | 0 < x < 1}. For every x ∈I, define Sx = {y ∈R | x < y < x + 1}. Prove that [ x∈I Sx = {z ∈R | 0 < z < 2} (10) For every n ∈N, define the sets An and Bn by An =  x ∈R | 0 ≤x < n −1 n  Bn =  y ∈R | −1 n < y < 1  Prove the following set equality by a double-containment argument: [ n∈N An = \ n∈N Bn
+## 3.10 Summary This was our first foray into some abstract conepts and results. We introduced the notion of a set, motivating it via several examples. We discussed the key relationships of being an element and being a subset, and pointed out how important is to distinguish the two! (Keeping the "Bag Analogy" in mind might help you in this regard.) We also discussed some notation, included setbuilder notation. As we continue to move into more abstract mathematics, using correct, formal notation will be more important than ever to ensure that we are properly expressing our ideas. One key idea that came up is the notion of the power set, which represents a place where the element and subset relationships are both at work. A discussion of set operations showed us how to combine sets and create new ones. All of these operations will be used throughout the remainder of our work in this book. We also showed how these operations can be indexed. This allows
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+us to use shorthand to write a union of several sets using just a few definitions and symbols. Again, these ideas will re-appear quite often throughout our work, so we will present many exercises relating to these ideas; we encourage you to attempt and work through as many as you can! We saw a proof technique relating to sets: namely, double-containment arguments. This is a fundamental proof technique in mathematics. You will see us use it often, and you will find it appearing in other courses and studies, as well. A couple of discussions came up that allowed us to touch upon some profound ideas in abstract set theory, although we couldn't completely dive into them. For one, Russell's Paradox showed us that there is no "set of all sets". For another, we talked about how the natural numbers can be formally defined in terms of sets. In practice, we won't use this definition, and will continue to rely on our intuitions about N. However, we hope it was interesting and somehow informative to read such a discussion.
+## 3.11 Chapter Exercises These problems incorporate all of the material covered in this chapter, as well as any previous material we've seen, and possibly some assumed mathematical knowledge. We don't expect you to work through all of these, of course, but the more you work on, the more you will learn! Remember that you can't truly learn mathematics without doing mathematics. Get your hands dirty working on a problem. Read a few statements and walk around thinking about them. Try to write a proof and show it to a friend, and see if they're convinced. Keep practicing your ability to take your thoughts and write them out in a clear, precise, and logical way. Write a proof and then edit it, to make it better. Most of all, just keep doing mathematics! Short-answer problems, that only require an explanation or stated answer without a rigorous proof, have been marked with a . Particularly challenging problems have been marked with a ⋆. Problem 3.11.1.  For each of the following statements about elements and subsets, state whether it is True or False. Be prepared to defend your choice to a skeptical friend! Throughout this problem, we will use the following definitions: A = {x ∈Z | −3 ≤x ≤3} B = {y ∈Z | −5 < y < 6} C =  x ∈R | x2 ≥9
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+D = {x ∈R | x < −3} E = {n ∈N | n is even }
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(a) A ⊆B (b) C ∩D = ∅ (c) 4 ∈E ∩B (d) {4} ⊆A ∩E (e) 10 ∈C −D (f) A ∪B ⊇C (g) 3 ∈A ∩C (h) 0 ∈(A −B) ∪D (i) E ∩C ⊆Z (j) 0 /∈B −C Problem 3.11.2.  Let m, n ∈N. Suppose m ≤n. Explain why P([m]) ⊆ P([n]). Problem 3.11.3. Look back at Problem 7 in Section 3.9. We proved that whenever two sets satisfy A ⊆B, then they must also satisfy P(A) ⊆P(B). Read through that proof, too, to remind yourself of the details. Now, does this claim "work the other way"? That is, suppose P(A) ⊆P(B). Can you prove that A ⊆B is also true? Or can you find an example where this is not true? Problem 3.11.4. Rewrite the following sentences using the "set-builder notation" to define a set. Then, if possible, write out all the elements of the set, using set braces; if not possible, explain why not and write out three example elements of the set. (a) Let A be the set of all natural numbers whose squares are less than 39. (b) Let B be the set of all real numbers that are roots of the equation x2 −3x− 10 = 0. (c) Let C be the set of pairs of integers whose sum is non-negative. (d) Let D be the set of pairs of real numbers whose first coordinate is positive and whose second coordinate is negative and whose sum is positive. Problem 3.11.5. Define the following sets: A =  x ∈R | x2 −x −12 > 0
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+B = {y ∈R | −3 < y < 4} Prove that A = B.
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Problem 3.11.6. Let X be the set of students at your school. Identify a property P(x) such that A := {x ∈X | P(x)} is a proper subset of X and A ̸= ∅. Then, identify a property Q(x) such that B := {x ∈X | Q(x)} is a proper subset of A (i.e. B ⊂A) and B ̸= ∅. Problem 3.11.7. Let A, B, and C be sets with A ⊆C and B ⊆C. (a) Draw a Venn diagram for the sets A ∩B and (A ∩B). (b) Prove that A ∩B ⊆(A ∩B). (c) Define specific sets A, B, C such that the containment is strict, i.e. A∩B ⊂ (A ∩B) (d) Define specific sets A, B, C such that A ∩B = (A ∩B). Problem 3.11.8. Let S =  (m, n) ∈Z × Z | m = n2 . How does S compare to the set T = {(m, n) ∈Z × Z | n = m2}? If one is a subset of the other, prove it. If not, provide examples to show this. Problem 3.11.9. Let (a, b) be a point on the Cartesian plane, i.e. (a, b) ∈R×R. Let ε (the Greek letter epsilon) be a nonnegative real number, i.e. ε ∈R and ε ≥0. Let C(a,b),ε be the set of real numbers that are "close" to (a, b), defined as follows: C(a,b),ε = n (x, y) ∈R × R | p (x −a)2 + (y −b)2 < ε o 1. Come up with a geometric description of the set C(a,b),ε. What happens to the set as we change a and b? What happens as we change ε? 2. What is C(0,0),1 ∩C(0,0),2? 3. What is C(0,0),1 ∪C(0,0),2? 4. What is C(0,0),1 ∩C(2,2),1? Problem 3.11.10. Consider the (false!) claim that [ n∈N P([n]) = P(N) (a) What is wrong with the following "proof" of the claim? Point out any error(s) and explain why it/they ruin the "proof". First, we will show that [ n∈N P([n]) ⊆P(N)
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Consider an arbitrary element X of the union on the left. By the definition of an indexed union, we know there exists some k ∈N such that X ⊆[k]. Since [k] ⊆N, and X ⊆[k], we deduce that X ⊆N. Thus, X ∈P(N). Second, we will prove the "⊆" relationship holds in the other direction, as well. Consider an arbitrary Y ⊆N. By the definition of subset, and the fact that Y is a set of natural numbers, we know there exists some ℓ∈N such that Y ⊆[ℓ]. By the definition of indexed union, we know Y ∈ [ n∈N P([n]). Since we have shown ⊆and ⊇, we know the two sets are equal. (b) Disprove the claim by defining an explicit example of a set S such that S ∈P(N) and S /∈ [ n∈N P([n]) Problem 3.11.11. Let A = [3] × [4]. (Remember that [n] = {1, 2, 3, . . . , n}.) Let B = {(x, y) ∈Z × Z | 0 ≤3x −y + 1 ≤9}. (a) Prove that A ⊆B. (b) Is it true that A = B? Why or why not? Prove your claim. Problem 3.11.12. Let n ∈N be a fixed natural number. Let S = [n] × [n]. Let T be the set T =  (x, y) ∈Z × Z | 0 ≤nx + y −(n + 1) ≤n2 −1
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Prove that S ⊆T but S ̸= T. Problem 3.11.13. Suppose A and B are sets. (a) Prove that P(A) ∪P(B) ⊆P(A ∪B) (b) Provide an explicit example of A and B where the containment in (a) is strict. Problem 3.11.14. Let S and T be sets whose elements are sets, themselves. Suppose that S ⊆T. Prove that [ X∈S X ⊆ [ Y ∈T Y
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+Problem 3.11.15. Let A, B, C, D be sets. (a) Prove that (A × B) ∪(C × D) ⊆(A ∪C) × (B ∪D) (b) Provide an explicit example of A, B, C, D where the containment in (a) is strict. Problem 3.11.16. Let A, B, C be sets. Prove that A × (B ∩C) = (A × B) ∩(A × C) and A × (B −C) = (A × B) −(A × C) Problem 3.11.17. Let X, Y, Z be sets. Prove that (X ∪Y ) −Z ⊆X ∪(Y −Z) but equality need not hold. Problem 3.11.18. Find an example of a set S such that S ∈P(N) and S contains exactly 4 elements. Then, find an example of a set T such that T ⊆P(N) and T contains exactly 4 elements. Problem 3.11.19. Find examples of sets R, S, T such that R ∈S and S ∈T and R ⊆T but R /∈T. Problem 3.11.20. Identify what each of the following sets are, and prove your claims. \ n∈N [n] and [ n∈N [n] Problem 3.11.21. Let I = {−1, 0, 1}. For each i ∈I, define Ai = {i −2, i − 1, i, i + 1, i + 2} and Bi = {−2i, −i, i, 2i}. (a) Write out the elements of [ i∈I Ai. (b) Write out the elements of \ i∈I Ai. (c) Write out the elements of [ i∈I Bi. (d) Write out the elements of \ i∈I Bi. (e) Use your answers above to write out the elements of [ i∈I Ai ! − [ i∈I Bi ! . (f) Use your answers above to write out the elements of \ i∈I Ai ! − \ i∈I Bi ! .
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+(g) Write out the elements of [ i∈I (Ai −Bi). How does this compare to your answer in (e)? (h) Write out the elements of \ i∈I (Ai −Bi). How does this compare to your answer in (f)? Problem 3.11.22. In this problem, we are going to "prove" the existence of the negative integers! We say "prove" because we won't really understand what we've done until later but, trust us, it's what we're doing. Because of this goal, you cannot assume any integers strictly less than 0 exist, so your algebraic steps, especially in part (d), should not involve any terms that might be negative. That is, if you consider an equation like x + y = x + z we can deduce that y = z, by subtracting x from both sides, since x −x = 0. However, if we consider an equation like x + y = z + w we cannot deduce that x −z = w −y. Perhaps y > w, so w −y does not exist in our context . . . Let P = N × N. Define the set R by R = {((a, b), (c, d)) ∈P × P | a + d = b + c} (a) Find three different pairs (c, d) such that ((1, 4), (c, d)) ∈R. (b) Let (a, b) ∈P. Prove that ((a, b), (a, b)) ∈R. (c) Let ((a, b), (c, d)) ∈R. Prove that ((c, d), (a, b)) ∈R, as well. (d) Assume ((a, b), (c, d)) ∈R and ((c, d), (e, f)) ∈R. Prove that ((a, b), (e, f)) ∈R, as well.
+## 3.12 Lookahead Now that we've introduced sets, defined them, seen many examples, and talked about operations and how to manipulate sets, it's time to move on to logic. We've already previewed some important logical ideas, specifically in Section
+## 3.9 on how to write proofs about sets. In the next Chapter, we will make all
+of these logical ideas more formal, explicit and rigorous. We will develop some
+
+
+> 🇨🇳 TODO: 待翻译
+
+
+notation and grammar that will help us express logical ideas more precisely and concisely. We will use these to express our mathematical thoughts in a common language and communicate our ideas with others. In short, we will be able to confidently talk and write about mathematics!
+
+
+> 🇨🇳 TODO: 待翻译
+
+
