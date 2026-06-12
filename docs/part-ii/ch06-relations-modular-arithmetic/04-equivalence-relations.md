@@ -9,13 +9,16 @@ Example 6.4.3. Let S = N −{1} and define (x, y) $\in$R ⇐$\Rightarrow$x and y
 common factor (that is not 1, i.e. strictly greater than 1). Let's determine if this relation is, in fact, an equivalence relation by trying to prove that it is one, and seeing if the argument breaks down anywhere. If it doesn't, then we have succeeded, and if it does, then we can use that knowledge to construct a counterexample. First, we notice that (x, x) $\in$R because x and x have a common factor, x. Also, by the definition of S we have x > 1, so R is reflexive. Second, we notice that if (x, y) $\in$R, then x and y have a common factor, some k > 1. Then, certainly, switching the letters in the pair doesn't alter this fact: y and x have a common factor k > 1, so (y, x) $\in$R, as well, and R is symmetric. Third, let's assume (x, y) $\in$R and (y, z) $\in$R. This means x and y have a common factor, call it k > 1, and y and z have a common factor ℓ> 1. Can we use this to find a common factor of x and z? Not necessarily, it seems . . . There is no way we can determine that k and ℓhave a common factor, for instance. What if k = 2 and ℓ= 3? Can we identify some values of x, y, z that achieve these common factors, and then verify that x and z have no common factor? Sure, let's consider x = 2 and y = 6 and z = 9. Then (2, 6) $\in$R and (6, 9) $\in$R but (2, 9) /$\in$R. This is a counterexample that shows that the transitive property is False for this relation, so it is not an equivalence relation.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **等价关系（Equivalence Relations）** 等价关系是一种同时满足自反性、对称性和传递性的关系。它是数学中最基本的关系类型之一，将集合划分为不相交的等价类。
 
 
 We do recommend this method for identifying whether or not a given relation is an equivalence or order relation. Just go through each of the relevant properties---reflexivity, symmetry, transitivity, whatever else you might consider---and try to prove them. If you succeed, that's it! If you struggle to prove one of them, use your efforts to identify the problem and see why the property fails. Use this to construct a counterexample for that property. Motivation Think about that first example again that we mentioned in this section, where x R y ⇐$\Rightarrow$⌊x⌋= ⌊y⌋. Notice that each real number is related to an integer, specifically the integer we get by rounding down. For instance, 1.5 R 1 and π R 3 and −1.5 R −2. Furthermore, any two real numbers that are related to the same integer are related to each other. For instance, 3.5 R 3 and π R 3, and 3.5 R π. Because of these observations, we claim that we can "package" all of the real numbers that satisfy 0 $\leq$x < 1 into one "cluster" and represent them by a single element of that cluster, say 0. Likewise, we can take all of the real numbers that satisfy 1 $\leq$x < 2 and package them into one "cluster" represented by 1. And so on. We didn't have to choose 0 and 1 as the representative elements. We could very well have chosen 1 2 and 3 2 instead, for example. But the point is that those "clusters" of real numbers are all related to each other within the same cluster, and we can represent each of those clusters by one representative element. This observation will lead us directly into the next section, where we will discuss how to formally describe these "clusters". These are called equivalence classes. We will then investigate many examples and ascertain some general properties. Before doing that, we strongly recommend that you play around with some of the examples we have seen already, looking for these kinds of "clusters" and "representatives". For instance, take the relation R defined on Z by $\forall$x, y $\in$Z. x ⋆y ⇐$\Rightarrow$3 | x −y It is an equivalence relation. What are those "clusters" in this case? Can you identify all of them? How many elements are in each cluster? Can you choose representatives? Try doing the same work with another equivalence relation, like the "was born in the same month" relation on the set of students in your class. (This is an equivalence relation, as you'll realize after a moment's thought.) A similarly instructive task is to take a non-equivalence relation and try to figure out why/how it does not have this "cluster" property. For example, take the "divides" relation on Z. Where does it fail to have this property? Does it "come close" at all? Essentially, do some exploring! It will really help to solidify your understanding of the properties of relations and will make the next section easier to follow.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **定义** 集合 $S$ 上的关系 $R$ 称为**等价关系（Equivalence Relation）**，若它满足：
+- **自反性（Reflexivity）**：$\forall x \in S.\, xRx$
+- **对称性（Symmetry）**：$\forall x, y \in S.\, xRy \Rightarrow yRx$
+- **传递性（Transitivity）**：$\forall x, y, z \in S.\, (xRy \wedge yRz) \Rightarrow xRz$
 
 
 ### 6.4.2 Equivalence Classes
@@ -33,19 +36,19 @@ Example 6.4.5. Let's return to the original motivating example from this section
 We define the relation R on R by $\forall$x, y $\in$R. (x, y) $\in$R ⇐$\Rightarrow$⌊x⌋= ⌊y⌋ Let's think about a particular equivalence class, using the definition we just made. Specifically, let's consider [0]R = {y $\in$R | (0, y) $\in$R} = {y $\in$R | ⌊0⌋= ⌊y⌋} = {y $\in$R | ⌊y⌋= 0} = {y $\in$R | 0 $\leq$y < 1} By using the definition of [0]R from above, the definition of R, and some knowledge of what ⌊y⌋means, we have figured out that the equivalence class of 0 under the relation R is this particular interval, between 0 (inclusive) and 1 (exclusive). We can picture that interval like this:
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** 相等关系 $=$ 是任何集合上的等价关系：自反（$x=x$），对称（$x=y \Rightarrow y=x$），传递（$x=y \wedge y=z \Rightarrow x=z$）。
 
 
 Similarly, we could find that [1]R = {y $\in$R | (1, y) $\in$R} = {y $\in$R | 1 $\leq$y < 2} and picture that set like this:
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** "同余模 $n$"关系 $\equiv_n$ 是 $\mathbb{Z}$ 上的等价关系：自反（$a \equiv a \pmod{n}$），对称（$a \equiv b \Rightarrow b \equiv a \pmod{n}$），传递（$a \equiv b$ 且 $b \equiv c$ $\Rightarrow$ $a \equiv c \pmod{n}$）。
 
 
 -1 -2 Notice that these two sets are disjoint (they don't overlap) because the first one does not include 1 as an element, but the second one does. Also, notice that every real number belongs to exactly one interval like this. For example, we can say things like π $\in$[3]R, e $\in$[2]R, −1.5 $\in$[−2]R, 1 2 $\in$[0]R However, notice that the definition of equivalence class doesn't say that we have to use exactly one element to represent that class. For example, we can say [0]R = 1
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **反例** "$\leq$"不是等价关系——不满足对称性（$1 \leq 2$ 但 $2 \not\leq 1$）。"$\neq$"也不是——不满足自反性（$x \neq x$ 为假）且不满足传递性（$1 \neq 2$ 且 $2 \neq 1$ 但 $1 \neq 1$ 为假）。
 
 
  R because the two sets are equal; they contain the same elements, because any real number whose "floor" is 0 is related to 0 (under R), and therefore also related to 1 2 under R (because its floor is also 0). Play around with this example some more and try to convince yourself that this partitioning property really works here. In the next part, we will formally prove this fact in its full generality, with your help! Because it will be a somewhat abstract discussion, we encourage you to get your hands dirty working with actual examples like this one. Try to define an equivalence relation on another set. What are its equivalence classes? Do you see why they form a partition? Equivalence Classes Partition the Set Now that we've explored the idea that equivalence classes partition a set, let's formalize this idea. We'll need to make a definition, then we can prove a theorem! The theorem will be, essentially, an "if and only if" style theorem, and we will prove one direction, leaving the other for you as an exercise.
@@ -55,7 +58,7 @@ Similarly, we could find that [1]R = {y $\in$R | (1, y) $\in$R} = {y $\in$R | 1 
 equivalence classes (under R), denoted by A/R, is A modulo R. That is, A/R = {[x]R | x $\in$A} Equivalently, A/R = {X $\subseteq$A | $\exists$x $\in$A. X = [x]R}
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **等价类（Equivalence Class）** 设 $R$ 是 $S$ 上的等价关系，$x \in S$。$x$ 的等价类定义为：$[x]_R = \{y \in S \mid yRx\}$。即所有与 $x$ 有关系 $R$ 的元素的集合。
 
 
 Let's look at a few examples to get a handle on these ideas before we prove an important result. In each example, let's convince ourselves that we have an equivalence relation, examine the equivalence classes, and think about what the modulo operation does.
@@ -65,7 +68,7 @@ Example 6.4.8. Define the relation B on the set of all people S by saying (x, y)
 B ⇐$\Rightarrow$x and y were born in the same month. Then, (Leonhard Euler,Henri Poincar´e) $\in$B and (Paul Erd¨os,Emmy Noether) $\in$B, for example. Why is this
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** 在 $\equiv_3$ 下，$[1]_{\equiv_3} = \{\ldots, -5, -2, 1, 4, 7, \ldots\}$。注意 $[1] = [4] = [7]$——同一等价类的不同代表元给出相同的等价类。
 
 
 an equivalence relation? Well, any person has the same birth month as themself (reflexivity), and if any two people share a birth month then they . . . (duh) share a birth month (symmetry), and if x and y share a birth month and y shares that month with z then x and z share that same birth month (transitivity). (Note: in general, a relation defined by "has the same . . ." or "is the same . . ." will be an equivalence relation.) Equivalence classes under this relation correspond to months! Since we are characterizing people by which month they were born in, an equivalence class is a set of people all born in the same month. For instance, Paul Erd¨os and Emmy Noether were both born in March, so we can say Emmy Noether$\in$[Paul Erd¨os]B. This equivalene class corresponds to the month of March, but notice that it is defined in terms of a particular element of the set S (of all people). If we define M to be the set of all people ever born in the month of March, then we can say M = [Paul Erd¨os]B. Taking these observations all together, we can say this: The set of people modulo birth month, written S/B, consists of 12 sets, each corresponding to a different month and containing all of the people born in that month.
@@ -73,13 +76,13 @@ Example 6.4.9. Consider the set R × R of all ordered-pairs of real numbers. We
 define a relation R on R×R by declaring when two pairs are related. Specifically, let's say that ((x, y), (u, v)) $\in$R ⇐$\Rightarrow$x = u That is, two pairs of points on the plane are related, under R, whenever their first coordinates are the same. Think about why this is an equivalence relation: geometrically speaking, the relation only cares about the vertical line, parallel to the y-axis, that a point lies on. With this in mind, you can easily "see" and explain why R is an equivalence relation, while proving that rigorously just takes a little bit more writing and notation. (Try it!) This also lets us easily describe and visualize the equivalence classes under this relation. All of the points lying on the same vertical line are packaged together into an equivalence class, and we can index (i.e. keep track of) those classes by just looking at where the line intersects the horizontal axis. That is, for example, (1, 3) $\in$[(1, 0)]R, because the points (1, 3) and (1, 0) lie on the same vertical line. We can write every equivalence class in such a way, [(x, 0)]R, for some x $\in$R.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **关键性质** 等价关系将集合划分为不相交的等价类：（1）$x \in [x]$（自反性保证）；（2）$xRy \Leftrightarrow [x] = [y]$；（3）若 $[x] \neq [y]$，则 $[x] \cap [y] = \emptyset$。
 
 
 (1,0) (2,0) (1, 3) $\in$[(1, 0)]R (0,1) (0,2) (0,3) [(0, 1)]R = {(y, 1)} Thus, the set of equivalence classes, (R×R)/R, is "identical" to the real number line, R, in some sense! We can just collapse all of the points of the plane down to the horizontal axis by ignoring their second coordinates. There is a way of making this idea more precise, mathematically speaking, but we won't be able to truly discuss it formally in this context. Suffice it to say that there's something interesting going on here, in that this relation on R×R yields equivalence classes that are represented by R. Here's another relation on R × R. Define S by setting ((x, y), (u, v)) $\in$S ⇐$\Rightarrow$ p x2 + y2 = p u2 + v2 Remembering some basic geometry and algebra, you might recognize that the expression p x2 + y2 describes the distance from the point (x, y) to the origin (0, 0). (In mathematics, we call such an expression a metric.) Thus, the relation says that two points are related whenever they are the same distance from the origin. Visually, this explains why S is an equivalence relation, and it shows us that the equivalence classes are circles centered around the origin! Therefore, we can describe the elements of the set (R × R)/S by just representing these circles by their one distinguishing feature: their radius, some real number r $\geq$0. Accordingly, the set of equivalence classes, under S, is "identical" to the set of non-negative real numbers!
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **证明 $xRy \Leftrightarrow [x] = [y]$** "$\Rightarrow$"：设 $xRy$，任取 $z \in [x]$，则 $zRx$，由对称性 $xRy$，再由传递性 $zRy$，故 $z \in [y]$，从而 $[x] \subseteq [y]$。类似得 $[y] \subseteq [x]$。"$\Leftarrow$"：若 $[x] = [y]$，由 $y \in [y]$（自反性）得 $y \in [x]$，即 $yRx$，再由对称性 $xRy$。
 
 
 [(1, 0)]S [(2, 0)]S r = 2 r = 1 This is a pretty weird idea, right? We started with a two-dimensional set and related pairs of points and sorted out the equivalence classes and ended up with a one-dimensional set. (Note: We don't have a formal way to define dimension here, but we think you have an intuition for what we mean.) Look back at the relation R defined on R2 above. What if we had defined that relation on just the "right half" of R2, all of the points whose first coordinate is nonnegative. Then, the set of equivalence classes would also be "identical" to the set of non-negative real numbers. In what sense would that set be the "same" as (R × R)/S? Is that even a reasonable question to ask? How might we prove statements like this? These are all very interesting questions that we encourage you to think about! Don't get too distracted by these notions and broad questions, though. The larger point is this: the set of equivalence classes forms a partition of the underlying set. Now that we've seen a few examples, let's state (and prove!) some important results about equivalence relations. Mainly, these theorems present the ideas that we have been alluding to in words all along, namely that an equivalence relation partitions a set into its corresponding equivalence classes. Perhaps somewhat surprisingly, though, we have another nice result which says we can do this process in reverse: given any partition, we can define an equivalence relation for it!
@@ -93,7 +96,7 @@ belonging to A/R form a partition of A. That is, they are nonempty, they are pai
 We will guide you through a proof of this result in Exercise 6.7.13 at the end of this chapter. The examples we have examined already should give you
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **划分与等价关系的对应** 给定等价关系 $R$，其等价类构成 $S$ 的一个划分。反之，给定 $S$ 的一个划分，由"在同一部分中"定义的关系是等价关系。这是等价关系与划分之间的一一对应。
 
 
 an intuitive understanding of why this theorem is true, but working through the details of the proof will give you a solid understanding of the mathematical rigor behind that. A Partition Yields an Equivalence Relation Now, let's move on and look at a similar and important result that is a converse for the previous theorm. To warm up to it, we will first look at one example that will also give us a sketch of the theorem's proof.
@@ -109,7 +112,7 @@ exists an equivalence relation R such that S/R = F. As we hinted at above, this 
 F = {Si | i $\in$I} where the sets Si satisfy Si $\subseteq$S and Si ̸= $\emptyset$and [ i$\in$I Si = S and $\forall$i, j $\in$I. i ̸= j =$\Rightarrow$Si $\cap$Sj = $\emptyset$
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** 在 $\mathbb{Z}$ 上，$\equiv_2$ 将整数划分为两个等价类：$[0] = \{$偶数$\}$ 和 $[1] = \{$奇数$\}$。这构成 $\mathbb{Z}$ 的一个划分。
 
 
 Let's define the relation R on S by (x, y) $\in$R ⇐$\Rightarrow$$\exists$i $\in$I.  x $\in$Si ∧y $\in$Si  We will now prove R is an equivalence relation. • Let x $\in$S be arbitrary and fixed. Since the sets Si cover S, we know $\exists$i $\in$I. x $\in$Si. Let such an i be given. Certainly, then x $\in$Si and x $\in$Si, so (x, x) $\in$R. Therefore, R is reflexive. • Let x, y $\in$S be arbitrary and fixed. Suppose (x, y) $\in$R. This means $\exists$i $\in$I.  x $\in$Si ∧y $\in$Si  . Let such an i be given. Certainly, then, we have y $\in$Si ∧x $\in$Si. Thus, (y, x) $\in$R, as well. Therefore, R is symmetric. • Let x, y, z $\in$S be arbitrary and fixed. Suppose that (x, y) $\in$R and (y, z) $\in$ R. This means $\exists$i $\in$I.  x $\in$Si ∧y $\in$Si  and $\exists$j $\in$I.  y $\in$Sj ∧z $\in$Sj  . Let such i, j be given. Notice that y $\in$Si ∧y $\in$Sj. Since Si $\cap$Sj = $\emptyset$for any distinct i, j, it must be that i = j. (Otherwise, y $\in$$\emptyset$, which is impossible!) Accordingly x $\in$Si and y $\in$Si and z $\in$Si. Thus, (x, z) $\in$R. Therefore, R is transitive. Since all three properties hold, R is an equivalence relation! The equivalence classes of S modulo R, S/R, are of the form [x]R, where x $\in$S. Since F is a partition of S, x $\in$Si for some i. Thus, [x]R = Si for some i. Therefore, all the equivalence classes are equal to some set Si. Likewise, any set Si ̸= $\emptyset$, so $\exists$x $\in$Si, and thus there is a corresponding equivalence class Si = [x]R. Therefore, every equivalence class is a set of the form Si, and vice-versa. This shows that any partition corresponds nicely to an equivalence relation, and its classes!
@@ -118,7 +121,7 @@ Example 6.4.13. Let's start with an easy one. Look back at the equality relation
 that we defined in Example 6.2.9. We explained already that "=" is an equivalence relation on any set. Specifically, it partitions a set into the equivalence classes which are . . . well, the elements of the set themselves! That is, on the
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** 在 $\mathbb{Z}$ 上，$\equiv_n$ 将整数划分为 $n$ 个等价类：$[0], [1], \ldots, [n-1]$。这就是模 $n$ 剩余类的来源。
 
 
 set N, say, [1]= = {1} and [2]= = {2}, and so on. The equivalence classes are all singletons (sets with one element each).
@@ -132,14 +135,14 @@ Example 6.4.15. Look back at the order relation on R that we defined in Exam-
 ple 6.2.6. Is this an equivalence relation? To figure this out, we can check each property in the definition. Notice that, whatever x $\in$R is, we have (x, x) /$\in$R because x ̸< x. Thus, R is not reflexive, and therefore not an equivalence relation. (It is also true that R is not symmetric, but it is transitive.) Why does it make sense that this strict order relation would not be an equivalence relation? Why do we want an equivalence relation to be reflexive? Think about the concept of an equivalence class; an equivalence relation should place the elements of the whole set into a partition, where we can identify any partition set by an element that belongs to it. With a relation that is not reflexive, we would then have some elements that don't belong to their own "equivalence classes", surely an undesirable situation! (Follow-up question: What about the order relation $\leq$, which is reflexive; is this an equivalence relation? Why or why not?) Put another way, we can see that the relation "<" on R does not separate the real numbers into a partition. Because of this, and thinking about the contrapositive of Theorem 6.4.10, we conclude that "<" cannot be an equivalence relation.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **商集（Quotient Set）** $S$ 模等价关系 $R$ 的商集定义为 $S/R = \{[x]_R \mid x \in S\}$，即所有等价类的集合。$|S/R|$ 是等价类的个数。
 
 
 Example 6.4.16. Define the relation ∼on R × R by
 (x, y) ∼(u, v) ⇐$\Rightarrow$x $\leq$u ∧y $\leq$v Without even examining its properties, let's see if we can identify whether it is an equivalence relation or not. To do this, let's take a specific element of the set and look at all of the elements related to that specific one. For the picture below, we will use (1, 1) as the specific element. (1,0) (2,0) (0,1) (0,2) (0,3) (1,3) (1,2) (1,1) (2,1) (1, 2) ̸∼(2, 1) Notice that the defining condition of ∼asks that a point lie "above and to the right" of another one for the two to be related. Also, notice that the inequalities are "$\leq$" so the second point doesn't have to be strictly above or to the right. Thus, (1, 2) ∼(1, 1) as we can see from the picture (also observing that 1 $\leq$1 ∧1 $\leq$2). Also, (1, 1) ∼(2, 1), for similar reasons. Accordingly, the points (1, 2) and (2, 1) are both related to (1, 1) and so for this relation ∼to be an equivalence relation, we would require that (2, 1) and (1, 2) be related to each other. This is because they would both have to belong to the "equivalence class" of (1, 1). However, notice that (1, 2) ̸∼(2, 1), unfortunately! The second point lies strictly "below and to the left" of the first one, so it does not satisfy the defining condition of ∼. This means that the set of all elements related to (1, 1) does not form a "closed club". Mathematically speaking, this set of elements is not an equivalence class. Therefore, ∼is not an equivalence relation. Now, try to identify which properties ∼does and doesn't have. Is it reflexive? Symmetric? Transitive? Why or why not? In so doing, you will prove again that ∼is not an equivalence relation. Wasn't it helpful to have already
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **例** $\mathbb{Z}/\!\equiv_2$ 有 2 个元素（偶数类和奇数类）。$\mathbb{Z}/\!\equiv_n$ 有 $n$ 个元素。
 
 
 figured out beforehand that it isn't? We recommend, in general, doing something similar when you are faced with a defined relation. Can you figure out what the "equivalence classes" might be? If so, then you've developed some intuition for how and why the relation is an equivalence relation, and it will help you describe the equivalence classes. If not, then you've developed some intuition for how to disprove such a claim. [Optional Reading] How Z comes from an Equivalence Relation on N × N Remember that crazy exercise from Chapter 3 that had you prove something about a set of pairs of pairs of natural numbers, and we claimed that was proving something about the existence of the integers? What was that all about? Look back at the exercise now, Exercise 3.11.22. You'll see that the last three parts of the problem have you prove that the set R we defined is an equivalence relation on the set P. (The underlying set was P = N×N.) Look at that! You proved R is reflexive, symmetric, and transitive. What that exercise showed is that (essentially, we are glossing over some details here) any negative integer is represented as the equivalence class of pairs of integers whose difference is that negative integer. That is, −1 " = " [(1, 2)]R = {(1, 2), (2, 3), (3, 4), . . . } and, for another example, −3 " = " [(1, 4)]R = {(1, 4), (2, 5), (3, 6), . . . } This is only an intuitive explanation and not rigorous, mathematically speaking, but that's the main idea!
@@ -147,13 +150,13 @@ figured out beforehand that it isn't? We recommend, in general, doing something 
 Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What properties does an equivalence relation have to satisfy? (2) What is an equivalence class? What must be true about all of the elements in one equivalence class? (3) Given a set S and an equivalence relation R on S, what must be true about the set of equivalence classes?
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **练习** (1) 验证"在城市中住在同一条街上"是人的集合上的等价关系。(2) 证明空关系不是等价关系（除非集合为空）。(3) 设 $R = \{(a,b) \in \mathbb{Z} \times \mathbb{Z} \mid a - b \text{ 是 5 的倍数}\}$。证明 $R$ 是等价关系，并描述其等价类。
 
 
 Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Look back at the relation defined in Exercise 2 in Section 6.2.5. There, we define the relation ⋆on Z by setting $\forall$x, y $\in$Z. x ⋆y ⇐$\Rightarrow$3 | x −y You proved there that it is, indeed, an equivalence relation. Now, describe the equivalence classes in Z/⋆. How many are there? How "big" are they? Can you list their elements or describe them somehow? (2) Look back at the relation defined in Exercise 3 in Section 6.2.5. There, we defined the relation ∼on Z by saying $\forall$x, y $\in$Z. x ∼y ⇐$\Rightarrow$3 | x + 2y You proved there that it is, indeed, an equivalence relation. Now, identify and describe the equivalence classes in Z/ ∼. How many are there? How "big" are they? Can you list their elements or describe them somehow? Compare this to the previous exercise. What do you notice? (3) Consider the set [5] = {1, 2, 3, 4, 5}. Define the relation $\approx$on [5] by setting, for any x, y $\in$[5] x $\approx$y ⇐$\Rightarrow$ |x2 −y2| $\leq$5 For every x $\in$[5], let S(x) be the set of all elements y $\in$[5] such that x $\approx$y. (a) Write out all the elements of the sets S(1), S(2), S(3), S(4), S(5). (b) Can you determine whether or not $\approx$is an equivalence relation by looking at these sets? How? (c) Prove whether or not $\approx$is an equivalence relation by proving/disproving the reflexive, symmetric, and/or transitive properties. (4) Consider the set N × N. Define the relation ∼on this set by setting (a, b) ∼(c, d) ⇐$\Rightarrow$a + b = c + d Determine whether or not this is an equivalence relation. If it is, describe its equivalence classes visually.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 (4) 设 $S = \{1,2,3,4,5,6\}$ 和划分 $\{\{1,3,5\}, \{2,4,6\}\}$。写出对应的等价关系。(5) 证明：若 $R$ 是等价关系，则 $[x] = [y]$ 或 $[x] \cap [y] = \emptyset$。
 
 
 ## 6.5 Modular Arithmetic A natural and common equivalence relation that you may have already seen and worked with before is that of congruence, in the context of the integers. This is a direct generalization of the "even/odd parity" equivalence relation, which classifies integers based on one specific property. Here, we expand this idea by defining a few properties of integers and then defining a bunch of relations. We will also go through some interesting results that become easy to prove (or provable at all!) by using these relations.
@@ -165,6 +168,6 @@ Divisibility We'll start with a definition that we have seen a few times already
 by a, i.e. $\exists$k $\in$Z such that b = ak, or equivalently, b a $\in$Z (except for the case where a = b = 0). We denote this by a | b. Notice that this definition says that every integer divides 0 (e.g., 5 | 0) but 0 doesn't divide anything except itself (e.g., 0 ∤5 but 0 | 0). Think about how this makes sense with your intuitive understanding of "divides" and also how it satisfies the given definition. Also, notice that negative numbers are accounted for here, since the existence quantifier takes an integer k $\in$Z. Thus, −2 | 4 and 8 | −24, as well. Now, a statement like 2 ∤5 tells us some information about how the integers 2 and 5 are related, but it doesn't say everything. We know that there is no possible integer k that satisfies 2k = 5, but it doesn't say how close we can get. Certainly k = −100 is a bad estimate, but 2 $\cdot$ 2 = 4 and 2 $\cdot$ 3 = 6 are pretty close to 5 . . . This seems obvious with small numbers like this where we can check by hand, but what about huge numbers? We know that 7 ∤100000 (Why? Think about primes . . . ), but how can we approach this "find the k that makes 7k the closest possible to 100000" problem? How do we know there's even a specific answer? Might there be two equally "reasonable" answers, like with 2 ∤5? Regarding the second question, about plurality, we'd like to restrict ourselves so that there is only one reasonable answer. This comes from a desire for simplicity, not having to worry about finding another answer after finding one. Accordingly, we will follow the The Price Is Right standard: we want the closest answer without going over. With the example 2 ∤5, we consider k = 2 to be the best estimate since 4 < 5. Likewise, with the example 7 ∤100000, we consider k = 14285 to be the best estimate because 7 $\cdot$ 14285 = 99995. (Notice that, in this case, there is a "closer" estimate that does go over, but we don't consider it.) This now motivates how to come up with such estimates. Given a, b $\in$Z, we can just look at larger and larger multiples of a until we go too far, past b; the multiple right before that will be the best. The "accuracy" of the estimate
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 (6) 考虑 $\mathbb{R}$ 上的关系 $R$：$xRy$ 当且仅当 $x - y \in \mathbb{Z}$。证明 $R$ 是等价关系，并描述其等价类。
 
 
