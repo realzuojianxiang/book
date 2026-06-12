@@ -48,7 +48,7 @@ x $\notin S$
 S $\subseteq T$
 This is defined by the conditional statement "Every element of S is also
 an element of T". This can be expressed as
-$\forall x \in U. x \in S$ =$\Rightarrow x \in T$
+$\forall x \in U. x \in S =\Rightarrow x \in T$
 That is, for every element x of the universal set (supposing S, T $\subseteq U$),
 whenever x $\in S$, we also know that x $\in T$.
 • To prove that a set is a subset of another set, like S $\subseteq T$, we need to do
