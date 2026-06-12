@@ -15,7 +15,7 @@ defined to be S(X) = X $\cup${X}. This definition applies to all sets, but in th
 1. 1 $\in$I 2. If n $\in$I, then S(n) $\in$I, as well. Certainly, N itself (as we hope to define it) should be an inductive set. Are there other inductive sets? Think about this. What properties would they have? Would they contain elements that are not natural numbers? We don't want to address these questions in depth, but for the sake of our discussion here, we will point out that there are, indeed, other inductive sets. We don't want any of those sets to be N, so we make this definition:
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 确实存在其他归纳集（Inductive Set），但我们不要那些集合成为 $\mathbb{N}$，于是定义自然数集为所有归纳集的交集——即最小的归纳集：$\mathbb{N} := \{x \mid \text{对所有归纳集 } I,\ x \in I\}$。这意味着 $\mathbb{N} \subseteq I$ 对一切归纳集 $I$ 成立。由此获得的"检验性质"：任何集合 $x$ 是自然数当且仅当它属于每一个归纳集。另外要注意：我们何以确知这样的无穷集存在？（实际上这需要作为集合论公理（Axiom）来假定！）
 
 
 <div class="def-definition" markdown>
@@ -28,7 +28,7 @@ N := {x | for every inductive set I, x $\in$I} Put another way, N is the smalles
 only if m $\in$n. This defines an order relation on the set N. We will discuss the concepts of relations and orders later on in the book (in Section 6.3). What about arithmetic? What is m + n in terms of the sets m and n? How do we define this operation and its output? How do we know m + n is another natural number? Can we be sure that m + n = n + m? These are questions we can address later on after discussing functions and relations.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 我们利用后继定义中的 $X \in S(X)$ 建立了自然数上的序关系（Order Relation）：$m < n$ 当且仅当 $m \in n$。至于算术运算（如 $m + n$）如何用集合定义、如何确保 $m + n$ 仍是自然数、为何 $m + n = n + m$，这些将在讨论函数（Function）和关系后解决。
 
 
 ### 3.8.2 Principle of Mathematical Induction For now, let us present a more rigorous version of induction:
@@ -44,7 +44,7 @@ true. That is, define S = {n $\in$N | P(n) is true}. By definition, S $\subseteq
 Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What is an inductive set? Give an example of one that is not N or Z. (2) We defined S = {n $\in$N | P(n) is true} in the proof of the Principle of Mathematical Induction. What does this mean? Describe this set in words. (3) Come up with your own analogy for how Induction works.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 回顾：(1) 什么是归纳集（Inductive Set）？举一个非 $\mathbb{N}$ 也不是 $\mathbb{Z}$ 的归纳集例子。(2) 在归纳原理证明中定义的 $S = \{n \in \mathbb{N} \mid P(n) \text{ 为真}\}$ 是什么含义？用文字描述此集合。(3) 为归纳法的运作方式想一个你自己的类比。
 
 
 Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) What if we changed the definition of successor to be S(X) = {X}. Using 0 = $\emptyset$, what are 1, 2, 3, and 4 in terms of sets? Do they still satisfy the equality n = {0, 1, . . . , n −1}? If not, do they satisfy some other relationship? Explore! (2) Have a debate with a friend about whether or not infinite sets exist. Why do we need to assume the existence of an inductive set to define N? Does this seem valid to you? Does it make sense, physically? Mathematically? (3) Consider a simple arithmetic statement, like 1 + 2 = 3. Write out the numbers 1, 2, and 3 in terms of sets, and see how this equation might make sense. What does "+" mean, in this context? (4) Investigate how one might define Z, using N. Do some exploring online or in books, or make up an idea on your own.
@@ -52,6 +52,6 @@ Try It Try answering the following short-answer questions. They require you to a
 ### 3.9.1 Logic and Rigor: Using Definitions The main point we'd like to emphasize here---as we transition from descriptive, "wordy", and intuitive proofs into more rigorous, mathematically correct, and formally-written ones---is that formal definitions are very important. Fundamentally, they're essential because when we say, for example, "A $\cup$B", we need to know that you know exactly what that symbol means and how it operates on the sets A and B. As another example, when we say "Prove A = B", we have a very specific goal in mind, and you need to be on the same page. It always helps to have an intuitive understanding of the main concepts---"Oh, the statement A = B just
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 从描述性的、直觉性的证明过渡到更严格的证明时，必须强调：形式化定义（Formal Definition）非常重要。当你看到"$A \cup B$"时，需要确切知道该符号的含义和运算方式；当看到"证明 $A = B$"时，需要明确我们要达到什么目标。直觉理解当然有帮助，但严格定义才是证明的基石。
 
 

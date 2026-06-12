@@ -1,7 +1,6 @@
 你是一位精通第一性原理、GitHub Pages / MkDocs / mdBook 项目构建的资深技术专家。
 
-  任务：将《The Book of Elon: A Guide to Purpose and Success》（Eric Jorgenson）这本PDF图书，构建成一个高质量的
-  GitHub 双语（中英对照）阅读项目。
+  任务：将当前项目目录下《Everything You Always Wanted To Know About Mathematics》 这本PDF图书，构建成一个高质量的  GitHub 双语（中英对照）阅读项目。
 
   核心要求（严格遵循）：
   1. 项目结构采用极简主义与最佳实践（DRY、可维护性强），适合长期迭代。

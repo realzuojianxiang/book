@@ -74,4 +74,4 @@ Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some
 P(k + 1) is true.
 Then the statement P(n) must be true for every natural number n $\in$N.
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……则命题 $P(n)$ 对所有自然数 $n \in \mathbb{N}$ 必定为真。

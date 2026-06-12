@@ -9,19 +9,28 @@ Note: It helps to read the "◦" as "after" to remind you of the order of
 operations: g ◦f means g is applied after f. We find f(a) and then find g(f(a)).
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 （直观上，这是所有输出"落入" $Z$ 的输入组成的集合。）注意：$\text{Im}_f(\emptyset) = \emptyset$，$\text{PreIm}_f(\emptyset) = \emptyset$。
+>
+> **A.5.2 满射、单射、双射 (Jections)** 设 $f: A \to B$ 为函数。若 $\text{Im}_f(A) = B$，称 $f$ 为**满射（Surjective）**，等价表述为 $\forall b \in B.\, \exists a \in A.\, f(a) = b$——陪域中所有元素都被"命中"。若 $\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$，称 $f$ 为**单射（Injective）**，等价于 $\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$——不同输入总产生不同输出。若 $f$ 既是单射又是满射，称 $f$ 为**双射（Bijective）**。
+>
+> **A.5.3 函数的复合** 设 $f: A \to B$，$g: B \to C$，则 $g \circ f: A \to C$ 定义为 $(g \circ f)(a) = g(f(a))$，称为 $g$ 与 $f$ 的**复合**。提示：将 "$\circ$" 读作"之后"，$g \circ f$ 即 $g$ 在 $f$ 之后作用。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS • Notation: We write (g ◦f)(x) = g(f(x)). We do not write g ◦f(x). The parentheses are important! • Let f : A $\to$B and g : B $\to$C and h : C $\to$D be functions. Then (h ◦g) ◦f = h ◦(g ◦f). This means composition is associative. • Suppose f : A $\to$B and g : B $\to$C are both in/sur/bi-jections. Then g ◦f is also an in/sur/bi-jection. A.5.4 Inverses • Let X be any set. The identity function IdX : X $\to$X is defined by $\forall$z $\in$X. IdX(z) = z. • Let f : A $\to$B be a function. If there is a function F : B $\to$A such that f ◦F : B $\to$B satisfies f ◦F = IdB and F ◦f : A $\to$A satisfies F ◦f = IdA then we say F is the inverse of f and write F = f −1. Notice that the formal defintion clearly includes the necessity of checking that both ways of composing the two functions yields an identity function. There exist examples where one way works and the other doesn't! (Note: When proving a function is the inverse of another one, we aren't allowed to write f −1 yet because we are, in fact, in the midst of proving that f even has an inverse.) If f has an inverse, we say f is invertible. • Theorem: f : A $\to$B is bijective ⇐$\Rightarrow$f has an inverse f −1 : B $\to$A. • Theorem: Let f : A $\to$B and g : B $\to$C both be bijections. Then g ◦f : A $\to$C is also a bijection, so it has an inverse; that inverse is (g ◦f)−1 = f −1 ◦g−1. A.5.5 Proof Techniques for Functions • Prove that f is surjective: -- Let b $\in$B be arbitrary and fixed. -- Define a = . -- Show that a $\in$A. -- Show that f(a) = b. -- This shows that b $\in$Imf(A), so B $\subseteq$Imf(A). -- Since Imf(A) $\subseteq$B by definition, this shows Imf(A) = B, so f is surjective. • Prove that f is not surjective:
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 记号：写 $(g \circ f)(x) = g(f(x))$，不写 $g \circ f(x)$，括号不可省！复合满足结合律：$(h \circ g) \circ f = h \circ (g \circ f)$。若 $f$、$g$ 同为单射/满射/双射，则 $g \circ f$ 亦然。
+>
+> **A.5.4 逆函数** 恒等函数 $\text{Id}_X : X \to X$ 定义为 $\text{Id}_X(z) = z$。若存在 $F: B \to A$ 使 $f \circ F = \text{Id}_B$ 且 $F \circ f = \text{Id}_A$，则 $F = f^{-1}$，称 $f$ **可逆**。注意必须验证两个方向的复合都得到恒等函数。**定理**：$f: A \to B$ 为双射 $\Leftrightarrow$ $f$ 有逆 $f^{-1}: B \to A$。双射的复合仍为双射，且 $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$。
+>
+> **A.5.5 函数的证明技巧**
+> 证明满射：任取 $b \in B$，构造 $a \in A$ 使 $f(a) = b$，从而 $\text{Im}_f(A) = B$。证明非满射：找 $b \in B$ 使 $\forall a \in A.\, f(a) \neq b$。
 
 
 -- Define b = . -- Show that b $\in$B. -- Let a $\in$A be arbitrary and fixed. -- Show that f(a) ̸= b. (Alternatively, suppose f(a) = b and find a contradiction.) -- This shows that $\exists$b $\in$B. b /$\in$Imf(A), so f is not surjective. • Prove that f is injective: -- Let x, y $\in$A be arbitrary and fixed. -- Suppose that f(x) = f(y). -- Deduce that x = y. Alternatively: -- Let x, y $\in$A be arbitrary and fixed. -- Suppose that x ̸= y. -- Deduce that f(x) ̸= f(y). • Prove that f is not injective: -- Define x = and define y = . -- Show that x $\in$A and y $\in$A. -- Show that x ̸= y. -- Show that f(x) = f(y). -- This shows $\exists$x, y $\in$A. x ̸= y ∧f(x) = f(y), so f is not injective. • Prove that f is bijective: -- Prove that f is injective. -- Prove that f is surjective. Alternatively: -- Define a function F : B $\to$A. -- Prove that F ◦f = IdA. -- Prove that f ◦F = IdB. -- This shows that F = f −1, so f is invertible and therefore it is bijective. • Prove that f is not bijective: -- Show that f is not injective, or else show that f is not surjective. Alternatively,
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 证明单射：任取 $x, y \in A$，由 $f(x) = f(y)$ 推出 $x = y$；或由 $x \neq y$ 推出 $f(x) \neq f(y)$。证明非单射：找 $x \neq y \in A$ 使 $f(x) = f(y)$。证明双射：证单射 + 证满射；或构造 $F: B \to A$ 使 $F \circ f = \text{Id}_A$ 且 $f \circ F = \text{Id}_B$，从而 $F = f^{-1}$，$f$ 双射。证明非双射：证非单射或非满射；或反设双射导出矛盾。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS -- AFSOC f is bijective, so it has an inverse f −1. Find a contradiction. • For some X $\subseteq$A, find the image Imf(X): -- Define a set S. Claim that S = Imf(X). (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.) -- Prove that Imf(X) $\subseteq$S. ∗Let y $\in$Imf(X) be arbitrary and fixed. ∗This means $\exists$a $\in$X. f(a) = y. ∗Use the properties of f to show that f(a) $\in$S. ∗This shows that y $\in$S. -- Prove that S $\subseteq$Imf(X). ∗Let z $\in$S be arbitrary and fixed. ∗Define x = . ∗Show that x $\in$X. ∗Show that f(x) = z. ∗This shows that z $\in$Imf(X). -- Conclude by a double-containment argument that Imf(X) = S. • For some Z $\subseteq$B, find the preimage PreImf(Z): -- Define a set T. Claim that T = PreImf(Z). (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.) -- Prove that PreImf(Z) $\subseteq$T. ∗Let a $\in$PreImf(Z) be arbitrary and fixed. ∗This means f(a) $\in$Z. ∗Use the properties of f to show that a $\in$T. -- Prove that T $\subseteq$PreImf(Z). ∗Let x $\in$T be arbitrary and fixed. ∗Use the properties of f to show that f(x) $\in$Z. ∗This shows that x $\in$PreImf(Z). -- Conclude by a double-containment argument that PreImf(Z) = T. • Find the inverse of f. -- Define a function F : B $\to$A. (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.)

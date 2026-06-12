@@ -78,4 +78,4 @@ it as a simple system where two players receive a hand of 5 random cards each
 and then they compare to see who wins. Hands are ranked according to the
 following list, from best to worst:
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……每位玩家随机获得5张手牌，然后比较大小决定胜负。手牌从最强到最弱排列如下：

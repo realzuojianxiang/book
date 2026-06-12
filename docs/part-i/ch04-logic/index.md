@@ -76,4 +76,4 @@ be).
 Goals and Warnings for the Reader
 Keep this in mind throughout this chapter:
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……证明这些命题为真（或为假，视情况而定）的技巧。**4.1.4 阅读目标与提醒** 请在整个章节中牢记以下要点：

@@ -151,7 +151,7 @@ A **prime number** is a positive integer that has exactly two distinct positive 
 > 🇨🇳 **定理 1.1.2** *（欧几里得）*。素数有无穷多个。
 </div>
 
-> 🇨🇳 TODO: 待翻译 — 完整的素数证明讨论
+> 🇨🇳 欧几里得证明了素数有无穷多个。其证明思路如下：假设只有有限个素数 $p_1, p_2, \ldots, p_n$，考虑数 $N = p_1 \cdot p_2 \cdots p_n + 1$。$N$ 除以任何一个素数 $p_i$ 都余1，因此 $N$ 要么本身是素数，要么有一个不在列表中的素因子——无论哪种情况，都说明列表之外还有素数，矛盾！
 
 ---
 
@@ -163,90 +163,90 @@ A **prime number** is a positive integer that has exactly two distinct positive 
 > 🇨🇳 **定理 1.1.3.** $\sqrt{2}$ 是无理数。
 </div>
 
-> 🇨🇳 TODO: 待翻译 — 无理性的证明
+> 🇨🇳 这里我们需要证明 $\sqrt{2}$ 不是有理数。采用反证法：假设 $\sqrt{2} = \frac{a}{b}$，其中 $a, b$ 为互素整数。则 $a^2 = 2b^2$，所以 $a^2$ 是偶数，从而 $a$ 是偶数。设 $a = 2c$，代入得 $4c^2 = 2b^2$，即 $b^2 = 2c^2$，故 $b$ 也是偶数。但 $a, b$ 互素，矛盾！因此 $\sqrt{2}$ 是无理数。
 
 ---
 
 ## 1.2 Exposition Exhibition
 
-> 🇨🇳 TODO: 待翻译 — 本节介绍数学表述的基本要素
+> 🇨🇳 本章介绍数学表述的基本要素：符号、写作规范、逻辑入门。
 
 ### 1.2.1 Simply Symbols
 
-> 🇨🇳 TODO: 待翻译 — 符号系统介绍
+> 🇨🇳 符号系统简介：数学中使用的各种符号及其含义。
 
 ### 1.2.2 Write Right
 
-> 🇨🇳 TODO: 待翻译 — 数学写作规范
+> 🇨🇳 数学写作规范：如何清晰、准确地书写数学论证。
 
 ### 1.2.3 Pick Logic
 
-> 🇨🇳 TODO: 待翻译 — 逻辑入门
+> 🇨🇳 逻辑入门：数学推理中逻辑的基本要素。
 
 ### 1.2.4 Obvious Obfuscation
 
-> 🇨🇳 TODO: 待翻译 — 显而易见的混淆
+> 🇨🇳 显而易见的混淆：数学写作中常见的模糊与混淆问题。
 
 ---
 
 ## 1.3 Review, Redo, Renew
 
-> 🇨🇳 TODO: 待翻译 — 本节回顾基础数学概念
+> 🇨🇳 本节回顾基础数学概念，为后续学习打好基础。
 
 ### 1.3.1 Quick Arithmetic
 
-> 🇨🇳 TODO: 待翻译 — 快速算术
+> 🇨🇳 快速算术：复习整数、分数等基本运算。
 
 ### 1.3.2 Algebra Abracadabra
 
-> 🇨🇳 TODO: 待翻译 — 代数魔术
+> 🇨🇳 代数魔术：通过代数技巧解决有趣的数学问题。
 
 ### 1.3.3 Polynomnomnomials
 
-> 🇨🇳 TODO: 待翻译 — 多项式
+> 🇨🇳 多项式：多项式的基本概念与运算。
 
 ### 1.3.4 Let's Talk About Sets
 
-> 🇨🇳 TODO: 待翻译 — 初识集合
+> 🇨🇳 初识集合：集合的基本概念，后续章节将深入讨论。
 
 ### 1.3.5 Notation Station
 
-> 🇨🇳 TODO: 待翻译 — 记号站
+> 🇨🇳 记号站：数学中常用的记号与符号汇总。
 
 ---
 
 ## 1.4 Quizzical Puzzicles
 
-> 🇨🇳 TODO: 待翻译 — 本节通过趣味问题引入数学思维
+> 🇨🇳 本节通过趣味问题引入数学思维，培养归纳推理的直觉。
 
 ### 1.4.1 Funny Money
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 趣味货币问题。
 
 ### 1.4.2 Gauss in the House
 
-> 🇨🇳 TODO: 待翻译 — 高斯求和
+> 🇨🇳 高斯求和：少年高斯巧妙地求出 $1+2+\cdots+n = \frac{n(n+1)}{2}$ 的故事。
 
 ### 1.4.3 Some Other Sums
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 其他求和问题：探讨不同形式的求和公式。
 
 ### 1.4.4 Friend Trends
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 朋友圈趋势：用图论思想研究朋友圈中的关系。
 
 ### 1.4.5 The Full Monty Hall
 
-> 🇨🇳 TODO: 待翻译 — 蒙提霍尔问题
+> 🇨🇳 蒙提霍尔问题：经典的概率悖论，换门是否更优？
 
 ---
 
 ## 1.5 It's Wise To Exercise
 
-> 🇨🇳 TODO: 待翻译 — 本章练习
+> 🇨🇳 本章练习题，帮助巩固所学概念。
 
 ---
 
 ## 1.6 Lookahead
 
-> 🇨🇳 TODO: 待翻译 — 下一章预告
+> 🇨🇳 下一章预告：第2章将介绍数学归纳法。

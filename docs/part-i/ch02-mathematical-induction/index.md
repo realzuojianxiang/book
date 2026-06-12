@@ -80,4 +80,4 @@ or sometimes just induction, for short. (The word induction has some non-
 mathematical meanings, as well, such as in electromagnetism or in philosophical
 arguments, but within the context of this book, when we say induction, we mean
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……（"归纳"一词在电磁学或哲学论证中也有非数学含义，但在本书语境中，当我们说归纳时，我们指的是数学归纳法。）

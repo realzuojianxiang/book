@@ -74,4 +74,4 @@ is to say, the examples of functions we explore here, and their properties, do
 not depend on the other ideas explored in the last chapter. Rather, we will use
 those ideas to create interesting examples and exercises here.
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……也就是说，我们此处探讨的函数示例及其性质，并不依赖于上一章中的其他概念。相反，我们将利用那些概念来创建有趣的示例和练习。

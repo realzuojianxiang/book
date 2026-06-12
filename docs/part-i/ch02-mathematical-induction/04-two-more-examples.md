@@ -6,63 +6,71 @@ title: Two More (Different) Examples
 
 As before, let's examine the first few cases--where n = 1, 2, 3, and so on--and see if we notice any patterns. Try working with the problem yourself, before reading on, even! When n = 1, we have an array that is exactly the shape of one domino, so surely there is only one way to do this. Let's use the notation T(n) to represent the number of tilings on a 2 × n array. Thus, T(1) = 1. When n = 2, we have a 2 × 2 array. Since the orientation of the array matters, we have each of the following distinct tilings. Thus, T(2) = 2. What about when n = 3? Again, we can enumerate these tilings by hand and be sure that we aren't missing any. We see that T(3) = 3. Okay, one more case, when n = 4. We see that T(4) = 5.
 
-
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 和之前一样，让我们先考察前几个情形——$n = 1, 2, 3$ 等等——看看能否发现什么规律。不妨先自己动手试试再往下读！当 $n = 1$ 时，我们有一个恰好是一块多米诺骨牌形状的阵列，所以显然只有一种铺法。我们用记号 $T(n)$ 来表示 $2 \times n$ 阵列的铺法数量。因此，$T(1) = 1$。当 $n = 2$ 时，我们有一个 $2 \times 2$ 的阵列。由于阵列的方向性，以下每种铺法各不相同。因此，$T(2) = 2$。那 $n = 3$ 呢？同样，我们可以手动枚举这些铺法并确保没有遗漏。我们看到 $T(3) = 3$。好，再看一个情形，$n = 4$ 时，我们看到 $T(4) = 5$。
 
 
 2.4. TWO MORE (DIFFERENT) EXAMPLES
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 2.4 另外两个（不同类型的）例子
 
 
 Can we start to find a pattern now? Writing out larger arrays will just be tiresome! Let's think about how we could have used the fact that T(1) = 1 to deduce something about T(2) . . . Well, wait a minute . . . We couldn't, right? There was something fundamentally different about those two cases. Specifically, because dominoes are 2 × 1 in size, the fact that we only added one row to the array didn't help us. Alright, let's consider n = 3, then. Could we use the fact that T(2) = 2 at all? In this case, yes! Knowing there were two tilings of the 2 × 2 array, we could immediately build two tilings of the 2 × 3 array without much thought. Specifically, we can just append a vertical domino to each of those previous tilings. But we know now that T(3) = 3. Where did the third tiling come from? Look at that tiling again and how it compares to the other two. In that third tiling, the dominoes on the right side are horizontal, as opposed to the vertical one in the other two tilings. If we remove those two parallel, horizontal dominoes, we are left with precisely the situation when n = 1. Put another way, we can build a tiling of a 2 × 3 array by appending a square of two horizontal dominoes to the right side. In total, then, we have described all of the tilings of a 2 × 3 board in terms of boards of smaller sizes, namely 2 × 2 and 2 × 1: T(2) = 2 T(1) = 1 T(3) = 3 = 2 + 1 = T(2) + T(1) Now you might see how the pattern develops! Let's show you what happens when n = 4, how we can construct all of the tillings that make up T(4) by appending a vertical domino to each of the tilings that make up T(3), or by appending two horizontal dominoes to each of the tilings that make up T(2):
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 我们现在能开始发现规律了吗？写出更大的阵列只会让人厌烦！让我们想想如何利用 $T(1) = 1$ 这个事实来推导关于 $T(2)$ 的信息……嗯，等一下……我们不能，对吧？这两种情形存在某种本质上的不同。具体来说，因为多米诺骨牌的尺寸是 $2 \times 1$，仅仅在阵列中增加一行并不能帮助到我们。好，那让我们考虑 $n = 3$。我们能利用 $T(2) = 2$ 这个事实吗？这次可以！知道了 $2 \times 2$ 阵列有两种铺法，我们几乎不假思索地就能构建出 $2 \times 3$ 阵列的两种铺法。具体来说，我们只需在之前那些铺法右侧各附加一块竖直骨牌。但我们知道 $T(3) = 3$。第三种铺法从何而来？再看看那种铺法与其他两种的比较。在第三种铺法中，右侧的骨牌是水平的，而不是像另外两种那样竖直的。如果我们移除那两块平行的水平骨牌，剩下的恰好是 $n = 1$ 时的情形。换言之，我们可以通过在右侧附加一个由两块水平骨牌组成的方块来构建 $2 \times 3$ 阵列的一种铺法。因此，我们用更小尺寸的阵列——即 $2 \times 2$ 和 $2 \times 1$——描述了 $2 \times 3$ 棋盘的所有铺法：$T(2) = 2$，$T(1) = 1$，$T(3) = 3 = 2 + 1 = T(2) + T(1)$。现在你可能已经看到规律是如何发展的了！
 
 
 T(3) = 3 T(2) = 2 T(4) = 5 = 3 + 2 = T(3) + T(2) Notice, as well, that no tiling for the 2 × 4 array was produced twice in this way. (Think carefully about why this is true. How can we characterize the two types of tilings in a way that will guarantee they don't coincide at all?) With this information, we can immediately conclude that T(4) = T(3) + T(2). Furthermore, we can generalize this argument; nothing was special about n = 4, right? For any particular n, we can just consider all possible tilings, and look at what happens on the far right-hand side of the array: either we have one vertical domino (which means the tiling came from a 2 × (n −1) array) or two horizontal dominoes (which means the tiling came from a 2×(n−2) array). With confidence in this argument, we can conclude that T(n) = T(n −1) + T(n −2) for all of the values of n for which this expression makes sense. What values are those? Remember that we had to identify T(1) and T(2) separately; this argument doesn't apply to those values. Accordingly, we have to add the restriction n $\geq$3 for the equation above to hold true. With this information, we can then easily figure out T(n) for any value of n, given enough time. We could write a computer program fairly easily, even. It was this inductive argument, though---the pattern that we noticed and our thorough description of why it occurs---that allowed us to make the conclusion in the first place. In this case, too, it just so happens that the value of every term, T(n), depends on the value of two previous terms, T(n −1) and T(n −2). This did not happen in our previous examples in this chapter, and it hints at something deeper going on here. Do you see how our previous definition of induction, and the domino analogy, doesn't exactly apply here anymore? How might you try to amend our analogy to explain this kind of situation? Think
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 $T(3) = 3$，$T(2) = 2$，$T(4) = 5 = 3 + 2 = T(3) + T(2)$。还要注意，这种方式不会产生 $2 \times 4$ 阵列的任何重复铺法。（仔细想想为什么这是对的。我们如何刻画这两种类型的铺法，以保证它们完全不会重叠？）有了这些信息，我们可以立即得出结论 $T(4) = T(3) + T(2)$。此外，我们可以推广这个论证；$n = 4$ 并没有什么特别之处，对吧？对于任意的 $n$，我们只需考虑所有可能的铺法，并观察阵列最右端的情况：要么有一块竖直骨牌（这意味着该铺法来自 $2 \times (n-1)$ 阵列），要么有两块水平骨牌（这意味着该铺法来自 $2 \times (n-2)$ 阵列）。在对这个论证有了信心之后，我们可以得出结论：$T(n) = T(n-1) + T(n-2)$ 对所有使得该表达式有意义的 $n$ 值成立。哪些值呢？记住我们需要分别确定 $T(1)$ 和 $T(2)$；这个论证并不适用于那些值。因此，我们需要加上限制 $n \geq 3$ 才能使上式成立。有了这些信息，只要给足时间，我们就能轻易地算出任意 $n$ 对应的 $T(n)$。甚至编写一个计算机程序也相当容易。然而，正是这个归纳论证——我们注意到的规律以及对它为何出现的透彻描述——使我们能够在第一时间做出这个结论。在这个例子中，每一项 $T(n)$ 的值恰好依赖于前两项 $T(n-1)$ 和 $T(n-2)$ 的值。这在我们本章之前的例子中并未发生，它暗示着这里有更深层的东西。你是否注意到我们之前对归纳法的定义以及多米诺骨牌类比在这里已经不能完全适用了？你会如何修正我们的类比来解释这种情况？想一想——
 
 
 2.4. TWO MORE (DIFFERENT) EXAMPLES
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 2.4 另外两个（不同类型的）例子
 
 
 about these issues for a bit and then read on. We'll talk about them more in-depth after the next example. By the way, did you notice something interesting about our solution to this example? Do you know any other sequences of numbers that behave similarly? Think about it . . .
 ### 2.4.2 Winning Strategies This example will be our first induction puzzle that doesn't prove a numerical formula! It might seem strange to think about that, but it's true, as you'll see. This is actually more common in mathematics than you might think, too: a problem or mathematical object might have some underlying inductive structure without depending on something algebraic or arithmetic. In fact, we will be discussing a game. It's a game in the usual sense---there are rules to be followed by two players and there is a clear winner and loser---but it's also a game in the mathematical sense, where we can formulate the rules and playing situations using mathematical notation and discuss formal strategies in an abstract way. We can even solve the game. This is very different than say, the game of baseball. Let's discuss the rules for this game, which we shall call "Takeaway", for now. There are two players, called P1 and P2. The player P1 goes first every time. The players start with two piles of stones in the middle of a table, each pile containing exactly n stones, where n is some natural number. (To distinguish the different versions of the game, we will say the players are "playing Tn" when there are n stones per pile.) On each player's move, they are allowed to remove any number of stones from either pile. It is illegal, though, to remove stones from both piles at once. The player who removes the final stone from the piles is the winner. Try playing Takeaway with some friends. Use pennies or candies or penny candy as stones. Try it for different values of n. Try switching roles so you are P1 and then P2. Try to come up with a winning strategy, a method of playing that maximizes your chances of winning. Try to make a conjecture for what happens for different values of n. Who is "supposed" to win? Can you prove your claim? Seriously, play around with this game and attempt to prove something before reading on for our analysis thereof. You might be surprised by what you can accomplish!
 
-
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ### 2.4.2 必胜策略
+>
+> 这个例子将是我们第一个不证明数值公式的归纳谜题！想想这可能让人觉得奇怪，但这是真的，你将会看到。实际上，这在数学中比你想象的更为常见：一个问题或数学对象可能具有某种底层的归纳结构，而不依赖于代数或算术的东西。事实上，我们将讨论一个游戏。它在通常意义上是一个游戏——有两个玩家遵守的规则，有明确的胜者和败者——但它也在数学意义上是一个游戏，我们可以用数学符号来表述规则和对局状态，并以抽象的方式讨论形式化策略。我们甚至可以"解"这个游戏。这和棒球之类的游戏截然不同。让我们来讨论这个游戏的规则，我们称之为"取石游戏"（Takeaway）。有两个玩家，称为 P1 和 P2。每次都是 P1 先行动。玩家们从桌子中间的两堆石子开始，每堆恰好有 $n$ 颗石子，其中 $n$ 是某个自然数。（为了区分不同版本的游戏，当每堆有 $n$ 颗石子时，我们说玩家"在玩 $T_n$"。）每个玩家在自己的回合中，可以从任一堆中移除任意数量的石子。但是，同时从两堆中移除石子是违规的。移除最后一颗石子的玩家获胜。试着和朋友玩几局取石游戏。用硬币或糖果当作石子。尝试不同的 $n$ 值。尝试互换角色，让你分别做 P1 和 P2。试着想出一个必胜策略——一种最大化你获胜几率的方法。试着对不同 $n$ 值的情况做一个猜想。谁"应该"赢？你能证明你的结论吗？认真的，先玩一玩这个游戏再继续阅读我们的分析。你可能会对自己的发现感到惊讶！
 
 
 As with the other examples, let's use some small values of n to figure out what's really going on, then try to generalize. When n = 1, this game is rather silly. P1 must empty one pile of its only stone, then P2 gets the only remaining stone in the other pile. Thus, P2 wins. (Notice that it doesn't matter which of the two piles P1 picks from, P2 will always get the other one. We might say that P1 picks the pile on the left "without loss of generality" because it doesn't matter either way; the situations are equivalent, so we might as well say it's the left pile to have something concrete to say. We will explore this idea of "without loss of generality" later on when we discuss mathematical logic, too.) P1's turn P2's turn P2 wins! When n = 2, we now have a few cases that might appear. Think about P1's possible moves. Again, they might act on either the left or right pile, but because they're ultimately identical and we can switch the two piles, let's just say (without loss of generality) that P1 removes some stones from the left pile. How many? It could be one or two stones. Let's examine each case separately. P1's turn P2's turn P2 wins! P2's turn ??? If P1 removes both stones, how should P2 react? Duh, they should take the other pile, so P1 probably shouldn't have made that move in the first place. However, P1 might not be thinking straight or something and, besides, we need to consider all possible situations here to fully analyze this game. Thus, in this case (the top line in the above diagram) P2 wins. Okay, that's the easy situation. What if P1 removes just one stone from the left pile (the bottom line above)? How should P2 react? We now have some options: • If P2 removes the other stone from the left pile . . . well, P1 takes the other pile and P1 wins. • If P2 removes both stones from the right pile . . . well, P1 takes the last stone from the left pile and P1 wins.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 和其他例子一样，让我们用一些小的 $n$ 值来弄清楚真正发生的事情，然后尝试推广。当 $n = 1$ 时，这个游戏相当无聊。P1 必须清空其中一堆仅有的一颗石子，然后 P2 拿走另一堆中仅剩的石子。因此，P2 获胜。（请注意，P1 选择哪一堆并不重要，P2 总是会拿到另一堆。我们可以说 P1 "不妨"选择左边那堆，因为两种情况没有区别；为了说得具体一些，我们就说选的是左边那堆。我们稍后在讨论数学逻辑时，还会探讨"不妨假设"这个概念。）当 $n = 2$ 时，我们现在有几种可能出现的情况。想想 P1 可能的走法。同样，P1 可以作用于左边或右边的堆，但因为它们本质上是相同的，我们可以交换两堆，所以不妨假设 P1 从左边那堆移除一些石子。移除多少呢？可以是一颗或两颗。让我们分别考察每种情况。如果 P1 移除两颗石子，P2 应该怎么应对？当然，应该拿走另一堆，所以 P1 可能一开始就不该走那步。然而，P1 可能没想清楚，而且我们需要考虑所有可能的情况来全面分析这个游戏。因此，在这种情况下 P2 获胜。好，这是简单的情况。如果 P1 只移除左边那堆的一颗石子呢？P2 应该怎么应对？我们有以下选择：
+>
+> - 如果 P2 移除左边那堆剩余的那颗石子……那么 P1 拿走另一堆，P1 获胜。
+> - 如果 P2 移除右边那堆的两颗石子……那么 P1 拿走左边那堆最后一颗石子，P1 获胜。
 
 
 2.4. TWO MORE (DIFFERENT) EXAMPLES
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 2.4 另外两个（不同类型的）例子
 
 
 • However, if P2 removes just one stone from the right pile . . . P1's turn P2's turn Now we have exactly the same situation presented by T1, which we already analyzed! It is, again, P1's move first, so we know what will happen: P2 wins no matter what. If you are player P2, this is obviously the best move: you win no matter how P1 responds! Stepping back for a second, let's think about what this has shown: no matter what P1 does first (remove one or two stones from either pile), there is some possible response that P2 can make that will guarantee a win for P2, regardless of P1's subsequent response. Wow, P2 is sitting pretty! Let's see if this happens for other values of n. When n = 3, we will again assume (without loss of generality) that player P1 acted on the left pile. They could remove one, two, or three stones: • If P1 removes all three, P2 responds by taking the other pile completely and wins. • If P2 removes two stones . . . well, what should player P2 do? Finishing offthat left pile is stupid (because P1 can take the whole right pile and win), and pulling the entire right pile is similarly stupid (because P1 can take the whole left pile and win), so something in between is required. Now, if P2 removes just one stone from the right pile, notice that P1 can respond with the same action; this leaves exactly one stone in both piles, but the roles reversed. With P2 going first in such a situation, they are now bound to lose, per our previous analysis. Bad move, P2! P1's turn P2's turn P1's turn P1 wins! Let's try again. If P2 removes two stones from the right pile instead . . . look at that! We now have exactly one stone in each pile, with P1 up first, so we know P1 is going to lose. P2 strikes again!
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 - 然而，如果 P2 只从右边那堆移除一颗石子……现在我们得到了与 $T_1$ 完全相同的局面，而我们之前已经分析过了！同样由 P1 先走，所以我们知道结果：无论 P1 如何回应，P2 都会获胜。如果你是玩家 P2，这显然是最优的走法：无论 P1 怎么回应，你都赢！退一步想想，这说明了什么：无论 P1 先做什么（从任一堆移除一颗或两颗石子），P2 都有某种可能的回应能够保证 P2 获胜，无论 P1 后续如何应对。哇，P2 坐享其成！让我们看看其他 $n$ 值是否也是如此。当 $n = 3$ 时，我们再次不妨假设玩家 P1 作用在左边那堆。他们可以移除一颗、两颗或三颗石子：
+>
+> - 如果 P1 移除全部三颗，P2 回以拿走另一堆全部石子并获胜。
+> - 如果 P1 移除两颗石子……嗯，玩家 P2 应该怎么做？吃完左边那堆是愚蠢的（因为 P1 可以拿走右边整堆并获胜），而拿走右边整堆同样愚蠢（因为 P1 可以拿走左边整堆并获胜），所以需要折中。此时，如果 P2 只从右边那堆移除一颗石子，注意 P1 可以做同样的回应；这将使两堆都只剩恰好一颗石子，但角色互换。在这种局面下由 P2 先走，根据我们之前的分析，P2 注定会输。走臭了，P2！让我们再试一次。如果 P2 改为从右边那堆移除两颗石子……看！现在每堆恰好剩一颗石子，而由 P1 先走，我们知道 P1 会输。P2 再下一城！
 
 
 P1's turn P2's turn P2 wins! Think about the case where n = 4 for a minute, and you'll find the exact same analysis occurring. You'll another possibility to consider: player P1 can remove one, or two, or three, or four stones from the left pile. Whatever they do, though, you'll find that P2 can just mimic that action on the other pile, reducing the whole game to a previous, smaller version of the game, where P2 was shown to be guaranteed a win! It looks like P2 is in the driver's seat the whole time, since they can respond to whatever P1 does, making an identical move on the other pile. No matter what P1 does, there is always a response for P2 that means they win, regardless of P1's subsequent moves. In this sense, we say "P2 has a winning strategy". There is a clear and describable method for P2 to assess the game situation and choose a specific move to guarantee a win. How might we prove this? How does this even fit into this chapter on induction? It might be hard to see, at the moment. What are we really even proving here? What are the dominoes or rungs in our analogy for this problem? In wrapping your brain around this example, you should hopefully realize the following: induction is not about algebraic formulas all the time; induction represents some kind of "building-up" structure, where larger situations depend on smaller ones; we have to prove some initial fact, and then argue how an arbitrary, larger fact can be reduced so that it depends on a previous fact. This is really what the dominoes analogy is meant to accomplish. It just so happens that this analogy is particularly illustrative for certain induction problems (but not all) and is visualizable and memorable. It does not perfectly apply to all situations, though. Read back through these four examples from this chapter and think about how they are similar and how they are different. Try to come up with a more precise, mathematical description of mathematical induction using some better terminology, perhaps of your own invention. (By this, we mean something better than our intuitive analogy. You'd be surprised at how well you might be able to describe induction without really knowing what you "ought" to say, and you'll actually learn a lot, in the process!) In due time, we will have a rigorous statement to make, and prove, about mathematical induction and its various forms. In the meantime, we need to take a trip through some other areas of mathematics to build up the necessary language, notation, and knowledge to come back and tackle this problem. Before we go, though, we should mention a few useful applications of mathematical induction.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 P1 的回合，P2 的回合，P2 获胜！试想一下 $n = 4$ 时的情形，你会发现完全相同的分析模式。你将多一种可能要考虑：玩家 P1 可以从左边那堆移除一颗、两颗、三颗或四颗石子。无论 P1 做什么，你会发现 P2 只需在另一堆上模仿同样的操作，将整个游戏归约为之前更小的版本，而在那些版本中 P2 已被证明必胜！看起来 P2 从头到尾都占据主动权，因为他们可以对 P1 的任何操作做出回应——在另一堆上做相同的操作。无论 P1 怎么走，P2 总有一种回应方式保证自己获胜，不管 P1 后续如何行动。在这种意义下，我们说"P2 有必胜策略"。P2 有一种清晰且可描述的方法来评估游戏局势并选择特定的走法以保证获胜。
+>
+> 我们该如何证明这一点？这与本章的归纳法有何关联？目前可能还很难看出来。我们到底在证明什么？在这个问题中，我们类比中的多米诺骨牌或梯级是什么？在消化这个例子的过程中，你应该能认识到以下几点：归纳法并不总是关于代数公式的；归纳法代表某种"逐层构建"的结构，其中更大的情形依赖于更小的情形；我们需要先证明某个初始事实，然后论证一个任意的、更大的事实如何归约为依赖于之前事实。这才是多米诺骨牌类比真正要表达的意思。只是这个类比在特定的归纳问题上特别直观（但并非全部问题），便于可视化和记忆。但它并不完美地适用于所有情况。回顾本章这四个例子，思考它们的相同之处和不同之处。试着用更精确的数学语言——也许用你自己发明的术语——来描述数学归纳法。（我们指的是比我们的直觉类比更好的东西。你可能会惊讶于自己在并不"应该"说什么的情况下，竟能相当出色地描述归纳法，而且在此过程中你会学到很多东西！）到了合适的时候，我们将能做出关于数学归纳法及其各种形式的严格陈述和证明。在此之前，我们需要先涉猎数学的其他领域来积累必要的语言、符号和知识，然后再回来攻克这个问题。
 
 
 ### 2.4.3 Questions & Exercises
@@ -71,12 +79,27 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 ### 2.5.1 Recursive Programming The concepts behind mathematical induction are employed heavily in computer science, as well. Think back to how we first derived the formula for Pn k=1 k2.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ### 2.5 应用
+>
+> ### 2.5.1 递归编程
+>
+> 数学归纳法背后的概念在计算机科学中也得到了广泛应用。回想我们最初如何推导求和公式 $\sum_{k=1}^{n} k^2$ 的。
 
 
 Once we had a way to represent a cubic number in terms of a smaller cube and some leftover terms, we repeated this subsitution process over and over until we arrived at the "simplest" case, namely, the one that we first observed when starting the problem: 23 = 1+3+3+1. Recursive programming takes advantage of this technique: to solve a "large" problem, identify how the problem depends on "smaller" cases, and reduce the problem until one reaches a simple, known case. A classical example of this type of technique is seen in writing code to compute the factorial function, n!, which is defined as the product of the first n natural numbers: n! = 1 $\cdot$ 2 $\cdot$ 3 $\cdot$  $\cdot$  $\cdot$ (n −1) $\cdot$ n This is a simple definition that we, as humans, intuitively understand, but telling a computer how to perform this product doesn't work quite the same way. (Try it! How do you say "and just keep going until you reach n" in computer code?) A more efficient way to program the function, and one that models the mathematically inductive definition, in fact, is to have one program recursively call itself until it reaches that "simple" case. With the factorial function, that case is 1! = 1. For any other value of n, we can simply apply the knowledge that n! = (n −1)! $\cdot$ n over and over to compute n!. Consider the following pseudocode that represents this idea: factorial(n): if n = 1 return 1 else return n * factorial(n-1) end We know that 1! = 1, so if the program is asked to compute that, the correct value is returned right away. For any larger value of n, the program refers to itself and says, "Go back and compute (n−1)! for me, then I'll add a factor of n at the end, and we'll know the answer." To compute (n−1)!, the program asks, again, if the input is 1; if not, it calls itself and says, "Go back and compute (n−2)! for me, then I'll add a factor of n−1 at the end." This process continues until the program returns 1! = 1. From there, it knows how to find 2! = 1 × 2, and then 3! = 2! × 3, and so on, until n! = (n −1)! × n. Another example involving recursive programming arises with the Fibonacci numbers. You may have seen this sequence of numbers before in a mathematics course. (In fact, we even mentioned them in the last section, with the domino tilings!) You also might have heard about how they appear in nature in some interesting and strange ways. (The sequence was first "discovered" by the Italian mathematician Leonardo of Pisa while studying the growth of rabbit populations.) The first two numbers in the sequence are specified to be 1, and any
 
 
-> 🇨🇳 TODO: 待翻译
-
-
+> 🇨🇳 一旦我们找到将一个立方数用更小的立方数和一些额外项来表示的方法，我们就一再重复这个替换过程，直到抵达"最简"的情形，即我们在开始问题时首先观察到的那个：$2^3 = 1+3+3+1$。递归编程正是利用了这种技术：要解决一个"大"问题，先确定该问题如何依赖于"更小"的情形，然后将问题逐步归约直到达到一个简单的、已知的情形。这种技术的一个经典例子见于编写计算阶乘函数 $n!$ 的代码，阶乘定义为前 $n$ 个自然数的乘积：$n! = 1 \cdot 2 \cdot 3 \cdots (n-1) \cdot n$。这是一个简单的定义，我们人类凭直觉就能理解，但告诉计算机如何执行这个乘法并不完全一样。（试试看！你如何在代码中表达"一直乘到 $n$"？）一种更高效的编程方式——事实上也正是数学归纳定义所建模的方式——是让一个程序递归地调用自身，直到达到那个"简单"的情形。对于阶乘函数，该情形是 $1! = 1$。对于其他任何 $n$ 值，我们可以反复应用 $n! = (n-1)! \cdot n$ 来计算 $n!$。考虑以下表示此思想的伪代码：
+>
+> ```
+> factorial(n):
+>   if n = 1
+>     return 1
+>   else
+>     return n * factorial(n-1)
+> end
+> ```
+>
+> 我们知道 $1! = 1$，所以如果程序被要求计算这个值，正确的值会立即返回。对于任何更大的 $n$ 值，程序会引用自身并说："回去帮我算 $(n-1)!$，然后我在末尾乘上 $n$，我们就能得到答案。"为了计算 $(n-1)!$，程序再次检查输入是否为 1；如果不是，它调用自身并说："回去帮我算 $(n-2)!$，然后乘上 $n-1$。"这个过程一直持续到程序返回 $1! = 1$。从那里开始，它知道如何求出 $2! = 1 \times 2$，然后 $3! = 2! \times 3$，以此类推，直到 $n! = (n-1)! \times n$。
+>
+> 另一个涉及递归编程的例子与斐波那契数列有关。你可能之前在数学课上见过这组数列。（事实上，我们在上一节多米诺骨牌铺法讨论中就提到过它们！）你也可能听说过它们如何以有趣而奇妙的方式出现在自然界中。（该数列最早由意大利数学家比萨的莱奥纳多在研究兔子种群增长时"发现"。）数列的前两个数被规定为 1，而任意后续的数都是其前两个数之和。

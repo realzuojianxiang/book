@@ -76,4 +76,4 @@ and we will get to that soon enough. For now, we need to learn how to express
 many types of mathematical objects in the first place, before we can even make
 claims about them.
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 ……在我们能够对这些数学对象做出论断之前，我们首先需要学会如何表达它们，而这就涉及集合（Sets）。

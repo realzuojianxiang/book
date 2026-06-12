@@ -70,4 +70,4 @@ P(S) = {A | A $\subseteq$S}
 That is, P(S) is the set of all subsets of S.
 • It is true that $\emptyset$$\in$P(S) and S $\in$P(S), for any set S.
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 即 $\mathcal{P}(S)$ 是 $S$ 的所有子集的集合。对任意集合 $S$，都有 $\emptyset \in \mathcal{P}(S)$ 且 $S \in \mathcal{P}(S)$。
