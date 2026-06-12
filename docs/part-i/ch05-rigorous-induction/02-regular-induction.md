@@ -4,7 +4,7 @@ title: Regular Induction
 
 # Regular Induction
 
-Look at all of these wordy sentences and phrases and hand-wavey terms. Some "fact" that depends on a natural number? Sounds like a variable proposition, right? "If . . . then we can conclude necessarily . . . " Sounds like a conditional statement, doesn't it? All of this language is meant to express some logical underpinnings, and we can restate the whole theorem now, using the concepts and notation developed in the previous chapter. Try your hand at doing this first, before looking at our version. While you're at it, try remembering how we proved that theorem. (Again, you might have missed this if you skipped this optional reading, and that's fine.) Look back to Section 3.8.2 and remind yourself, because we will follow that same proof here, but we'll use the logical symbols and tools that we now have in hand. Ready? Here we go!
+Look at all of these wordy sentences and phrases and hand-wavey terms. Some "fact" that depends on a natural number? Sounds like a variable proposition, right? "If... then we can conclude necessarily... " Sounds like a conditional statement, doesn't it? All of this language is meant to express some logical underpinnings, and we can restate the whole theorem now, using the concepts and notation developed in the previous chapter. Try your hand at doing this first, before looking at our version. While you're at it, try remembering how we proved that theorem. (Again, you might have missed this if you skipped this optional reading, and that's fine.) Look back to Section 3.8.2 and remind yourself, because we will follow that same proof here, but we'll use the logical symbols and tools that we now have in hand. Ready? Here we go!
 <div class="def-theorem" markdown>
 **Theorem 5.2.2 (Principle of Mathematical Induction). Let P(n) be a variable**
 </div>
@@ -35,7 +35,7 @@ Suppose that the two conditions given in the theorem do hold, namely (1) P(1) ho
 
 • We must verify the Base Case (BC) to show that condition (1) in the PMI is satisfied. • We must verify the the conditional statement $\forall k \in \mathbb{N}. P(k) =\Rightarrow P$(k+1) to show that condition (2) in the PMI is satisfied. To do this, we will apply the direct proof strategy for proving conditional statements; this has two parts: -- First, we make an Inductive Hypothesis (IH), which introduces an arbitrary and fixed natural number k and supposes P(k) holds. -- Second, we go through the Inductive Step (IS), which takes that assumption and deduces that P(k + 1), also holds. • Between these steps---the BC, the IH, and the IS---we have verified the conditions of PMI, and we can deduce its conclusion: $\forall n \in \mathbb{N}$. P(n). Finally, we make this conclusion to remind our reader of what we have accomplished. Template for a "Proof by Induction" Goal: Prove that $\forall n \in \mathbb{N}$. P(n)
 <div class="def-proof" markdown>
-*Proof.* Let P(n) be the proposition " ". We will prove $\forall n \in \mathbb{N}$. P(n) by induction on n. Base Case: Observe that P(1) holds because . Induction Hypothesis: Let k $\in \mathbb{N}$ be arbitrary and fixed. Suppose P(k) holds. Induction Step: Deduce that P(k + 1) also holds. By PMI, it follows that \forall n $\in \mathbb{N}$. P(n). Comments and Common Pitfalls What follows are some recommendations and suggestions. These are based on what we feel constitutes a good, well-written inductive argument, and also some mistakes that we see students consistently make over the years. • Be sure to define a proposition. Sometimes the claim is defined for you in the statement of a problem or exercise. However, it is not always defined explicitly as P(n). In that case, referring to a proposition P(n) later on has no meaning. So, be sure to define a statement if you want to refer to it! To be concise, you might say something like "Let P(n) be the claim defined
+*Proof.* Let P(n) be the proposition " ". We will prove $\forall n \in \mathbb{N}$. P(n) by induction on n. Base Case: Observe that P(1) holds because. Induction Hypothesis: Let k $\in \mathbb{N}$ be arbitrary and fixed. Suppose P(k) holds. Induction Step: Deduce that P(k + 1) also holds. By PMI, it follows that \forall n $\in \mathbb{N}$. P(n). Comments and Common Pitfalls What follows are some recommendations and suggestions. These are based on what we feel constitutes a good, well-written inductive argument, and also some mistakes that we see students consistently make over the years. • Be sure to define a proposition. Sometimes the claim is defined for you in the statement of a problem or exercise. However, it is not always defined explicitly as P(n). In that case, referring to a proposition P(n) later on has no meaning. So, be sure to define a statement if you want to refer to it! To be concise, you might say something like "Let P(n) be the claim defined
 </div>
 
 
@@ -57,46 +57,46 @@ Claim: The sum of the first n odd natural numbers is n2.
 <div class="def-proof" markdown>
 *Proof.* Let P(n) be the proposition
 </div>
-" 1 + 3 + 5 + $\cdot  \cdot  \cdot$ + 2n −1 = n X i=1 (2i −1) = n2 " We will prove that $\forall n \in \mathbb{N}$. P(n) by induction on n. BC: Consider n = 1. Notice that
+" 1 + 3 + 5 + $\cdot \cdot \cdot$ + 2n -1 = n X i=1 (2i -1) = n2 " We will prove that $\forall n \in \mathbb{N}$. P(n) by induction on n. BC: Consider n = 1. Notice that
 
 
 > 🇨🇳 考虑 $n = 1$。注意到 $\sum_{i=1}^{1}(2i-1) = 1$，而 $1^2 = 1$，因此
 
 
-X i=1 (2i −1) = 1 and 12 = 1 and so
+X i=1 (2i -1) = 1 and 12 = 1 and so
 
 
 > 🇨🇳 因此 $\sum_{i=1}^{1}(2i-1) = 1^2$，于是 $P(1)$ 为真，因为 $1 = 1$。
 
 
-X i=1 (2i −1) = 12 Thus, P(1) is True, because 1 = 1.
+X i=1 (2i -1) = 12 Thus, P(1) is True, because 1 = 1.
 
 
 > 🇨🇳 归纳假设（IH）：设 $k \in \mathbb{N}$ 为任意且固定的自然数。假设 P(k) 成立，即 $\sum_{i=1}^{k}(2i-1) = k^2$。归纳步骤（IS）：考虑 $k+1$。
 
 
-IH: Let k $\in \mathbb{N}$ be arbitrary and fixed. Suppose P(k) holds. This means n X i=1 (2k −1) = n2 IS: Consider k + 1. We can write k+1 X i=1 (2i −1) = 2(k + 1) −1 + k X i=1 (2i −1) = 2k + 1 + k X i=1 (2i −1) by separating out the (k + 1)-th term of the summation. We now use the IH to replace the summation on the right-hand side and deduce that k+1 X i=1 (2i −1) = 2k + 1 + k2
+IH: Let k $\in \mathbb{N}$ be arbitrary and fixed. Suppose P(k) holds. This means n X i=1 (2k -1) = n2 IS: Consider k + 1. We can write k+1 X i=1 (2i -1) = 2(k + 1) -1 + k X i=1 (2i -1) = 2k + 1 + k X i=1 (2i -1) by separating out the (k + 1)-th term of the summation. We now use the IH to replace the summation on the right-hand side and deduce that k+1 X i=1 (2i -1) = 2k + 1 + k2
 Factoring then tells us
-k+1 X i=1 (2i −1) = (k + 1)2 and therefore P(k + 1) holds. By the PMI, we conclude that $\forall n \in \mathbb{N}$. P(n). Here's another good induction proof of a useful fact about geometric series.
+k+1 X i=1 (2i -1) = (k + 1)2 and therefore P(k + 1) holds. By the PMI, we conclude that $\forall n \in \mathbb{N}$. P(n). Here's another good induction proof of a useful fact about geometric series.
 Example 5.2.6. Geometric series formula:
-Claim: For every q $\in \mathbb{R}$ −{0, 1} and for every n $\in \mathbb{N}$, the following formula
-holds: n−1 X i=0 qi = 1 + q + q2 + $\cdot  \cdot  \cdot$ + qn−1 = qn −1 q −1
+Claim: For every q $\in \mathbb{R}$ -{0, 1} and for every n $\in \mathbb{N}$, the following formula
+holds: n-1 X i=0 qi = 1 + q + q2 + $\cdot \cdot \cdot$ + qn-1 = qn -1 q -1
 <div class="def-proof" markdown>
-*Proof.* Let q $\in \mathbb{R}$ −{0, 1} be arbitrary and fixed. Define P(n) to be the propo-
+*Proof.* Let q $\in \mathbb{R}$ -{0, 1} be arbitrary and fixed. Define P(n) to be the propo-
 </div>
-sition " n−1 X i=0 qi = qn −1 q −1 " We will prove $\forall n \in \mathbb{N}$. P(n) by induction on n. BC: Consider n = 1. Observe that n−1 X i=0 qi =
+sition " n-1 X i=0 qi = qn -1 q -1 " We will prove $\forall n \in \mathbb{N}$. P(n) by induction on n. BC: Consider n = 1. Observe that n-1 X i=0 qi =
 
 
 > 🇨🇳 考虑 $n = 1$。注意到 $\sum_{i=0}^{0} q^i = q^0 = 1$，因为 $q \neq 0$。同时，注意到 $\frac{q^n - 1}{q - 1} = \frac{q - 1}{q - 1} = 1$，因为 $q \neq 1$。于是 $P(1)$ 成立。
 
 
-X i=0 qi = q0 = 1 since q \neq 0. Also, observe that qn −1 q −1 = q −1 q −1 = 1
+X i=0 qi = q0 = 1 since q \neq 0. Also, observe that qn -1 q -1 = q -1 q -1 = 1
 
 
 > 🇨🇳 归纳假设（IH）：设 $k \in \mathbb{N}$ 为任意且固定的自然数，假设 P(k) 成立，即 $\sum_{i=0}^{k-1} q^i = \frac{q^k - 1}{q - 1}$。归纳步骤（IS）：要证 P(k+1) 成立，即 $\sum_{i=0}^{k} q^i = \frac{q^{k+1} - 1}{q - 1}$。
 
 
-since q \neq 1. Thus, P(1) holds. IH: Let k $\in \mathbb{N}$ be arbitrary and fixed and suppose P(k) holds. This means k−1 X i=0 qi = qk −1 q −1 IS: WWTS P(k + 1) holds. (Remember, WWTS means "We want to show".) That is, WWTS k X i=0 qi = qk+1 −1 q −1 noticing that (k + 1) −1 = k. Observe that we can algebraically simplify and use our assumptions to write k X i=0 qi = k−1 X i=0 qi ! + qk summation notation = qk −1 q −1 + qk invoking IH = qk −1 + qk(q −1) q −1 common denominator = qk −1 + qk+1 −qk q −1 = qk+1 −1 q −1 algebra This shows that P(k + 1) holds, as well. By the PMI, \forall n $\in \mathbb{N}$. P(n) holds. Follow-up question: Why did we need q $\notin${0, 1} in the claim? What happens when q = 0? Where does this proof break down? Does the formula still holds? If so, prove it. If not, can you fix it? Try answering the same questions for q = 1, as well.
+since q \neq 1. Thus, P(1) holds. IH: Let k $\in \mathbb{N}$ be arbitrary and fixed and suppose P(k) holds. This means k-1 X i=0 qi = qk -1 q -1 IS: WWTS P(k + 1) holds. (Remember, WWTS means "We want to show".) That is, WWTS k X i=0 qi = qk+1 -1 q -1 noticing that (k + 1) -1 = k. Observe that we can algebraically simplify and use our assumptions to write k X i=0 qi = k-1 X i=0 qi ! + qk summation notation = qk -1 q -1 + qk invoking IH = qk -1 + qk(q -1) q -1 common denominator = qk -1 + qk+1 -qk q -1 = qk+1 -1 q -1 algebra This shows that P(k + 1) holds, as well. By the PMI, \forall n $\in \mathbb{N}$. P(n) holds. Follow-up question: Why did we need q $\notin${0, 1} in the claim? What happens when q = 0? Where does this proof break down? Does the formula still holds? If so, prove it. If not, can you fix it? Try answering the same questions for q = 1, as well.
 ### 5.2.4 Questions & Exercises
 Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What does the PMI (Principle of Mathematical Induction) state? How is it proven?
 
@@ -104,22 +104,22 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 > 🇨🇳 (1) 数学归纳法原理（PMI）陈述了什么？它是如何被证明的？(2) 归纳证明的基础情形是什么？它与数学归纳法原理的陈述有何关系？(3) 归纳假设与归纳步骤有何关系？它们与数学归纳法原理的陈述有何关系？(4) 为什么在归纳步骤中的某处使用归纳假设是重要的？
 
 
-(2) What is the Base Case of an induction proof? How does it relate to the statement of the PMI? (3) How are the Induction Hypothesis and Induction Step of a proof related? How do they relate to the statement of the PMI? (4) Why is it important to invoke the Induction Hypothesis somewhere in the Induction Step? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Prove that n X i=1 i3 = n(n + 1)
+(2) What is the Base Case of an induction proof? How does it relate to the statement of the PMI? (3) How are the Induction Hypothesis and Induction Step of a proof related? How do they relate to the statement of the PMI? (4) Why is it important to invoke the Induction Hypothesis somewhere in the Induction Step? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Prove that n X i=1 i3 = [n(n + 1)
 
 
 > 🇨🇳 (1) 证明 $\sum_{i=1}^{n} i^3 = \left[\dfrac{n(n+1)}{2}\right]^2$ 对一切 $n \in \mathbb{N}$ 成立。(2) 证明每个奇自然数的平方比 8 的倍数多 1，即证明 $(2n+1)^2 - 1$ 是 8 的倍数对一切 $n \in \mathbb{N}$ 成立。(3) 考虑以下命题：对一切 $n \in \mathbb{N}$，$7^n - 4^n$ 是 3 的倍数。用逻辑符号重写该命题，然后用归纳法证明它。(4) 回忆斐波那契数列的定义：$f_0 = 0$，$f_1 = 1$，$\forall n \in \mathbb{N} \setminus \{1\}.\ f_n = f_{n-1} + f_{n-2}$。用归纳法证明下列命题对一切 $n \in \mathbb{N}$ 成立：(a) $\sum_{i=1}^{n} f_i = f_{n+2} - 1 (b) \sum_{i=1}^{n} f_{2i-1} = f_{2n} (c) f_{4n}$ 是 3 的倍数 (d) 挑战 1：n 是 3 的倍数 $\Rightarrow f_n$ 是偶数 (e) 挑战 2：n 不是 3 的倍数 \Rightarrow $f_n$ 是奇数
 
 
-2 holds for every n $\in \mathbb{N}$. (2) Prove that the square of every odd natural number is one more than a multiple of 8. That is, prove that (2n + 1)2 −1 is a multiple of 8 for every n $\in \mathbb{N}$. (3) Consider this claim: 7n −4n is a multiple of 3, for every n $\in \mathbb{N}$. Rewrite this claim using logical symbolic notation. Then, prove it by induction. (4) Recall that the Fibonacci Numbers are defined by f0 = 0 and f1 = 1 and \forall n $\in \mathbb{N}$ −{1}. fn = fn−1 + fn−2 Prove the following claims hold for every n $\in \mathbb{N}$, by induction on n: (a) n X i=1 fi = fn+2 −1 (b) n X i=1 f2i−1 = f2n (c) f4n is a multiple of 3 (d) Challenge 1: (n is a multiple of 3) =\Rightarrow(fn is even) (e) Challenge 2: (n is not a multiple of 3) =$\Rightarrow$(fn is odd)
+]2 holds for every n $\in \mathbb{N}$. (2) Prove that the square of every odd natural number is one more than a multiple of 8. That is, prove that (2n + 1)2 -1 is a multiple of 8 for every n $\in \mathbb{N}$. (3) Consider this claim: 7n -4n is a multiple of 3, for every n $\in \mathbb{N}$. Rewrite this claim using logical symbolic notation. Then, prove it by induction. (4) Recall that the Fibonacci Numbers are defined by f0 = 0 and f1 = 1 and \forall n $\in \mathbb{N}$ -{1}. fn = fn-1 + fn-2 Prove the following claims hold for every n $\in \mathbb{N}$, by induction on n: (a) n X i=1 fi = fn+2 -1 (b) n X i=1 f2i-1 = f2n (c) f4n is a multiple of 3 (d) Challenge 1: (n is a multiple of 3) =\Rightarrow(fn is even) (e) Challenge 2: (n is not a multiple of 3) =$\Rightarrow$(fn is odd)
 
 
 > 🇨🇳 练习题解答提示：对于斐波那契数列的归纳证明，注意在 (d) 和 (e) 中需要仔细分析 $f_n$ 的奇偶性与 $n$ 是否为 3 的倍数之间的关系。建议对 (d) 和 (e) 使用强归纳法（见下一节）。
 
 
 ## 5.3 Other Variants of Induction Now that we're really comfortable with how induction works and have seen many examples, we can show you two modifications of this method. The idea is that there is "nothing special" about using induction to prove a statement holds for every n $\in \mathbb{N}$. Don't get us wrong; there is a lot that's special about N! What we mean is that it's possible to use induction to prove that a statement holds for every n $\in S$, where S might be some other kind of set. We will describe these sets for you in the following discussions and examples.
-### 5.3.1 Starting with a Base Case other than n = 1 We need to have a base case in an induction proof, but there's nothing that says it always has to be n = 1. Perhaps we have a proposition P(n) that is True for n = 1 and n = 2, but then somehow False for n = 3 and n = 4, but then True for every n that is at least 5. How could we prove these claims? Well, we could just show the individual cases for n = 1, 2, 3, 4 separately, and then use induction to prove all the others. This will work because the set N −{1, 2, 3, 4} is also an inductive set. In terms of the Domino Analogy, this is like saying, "Let's just skip a few dominoes and start the line falling at n = 5. The rest will all fall down in the exact same way as we'd expect." In fact, we can even allow ourselves to talk about negative integers here! Let's slide to the left on the number line a bit and imagine that we actually have a line of dominoes numbered starting from, say, −3. That is, we'd have Domino
-# −3 and Domino # −2 and Domino # −1 and Domino #0 and Domino #1
-and all the rest. We can start the line falling at n = −3 and know that they will all fall into each other in much the same way as before. The whole idea here is that we still have an infinite line of dominoes moving offto the right with no gaps between them. It doesn't matter what numerical label we assign to the first domino. A line of dominoes like this will topple into each other no matter how we number that first one. This idea is what the next theorem encapsulates.
+### 5.3.1 Starting with a Base Case other than n = 1 We need to have a base case in an induction proof, but there's nothing that says it always has to be n = 1. Perhaps we have a proposition P(n) that is True for n = 1 and n = 2, but then somehow False for n = 3 and n = 4, but then True for every n that is at least 5. How could we prove these claims? Well, we could just show the individual cases for n = 1, 2, 3, 4 separately, and then use induction to prove all the others. This will work because the set N -{1, 2, 3, 4} is also an inductive set. In terms of the Domino Analogy, this is like saying, "Let's just skip a few dominoes and start the line falling at n = 5. The rest will all fall down in the exact same way as we'd expect." In fact, we can even allow ourselves to talk about negative integers here! Let's slide to the left on the number line a bit and imagine that we actually have a line of dominoes numbered starting from, say, -3. That is, we'd have Domino
+# -3 and Domino # -2 and Domino # -1 and Domino #0 and Domino #1
+and all the rest. We can start the line falling at n = -3 and know that they will all fall into each other in much the same way as before. The whole idea here is that we still have an infinite line of dominoes moving offto the right with no gaps between them. It doesn't matter what numerical label we assign to the first domino. A line of dominoes like this will topple into each other no matter how we number that first one. This idea is what the next theorem encapsulates.
 <div class="def-theorem" markdown>
 **Theorem 5.3.1 (Induction with any base case). Let P(n) be a variable propo-**
 </div>

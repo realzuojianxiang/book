@@ -14,12 +14,12 @@ Sets
 A.1.1
 Standard Sets
 • The natural numbers are
-N = {1, 2, 3, 4, 5, . . . }
+N = {1, 2, 3, 4, 5,... }
 Note: 0 $\notin \mathbb{N}$.
 • For every n $\in \mathbb{N}$, the set [n] ("brackets n") is defined by
-[n] = {x $\in \mathbb{N}$ | 1 $\leq x$ $\leq n$} = {1, 2, 3, . . . , n}
+[n] = {x $\in \mathbb{N}$ | 1 $\leq x$ $\leq n$} = {1, 2, 3,..., n}
 • The integers are
-Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . . }
+Z = {..., -3, -2, -1, 0, 1, 2, 3,... }
 • The rational numbers are
 Q =
 n
@@ -54,7 +54,7 @@ whenever x $\in S$, we also know that x $\in T$.
 • To prove that a set is a subset of another set, like S $\subseteq T$, we need to do
 something like this:
 Let x $\in S$ be arbitrary and fixed.
-. . . blah blah blah . . .
+... blah blah blah...
 Therefore, x $\in T$, as well.
 This shows S $\subseteq T$.
 • To say "S is a proper subset of T" we write
