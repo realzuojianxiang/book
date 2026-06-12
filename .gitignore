@@ -9,6 +9,11 @@ dist/
 # Source PDF (too large for git, provide separately)
 *.pdf
 
-# Extraction scripts (utility, not site content)
+# Extraction & cleanup scripts (utility, not site content)
 extract_pdf.py
 extract_pdf_v2.py
+replace_unicode.py
+wrap_bare_latex.py
+fix_fragmented_math.py
+fix_adjacent_dollars.py
+latex_convert.py

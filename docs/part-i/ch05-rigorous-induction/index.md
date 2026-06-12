@@ -70,8 +70,8 @@ process.
 Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some
 "fact" or "observation" that depends on the natural number n. Assume that
 1. P(1) is a true statement.
-2. Given any k $\in$N, if P(k) is true, then we can conclude necessarily that
+2. Given any k $\in \mathbb{N}$, if P(k) is true, then we can conclude necessarily that
 P(k + 1) is true.
-Then the statement P(n) must be true for every natural number n $\in$N.
+Then the statement P(n) must be true for every natural number n $\in \mathbb{N}$.
 
 > 🇨🇳 ……则命题 $P(n)$ 对所有自然数 $n \in \mathbb{N}$ 必定为真。

@@ -33,7 +33,7 @@ We've introduced the idea of a proof by talking about what we hope proofs to acc
 > 🇨🇳 我们通过讨论证明的目的和重要性引入了证明的概念。你可能会想，究竟如何定义一个证明。这其实是一个难以回答的问题！
 
 <div class="def-theorem" markdown>
-**Theorem 1.1.1** *(The Pythagorean Theorem)*. If a right triangle has base lengths $a$, $b$ and hypotenuse length $c$, then these values satisfy $a^2 + b^2 = c^2$.
+**Theorem 1.1.1** *(The Pythagorean Theorem)*. If a right triangle has base lengths $a, b$ and hypotenuse length c, then these values satisfy $a^2 + b^2 = c^2$.
 
 > 🇨🇳 **定理 1.1.1** *（勾股定理）*。如果直角三角形的两条直角边长为 $a$、$b$，斜边长为 $c$，则有 $a^2 + b^2 = c^2$。
 </div>
@@ -43,22 +43,22 @@ We've introduced the idea of a proof by talking about what we hope proofs to acc
 
     The area of the larger square can be computed in two ways:
 
-    $$
-    (a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab
-    $$
+ $$
+ $(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$
+ $$
 
     Expanding and canceling:
 
-    $$
+ $$
     a^2 + 2ab + b^2 = c^2 + 2ab \implies a^2 + b^2 = c^2
-    $$
+ $$
 
-    > 🇨🇳 画一个边长为 $a + b$ 的正方形。在其内部画四个直角三角形的副本，形成边长为 $c$ 的内正方形。大正方形面积可通过两种方式计算：$(a+b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$。展开并消去公共项：$a^2 + 2ab + b^2 = c^2 + 2ab$，因此 $a^2 + b^2 = c^2$。
+    > 🇨🇳 画一个边长为 $a + b$ 的正方形。在其内部画四个直角三角形的副本，形成边长为 c 的内正方形。大正方形面积可通过两种方式计算：$(a+b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$。展开并消去公共项：$a^2 + 2ab + b^2 = c^2 + 2ab$，因此 $a^2 + b^2 = c^2$。
 
 ??? example "Proof 2 — 相似三角形法 | Similar Triangles Method"
     Suppose the Pythagorean Theorem is true and draw the right triangle with the altitude from the vertex corresponding to the right angle.
 
-    Since the Pythagorean Theorem is true, we can apply it to all three of the right triangles in the diagram, namely $\triangle ABC$, $\triangle BCD$, $\triangle ACD$.
+    Since the Pythagorean Theorem is true, we can apply it to all three of the right triangles in the diagram, namely $\triangle ABC, \triangle BCD, \triangle ACD$.
 
     > 🇨🇳 假设勾股定理成立，从直角顶点画高。因为勾股定理成立，我们可以对图中的三个直角三角形应用它，即 $\triangle ABC$、$\triangle BCD$、$\triangle ACD$。
 
@@ -117,6 +117,6 @@ A **prime number** is a positive integer that has exactly two distinct positive 
 </div>
 
 ??? note "证明思路 | Proof Idea"
-    Suppose, for contradiction, that $\sqrt{2} = \frac{a}{b}$ where $a, b$ are integers with no common factor.
+    Suppose, for contradiction, that $\sqrt{2} = \frac{a}{b} where a, b$ are integers with no common factor.
 
     > 🇨🇳 反证法：假设 $\sqrt{2} = \frac{a}{b}$，其中 $a, b$ 为无公因子的整数。

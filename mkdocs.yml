@@ -88,6 +88,7 @@ extra_css:
   - assets/css/math.css
 
 extra_javascript:
+  - assets/js/mathjax-config.js
   - assets/js/reading-progress.js
   - assets/js/bilingual-toggle.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

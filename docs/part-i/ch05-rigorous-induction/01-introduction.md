@@ -25,7 +25,7 @@ Here, let's recall the statement of the Principle of Mathematical Induction that
 <div class="def-theorem" markdown>
 **Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some**
 </div>
-"fact" or "observation" that depends on the natural number n. Assume that 1. P(1) is a true statement. 2. Given any k $\in$N, if P(k) is true, then we can conclude necessarily that P(k + 1) is true. Then the statement P(n) must be true for every natural number n $\in$N.
+"fact" or "observation" that depends on the natural number n. Assume that 1. P(1) is a true statement. 2. Given any k $\in \mathbb{N}$, if P(k) is true, then we can conclude necessarily that P(k + 1) is true. Then the statement P(n) must be true for every natural number n $\in \mathbb{N}$.
 
 
 > 🇨🇳 定理 5.2.1（数学归纳原理）——设 $P(n)$ 是依赖于自然数 $n$ 的某个"事实"或"观察"。假设：(1) $P(1)$ 为真；(2) 对任意 $k \in \mathbb{N}$，若 $P(k)$ 为真则可必然推出 $P(k+1)$ 为真。则 $P(n)$ 对一切自然数 $n \in \mathbb{N}$ 必然为真。

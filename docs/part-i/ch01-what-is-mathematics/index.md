@@ -66,7 +66,7 @@ The mathematical arguments we will present here are all about triangles. Specifi
 > 🇨🇳 我们将展示的数学论证都与三角形有关。具体来说，它们涉及勾股定理。
 
 <div class="def-theorem" markdown>
-**Theorem 1.1.1** *(The Pythagorean Theorem)*. If a right triangle has base lengths $a$, $b$ and hypotenuse length $c$, then these values satisfy
+**Theorem 1.1.1** *(The Pythagorean Theorem)*. If a right triangle has base lengths $a, b$ and hypotenuse length $c$, then these values satisfy
 
 $$
 a^2 + b^2 = c^2
@@ -94,7 +94,7 @@ Let's look at some sample "proofs" and see whether they work well enough. (We sa
 The area of the larger square can be computed in two ways: by applying the area formula to the larger square or by adding the area of the smaller square to the area of the four triangles. Thus, it must be true that
 
 $$
-(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab
+$(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$
 $$
 
 Expanding the expression on the left and canceling a common term on both sides yields
