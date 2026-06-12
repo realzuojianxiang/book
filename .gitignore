@@ -16,4 +16,5 @@ replace_unicode.py
 wrap_bare_latex.py
 fix_fragmented_math.py
 fix_adjacent_dollars.py
+fix_final_math.py
 latex_convert.py
