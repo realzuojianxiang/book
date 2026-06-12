@@ -36,13 +36,17 @@ APPENDIX A. DEFINITIONS AND THEOREMS • Notation: We write (g ◦f)(x) = g(f(x)
 APPENDIX A. DEFINITIONS AND THEOREMS -- AFSOC f is bijective, so it has an inverse f −1. Find a contradiction. • For some X $\subseteq$A, find the image Imf(X): -- Define a set S. Claim that S = Imf(X). (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.) -- Prove that Imf(X) $\subseteq$S. ∗Let y $\in$Imf(X) be arbitrary and fixed. ∗This means $\exists$a $\in$X. f(a) = y. ∗Use the properties of f to show that f(a) $\in$S. ∗This shows that y $\in$S. -- Prove that S $\subseteq$Imf(X). ∗Let z $\in$S be arbitrary and fixed. ∗Define x = . ∗Show that x $\in$X. ∗Show that f(x) = z. ∗This shows that z $\in$Imf(X). -- Conclude by a double-containment argument that Imf(X) = S. • For some Z $\subseteq$B, find the preimage PreImf(Z): -- Define a set T. Claim that T = PreImf(Z). (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.) -- Prove that PreImf(Z) $\subseteq$T. ∗Let a $\in$PreImf(Z) be arbitrary and fixed. ∗This means f(a) $\in$Z. ∗Use the properties of f to show that a $\in$T. -- Prove that T $\subseteq$PreImf(Z). ∗Let x $\in$T be arbitrary and fixed. ∗Use the properties of f to show that f(x) $\in$Z. ∗This shows that x $\in$PreImf(Z). -- Conclude by a double-containment argument that PreImf(Z) = T. • Find the inverse of f. -- Define a function F : B $\to$A. (Note: Coming up with this definition is the hard part, and will involve a bunch of scratch work. There is no need to show this as part of your proof. Just start with the definition.)
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 证明 $F$ 是良定义的函数：证 $B$ 中每个输入都有且仅有一个属于 $A$ 的输出。证 $F \circ f = 	ext{Id}_A$。证 $f \circ F = 	ext{Id}_B$。由此得 $F = f^{-1}$（从而 $f$ 为双射）。
 
 
 -- Show that F is a well-defined function: show that every input from B has exactly one output that lies in A. -- Show that F ◦f = IdA. -- Show that f ◦F = IdB. -- Deduce that F = f −1. (Since f has an inverse, it is therefore a bijection, as well.)
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 **A.6 基数（Cardinality）**
+>
+> **A.6.1 定义** 设 $S$ 为任意集合。称 $S$ **有限（Finite）**，若 $\exists n \in \mathbb{N} \cup \{0\}$ 使存在双射 $f: S 	o [n]$。空集 $\emptyset$ 有限，因为 $[0] = \emptyset$。称 $S$ **无限（Infinite）**，若 $S$ 非有限。称 $S$ **可数无限（Countably Infinite）**，若存在双射 $f: S 	o \mathbb{N}$。称 $S$ **不可数无限（Uncountably Infinite）**，若每个函数 $f: S 	o \mathbb{N}$ 都不是双射。用 $|S|$ 表示 $S$ 的基数。有限时 $|S| = n$；无限时仅用 $|S|$ 与其他集合比较，不写 $|S| = \infty$，而写 $|S| = |T|$ 表示等势，$|S| < |T|$ 表示 $T$ 的基数严格更大。$|S| = |T|$ 当且仅当存在双射 $f: S 	o T$。
+>
+> **A.6.2 一般结果** 若 $|A| = |C|$ 且 $|B| = |D|$，则 $|A 	imes B| = |C 	imes D|$。若还有 $A \cap B = \emptyset$ 且 $C \cap D = \emptyset$，则 $|A \cup B| = |C \cup D|$。若存在单射 $f: A 	o B$，则 $|A| \leq |B|$。若存在满射 $f: A 	o B$，则 $|A| \geq |B|$。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS A.6 Cardinality A.6.1
@@ -52,6 +56,6 @@ Note: The empty set S = $\emptyset$is finite, since [0] = $\emptyset$.
 • We say S is infinite if S is not finite; that is, if $\forall$n $\in$N $\cup${0}, every function f : S $\to$[n] fails to be a bijection. • We say S is countably infinite (or just countable) if there exists a bijection f : S $\to$N. • We say S is uncountably infinite (or just uncountable) if every function f : S $\to$N fails to be a bijection. • We use |S| to indicate the cardinality of S. When S is finite, so there is some n $\in$N $\cup${0} and a bijection f : S $\to$[n], we write |S| = n to mean that S has n elements. We say n is the size of S. When S is infinite, we only use |S| to compare the cardinality of S to that of other sets. That is, we don't write things like |S| = $\infty$; rather, we write something like |S| = |T| to indicate that S and T have the same cardinality, whatever that may be, or something like |S| < |T| to indicate T has a strictly larger cardinality than S. • We write |S| = |T| and say S has the same cardinality as T if and only if there exists a bijection f : S $\to$T. A.6.2 Results In general, the following results hold. Some of the remaining results follow from these general statements. • Suppose |A| = |C| and |B| = |D|. Then |A × B| = |C × D|. • Suppose |A| = |C| and |B| = |D|, and suppose A$\cap$B = $\emptyset$and C $\cap$D = $\emptyset$. Then |A $\cup$B| = |C $\cup$D|. • Suppose there is an injection f : A $\to$B. Then |A| $\leq$|B|. • Suppose there is a surjection f : A $\to$B. Then |A| $\geq$|B|.
 
 
-> 🇨🇳 TODO: 待翻译
+> 🇨🇳 （基数一般结果已合并于上方翻译）
 
 
