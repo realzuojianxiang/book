@@ -78,4 +78,4 @@ In this sense, this chapter follows from all
 of the previous chapters. We will be putting all of that acquired knowledge,
 terminology, and experience to good use!
 
-> 🇨🇳 TODO: 待翻译
+> 既然我们已经建立了坚实的数学术语、概念和材料基础，你可能想知道我们接下来要讨论什么！就像我们曾经想要将数学归纳法的概念严格化——那个我们直觉上"理解"但还无法用精确的数学方式表达的东西——在接下来的两章中，我们将把我们已经顺便使用过、而且你可能直觉上熟悉的概念建立在更坚实的基础之上：函数（Function）。为此，我们将从讨论关系（Relation）开始。这将引导我们进入等价关系（Equivalence Relation）这一特定领域，它使我们能够讨论集合的某些定性性质。特别地，我们将在集合 $\mathbb{Z}$ 上使用一些等价关系来陈述和证明关于整数的许多有趣性质。这将给我们一个机会简要探索数论（Number Theory）这一数学分支。这是一个丰富、深刻且广阔的领域，我们实际上只是浅尝辄止，通过陈述和证明一些有用的定理，并用它们来解决一些有趣的谜题和问题。然后，我们将直接进入下一章，回到讨论函数的目标上来。

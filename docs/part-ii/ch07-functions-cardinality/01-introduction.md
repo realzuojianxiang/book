@@ -34,7 +34,7 @@ Here's what we will use. Perhaps it's close to what your definition was, maybe t
 <div class="def-definition" markdown>
 **Definition 7.2.1. Let A, B be sets. Let f be a relation between A and B, so**
 </div>
-f ⊆A × B. Also, assume that f has the property that ∀a ∈A. ∃! b ∈B. (a, b) ∈f (Recall that "∃!" means "there exists a unique . . . ", i.e. "there is one and only one . . . ") Such a relation is called a function from A to B. We call A the domain of the function and B the codomain of the function.
+f $\subseteq$A × B. Also, assume that f has the property that $\forall$a $\in$A. $\exists$! b $\in$B. (a, b) $\in$f (Recall that "$\exists$!" means "there exists a unique . . . ", i.e. "there is one and only one . . . ") Such a relation is called a function from A to B. We call A the domain of the function and B the codomain of the function.
 
 
 > 🇨🇳 TODO: 待翻译

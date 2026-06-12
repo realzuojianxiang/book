@@ -5,7 +5,7 @@ title: Introduction
 # Introduction
 
 Chapter 5 Rigorous Mathematical Induction: A Formal Restatement
-## 5.1 Introduction It might seem like we're being redundant by including this chapter after having already discussed mathematical induction. Our goals are many, though, and you will see afterwards why we have turned our eye backwards a bit to discuss this material once more. First, we feel a little uncomfortable with how informal (mathematically speaking) we were with our initial treatment of induction. Second, we left a few lingering questions back in Chapter 2. What was different about some of the later examples we saw, like the Takeaway game and the Tower of Hanoi? Didn't they seem to use "more assumptions" in their inductive arguments than the other examples, like our proof that P k∈[n] k = n(n+1)
+## 5.1 Introduction It might seem like we're being redundant by including this chapter after having already discussed mathematical induction. Our goals are many, though, and you will see afterwards why we have turned our eye backwards a bit to discuss this material once more. First, we feel a little uncomfortable with how informal (mathematically speaking) we were with our initial treatment of induction. Second, we left a few lingering questions back in Chapter 2. What was different about some of the later examples we saw, like the Takeaway game and the Tower of Hanoi? Didn't they seem to use "more assumptions" in their inductive arguments than the other examples, like our proof that P k$\in$[n] k = n(n+1)
 
 
 > 🇨🇳 TODO: 待翻译
@@ -25,7 +25,7 @@ Here, let's recall the statement of the Principle of Mathematical Induction that
 <div class="def-theorem" markdown>
 **Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some**
 </div>
-"fact" or "observation" that depends on the natural number n. Assume that 1. P(1) is a true statement. 2. Given any k ∈N, if P(k) is true, then we can conclude necessarily that P(k + 1) is true. Then the statement P(n) must be true for every natural number n ∈N.
+"fact" or "observation" that depends on the natural number n. Assume that 1. P(1) is a true statement. 2. Given any k $\in$N, if P(k) is true, then we can conclude necessarily that P(k + 1) is true. Then the statement P(n) must be true for every natural number n $\in$N.
 
 
 > 🇨🇳 TODO: 待翻译

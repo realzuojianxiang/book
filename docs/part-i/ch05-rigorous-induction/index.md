@@ -23,7 +23,7 @@ few lingering questions back in Chapter 2. What was diﬀerent about some of
 the later examples we saw, like the Takeaway game and the Tower of Hanoi?
 Didn't they seem to use "more assumptions" in their inductive arguments than
 the other examples, like our proof that P
-k∈[n] k = n(n+1)
+k$\in$[n] k = n(n+1)
 
 ? We think so, and
 we will adress those diﬀerences here. Third, there are plenty of examples left
@@ -70,8 +70,8 @@ process.
 Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some
 "fact" or "observation" that depends on the natural number n. Assume that
 1. P(1) is a true statement.
-2. Given any k ∈N, if P(k) is true, then we can conclude necessarily that
+2. Given any k $\in$N, if P(k) is true, then we can conclude necessarily that
 P(k + 1) is true.
-Then the statement P(n) must be true for every natural number n ∈N.
+Then the statement P(n) must be true for every natural number n $\in$N.
 
 > 🇨🇳 TODO: 待翻译

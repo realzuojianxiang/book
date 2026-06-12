@@ -32,14 +32,14 @@ Let's jump right in and start talking about relations. We'll give you a definiti
 <div class="def-definition" markdown>
 **Definition 6.2.1. Let A, B be sets. A relation between A and B is a set of**
 </div>
-ordered pairs, R ⊆A × B. Given elements a ∈A and b ∈B, we say a and b are related if and only if (a, b) ∈R. The set A is called the domain and the set B is called the codomain. The set R is called the relation set. If A = B, we say R is a relation on A. It is also fairly common to write x R y to mean (x, y) ∈R. When we have defined a relation in this way, we will stick to the notation (x, y) ∈R to indicate the underlying set structure. Later on, we will sometimes define relations by using some symbol, like x < y or x ⋆y, and so on.
+ordered pairs, R $\subseteq$A × B. Given elements a $\in$A and b $\in$B, we say a and b are related if and only if (a, b) $\in$R. The set A is called the domain and the set B is called the codomain. The set R is called the relation set. If A = B, we say R is a relation on A. It is also fairly common to write x R y to mean (x, y) $\in$R. When we have defined a relation in this way, we will stick to the notation (x, y) $\in$R to indicate the underlying set structure. Later on, we will sometimes define relations by using some symbol, like x < y or x ⋆y, and so on.
 Remark 6.2.2. A relation, as we defined it here, is also sometimes referred to
-as a binary relation. This is because there are two "inputs" of the relation; the set R consists of ordered pairs. We could generalize this idea to ternary relations. That is, given sets A, B, C, we could define a set R ⊆A × B × C to be a ternary relation and say a, b, c are related if and only if (a, b, c) ∈R. We could generalize this further to relations with n "inputs", as well. In this context, though, we will only consider binary relations, so we will use the term relation to mean binary relation.
+as a binary relation. This is because there are two "inputs" of the relation; the set R consists of ordered pairs. We could generalize this idea to ternary relations. That is, given sets A, B, C, we could define a set R $\subseteq$A × B × C to be a ternary relation and say a, b, c are related if and only if (a, b, c) $\in$R. We could generalize this further to relations with n "inputs", as well. In this context, though, we will only consider binary relations, so we will use the term relation to mean binary relation.
 Remark 6.2.3. A relation R is often defined by identifying a property of elements
-of A and B (phrased as a variable proposition P(a, b)) and setting (a, b) ∈R ⇐⇒P(a, b)
+of A and B (phrased as a variable proposition P(a, b)) and setting (a, b) $\in$R ⇐$\Rightarrow$P(a, b)
 Examples
 Example 6.2.4. Let W = {English words} and L = {English letters}. Define
-the relation R by setting (w, ℓ) ∈R ⇐⇒w begins with ℓ Then, (mathematics,m) ∈R and (golf,g) ∈R because these are valid words and we have identified their starting letters. For some non-examples, notice that (knowledge,n) /∈R and (you,u) /∈R. Furthermore, note that (zyzyxyqy,z) /∈R because zyzyxyqy/∈W. It is often the case that A = B, so R defines a relation on pairs of elements from one set. The next example considers this situation.
+the relation R by setting (w, ℓ) $\in$R ⇐$\Rightarrow$w begins with ℓ Then, (mathematics,m) $\in$R and (golf,g) $\in$R because these are valid words and we have identified their starting letters. For some non-examples, notice that (knowledge,n) /$\in$R and (you,u) /$\in$R. Furthermore, note that (zyzyxyqy,z) /$\in$R because zyzyxyqy/$\in$W. It is often the case that A = B, so R defines a relation on pairs of elements from one set. The next example considers this situation.
 
 
 > 🇨🇳 TODO: 待翻译

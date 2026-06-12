@@ -113,7 +113,7 @@ Therefore, $a^2 + b^2 = c^2$ is true.
 >
 > 展开左边的表达式并消去两边的公共项，得到：
 >
-> $$a^2 + 2ab + b^2 = c^2 + 2ab$$
+> $ $1^2 + 2ab + b^2 = c^2 + 2ab$$
 >
 > 因此，$a^2 + b^2 = c^2$ 成立。
 
@@ -135,7 +135,7 @@ From a historical perspective, mathematical proof-writing has evolved over the y
 
 What's nice about the truth requirement is that mathematics has been built up so that we can read through an argument and verify each claim as True or False. What's difficult to define is clear writing. In a way, it is much like Supreme Court Justice Potter Stewart's famous definition of obscenity: *"I know it when I see it"*.
 
-> 🇨🇳 真值要求的好处在于，数学已经发展到这样的程度：我们可以通读一个论证并验证每个断言的真假。难以定义的是清晰的写作。在某种意义上，这很像最高法院大法官波特·斯图尔特对猥亵的著名定义：*"我看到时就知道"*。
+> 🇨🇳 真值要求的好处在于，数学已经发展到这样的程度：我们可以通读一个论证并验证每个断言的真假。难以定义的是清晰的写作。在某种意义上，这很像最高法院大法官波特 $\cdot$ 斯图尔特对猥亵的著名定义：*"我看到时就知道"*。
 
 ---
 

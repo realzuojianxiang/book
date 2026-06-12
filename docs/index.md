@@ -13,11 +13,11 @@ description: Everything You Always Wanted To Know About Mathematics — 双语�
 
 > 🇨🇳 **抽象数学与证明写作的引导之旅**
 
-**Author:** Brendan W. Sullivan · bwsulliv@andrew.cmu.edu
+**Author:** Brendan W. Sullivan $\cdot$ bwsulliv@andrew.cmu.edu
 **With:** Professor John Mackey
 **Department of Mathematical Sciences, Carnegie Mellon University**
 
-> 🇨🇳 **作者：** Brendan W. Sullivan · 与 John Mackey 教授合作
+> 🇨🇳 **作者：** Brendan W. Sullivan $\cdot$ 与 John Mackey 教授合作
 > **卡内基梅隆大学数学科学系**
 
 ---

@@ -10,9 +10,9 @@ First, let's define what it means to be finite.
 <div class="def-definition" markdown>
 **Definition 7.6.1. Let S be any set. We say S is finite if and only if**
 </div>
-∃n ∈N ∪{0} such that there exists a bijection f : S →[n] In this case, we write |S| = n to indicate that the size of S is n.
-Note: The empty set S = ∅is finite, since [0] = ∅.
-This is why we said n ∈N ∪{0} in the definition, and not just n ∈N. The function f : ∅→∅ that is a bijection is simply the empty relation. (Remember that a function is a relation!) By definition, sets of the form [n] are finite. They are our standard examples of finite sets, with size |[n]| = n. Thus, to show that a set S has size n, we need to find a bijection between S and [n]. For example, consider the set {1, 3, 5}. This clearly looks like it has size 3. We can show this by exhibiting the bijection f : {1, 3, 5} →[3] defined by f(1) = 1 and f(3) = 2 and f(5) = 3. It's interesting to think about whether a finite set could have two different sizes. The definition technically doesn't preclude this, but we can prove that the size of a finite set is unique. Think about how to do that . . . We will do so after a few more essential definitions.
+$\exists$n $\in$N $\cup${0} such that there exists a bijection f : S $\to$[n] In this case, we write |S| = n to indicate that the size of S is n.
+Note: The empty set S = $\emptyset$is finite, since [0] = $\emptyset$.
+This is why we said n $\in$N $\cup${0} in the definition, and not just n $\in$N. The function f : $\emptyset$\to$\emptyset$ that is a bijection is simply the empty relation. (Remember that a function is a relation!) By definition, sets of the form [n] are finite. They are our standard examples of finite sets, with size |[n]| = n. Thus, to show that a set S has size n, we need to find a bijection between S and [n]. For example, consider the set {1, 3, 5}. This clearly looks like it has size 3. We can show this by exhibiting the bijection f : {1, 3, 5} $\to$[3] defined by f(1) = 1 and f(3) = 2 and f(5) = 3. It's interesting to think about whether a finite set could have two different sizes. The definition technically doesn't preclude this, but we can prove that the size of a finite set is unique. Think about how to do that . . . We will do so after a few more essential definitions.
 
 
 > 🇨🇳 TODO: 待翻译
