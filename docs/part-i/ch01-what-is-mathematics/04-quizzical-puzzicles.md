@@ -49,13 +49,13 @@ Generalizing: Even n What if the teacher had asked his students to add the numbe
 > 🇨🇳 **谜题 4：格子路径问题** 从 $(0,0)$ 到 $(a,b)$ 的格子路径数（每步向上或向右）为 $\binom{a+b}{a}$。例：到 $(2,3)$ 有 $\binom{5}{2}=10$ 条路径。推导：总需 $a+b$ 步，选其中 $a$ 步向右（或 $b$ 步向上）。
 
 
-The caveat in the second sentence rules out a solution of the form given by our investigations above. We have already come up with some simple algorithms for finding a solution to this problem, but we have now been asked to find a forumla that will produce a solution. How do we begin to approach this? Well, based on some observations we made above, it would make sense to tackle this puzzle by handling the cases where n is even and where n is odd separately. We saw that the pairing worked out slightly differently in those cases, so let's investigate one and then the other. In each case, we are looking for a formula for S(n), the sum represented by 1 + 2 + 3 + $\cdot \cdot \cdot$ + (n -2) + (n -1) + n. We are using this new notation S(n) to indicate that the sum depends on that particular value of n. If n is even, we know that we can pair offevery number and have no terms leftover: S(n) = 1 + 2 + 3 + \cdot \cdot \cdot + n 2 -1  + n 2 + n 2 + 1  + \cdot \cdot \cdot + (n -2) + (n -1) + n = (1 + n) + (2 + (n -1)) + (3 + (n -2)) + \cdot \cdot $\cdot$ + n 2 -1  + n 2 + 2  + n
+The caveat in the second sentence rules out a solution of the form given by our investigations above. We have already come up with some simple algorithms for finding a solution to this problem, but we have now been asked to find a forumla that will produce a solution. How do we begin to approach this? Well, based on some observations we made above, it would make sense to tackle this puzzle by handling the cases where n is even and where n is odd separately. We saw that the pairing worked out slightly differently in those cases, so let's investigate one and then the other. In each case, we are looking for a formula for S(n), the sum represented by 1 + 2 + 3 + $\cdot \cdot \cdot$ + (n -2) + (n -1) + n. We are using this new notation S(n) to indicate that the sum depends on that particular value of n. If n is even, we know that we can pair offevery number and have no terms leftover: S(n) = 1 + 2 + 3 + \cdot \cdot \cdot + {n 2 -1 } + n 2 + {n 2 + 1 } + \cdot \cdot \cdot + (n -2) + (n -1) + n = (1 + n) + (2 + (n -1)) + (3 + (n -2)) + \cdot \cdot $\cdot$ + {{n 2 -1 } + {n 2 + 2 }} + {{n
 
 
 > 🇨🇳 **谜题 5：凸多边形的对角线** $n$ 个顶点的凸多边形有多少条对角线？每对顶点连线 \binom{n}{2} 条，但边有 n 条不是对角线。故对角线数 = $\binom{n}{2} - n = \frac{n(n-3)}{2}$。
 
 
- + n 2 + 1  = (n + 1) $\cdot$ n 2 = n2 + n
+} + {n 2 + 1 }} = (n + 1) $\cdot$ n 2 = n2 + n
 
 
 > 🇨🇳 **谜题 6：握手变体** 如果夫妇不互相握手，$n$ 对夫妇的聚会中，总握手数的最大值是什么？每人最多握 2n-2 次（排除自己和配偶），最大总和为 $\frac{2n(2n-2)}{2} = n(2n-2) = 2n(n-1)$。但每对夫妇之间不握手——这已被排除了。
@@ -164,7 +164,7 @@ How might this be useful in this puzzle? The sum formula we proved involves all 
 > 🇨🇳 画出图表和表格是发现模式的有力工具。小情形的穷举虽然不是证明，但能指引证明方向。
 
 
-contains all of the natural numbers from 1 to 2n, whereas T(n) only contains the odd natural numbers in that range. Perhaps it would make sense to subtract those two sums and try to find an expression for the sum of the leftover terms: S(2n) -T(n) =  1 + 2 + 3 + $\cdot \cdot \cdot$ + (2n -1) + 2n  -  1 + 3 + 5 + \cdot \cdot \cdot + (2n -3) + (2n -1)  = 2 + 4 + 6 + \cdot \cdot $\cdot$ + (2n -2) + 2n These terms are all of the even natural numbers from 2 to 2n. How can we find a formula for this sum? Do we need to do any extra work, or can we apply a previously-proven result? Well, since all of the terms are even, we can divide everything by 2 and write
+contains all of the natural numbers from 1 to 2n, whereas T(n) only contains the odd natural numbers in that range. Perhaps it would make sense to subtract those two sums and try to find an expression for the sum of the leftover terms: S(2n) -T(n) = {1 + 2 + 3 + $\cdot \cdot \cdot$ + (2n -1) + 2n } - {1 + 3 + 5 + \cdot \cdot \cdot + (2n -3) + (2n -1) } = 2 + 4 + 6 + \cdot \cdot $\cdot$ + (2n -2) + 2n These terms are all of the even natural numbers from 2 to 2n. How can we find a formula for this sum? Do we need to do any extra work, or can we apply a previously-proven result? Well, since all of the terms are even, we can divide everything by 2 and write
 
 
 > 🇨🇳 约束分析是许多谜题的突破口。如棋盘覆盖问题中，"黑白"约束直接给出了不可能性证明。
@@ -176,7 +176,7 @@ contains all of the natural numbers from 1 to 2n, whereas T(n) only contains the
 > 🇨🇳 信息论角度：天平称量问题的本质是"每次获得多少比特信息"。3 次称量最多区分 $3^3=27$ 种情况。
 
 
- 2 + 4 + 6 + $\cdot \cdot \cdot$ + (2n -2) + 2n  = 1 + 2 + 3 + \cdot \cdot $\cdot$ + (n -1) + n = S(n) and we can be assured that all of the terms in the sum on the far right are, indeed, integers. Not only that, they are all of the consecutive integers from 1 to n, and we have a formula for that sum! Now, everything is written in terms of formulas we already know, namely S(n) and S(2n), and the one formula that we are seeking, namely T(n). The last step now is to rearrange the equation to isolate T(n) and then substitute what we know about the formulas involving S:
+{2 + 4 + 6 + $\cdot \cdot \cdot$ + (2n -2) + 2n } = 1 + 2 + 3 + \cdot \cdot $\cdot$ + (n -1) + n = S(n) and we can be assured that all of the terms in the sum on the far right are, indeed, integers. Not only that, they are all of the consecutive integers from 1 to n, and we have a formula for that sum! Now, everything is written in terms of formulas we already know, namely S(n) and S(2n), and the one formula that we are seeking, namely T(n). The last step now is to rearrange the equation to isolate T(n) and then substitute what we know about the formulas involving S:
 
 
 > 🇨🇳 数学思维训练的目的：不是记住答案，而是内化方法。面对新问题时能自动使用"观察$\to$归纳$\to$验证"的模式。

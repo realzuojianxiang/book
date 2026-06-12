@@ -93,7 +93,7 @@ Suppose a license plate string consists of 6 or 7 positions, each of which is fi
 > 🇨🇳 **例** 10 人围圆桌就坐的方案数：$\frac{10!}{10} = 9! = 362880$。除以 10 是因为旋转对称性——每种实质上不同的座位方式被计了 10 次。
 
 
-(after we have defined them and derived a formula). Instead, let's take advantage of the work we just did! Let's partition the set of all license plates (call this set Y ) into those with at most 1 digit (call this set X1) and those with at least 2 digits (call this set X2). Notice that this is a partition, so ROS tells us |Y | = |X1| + |X2|. Subtracting algebraically, this tells us the expression we want is |X2| = |Y | -|X1| = (366 + 367) -  (366 + 6 $\cdot 1^0 \cdot 3$65) + (367 + 7 $\cdot 1^0 \cdot 3$66)  by just substituting in the expressions we've already derived. How convenient! In general, this is a good strategy: to count a set, we can count its complement (i.e. all of the "other" elements outside the set) and remove that count from the "total". However, remember that we only have a Rule of Sum at our disposal, not a rule of Subtraction, so we should always be careful (for now, at least) to phrase such a step in terms of a partition and a sum. After that, we can subtract numbers or algebraic variables. Eventually, once we are more mathematically mature, we can easily skip this formality and just talk about "subtracting out" a count; for now, though, we want to emphasize the underpinnings of these counting arguments, so we will require this careful phrasing and application of the Rule of Sum. (4) How many license plates have no vowels and no even digits? This condition just limits the number of choices at each step. There are only 21 letters and 5 digits to choose from, so we get 266 + 267 total outcomes, by ROP and ROS.
+(after we have defined them and derived a formula). Instead, let's take advantage of the work we just did! Let's partition the set of all license plates (call this set Y ) into those with at most 1 digit (call this set X1) and those with at least 2 digits (call this set X2). Notice that this is a partition, so ROS tells us |Y | = |X1| + |X2|. Subtracting algebraically, this tells us the expression we want is |X2| = |Y | -|X1| = (366 + 367) - | (366 + 6 $\cdot 1^0 \cdot 3$65) + (367 + 7 $\cdot 1^0 \cdot 3$66) | by just substituting in the expressions we've already derived. How convenient! In general, this is a good strategy: to count a set, we can count its complement (i.e. all of the "other" elements outside the set) and remove that count from the "total". However, remember that we only have a Rule of Sum at our disposal, not a rule of Subtraction, so we should always be careful (for now, at least) to phrase such a step in terms of a partition and a sum. After that, we can subtract numbers or algebraic variables. Eventually, once we are more mathematically mature, we can easily skip this formality and just talk about "subtracting out" a count; for now, though, we want to emphasize the underpinnings of these counting arguments, so we will require this careful phrasing and application of the Rule of Sum. (4) How many license plates have no vowels and no even digits? This condition just limits the number of choices at each step. There are only 21 letters and 5 digits to choose from, so we get 266 + 267 total outcomes, by ROP and ROS.
 ### 8.2.3 Fundamental Counting Objects and Formulas Let's return to our motivating example of counting poker hands. Remember that we want to know how many of each type of hand there are, how many ways we could be dealt a flush, say, from a freshly-shuffled deck of 52 cards. Let's start by answering a related, but simpler, question: how many total poker hands are there? Another way of phrasing the question--one that will actually hint at our method of answering it--is as follows: how many ways are there to shuffle the entire deck of 52 cards, and how many of those yield the same poker hand among the top 5 cards? That is, let's identify how many distinct (i.e. totally different) ways there are to shuffle the deck; let's call these ways shufflings. Then, let's think of a specific hand, say T♣J♣Q♣K♣A♣, and count how many shufflings have the property that the top 5 cards of the deck comprise that specific hand in any order (because we don't care how we receive the 5 card we're dealt, we just care what we're holding!).
 
 
@@ -136,7 +136,7 @@ we did was identify a particular set of objects--in this case, the set of shuffl
 <div class="def-definition" markdown>
 **Definition 8.2.15. Let k, n $\in \mathbb{N} with n \geq k$. A k-selection from [n] is an**
 </div>
-unordered set of k elements from [n]. The number of k-selections from [n] is represented by  n k . This is known as a binomial coefficient, and is read as "n choose k".
+unordered set of k elements from [n]. The number of k-selections from [n] is represented by {n k }. This is known as a binomial coefficient, and is read as "n choose k".
 Proposition 8.2.16. Let k, n $\in \mathbb{N} with n \geq k$. The number of k-selections
 from [n] is given by (n k ) = n! k! $\cdot$ (n -k)!
 <div class="def-proof" markdown>
@@ -147,31 +147,31 @@ from [n] is given by (n k ) = n! k! $\cdot$ (n -k)!
 > 🇨🇳 **$k$-排列（$k$-Arrangement/Permutation）** 从 $[n]$ 中选 $k$ 个的有序排列数：$\frac{n!}{(n-k)!} = \binom{n}{k} \cdot k!$。即先选 $k$ 个（$\binom{n}{k}$），再排列（$k!$）。
 
 
-Binomial Coefficients One thing you might find surprising about the above formula is that the fraction is actually a natural number, no matter what k and n are! This is proven by the fact that it represents a number of ways to complete a procedure, as described in the proof, and this must be a natural number. We want to point out one special case of this formula which may not occur to you. What if k = 0, say? What number should  n
+Binomial Coefficients One thing you might find surprising about the above formula is that the fraction is actually a natural number, no matter what k and n are! This is proven by the fact that it represents a number of ways to complete a procedure, as described in the proof, and this must be a natural number. We want to point out one special case of this formula which may not occur to you. What if k = 0, say? What number should {n
 
 
 > 🇨🇳 **排列与组合的关系** $\binom{n}{k} = \frac{\text{排列数}}{k!} = \frac{P(n,k)}{k!}$。除以 $k!$ 是因为取消 $k$ 个选定元素间的顺序——$k!$ 种排列对应同一种组合。
 
 
- be? You might be surprised to find out that  n
+} be? You might be surprised to find out that {n
 
 
 > 🇨🇳 **例** 密码由 4 位数字（0-9）组成，允许重复：$10^4 = 10000$。不允许重复：$P(10,4) = 5040$。
 
 
- = 1. Why does this make sense? Intuitively, we think of  n k  as the number of ways to select k objects from a set of n objects; so, how many ways can we select 0 objects from, say, 3 objects? Put 3 pens on your desk. Now, select none of them. There! You just did it! That was one way---and the only way---to select none of the objects. This argument works just as well when n = 0, even! Put no pens on your desk. Now, select none of them. There! You just did it in one way again. Thus, $\forall n \in \mathbb{N} \cup${0}. (n
+} = 1. Why does this make sense? Intuitively, we think of {n k } as the number of ways to select k objects from a set of n objects; so, how many ways can we select 0 objects from, say, 3 objects? Put 3 pens on your desk. Now, select none of them. There! You just did it! That was one way---and the only way---to select none of the objects. This argument works just as well when n = 0, even! Put no pens on your desk. Now, select none of them. There! You just did it in one way again. Thus, $\forall n \in \mathbb{N} \cup${0}. (n
 
 
 > 🇨🇳 **例** 从 6 男 4 女中选 3 男 2 女组 5 人委员会：$\binom{6}{3} \times \binom{4}{2} = 20 \times 6 = 120$（乘积法则）。
 
 
-) = 1 There are "better", more mathematical reasons for this result, and we will point these out in the next section when we prove Pascal's Identity. For now, we hope that this heuristic explanation with selections makes sense and can convince you of this result. Another fact is that   n K  = 0 whenever K > n. This is because there are no ways to choose, for instance, 5 objects from a set of only 3 objects. This fact is borne out by our derivation above, because in one of the steps, we would be trying to (impossibly) draw more cards for a hand than there are cards in that deck, and there are 0 ways to do this. Then, when we apply ROP, the product would evaluate to 0. If you play around with some values of k and n, you'll notice that the values of  n k  obeys a so-called unimodal distribution. That is, if we fix n and let k increase from 0 to n, we find the numbers going up, reaching a peak at  n
+) = 1 There are "better", more mathematical reasons for this result, and we will point these out in the next section when we prove Pascal's Identity. For now, we hope that this heuristic explanation with selections makes sense and can convince you of this result. Another fact is that { n K } = 0 whenever K > n. This is because there are no ways to choose, for instance, 5 objects from a set of only 3 objects. This fact is borne out by our derivation above, because in one of the steps, we would be trying to (impossibly) draw more cards for a hand than there are cards in that deck, and there are 0 ways to do this. Then, when we apply ROP, the product would evaluate to 0. If you play around with some values of k and n, you'll notice that the values of {n k } obeys a so-called unimodal distribution. That is, if we fix n and let k increase from 0 to n, we find the numbers going up, reaching a peak at n
 
 
 > 🇨🇳 **练习** (1) 冰淇淋店有 31 种口味。选 2 勺不同口味冰淇淋有多少种方式？(2) 同上，但允许两勺同口味？(3) 餐厅有 8 种开胃菜、10 种主菜、6 种甜点。一顿完整套餐有多少种搭配？
 
 
- (notice these are the same if n is even) and then decreasing again. Furthermore, the distribution is symmetric around that middle! Can you prove that these properties hold? Try it! Arrangements We now have all of the tools necessary to count poker hands (and plenty of other objects, for that matter). We know how many ways there are to permute the elements of a set, and we know how many ways there are to choose a subset of a certain size from a larger set. Between these two tools, we know how to count any combinations of cards. For instance, to count an ordered subset of cards, we can count the number of ways to choose the subset and then permute its elements, applying the Rule of Product to this two-step process. In fact, this idea is common enough that we will give it a defined name.
+ (notice these are the same if n is even) and then decreasing again. Furthermore, the distribution is symmetric around that middle! Can you prove that these properties hold? Try it! Arrangements We now have all of the tools necessary to count poker hands (and plenty of other objects, for that matter). We know how many ways there are to permute the elements of a set, and we know how many ways there are to choose a subset of a certain size from a larger set. Between these two tools, we know how to count any combinations of cards. For instance, to count an ordered subset of cards, we can count the number of ways to choose the subset and then permute its elements, applying the Rule of Product to this two-step process. In fact, this idea is common enough that we will give it a defined name.
 
 
 > 🇨🇳 (4) 从 15 人中选 5 人排成一列有多少种方式？(5) 从 15 人中选 5 人组委员会有多少种方式？(6) 解释为什么 $P(15,5)/5! = \binom{15}{5}$。
@@ -182,7 +182,7 @@ Binomial Coefficients One thing you might find surprising about the above formul
 </div>
 an ordered k-tuple of elements from [n] with no repeated elements. Equivalently, a k-arrangement from [n] is a function f : [k] $\to$[n] that is an injection.
 Proposition 8.2.18. Let k, n $\in \mathbb{N} with n \geq k$. The number of k-arrangements
-from [n] is given by  n k  $\cdot$ k! = n! (n-k)!.
+from [n] is given by {n k } $\cdot$ k! = n! (n-k)!.
 <div class="def-proof" markdown>
 *Proof.* Left for the reader as Exercise 3 in Section 8.2.4
 </div>
@@ -213,13 +213,13 @@ You might anticipate a definition and proposition for k-selections with repetiti
 
 • An arrangement of k elements from n elements is an injection f : [k] $\to$ [n]. There are n! (n-k)! injections from [k] to [n]. • An arrangement with repetition of k elements from n elements is a function f : [k] $\to$[n]. There are nk possible functions from [k] to [n].
 ### 8.2.4 Questions & Exercises
-Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What is the difference between a selection and an arrangement? (2) How might a permutation be defined in terms of selections and arrangements? (3) What is  10
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What is the difference between a selection and an arrangement? (2) How might a permutation be defined in terms of selections and arrangements? (3) What is {10
 
 
 > 🇨🇳 **补充：避免重复计数** 使用求和法则时必须确保各部分不相交；使用乘积法则时各步骤的选择必须独立。最常见的错误是重复计数。
 
 
- ? (4) How is a permutation related to the concept of a bijection? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Verify algebraically that  n k  =   n n-k . (2) Prove Proposition 8.2.16, i.e. prove that (n k ) = n! k!(n -k)! Do this by adapting the argument we used for counting the number of 5 card hands from a standard deck. (3) Prove Proposition 8.2.18. That is, prove there are n! (n -k)! possible k-arrangements from [n].
+} ? (4) How is a permutation related to the concept of a bijection? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Verify algebraically that {n k } = { n n-k }. (2) Prove Proposition 8.2.16, i.e. prove that (n k ) = n! k!(n -k)! Do this by adapting the argument we used for counting the number of 5 card hands from a standard deck. (3) Prove Proposition 8.2.18. That is, prove there are n! (n -k)! possible k-arrangements from [n].
 
 
 > 🇨🇳 **补充：排列的特殊情形** 当 $k=n$ 时排列数即 $n!$；当 $k=0$ 时排列数为 $0!=1$（空排列）。排列公式在 $k > n$ 时无意义。
