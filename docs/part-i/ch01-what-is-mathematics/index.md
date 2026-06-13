@@ -68,9 +68,9 @@ The mathematical arguments we will present here are all about triangles. Specifi
 <div class="def-theorem" markdown>
 **Theorem 1.1.1** *(The Pythagorean Theorem)*. If a right triangle has base lengths $a, b$ and hypotenuse length $c$, then these values satisfy
 
-$$
+
 a^2 + b^2 = c^2
-$$
+
 
 > 🇨🇳 **定理 1.1.1** *（勾股定理）*。如果直角三角形的两条直角边长为 $a$、$b$，斜边长为 $c$，则有 $a^2 + b^2 = c^2$。
 </div>
@@ -93,15 +93,15 @@ Let's look at some sample "proofs" and see whether they work well enough. (We sa
 
 The area of the larger square can be computed in two ways: by applying the area formula to the larger square or by adding the area of the smaller square to the area of the four triangles. Thus, it must be true that
 
-$$
+
 $(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$
-$$
+
 
 Expanding the expression on the left and canceling a common term on both sides yields
 
-$$
+
 a^2 + 2ab + b^2 = c^2 + 2ab
-$$
+
 
 Therefore, $a^2 + b^2 = c^2$ is true.
 
@@ -109,11 +109,11 @@ Therefore, $a^2 + b^2 = c^2$ is true.
 >
 > 大正方形的面积可以通过两种方式计算：对大正方形应用面积公式，或将小正方形的面积与四个三角形的面积相加。因此，必定有：
 >
-> $$(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$$
+> (a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab
 >
 > 展开左边的表达式并消去两边的公共项，得到：
 >
-> $ $1^2 + 2ab + b^2 = c^2 + 2ab$$
+> $ $1^2 + 2ab + b^2 = c^2 + 2ab
 >
 > 因此，$a^2 + b^2 = c^2$ 成立。
 

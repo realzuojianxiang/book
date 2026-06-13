@@ -57,7 +57,7 @@ Note:
 } and so on. With that observation made, we might as well write the number in the first step as {13
 
 
-> 🇨🇳 **不可数：$\mathbb{R}$** 康托尔对角线法证明 $\mathbb{R}$ 不可数。反证：设 \mathbb{R} 可数，列出 $r_1, r_2, \ldots$。构造 x 使 $x$ 的第 n 位小数与 $r_n$ 不同——则 $x$ 不在列表中，矛盾！
+> 🇨🇳 **不可数：$\mathbb{R}$** 康托尔对角线法证明 $\mathbb{R}$ 不可数。反证：设 $\mathbb{R}$ 可数，列出 $r_1, r_2, \ldots$。构造 $x$ 使 $x$ 的第 $n$ 位小数与 $r_n$ 不同——则 $x$ 不在列表中，矛盾！
 
 
 }, right? Now, we observe that any selections made in these steps produce a unique pair. That is, we can't possibly have a pair that could arise from two different versions of this proces. Thus, the Rule of Product applies, and we can conclude that there are {13
@@ -69,13 +69,13 @@ Note:
 } ways to select a pair of cards. What if we had performed these two steps in the opposite order? We could just as well identify a pair of cards by asking which two suits are represented and then asking what their common rank is? (Of course, this only works if we know, a priori, that the cards have a common rank.) In that case, the Rule of Product would tell us there are {4
 
 
-> 🇨🇳 **子集的基数** 若存在单射 $f: $A \to B$$，则 $|A| \leq |B|$。若存在满射 $f: $A \to B$$，则 $|A| \geq |B|$。
+> 🇨🇳 **子集的基数** 若存在单射 $f: A \to B$，则 $|A| \leq |B|$。若存在满射 $f: A \to B$，则 $|A| \geq |B|$。
 
 
 } such pairs. Hey, that's the same number! The commutativity of multiplication of real numbers (that is, $x \cdot y = y \cdot x$ for any $x, y \in \mathbb{R}$) confirms our intuition that these steps are reversible. We aren't quite done constructing a poker hand with one pair. We need to choose three more cards. What property should they have? What more specific questions could we ask our friend, besides "What are they?". We need to know the three cards' ranks and their suits. Is there any restriction on their suits? No! (Because we have a pair already, there is no chance for a flush.) Is there any restriction on their ranks? Yes! We know the three cards all have different ranks, and none of them match the rank of the pair already chosen. With these observations, we can reverse the process and construct the rest of the hand.
 
 
-> 🇨🇳 **Cantor-Schröder-Bernstein 定理** 若存在单射 $f: $A \to B$$ 和单射 $g: $B \to A$$，则存在双射 $h: $A \to B$$，故 $|A| = |B|$。这提供了"等势"的更方便的判定方式。
+> 🇨🇳 **Cantor-Schröder-Bernstein 定理** 若存在单射 $f: A \to B$ 和单射 $g: B \to A$，则存在双射 $h: A \to B$，故 $|A| = |B|$。这提供了"等势"的更方便的判定方式。
 
 
 1. Choose 3 ranks from the 12 remaining (i.e. not the same rank as the pair cards): {12
@@ -173,7 +173,7 @@ Answer: We claim there are (13
 } ways to do this. (2) Select which two suits of that card in (1) appear in the hand. There are {4
 
 
-> 🇨🇳 **$\mathbb{Q}$ 可数的详细证明** 正有理数枚举：排列 \frac{p}{q}（$p,q \in \mathbb{N}$）为二维表格，按对角线遍历。跳过非最简分数（如 2/4 与 1/2 重复）。总枚举数 = $|\mathbb{N}|$。
+> 🇨🇳 **$\mathbb{Q}$ 可数的详细证明** 正有理数枚举：排列 $\frac{p}{q}$（$p,q \in \mathbb{N}$）为二维表格，按对角线遍历。跳过非最简分数（如 $2/4$ 与 $1/2$ 重复）。总枚举数 = $|\mathbb{N}|$。
 
 
 } ways to do this. (3) Select three other ranks to appear. There are {12
@@ -241,7 +241,7 @@ Answer: We claim there are (13
 } ways to do this. (5) For the middle of those 3 ranks not chosen in Step (2), select a suit. There are {4
 
 
-> 🇨🇳 **补充：$p$ 进数** 另一种"无限"——p 进数不是更大的集合，而是 \mathbb{Q} 的另一种完备化（与 $\mathbb{R}$ 平行）。
+> 🇨🇳 **补充：$p$ 进数** 另一种"无限"——$p$ 进数不是更大的集合，而是 $\mathbb{Q}$ 的另一种完备化（与 $\mathbb{R}$ 平行）。
 
 
 } ways to do this. (6) For the highest of those 3 ranks not chosen in Step (2), select a suit. There are {4
@@ -839,7 +839,7 @@ try to infer a pattern. We might strart writing out the outcomes as: 3 Red and 1
 > 🇨🇳 补充内容 (项 130)：此段原文为详细计数论证的进阶练习和补充说明。
 
 
-} = 3 choices for which term is nonzero, so there are 3 such possibilities. • If one term is 0, then the other two terms must sum to 4 and both be nonzero. There are 3 ways to do this: 1 + 3 and 2 + 2 and 3 + 1. Since there are 3 choices for which term is 0, by ROP, there are 3 $\cdot$ 3 = 9 such possibilities. • If all three terms are nonzero, then we see that the only such sum is 1+1+2, in some order. There are 3 choices for which term is 2, and then the other terms must be 1. Thus, there are 3 such possibilities. By ROS, there are 3 + 9 + 3 = 15 total possibilities. Lattice Paths Consider the set $\mathbb{N}$ $\cup {0} \times \mathbb{N} \cup{0} = (N \cup${0})2 consisting of all ordered pairs of natural numbers or 0.In fact, let's represent this set visually on the plane:
+} = 3 choices for which term is nonzero, so there are 3 such possibilities. • If one term is 0, then the other two terms must sum to 4 and both be nonzero. There are 3 ways to do this: 1 + 3 and 2 + 2 and 3 + 1. Since there are 3 choices for which term is 0, by ROP, there are 3 $\cdot$ 3 = 9 such possibilities. • If all three terms are nonzero, then we see that the only such sum is 1+1+2, in some order. There are 3 choices for which term is 2, and then the other terms must be 1. Thus, there are 3 such possibilities. By ROS, there are 3 + 9 + 3 = 15 total possibilities. Lattice Paths Consider the set $\mathbb{N}$ $\cup {0} \times \mathbb{N} \cup{0} = (N \cup \{0\}$)2 consisting of all ordered pairs of natural numbers or 0.In fact, let's represent this set visually on the plane:
 
 
 > 🇨🇳 补充内容 (项 131)：此段原文为详细计数论证的进阶练习和补充说明。
@@ -914,7 +914,7 @@ Note: Use the last two parts to write 2n as a sum of binomial coefficients!
 
 
 ## 8.4 Counting in Two Ways If you're just jumping into this section, reread the last example from the previous section because it provides a perfect introduction to (and example of) Counting in Two Ways. In that example, we counted the number of lattice paths to a particular point in two different ways, deducing that the two expressions we found must be equal. Specifically, we deduced that {x+y x } = {x+y y }. With that example already under our belt, we will outline a general strategy here and apply it to several examples. Along the way, we will not only practice this technique, but we will also be proving some useful combinatorial results that we can apply to other problems! Let's start by actually presenting an alternative proof of the example from the previous section. There is a much shorter argument that doesn't delve into lattice paths at all and is a more memorable and understandable explanation of this result.
-Proposition 8.4.1. Let $n, k \in \mathbb{N} \cup${0}. Then
+Proposition 8.4.1. Let $n, k \in \mathbb{N} \cup \{0\}$. Then
 (n k ) = ( n n -k ).
 <div class="def-proof" markdown>
 *Proof.* Let S be the set of subsets of [n] with size k, i.e.

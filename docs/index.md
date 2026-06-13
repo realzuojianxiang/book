@@ -74,9 +74,9 @@ This book's main goals are to show you what mathematical thinking, problem-solvi
 !!! abstract "数学公式 | Math Rendering"
     所有 LaTeX 公式由 MathJax 渲染。行内公式如 $\alpha + \beta = \gamma$，行间公式如：
 
- $$
- $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
- $$
+
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+
 
 ---
 

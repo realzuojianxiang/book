@@ -25,10 +25,10 @@ B = {1, 2, 3, 4, 5, 6} and g = {(a, 2), (b, 3)(c, 3), (d, 1), (e, 6)} Define X1 
 
 g : A $\to B$ A B (1) Img({a}) = {2} This is because g(a) = 2. Notice the use of set brackets. We always find the image of a set, so writing Img(a) would be incorrect. (2) Img({b, c}) = {3} This is because g(b) = g(c) = 3. (3) Img(X1) = {2, 3} This is because g(b) = g(c) = 3 and g(a) = 2. (4) Img(X2) = {2, 3, 6} This is because g(a) = 2 and g(c) = 3 and g(e) = 6. (5) Img(X3) = {1, 3, 6} This is because g(c) = 3 and g(d) = 1 and g(e) = 6. (6) Img(A) = {1, 2, 3, 6} Looking at the set B in the schematic diagram, we see that these are the only values that are "hit" by the function. Notice 4, 5 \in B but 4, 5 \notin Img(A), so Img(A) $\subset B$ (a proper subset).
 Example 7.3.3. Consider the temperatures (in degrees Celsius) where water is
-in its liquid state. Specifically, define the set C = {$x \in \mathbb{R}$ | 0 < x < 100} and define the function F : C $\to $\mathbb{R}$ by \forall c \in \mathbb{C}$. F(c) = 9 5c + 32 What is ImF (C)? What does it represent? To approach questions like these, we must (a) identify a claim for what ImF (C) is by defining a set, and then (b) prove that the set we defined is actually equal
+in its liquid state. Specifically, define the set C = {$x \in \mathbb{R}$ | 0 < x < 100} and define the function F : C $\to \mathbb{R}$ by \forall c \in \mathbb{C}$. F(c) = 9 5c + 32 What is ImF (C)? What does it represent? To approach questions like these, we must (a) identify a claim for what ImF (C) is by defining a set, and then (b) prove that the set we defined is actually equal
 
 
-> 🇨🇳 **原像（Preimage）** 设 $f: A \to B$ 是函数，$Z \subseteq B$。$Z$ 在 $f$ 下的原像定义为 $\text{PreIm}_f(Z) = \{a \in A \mid f(a) \in $\mathbb{Z}$\}$。即所有输出落入 $Z$ 中的输入集合。
+> 🇨🇳 **原像（Preimage）** 设 $f: A \to B$ 是函数，$Z \subseteq B$。$Z$ 在 $f$ 下的原像定义为 $\text{PreIm}_f(Z) = \{a \in A \mid f(a) \in Z\}$。即所有输出落入 $Z$ 中的输入集合。
 
 
 7.3. IMAGES AND PRE-IMAGES
@@ -58,7 +58,7 @@ output of the function F actually satisfies the inequality in the definition of 
 F(x) = 9 5x + 32. Since multiplying by a positive number and adding to both sides preserves inequalities, we can deduce that
 
 
-> 🇨🇳 **像与原像的关系** (1) 对任意 $X \subseteq A$，$X \subseteq \text{PreIm}_f(\text{Im}_f(X))$，等号成立当且仅当 $f$ 在 $X$ 上单射。(2) 对任意 $Z \subseteq B$，$\text{Im}_f(\text{PreIm}_f(Z)) \subseteq \mathbb{Z}$，等号成立当且仅当 $Z \subseteq \text{Im}_f(A)$。
+> 🇨🇳 **像与原像的关系** (1) 对任意 $X \subseteq A$，$X \subseteq \text{PreIm}_f(\text{Im}_f(X))$，等号成立当且仅当 $f$ 在 $X$ 上单射。(2) 对任意 $Z \subseteq B$，$\text{Im}_f(\text{PreIm}_f(Z)) \subseteq Z$，等号成立当且仅当 $Z \subseteq \text{Im}_f(A)$。
 
 
 5 $\cdot$ 0 + 32 < F(x) < 9 5 \cdot 100 + 32 and, simplifying, this tells u 32 < F(x) < 212 Thus, F(x) \in S, i.e y \in S. Therefore, ImF (C) \subseteq S. Second, we'll prove S \subseteq ImF (C). (In other words, we'll prove that every element of S is actually "achieved" by the function F somehow. This amounts to proving an existential claim, i.e. that some element of the domain exists.) Let s \in S be arbitrary and fixed. By the definition of S, we know that s $\in \mathbb{R}$ and 32 < s < 212. We need to prove that \exists c $\in \mathbb{C}$. F(c) = s. (By doing some scratch work on the side, that you can work through on your own, we came up with the following idea. Just set an expression equal to s and solve for c... ) Define c = 5 9(s -32). Let's show c $\in \mathbb{C}$. By using the information we have about s and manipulating the inequalities, we observe that 32 < s < 212 =\Rightarrow0 < s -32 < 180 =\Rightarrow0 < 5 9(s -32) < 5 9 \cdot 180 = 100 =\Rightarrow0 < c < 100 Since c $\in \mathbb{R}$, certainly, this shows that c $\in \mathbb{C}$. Next, let's show that F(c) = s. We observe that F(c) = 9 5c + 32 = 9
@@ -97,33 +97,33 @@ Let y $\in I$mf(R) be arbitrary and fixed. By the definition of image, we know \
 > 🇨🇳 **求像的证明方法** 要证 $\text{Im}_f(X) = S$：先证 $\text{Im}_f(X) \subseteq S$（任取 $y \in \text{Im}_f(X)$，找 $x \in X$ 使 $f(x)=y$，推出 $y \in S$）；再证 $S \subseteq \text{Im}_f(X)$（任取 $y \in S$，构造 $x \in X$ 使 $f(x)=y$），此步较难。
 
 
-x2+1. By multiplying the previous two inequalities---which we can do since all the terms are non-negative---we may deduce that 0 $\leq$ x2 1+x2. Next, we know that 0 \leq x2 < x2 + 1, so x2 1+x2 < 1, as well. (Note: why was it important to point out that x2 \geq0? What can go wrong there?) This shows that 0 \leq x2 1+x2 < 1. Since y = f(x) = x2 1+x2, this is equivalent to saying 0 \leq y < 1. Thus, y \in T, and so Imf(R) \subseteq T. Second, let's prove T \subseteq Imf(R). Let y \in T be arbitrary and fixed. This means y $\in $\mathbb{R}$ and 0 \leq y$ < 1. To show y $\in I$mf(R), as well, we must produce an x such that f(x) = y.
+x2+1. By multiplying the previous two inequalities---which we can do since all the terms are non-negative---we may deduce that 0 $\leq$ x2 1+x2. Next, we know that 0 \leq x2 < x2 + 1, so x2 1+x2 < 1, as well. (Note: why was it important to point out that x2 \geq0? What can go wrong there?) This shows that 0 \leq x2 1+x2 < 1. Since y = f(x) = x2 1+x2, this is equivalent to saying 0 \leq y < 1. Thus, y \in T, and so Imf(R) \subseteq T. Second, let's prove T \subseteq Imf(R). Let y \in T be arbitrary and fixed. This means y $\in \mathbb{R}$ and 0 \leq y$ < 1. To show y $\in I$mf(R), as well, we must produce an x such that f(x) = y.
 
 
-> 🇨🇳 **求原像的证明方法** 要证 $\text{PreIm}_f(Z) = T$：先证 $\text{PreIm}_f(Z) \subseteq T$（任取 $a \in \text{PreIm}_f(Z)$，由 $f(a) \in \mathbb{Z}$ 推出 $a \in T$）；再证 $T \subseteq \text{PreIm}_f(Z)$（任取 $x \in T$，证 $f(x) \in \mathbb{Z}$）。
+> 🇨🇳 **求原像的证明方法** 要证 $\text{PreIm}_f(Z) = T$：先证 $\text{PreIm}_f(Z) \subseteq T$（任取 $a \in \text{PreIm}_f(Z)$，由 $f(a) \in Z$ 推出 $a \in T$）；再证 $T \subseteq \text{PreIm}_f(Z)$（任取 $x \in T$，证 $f(x) \in Z$）。
 
 
 7.3. IMAGES AND PRE-IMAGES
 
 
-> 🇨🇳 **例** 设 $f: $\mathbb{R}$ \to $\mathbb{R}$, f(x) = x^2$。求 $\text{Im}_f(\{-1,1\}) = \{1\}$，$\text{PreIm}_f(\{1\}) = \{-1,1\}$，$\text{PreIm}_f(\{-1\}) = \emptyset$。
+> 🇨🇳 **例** 设 $f: \mathbb{R} \to \mathbb{R}$, f(x) = x^2$。求 $\text{Im}_f(\{-1,1\}) = \{1\}$，$\text{PreIm}_f(\{1\}) = \{-1,1\}$，$\text{PreIm}_f(\{-1\}) = \emptyset$。
 
 
 We claim that x = q y 1-y works. Notice that y $\geq 0$, and y < 1 implies -y > -1 so 1 -y > 0. Thus, y 1-y \geq0, and so $x \in \mathbb{R}$ is well-defined as a square root, and x belongs to the domain R. Next, notice that x2 = y 1-y, and so f(x) = x2 1 + x2 = y 1-y 1 + y 1-y = y 1-y (1-y)+y 1-y = y 1-y
 
 
-> 🇨🇳 **例** 设 $f: $\mathbb{N}$ \to $\mathbb{N}$, f(n) = 2n$。$\text{Im}_f($\mathbb{N}$) = \{$偶数$\}$。$\text{PreIm}_f(\{$偶数$\}) = \mathbb{N}$。$\text{PreIm}_f(\{$奇数$\}) = \emptyset$。
+> 🇨🇳 **例** 设 $f: \mathbb{N} \to \mathbb{N}$, f(n) = 2n$。$\text{Im}_f($\mathbb{N}$) = \{$偶数$\}$。$\text{PreIm}_f(\{$偶数$\}) = \mathbb{N}$。$\text{PreIm}_f(\{$奇数$\}) = \emptyset$。
 
 
 1-y = y 1 -y $\cdot$ 1 -y
 
 
-> 🇨🇳 **证明 $\text{PreIm}_f(Z \cap W) = \text{PreIm}_f(Z) \cap \text{PreIm}_f(W)** a \in \text{PreIm}_f(Z \cap W) \Leftrightarrow f(a) \in $\mathbb{Z}$ \cap W \Leftrightarrow f(a) \in \mathbb{Z}$ 且 $f(a) \in W \Leftrightarrow a \in \text{PreIm}_f(Z)$ 且 $a \in \text{PreIm}_f(W) \Leftrightarrow a \in \text{PreIm}_f(Z) \cap \text{PreIm}_f(W)$。
+> 🇨🇳 **证明 $\text{PreIm}_f(Z \cap W) = \text{PreIm}_f(Z) \cap \text{PreIm}_f(W)** a \in \text{PreIm}_f(Z \cap W) \Leftrightarrow f(a) \in \mathbb{Z}$ \cap W \Leftrightarrow f(a) \in \mathbb{Z}$ 且 $f(a) \in W \Leftrightarrow a \in \text{PreIm}_f(Z)$ 且 $a \in \text{PreIm}_f(W) \Leftrightarrow a \in \text{PreIm}_f(Z) \cap \text{PreIm}_f(W)$。
 
 
 = y 1 = y This shows that y $\in I$mf(R), and so T $\subseteq I$mf(R). Overall, by a double-containment proof, we conclude that T = Imf(R). Notice how we addressed the issues discussed before the proof. Yes, two potential x values existed that would work (namely, the + and -square roots) but we only needed one, so we just picked one (the positive one) and ran with it. (Questions: What if this function was defined only on the nonnegative real numbers? What about just the negative real numbers? How might that restriction affect our choice?)
-Example 7.3.5. Consider the function p : $N \times $\mathbb{N}$ \to \mathbb{N}$ defined by
-$\forall(a, b) \in $\mathbb{N}$ \times $\mathbb{N}$. p(a, b) = ab + a What is Imp(N \times $\mathbb{N}$)$? This example might feel a little trickier because the domain is a Cartesian product of sets; that is, p inputs an ordered pair of natural numbers and outputs a single natural number. A good approach in a situation like this is to just start plugging in some values and seeing what happens. Consider the following table of values as a way to get started, where the left column indicates values of a, the top row indicates values of b, and the table entries are the values of p(a, b).
+Example 7.3.5. Consider the function p : $N \times \mathbb{N}$ \to \mathbb{N}$ defined by
+$\forall(a, b) \in \mathbb{N}$ \times \mathbb{N}$. p(a, b) = ab + a What is Imp(N \times \mathbb{N}$)$? This example might feel a little trickier because the domain is a Cartesian product of sets; that is, p inputs an ordered pair of natural numbers and outputs a single natural number. A good approach in a situation like this is to just start plugging in some values and seeing what happens. Consider the following table of values as a way to get started, where the left column indicates values of a, the top row indicates values of b, and the table entries are the values of p(a, b).
 
 
 > 🇨🇳 **证明 $\text{Im}_f(X \cap Y) \subseteq \text{Im}_f(X) \cap \text{Im}_f(Y)$** 设 $b \in \text{Im}_f(X \cap Y)$。则 $\exists a \in X \cap Y$ 使 $f(a)=b$。由 $a \in X$ 得 $b \in \text{Im}_f(X)$，由 $a \in Y$ 得 $b \in \text{Im}_f(Y)$。故 $b \in \text{Im}_f(X) \cap \text{Im}_f(Y)$。
@@ -131,15 +131,15 @@ $\forall(a, b) \in $\mathbb{N}$ \times $\mathbb{N}$. p(a, b) = ab + a What is Im
 
 It looks like every natural number is "achieved" by the function p, except for 1. Specifically, look at the top row of the array of values: there are all the natural numbers except 1. Let's use this insight in the following proof.
 <div class="def-proof" markdown>
-*Proof.* Let V = N -${1}. We claim V = Imp(N \times $\mathbb{N}$).$
+*Proof.* Let V = N - {1}. We claim V = Imp(N \times \mathbb{N}$).$
 </div>
-$First, we prove Imp(N \times $\mathbb{N}$) \subseteq V. Let n \in Imp(N \times $\mathbb{N}$) be arbitrary and fixed. This means n \in $\mathbb{N}$ and \exists(a, b) \in $\mathbb{N}$ \times $\mathbb{N}$ such that p(a, b) = n. Let such (a, b) be$
+First, we prove Imp(N \times \mathbb{N}$) \subseteq V. Let n \in Imp(N \times \mathbb{N}$) be arbitrary and fixed. This means n \in \mathbb{N}$ and \exists$(a, b) \in \mathbb{N} \times \mathbb{N}$ such that p(a, b) = n. Let such (a, b) be$
 
 
 > 🇨🇳 **反例：$\text{Im}_f(X \cap Y) \neq \text{Im}_f(X) \cap \text{Im}_f(Y)$** 设 $f:\{1,2\} \to \{a\}$，$f(1)=f(2)=a$。$\text{Im}_f(\{1\} \cap \{2\}) = \text{Im}_f(\emptyset) = \emptyset$，但 $\text{Im}_f(\{1\}) \cap \text{Im}_f(\{2\}) = \{a\}$。
 
 
-given. This means n = ab + a. Since a, b $\geq1, then ab \geq$1 and so n = ab + a \geq2. By the defintion of V, this shows that n $\in V. Thus, Imp(N \times $\mathbb{N}$) \subseteq V$. (Try to write the next half of the proof before reading on and seeing ours! ) Second, we prove V $\subseteq Imp(N \times $\mathbb{N}$). Let v \in V$ be arbitary and fixed. This means v $\in $\mathbb{N}$ and v \geq$2. Define (a, b) = (v -1, 1). Notice that v -1 \geq1, so v -1 $\in \mathbb{N}$ and thus (a, b) $\in $\mathbb{N}$ \times $\mathbb{N}$. Also, notice that p(a, b) = p(v$ -1, 1) = (v -1) \cdot 1 + 1 = v -1 + 1 = v Thus, p(a, b) = v, and so (a, b) $\in Imp(N \times $\mathbb{N}$). Therefore, V \subseteq Imp(N \times $\mathbb{N}$). By a double-containment proof, we have shown V = Imp(N \times $\mathbb{N}$).$
+given. This means n = ab + a. Since a, b $\geq1, then ab \geq$1 and so n = ab + a \geq2. By the defintion of V, this shows that n $\in V. Thus, Imp(N \times \mathbb{N}$) \subseteq V$. (Try to write the next half of the proof before reading on and seeing ours! ) Second, we prove V $\subseteq Imp(N \times \mathbb{N}$). Let v \in V$ be arbitary and fixed. This means v $\in \mathbb{N}$ and v \geq$2. Define (a, b) = (v -1, 1). Notice that v -1 \geq1, so v -1 $\in \mathbb{N}$ and thus (a, b) $\in \mathbb{N}$ \times \mathbb{N}$. Also, notice that p(a, b) = p(v$ -1, 1) = (v -1) \cdot 1 + 1 = v -1 + 1 = v Thus, p(a, b) = v, and so (a, b) $\in Imp(N \times \mathbb{N}$). Therefore, V \subseteq Imp(N \times \mathbb{N}$). By a double-containment proof, we have shown V = Imp(N \times \mathbb{N}$).$
 ### 7.3.2 Proofs about Images You might have observed the following fact by playing around with some of the examples we have seen. Either way, we can make state and prove this claim by working with the definition of image. Notice that it is a claim about an arbitrary function; it holds no matter what f is!
 Proposition 7.3.6. Let A, B be sets.
 Let f : A $\to B$ be a function. Let S, T \subseteq A. Then, Imf(S \cap T) \subseteq Imf(S) $\cap I$mf(T)
@@ -155,7 +155,7 @@ that f(a) = z. Let such an a be given. Since a $\in S \cap T, we know a \in S an
 7.3. IMAGES AND PRE-IMAGES
 
 
-> 🇨🇳 **满射的刻画** 以下等价：(a) $f$ 是满射；(b) $\forall $\mathbb{Z}$ \subseteq B.\, \text{Im}_f(\text{PreIm}_f(Z)) = \mathbb{Z}$。
+> 🇨🇳 **满射的刻画** 以下等价：(a) $f$ 是满射；(b) $\forall Z \subseteq B.\, \text{Im}_f(\text{PreIm}_f(Z)) = Z$。
 
 
 We will use a schematic diagram to come up with an example with the desired properties. We will then use this to formally define a function and state its properties, pointing out how they match what will be established in our claim. We want to point out that employing this technique is perfectly valid, as long as you go back and write down a formal definition afterwards. Turning in just a schematic diagram as a "proof" is not rigorous enough, but this can certainly help guide your intuition into producing fruitful ideas for a proof! Furthermore, keep in mind that there is no need to construct the most complicated or interesting counterexample in situations like this. If you're trying to disprove a universally-quantified statement, you just need one example that works! In particular, don't feel like you need to define a function that works with numbers, using some formula. Sometimes, this will actually make your job much harder! It's typically the case that a counterexample can be made using sets with just a few (i.e. two or three) elements each.
@@ -181,7 +181,7 @@ $\star$ S Imf(S) Now, we need to choose T. It will be interesting to have S \cap
 $\star$ S Imf(S) T Imf(T) = Imf(S \cap T) We have made it so that Imf(S) \cap Imf(T) is a strict superset of Imf(S $\cap T$). Look back over our construction, and see if you understand our thought process. What were the restrictions we had to conform to? Where did we have freedom of choice? What did we decide to do? We want to point out that this is absolutely not the only such example, though! Try to come up with others! Right now, all we have left to do is take the final diagram we constructed and use it to define an example and then prove it works. Here we go!
 
 
-> 🇨🇳 (6) 设 $f: $\mathbb{R}$ \to $\mathbb{R}$, f(x) = x+1$。求 $\text{Im}_f([0,1])$ 和 $\text{PreIm}_f([0,1])$。(7) 证明像不保持差集运算——即 $\text{Im}_f(X-Y)$ 未必等于 $\text{Im}_f(X) - \text{Im}_f(Y)$。
+> 🇨🇳 (6) 设 $f: \mathbb{R} \to \mathbb{R}$, f(x) = x+1$。求 $\text{Im}_f([0,1])$ 和 $\text{PreIm}_f([0,1])$。(7) 证明像不保持差集运算——即 $\text{Im}_f(X-Y)$ 未必等于 $\text{Im}_f(X) - \text{Im}_f(Y)$。
 
 
 7.3. IMAGES AND PRE-IMAGES
@@ -193,7 +193,7 @@ $\star$ S Imf(S) T Imf(T) = Imf(S \cap T) We have made it so that Imf(S) \cap Im
 <div class="def-proof" markdown>
 *Proof.* Define A = {1, 2, 3} and B = {$\star$, □}.
 </div>
-Define f : A $\to B$ by setting f(1) = \star, and f(2) = □, and f(3) = \star. Define S = {1, 2} and T = {2, 3}. Observe that S \cap T = {2}, so Imf(S \cap T) = {f(2)} = {□}. However, observe that Imf(S) = Imf(T) = B, so Imf(S) \cap Imf(T) \neq {□}. Since $\star$$\in Imf(S) \cap Imf(T) but \star$$\notin Imf(S \cap T$), this proves our claim. We have now seen an example of how to prove a claim about arbitrary functions and images, as well as how to construct a specific counterexample to disprove a claim. In the exercises, you will be asked to solve similar problems. Sometimes, you will need to figure out whether a claim is True or not. (Here, we told you which claim was valid beforehand.) We recommend trying one of two things: (1) Try to prove the claim, and see if it breaks down somewhere, or (2) Try to construct a counterexample, and see if you have trouble doing so. If you complete either task... well, hey, you figured it out! But if you're struggling, it might help you figure out what's really going on. Specifically, you will be asked to examine the claim we discussed above, but with "\cup" instead of "$\cap$". What do you think will happen? Go ahead and try it!
+Define f : A $\to B$ by setting f(1) = \star, and f(2) = □, and f(3) = \star. Define S = {1, 2} and T = {2, 3}. Observe that S \cap T = {2}, so Imf(S \cap T) = {f(2)} = {□}. However, observe that Imf(S) = Imf(T) = B, so Imf(S) \cap Imf(T) \neq {□}. Since $\star\in Imf(S) \cap Imf(T) but \star\notin Imf(S \cap T$), this proves our claim. We have now seen an example of how to prove a claim about arbitrary functions and images, as well as how to construct a specific counterexample to disprove a claim. In the exercises, you will be asked to solve similar problems. Sometimes, you will need to figure out whether a claim is True or not. (Here, we told you which claim was valid beforehand.) We recommend trying one of two things: (1) Try to prove the claim, and see if it breaks down somewhere, or (2) Try to construct a counterexample, and see if you have trouble doing so. If you complete either task... well, hey, you figured it out! But if you're struggling, it might help you figure out what's really going on. Specifically, you will be asked to examine the claim we discussed above, but with "\cup" instead of "$\cap$". What do you think will happen? Go ahead and try it!
 ### 7.3.3 Pre-Image: Definition and Examples A natural question you might have now is: What about going the other way? Can we take a subset of the codomain and identify the elements whose outputs "land" in that set? Of course! This next definition provides us a term for this notion, and you'll notice many similarities with the definition of image.
 Definition
 <div class="def-definition" markdown>
@@ -254,7 +254,7 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 > 🇨🇳 **补充6** 像/原像的直觉：像 = "$X$ 中的所有输入能到达哪些输出？"原像 = "哪些输入能到达 $Z$ 中的输出？"
 
 
-Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Let h : R -{-1} $\to $\mathbb{R}$ be defined by \forall x \in \mathbb{R}$ -{-1}. h(x) = x 1+x. Prove that Imh(R -{-1}) = R -{1}. Then, define P = {$y \in \mathbb{R}$ | y > 1} and U = {$y \in \mathbb{R}$ | y > -1}. Prove that PreImh(P) = U. (2) Let f : A \to B be a function. Let S, T \subseteq A. For each of the following claims, prove it must hold, or disprove it by finding a counterexample. (a) Imf(S \cup T) \subseteq Imf(S) \cup Imf(T) (b) Imf(S \cup T) \supseteq Imf(S) \cup Imf(T) (3) Let f : A \to B be a function. Let Y, Z \subseteq B. For each of the following claims, prove it must hold, or disprove it by finding a counterexample. (a) PreImf(Y $\cup $\mathbb{Z}$) \subseteq P$reImf(Y ) \cup PreImf(Z) (b) PreImf(Y $\cup $\mathbb{Z}$) \supseteq P$reImf(Y ) \cup PreImf(Z) (4) Look back at Proposition 7.3.12. Consider the reverse containment: Imf {PreImf(Y ) } \supseteq Y Disprove the claim that this holds for any function f : A \to B and any Y $\subseteq B$ by constructing a specific counterexample and proving that it works.
+Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Let h : R -{-1} $\to \mathbb{R}$ be defined by \forall x \in \mathbb{R}$ -{-1}. h(x) = x 1+x. Prove that Imh(R -{-1}) = R -{1}. Then, define P = {$y \in \mathbb{R}$ | y > 1} and U = {$y \in \mathbb{R}$ | y > -1}. Prove that PreImh(P) = U. (2) Let f : A \to B be a function. Let S, T \subseteq A. For each of the following claims, prove it must hold, or disprove it by finding a counterexample. (a) Imf(S \cup T) \subseteq Imf(S) \cup Imf(T) (b) Imf(S \cup T) \supseteq Imf(S) \cup Imf(T) (3) Let f : A \to B be a function. Let Y, Z \subseteq B. For each of the following claims, prove it must hold, or disprove it by finding a counterexample. (a) PreImf(Y $\cup $\mathbb{Z}$) \subseteq P$reImf(Y ) \cup PreImf(Z) (b) PreImf(Y $\cup $\mathbb{Z}$) \supseteq P$reImf(Y ) \cup PreImf(Z) (4) Look back at Proposition 7.3.12. Consider the reverse containment: Imf {PreImf(Y ) } \supseteq Y Disprove the claim that this holds for any function f : A \to B and any Y $\subseteq B$ by constructing a specific counterexample and proving that it works.
 ## 7.4 Properties of Functions
 ### 7.4.1 Surjective (Onto) Functions You might be wondering something by now... If we can identify the image of the domain under a given function, why bother with a codomain that's any "larger" than that set? Sure f : $\mathbb{R} \to \mathbb{R}$ defined by f(x) = x2 is a fine function, but changing the codomain to just the nonegative real numbers doesn't really affect anything. It might even make it better, because nothing in the codomain is "missed" by the function! If you're thinking this way, then you have anticipated our next definition, which encapsulates precisely this property of a function: when the codomain and the image of the domain are the same set.
 

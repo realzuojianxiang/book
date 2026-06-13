@@ -159,7 +159,7 @@ Binomial Coefficients One thing you might find surprising about the above formul
 > 🇨🇳 **例** 密码由 4 位数字（0-9）组成，允许重复：$10^4 = 10000$。不允许重复：$P(10,4) = 5040$。
 
 
-} = 1. Why does this make sense? Intuitively, we think of {n k } as the number of ways to select k objects from a set of n objects; so, how many ways can we select 0 objects from, say, 3 objects? Put 3 pens on your desk. Now, select none of them. There! You just did it! That was one way---and the only way---to select none of the objects. This argument works just as well when n = 0, even! Put no pens on your desk. Now, select none of them. There! You just did it in one way again. Thus, $\forall n \in \mathbb{N} \cup${0}. (n
+} = 1. Why does this make sense? Intuitively, we think of {n k } as the number of ways to select k objects from a set of n objects; so, how many ways can we select 0 objects from, say, 3 objects? Put 3 pens on your desk. Now, select none of them. There! You just did it! That was one way---and the only way---to select none of the objects. This argument works just as well when n = 0, even! Put no pens on your desk. Now, select none of them. There! You just did it in one way again. Thus, $\forall n \in \mathbb{N} \cup \{0\}$. (n
 
 
 > 🇨🇳 **例** 从 6 男 4 女中选 3 男 2 女组 5 人委员会：$\binom{6}{3} \times \binom{4}{2} = 20 \times 6 = 120$（乘积法则）。

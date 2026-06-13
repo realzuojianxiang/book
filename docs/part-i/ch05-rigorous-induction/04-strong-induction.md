@@ -70,13 +70,13 @@ Example 5.4.2. A formula for a recursively-defined sequence:
 
 
 Claim: Let the sequence sn be defined by
-s0 = 1 and $\forall n \in \mathbb{N}$. sn = 1 + n-1 X i=0 si Find and prove a closed formula for sn for every n $\in \mathbb{N} \cup${0}.
+s0 = 1 and $\forall n \in \mathbb{N}$. sn = 1 + n-1 X i=0 si Find and prove a closed formula for sn for every n $\in \mathbb{N} \cup \{0\}$.
 <div class="def-proof" markdown>
-*Proof.* Let P(n) be "sn = 2n". We prove $\forall n \in \mathbb{N} \cup${0}. P(n) by induction on
+*Proof.* Let P(n) be "sn = 2n". We prove $\forall n \in \mathbb{N} \cup \{0\}$. P(n) by induction on
 </div>
 n. BC: When n = 0, observe that s0 = 1 and 20 = 1, so s0 = 20. Thus, P(0) holds. IH: Let k $\in \mathbb{N} \cup {0} be arbitrary and fixed. Suppose P(0) \wedgeP(1) \wedge \cdot \cdot \cdot \wedgeP(k) holds. IS$: Observe that sk+1 = 1 + k X i=0 si
 Definition of sk+1
-= 1 + k X i=0 2i Using IHs: $P(0) \wedge \cdot \cdot \cdot \wedgeP(k) = 1 +$ {2k+1 -1 } Standard result (see Exercise 2.7.1) = 2k+1 Thus, P(k + 1) holds. Therefore, $\forall n \in \mathbb{N} \cup${0}. P(n) holds, by induction. Notice that this example required us to use all of the instances in the IH. Isn't that striking? Certainly, we needed strong induction here. Without knowing all of the previous instances held, we wouldn't have any hope of deducing the next one! What distinguishes this from the next example is that here we knew exactly which instance(s) of the IH we used (namely, all of them). In the next example, we will invoke the IH, but we won't be able to say exactly which instance we use. You'll see what we mean!
+= 1 + k X i=0 2i Using IHs: $P(0) \wedge \cdot \cdot \cdot \wedgeP(k) = 1 +$ {2k+1 -1 } Standard result (see Exercise 2.7.1) = 2k+1 Thus, P(k + 1) holds. Therefore, $\forall n \in \mathbb{N} \cup \{0\}$. P(n) holds, by induction. Notice that this example required us to use all of the instances in the IH. Isn't that striking? Certainly, we needed strong induction here. Without knowing all of the previous instances held, we wouldn't have any hope of deducing the next one! What distinguishes this from the next example is that here we knew exactly which instance(s) of the IH we used (namely, all of them). In the next example, we will invoke the IH, but we won't be able to say exactly which instance we use. You'll see what we mean!
 Example 5.4.3. To start we need to introduce you to (or perhaps remind you
 of) a couple of ideas about prime numbers and the natural numbers. Primes: A prime number is an element of the set P = {n $\in \mathbb{N}$ | $n > 1 \wedge(n = ab) = \Rightarrow (a = 1 \veea = n)} That is, the only divisors of a prime number are 1 and itself. Prime Factorization$: Given x $\in \mathbb{N}$, a prime factorization of x is a product of primes that equals x, with repeats allowed.
 
@@ -105,7 +105,7 @@ f0 = 0 and f1 = 1 and $\forall n \in \mathbb{N}$ -{1}. fn = fn-1 + fn-2 Define �
 > 🇨🇳 **例：邮资问题推广** 用 $a$ 分和 $b$ 分邮票（$\gcd(a,b)=1$），可以凑出所有 $n \geq (a-1)(b-1)$ 分邮资。证明需要强归纳和 $(a-1)(b-1)$ 以下的多个基例。
 
 
-. Then the following equality holds for every n $\in \mathbb{N} \cup${0}: fn =
+. Then the following equality holds for every n $\in \mathbb{N} \cup \{0\}$: fn =
 
 
 > 🇨🇳 **强归纳的常见错误** (1) 基例不够——归纳链断裂。(2) 归纳假设写错——应写"对所有 $j \leq k$"而非只写"假设 $P(k)$"。(3) 归纳步中假设了不该假设的东西。
@@ -139,7 +139,7 @@ $!2 = 1 + 2 \sqrt 5 + 5$
 > 🇨🇳 (5) 数列 $a_1=1, a_2=3, a_n=a_{n-1}+2a_{n-2}$（$n\geq3$）。用强归纳法证明 $a_n = 2^n - (-1)^n$。
 
 
-We will prove that $\forall n \in \mathbb{N} \cup${0}. P(n) by induction on n. BC: Observe that f0 = 0 and
+We will prove that $\forall n \in \mathbb{N} \cup \{0\}$. P(n) by induction on n. BC: Observe that f0 = 0 and
 
 
 > 🇨🇳 (6) 证明：用 5 分和 9 分邮票可以凑出所有 $n \geq 32$ 分。(7) 对比常规归纳与强归纳：各自给出一个必须用该方法的例子。
@@ -151,7 +151,7 @@ We will prove that $\forall n \in \mathbb{N} \cup${0}. P(n) by induction on n. B
 > 🇨🇳 **补充：归纳法的选用** 判断方法的简单规则：若递推关系只依赖前一项 $\to$ 常规归纳；若依赖前多项 \to 强归纳；若涉及"存在最小反例" $\to$ 良序原理。
 
 
-$\sqrt 5(1$ -1) = 0 Thus, P(0) holds. IH: Let k $\in \mathbb{N} \cup${0} be arbitrary and fixed. Suppose $\forall i \in[k] \cup${0}. P(i) holds. IS: Our goal now is to deduce that P(k + 1) holds. Case 1: Suppose k = 0. Then we can directly observe that f1 = 1 and
+$\sqrt 5(1$ -1) = 0 Thus, P(0) holds. IH: Let k $\in \mathbb{N} \cup \{0\}$ be arbitrary and fixed. Suppose $\forall i \in[k] \cup \{0\}$. P(i) holds. IS: Our goal now is to deduce that P(k + 1) holds. Case 1: Suppose k = 0. Then we can directly observe that f1 = 1 and
 
 
 > 🇨🇳 **补充：强归纳与良序** 强归纳与良序原理逻辑等价——但强归纳的证明往往更构造性（给出具体步骤），而良序证明更非构造性（只需矛盾）。
@@ -213,7 +213,7 @@ Factor
 > 🇨🇳 **补充：数学教育中的强归纳** 强归纳法的教学难点在于"看起来与常规归纳太像"——学生容易忘记把归纳假设写成"对所有 $j \leq k$"。
 
 
-{ϕk+1 -(1 -ϕ)k+1 } Thus, P(k + 1) holds. By induction, we conclude that $\forall n \in \mathbb{N} \cup${0}. P(n). A Discussion about Multiple Base Cases Notice, in the previous example, that we had to establish two cases in the IS. Because the Fibonacci Sequence is defined recursively so that each term depends on two previous terms, we could not use the truth of P(0) alone to deduce P(1). We had to show P(1) held separately. (Go back and try it. You'll find yourself trying to refer to f-1, an undefined term!) After that, we can use the truth of P(0) and P(1) to deduce P(2), then we can use P(1) and P(2) to deduce P(3)... That is to say, we really needed to throw in one extra base case before the whole "and so on" of induction kicked in.
+{ϕk+1 -(1 -ϕ)k+1 } Thus, P(k + 1) holds. By induction, we conclude that $\forall n \in \mathbb{N} \cup \{0\}$. P(n). A Discussion about Multiple Base Cases Notice, in the previous example, that we had to establish two cases in the IS. Because the Fibonacci Sequence is defined recursively so that each term depends on two previous terms, we could not use the truth of P(0) alone to deduce P(1). We had to show P(1) held separately. (Go back and try it. You'll find yourself trying to refer to f-1, an undefined term!) After that, we can use the truth of P(0) and P(1) to deduce P(2), then we can use P(1) and P(2) to deduce P(3)... That is to say, we really needed to throw in one extra base case before the whole "and so on" of induction kicked in.
 
 
 > 🇨🇳 **补充：归纳法的等价性** 四种表述等价：(1) 常规 PMI；(2) 强 PMI；(3) 良序原理；(4) 无限下降法（$P(n+1) \Rightarrow P(n)$ 导出矛盾）。选择最方便的用。
@@ -280,7 +280,7 @@ so let's define Bk = k[ i=1 Ai Then, observe that k+1 [ i=1 Ai = Ak+1 $\cup B$k 
 
 up with an argument, look at what sorts of dependencies there are between instances of your proposition. If you notice that an instance depends on several previous ones, you will almost certainly need a strong induction argument.
 ### 5.4.6 Questions & Exercises
-Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What are the differences between Strong and Regular Induction? (2) How might you identify when a Strong Induction argument is required? (3) Why is it that we might as well always use Strong Induction, instead of deciding whether to use Regular/Strong? (4) What was interesting about the use of the IH in the Prime Factorization example that we saw? How does it compare to the other examples, where we proved a formula about a recursively-defined sequence of numbers? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Define a sequence of numbers by x1 = 2 and x2 = 3 and $\forall n \in \mathbb{N}$ -{1, 2}. xn = 3xn-1 -2xn-2 Prove that $\forall n \in \mathbb{N}$. xn = 2n-1 + 1 (2) Let the sequence an be defined by a0 = 0 and a1 = 1 and $\forall n \in \mathbb{N}$ -{1}. an = 5an-1 -6an-$2 That is, \langlean\rangle= \langle0, 1, 5, 19, 65, 211,...\rangle Prove that an = 3n$ -2n for every n $\in \mathbb{N} \cup${0}.
+Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory! (1) What are the differences between Strong and Regular Induction? (2) How might you identify when a Strong Induction argument is required? (3) Why is it that we might as well always use Strong Induction, instead of deciding whether to use Regular/Strong? (4) What was interesting about the use of the IH in the Prime Factorization example that we saw? How does it compare to the other examples, where we proved a formula about a recursively-defined sequence of numbers? Try It Try answering the following short-answer questions. They require you to actually write something down, or describe something out loud (to a friend/classmate, perhaps). The goal is to get you to practice working with new concepts, definitions, and notation. They are meant to be easy, though; making sure you can work through them will help you! (1) Define a sequence of numbers by x1 = 2 and x2 = 3 and $\forall n \in \mathbb{N}$ -{1, 2}. xn = 3xn-1 -2xn-2 Prove that $\forall n \in \mathbb{N}$. xn = 2n-1 + 1 (2) Let the sequence an be defined by a0 = 0 and a1 = 1 and $\forall n \in \mathbb{N}$ -{1}. an = 5an-1 -6an-$2 That is, \langlean\rangle= \langle0, 1, 5, 19, 65, 211,...\rangle Prove that an = 3n$ -2n for every n $\in \mathbb{N} \cup \{0\}$.
 
 
 > 🇨🇳 **补充：非标准归纳** 有些变体不那么常见：(1) 向后归纳（$P(2^n)$ 再向下推）；(2) 区间归纳（$P(n) \Rightarrow P(n+1)$ 和 $P(n) \Rightarrow P(n-1)$）；(3) 超限归纳。
