@@ -15,10 +15,10 @@ The second condition in the hypothesis of the Principle of Induction is a condit
 Base Case(s): Prove that $P(1)$ holds. (Depending on what happens in the Induction Step, you might need more than one Base Case.)
 Induction Hypothesis: Suppose that $k$ is an arbitrary and fixed natural number that satisfies some inequality ($k \geq \ldots$, depending on what happens in the Induction Step), and suppose that $\neg P(k)$ holds; that is, suppose $P(k)$ fails to hold.
 Induction Step: Prove that $\neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$; that is, show that the proposition fails to hold at some prior instance, as well.
-Conclusion: By induction, $\forall n \in \mathbb{N}.\, P(n)$.
+Conclusion: By induction, $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 
-> 🇨🇳 A.3.3 "最小罪犯"（Minimal Criminal）论证——归纳原理假设的第二个条件是条件语句，可用逆否命题（Contrapositive）证明：$\neg P(k) \Rightarrow \neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$，即"若命题在某值 $k$ 处不成立，则必存在某个先前实例也不成立"。证明步骤：基底——证 $P(1)$ 成立；归纳假设——设 $k$ 为某固定自然数且 $\neg P(k)$ 成立；归纳步骤——证 $\neg P(1) \vee \cdots \vee \neg P(k-1)$（即某先前实例也不成立）；结论——由归纳得 $\forall n \in \mathbb{N}.\ P(n)$。
+> 🇨🇳 A.3.3 "最小罪犯"（Minimal Criminal）论证——归纳原理假设的第二个条件是条件语句，可用逆否命题（Contrapositive）证明：$\neg P(k) \Rightarrow \neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$，即"若命题在某值 $k$ 处不成立，则必存在某个先前实例也不成立"。证明步骤：基底——证 $P(1)$ 成立；归纳假设——设 $k$ 为某固定自然数且 $\neg P(k)$ 成立；归纳步骤——证 $\neg P(1) \vee \cdots \vee \neg P(k-1)$（即某先前实例也不成立）；结论——由归纳得 $\f\forall n \in \mathbb{N}.\ P(n)$。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS A.4 Relations
@@ -28,10 +28,10 @@ APPENDIX A. DEFINITIONS AND THEOREMS A.4 Relations
 A.4.1 Properties of Relations
 
 Let $A$ be a set and let $R$ be a relation on $A$, i.e. $R \subseteq A \times A$. (Note: These properties only apply in this case, and not to a relation between two different sets $A$ and $B$.)
-• We say $R$ is reflexive if $\forall x \in A.\, (x, x) \in R$ (i.e. every element is related to itself).
-• We say $R$ is symmetric if $\forall x, y \in A.\, (x, y) \in R \Rightarrow (y, x) \in R$ (i.e. the order of the comparison doesn't matter).
-• We say $R$ is transitive if $\forall x, y, z \in A.\, [(x, y) \in R \wedge (y, z) \in R] \Rightarrow (x, z) \in R$ (i.e. the relation always "transitions through a middle-man").
-• We say $R$ is anti-symmetric if $\forall x, y \in A.\, [(x, y) \in R \wedge (y, x) \in R] \Rightarrow x = y$ (i.e. two elements related in both directions must be the same).
+• We say $R$ is reflexive if $\f\forall x \in A.\, (x, x) \in R$ (i.e. every element is related to itself).
+• We say $R$ is symmetric if $\f\forall x, y \in A.\, (x, y) \in R \Rightarrow (y, x) \in R$ (i.e. the order of the comparison doesn't matter).
+• We say $R$ is transitive if $\f\forall x, y, z \in A.\, [(x, y) \in R \wedge (y, z) \in R] \Rightarrow (x, z) \in R$ (i.e. the relation always "transitions through a middle-man").
+• We say $R$ is anti-symmetric if $\f\forall x, y \in A.\, [(x, y) \in R \wedge (y, x) \in R] \Rightarrow x = y$ (i.e. two elements related in both directions must be the same).
 
 A.4.2 Equivalence Relations
 
@@ -39,5 +39,5 @@ Let $A$ be a set and let $R$ be a relation on $A$.
 • We say $R$ is an equivalence relation if and only if $R$ is reflexive, symmetric, and transitive.
 
 
-> 🇨🇳 A.4 关系（Relation）——设 $A, B$ 为集合，$A$ 与 $B$ 之间的关系是满足 $R \subseteq A \times B$ 的有序对集合。$A$ 为定义域（Domain），$B$ 为陪域（Codomain）。关系性质：自反性（Reflexive）——$\forall x \in A.\ (x,x) \in R$；对称性（Symmetric）——$(x,y) \in R \Rightarrow (y,x) \in R$；传递性（Transitive）——$(x,y) \in R \wedge (y,z) \in R \Rightarrow (x,z) \in R$；反对称性（Anti-symmetric）——$(x,y) \in R \wedge (y,x) \in R \Rightarrow x = y$。等价关系（Equivalence Relation）当且仅当 $R$ 同时满足自反性、对称性和传递性。
+> 🇨🇳 A.4 关系（Relation）——设 $A, B$ 为集合，$A$ 与 $B$ 之间的关系是满足 $R \subseteq A \times B$ 的有序对集合。$A$ 为定义域（Domain），$B$ 为陪域（Codomain）。关系性质：自反性（Reflexive）——$\f\forall x \in A.\ (x,x) \in R$；对称性（Symmetric）——$(x,y) \in R \Rightarrow (y,x) \in R$；传递性（Transitive）——$(x,y) \in R \wedge (y,z) \in R \Rightarrow (x,z) \in R$；反对称性（Anti-symmetric）——$(x,y) \in R \wedge (y,x) \in R \Rightarrow x = y$。等价关系（Equivalence Relation）当且仅当 $R$ 同时满足自反性、对称性和传递性。
 

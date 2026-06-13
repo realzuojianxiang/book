@@ -34,7 +34,7 @@ A.1.3 Elements and Subsets
 • To say "$x$ is an element of the set $S$" we write $x \in S$.
 To say "$x$ is not an element of the set $S$" we write $x \notin S$.
 • To say "$S$ is a subset of $T$" we write $S \subseteq T$.
-This is defined by the conditional statement "Every element of $S$ is also an element of $T$". This can be expressed as $\forall x \in U.\, x \in S \Rightarrow x \in T$.
+This is defined by the conditional statement "Every element of $S$ is also an element of $T$". This can be expressed as $\f\forall x \in U.\, x \in S \Rightarrow x \in T$.
 That is, for every element $x$ of the universal set (supposing $S, T \subseteq U$), whenever $x \in S$, we also know that $x \in T$.
 • To prove that a set is a subset of another set, like $S \subseteq T$, we need to do something like this:
 Let $x \in S$ be arbitrary and fixed.

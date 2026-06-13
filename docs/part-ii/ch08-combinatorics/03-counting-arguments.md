@@ -636,7 +636,7 @@ How many poker hands have exactly one Queen and exactly one Spade? Try this on y
 <div class="def-definition" markdown>
 **Definition 8.3.9. Let $n, k \in \mathbb{N}$ be given. Then**
 </div>
-Tk,n = [k]n = {(a1, a2,..., an) | $\forall i. a_i \in [k]$} That is, Tk,n is the set of all n-tuples whose elements belong to [k].
+Tk,n = [k]n = {(a1, a2,..., an) | $\f\forall i. a_i \in [k]$} That is, Tk,n is the set of all n-tuples whose elements belong to [k].
 Note: We chose the letter T because these objects are n-tuples, i.e. ordered
 lists of length n. We will also point out that when k is a small number, like 2 or 3, it is common to replace the set [k] with $[k-1] \cup \{0\}$. For instance, the concept of a binary n-tuple is quite common in mathematics, in part due to its prevalence in comptuer science. With that in mind, the case where k = 2 often considers ordered lists of length n whose elements are drawn from the set {0, 1},
 
@@ -854,7 +854,7 @@ This "grid" of dots on the plane is known as a lattice. Here's a natural questio
 <div class="def-definition" markdown>
 **Definition 8.3.19. Let $(x, y) \in (\mathbb{N} \cup \{0\})^2$. A lattice path to (x, y) is an**
 </div>
-ordered tuple of points in the plane lattice where the first element of the tuple is (0, 0), the last element of the tuple is (a, b), and every element in the tuple only differs from the previous one by having exactly one coordinate that is exactly one larger than the corresponding coordinate of the previous element. More rigorously, given (x, y) a lattice path is an n-tuple (P1, P2,..., Pn), for some n $\in \mathbb{N}$, where each Pi = (xi, yi) is a point in the lattice, and $\forall$ i $\in$[n -$1]. (xi+1, yi+1) = (xi + 1, yi) \vee(xi+1, yi+1) = (xi, yi + 1) and, furthermore, (x1, y1) = (0, 0) and (xn, yn) = (x, y). That is, a lattice path is a sequence of points in the lattice from (0, 0) to (n, n) where we are only allowed to move rightwards or upwards by one grid point at every step.$
+ordered tuple of points in the plane lattice where the first element of the tuple is (0, 0), the last element of the tuple is (a, b), and every element in the tuple only differs from the previous one by having exactly one coordinate that is exactly one larger than the corresponding coordinate of the previous element. More rigorously, given (x, y) a lattice path is an n-tuple (P1, P2,..., Pn), for some n $\in \mathbb{N}$, where each Pi = (xi, yi) is a point in the lattice, and $\f\forall$ i $\in$[n -$1]. (xi+1, yi+1) = (xi + 1, yi) \vee(xi+1, yi+1) = (xi, yi + 1) and, furthermore, (x1, y1) = (0, 0) and (xn, yn) = (x, y). That is, a lattice path is a sequence of points in the lattice from (0, 0) to (n, n) where we are only allowed to move rightwards or upwards by one grid point at every step.$
 Example 8.3.20. Consider the point (2, 4) in the plane lattice. In the diagram
 below, we plot a few sample lattice paths to (2, 4).
 

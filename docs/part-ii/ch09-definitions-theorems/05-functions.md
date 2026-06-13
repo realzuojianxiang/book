@@ -14,19 +14,19 @@ tags:
 
 A.5.2 Jections
 
-• Let $f: A \to B$ be a function. If $\text{Im}_f(A) = B$, then we say $f$ is surjective, or it is a surjection. The definition of image gives us this equivalent formulation of surjectivity: $f$ is surjective $\Leftrightarrow \forall b \in B.\, \exists a \in A.\, f(a) = b$ (Intuitively, $f$ is surjective when all of the codomain elements are "hit" by the function.)
-• Let $f: A \to B$ be a function. If $f$ has the property that $\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$ then we say $f$ is injective, or it is an injection. The contrapositive of this conditional statement yields an equivalent formulation of injectivity: $\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$ (Intuitively, $f$ is injective when two different inputs always yield different outputs, or equivalently when having equal outputs means they came from the same input.)
+• Let $f: A \to B$ be a function. If $\text{Im}_f(A) = B$, then we say $f$ is surjective, or it is a surjection. The definition of image gives us this equivalent formulation of surjectivity: $f$ is surjective $\Leftrightarrow \f\forall b \in B.\, \exists a \in A.\, f(a) = b$ (Intuitively, $f$ is surjective when all of the codomain elements are "hit" by the function.)
+• Let $f: A \to B$ be a function. If $f$ has the property that $\f\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$ then we say $f$ is injective, or it is an injection. The contrapositive of this conditional statement yields an equivalent formulation of injectivity: $\f\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$ (Intuitively, $f$ is injective when two different inputs always yield different outputs, or equivalently when having equal outputs means they came from the same input.)
 • If a function $f$ is both injective and surjective, then we say $f$ is bijective, or it is a bijection.
 
 A.5.3 Composition of Functions
 
-• Let $f: A \to B$ and $g: B \to C$ be functions. The function $g \circ f: A \to C$ defined by $\forall a \in A.\, (g \circ f)(a) = g(f(a))$ is the composition of $g$ with $f$, or "$g$ composed with $f$".
+• Let $f: A \to B$ and $g: B \to C$ be functions. The function $g \circ f: A \to C$ defined by $\f\forall a \in A.\, (g \circ f)(a) = g(f(a))$ is the composition of $g$ with $f$, or "$g$ composed with $f$".
 Note: It helps to read the "$\circ$" as "after" to remind you of the order of operations: $g \circ f$ means $g$ is applied after $f$. We find $f(a)$ and then find $g(f(a))$.
 
 
 > 🇨🇳 （直观上，这是所有输出"落入" $Z$ 的输入组成的集合。）注意：$\text{Im}_f(\emptyset) = \emptyset$，$\text{PreIm}_f(\emptyset) = \emptyset$。
 >
-> **A.5.2 满射、单射、双射 (Jections)** 设 $f: A \to B$ 为函数。若 $\text{Im}_f(A) = B$，称 $f$ 为**满射（Surjective）**，等价表述为 $\forall b \in B.\, \exists a \in A.\, f(a) = b$——陪域中所有元素都被"命中"。若 $\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$，称 $f$ 为**单射（Injective）**，等价于 $\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$——不同输入总产生不同输出。若 $f$ 既是单射又是满射，称 $f$ 为**双射（Bijective）**。
+> **A.5.2 满射、单射、双射 (Jections)** 设 $f: A \to B$ 为函数。若 $\text{Im}_f(A) = B$，称 $f$ 为**满射（Surjective）**，等价表述为 $\f\forall b \in B.\, \exists a \in A.\, f(a) = b$——陪域中所有元素都被"命中"。若 $\f\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$，称 $f$ 为**单射（Injective）**，等价于 $\f\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$——不同输入总产生不同输出。若 $f$ 既是单射又是满射，称 $f$ 为**双射（Bijective）**。
 >
 > **A.5.3 函数的复合** 设 $f: A \to B$，$g: B \to C$，则 $g \circ f: A \to C$ 定义为 $(g \circ f)(a) = g(f(a))$，称为 $g$ 与 $f$ 的**复合**。提示：将 "$\circ$" 读作"之后"，$g \circ f$ 即 $g$ 在 $f$ 之后作用。
 
@@ -37,7 +37,7 @@ Note: It helps to read the "$\circ$" as "after" to remind you of the order of op
 
 A.5.4 Inverses
 
-• Let $X$ be any set. The identity function $\text{Id}_X: X \to X$ is defined by $\forall z \in X.\, \text{Id}_X(z) = z$.
+• Let $X$ be any set. The identity function $\text{Id}_X: X \to X$ is defined by $\f\forall z \in X.\, \text{Id}_X(z) = z$.
 • Let $f: A \to B$ be a function. If there is a function $F: B \to A$ such that $f \circ F: B \to B$ satisfies $f \circ F = \text{Id}_B$ and $F \circ f: A \to A$ satisfies $F \circ f = \text{Id}_A$ then we say $F$ is the inverse of $f$ and write $F = f^{-1}$. Notice that the formal definition clearly includes the necessity of checking that both ways of composing the two functions yields an identity function. There exist examples where one way works and the other doesn't! (Note: When proving a function is the inverse of another one, we aren't allowed to write $f^{-1}$ yet because we are, in fact, in the midst of proving that $f$ even has an inverse.) If $f$ has an inverse, we say $f$ is invertible.
 • Theorem: $f: A \to B$ is bijective $\Leftrightarrow$ $f$ has an inverse $f^{-1}: B \to A$.
 • Theorem: Let $f: A \to B$ and $g: B \to C$ both be bijections. Then $g \circ f: A \to C$ is also a bijection, so it has an inverse; that inverse is $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
@@ -121,7 +121,7 @@ Alternatively, -- AFSOC $f$ is bijective, so it has an inverse $f^{-1}$. Find a 
 
 > 🇨🇳 （直观上，这是所有输出"落入" $Z$ 的输入组成的集合。）注意：$\text{Im}_f(\emptyset) = \emptyset$，$\text{PreIm}_f(\emptyset) = \emptyset$。
 >
-> **A.5.2 满射、单射、双射 (Jections)** 设 $f: A \to B$ 为函数。若 $\text{Im}_f(A) = B$，称 $f$ 为**满射（Surjective）**，等价表述为 $\forall b \in B.\, \exists a \in A.\, f(a) = b$——陪域中所有元素都被"命中"。若 $\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$，称 $f$ 为**单射（Injective）**，等价于 $\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$——不同输入总产生不同输出。若 $f$ 既是单射又是满射，称 $f$ 为**双射（Bijective）**。
+> **A.5.2 满射、单射、双射 (Jections)** 设 $f: A \to B$ 为函数。若 $\text{Im}_f(A) = B$，称 $f$ 为**满射（Surjective）**，等价表述为 $\f\forall b \in B.\, \exists a \in A.\, f(a) = b$——陪域中所有元素都被"命中"。若 $\f\forall a_1, a_2 \in A.\, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$，称 $f$ 为**单射（Injective）**，等价于 $\f\forall a_1, a_2 \in A.\, f(a_1) = f(a_2) \Rightarrow a_1 = a_2$——不同输入总产生不同输出。若 $f$ 既是单射又是满射，称 $f$ 为**双射（Bijective）**。
 >
 > **A.5.3 函数的复合** 设 $f: A \to B$，$g: B \to C$，则 $g \circ f: A \to C$ 定义为 $(g \circ f)(a) = g(f(a))$，称为 $g$ 与 $f$ 的**复合**。提示：将 "$\circ$" 读作"之后"，$g \circ f$ 即 $g$ 在 $f$ 之后作用。
 
@@ -137,7 +137,7 @@ Alternatively, -- AFSOC $f$ is bijective, so it has an inverse $f^{-1}$. Find a 
 > **A.5.4 逆函数** 恒等函数 $\text{Id}_X: X \to X$ 定义为 $\text{Id}_X(z) = z$。若存在 $F: B \to A$ 使 $f \circ F = \text{Id}_B$ 且 $F \circ f = \text{Id}_A$，则 $F = f^{-1}$，称 $f$ **可逆**。注意必须验证两个方向的复合都得到恒等函数。**定理**：$f: A \to B$ 为双射 $\Leftrightarrow$ $f$ 有逆 $f^{-1}: B \to A$。双射的复合仍为双射，且 $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$。
 >
 > **A.5.5 函数的证明技巧**
-> 证明满射：任取 $b \in B$，构造 $a \in A$ 使 $f(a) = b$，从而 $\text{Im}_f(A) = B$。证明非满射：找 $b \in B$ 使 $\forall a \in A.\, f(a) \neq b$。
+> 证明满射：任取 $b \in B$，构造 $a \in A$ 使 $f(a) = b$，从而 $\text{Im}_f(A) = B$。证明非满射：找 $b \in B$ 使 $\f\forall a \in A.\, f(a) \neq b$。
 
 
 > 🇨🇳 证明单射：任取 $x, y \in A$，由 $f(x) = f(y)$ 推出 $x = y$；或由 $x \neq y$ 推出 $f(x) \neq f(y)$。证明非单射：找 $x \neq y \in A$ 使 $f(x) = f(y)$。证明双射：证单射 + 证满射；或构造 $F: B \to A$ 使 $F \circ f = \text{Id}_A$ 且 $f \circ F = \text{Id}_B$，从而 $F = f^{-1}$，$f$ 双射。证明非双射：证非单射或非满射；或反设双射导出矛盾。
@@ -164,7 +164,7 @@ Let $S$ be any set.
 • We say $S$ is finite if $\exists n \in \mathbb{N} \cup \{0\}$ such that there exists a bijection $f: S \to [n]$.
 Note: The empty set $S = \emptyset$ is finite, since $[0] = \emptyset$.
 
-• We say $S$ is infinite if $S$ is not finite; that is, if $\forall n \in \mathbb{N} \cup \{0\}$, every function $f: S \to [n]$ fails to be a bijection.
+• We say $S$ is infinite if $S$ is not finite; that is, if $\f\forall n \in \mathbb{N} \cup \{0\}$, every function $f: S \to [n]$ fails to be a bijection.
 • We say $S$ is countably infinite (or just countable) if there exists a bijection $f: S \to \mathbb{N}$.
 • We say $S$ is uncountably infinite (or just uncountable) if every function $f: S \to \mathbb{N}$ fails to be a bijection.
 • We use $|S|$ to indicate the cardinality of $S$. When $S$ is finite, so there is some $n \in \mathbb{N} \cup \{0\}$ and a bijection $f: S \to [n]$, we write $|S| = n$ to mean that $S$ has $n$ elements. We say $n$ is the size of $S$. When $S$ is infinite, we only use $|S|$ to compare the cardinality of $S$ to that of other sets. That is, we don't write things like $|S| = \infty$; rather, we write something like $|S| = |T|$ to indicate that $S$ and $T$ have the same cardinality, whatever that may be, or something like $|S| < |T|$ to indicate $T$ has a strictly larger cardinality than $S$.

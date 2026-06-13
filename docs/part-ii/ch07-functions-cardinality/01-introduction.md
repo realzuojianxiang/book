@@ -36,9 +36,9 @@ Here's what we will use. Perhaps it's close to what your definition was, maybe t
 <div class="def-definition" markdown>
 **Definition 7.2.1. Let $A, B$ be sets. Let $f$ be a relation between $A$ and $B$, so**
 </div>
-$f \subseteq A \times B$. Also, assume that $f$ has the property that $\forall a \in A.\ \exists!\, b \in B.\ (a, b) \in f$ (Recall that "$\exists$!" means "there exists a unique . . . ", i.e. "there is one and only one . . . ") Such a relation is called a function from $A$ to $B$. We call $A$ the domain of the function and $B$ the codomain of the function.
+$f \subseteq A \times B$. Also, assume that $f$ has the property that $\f\forall a \in A.\ \exists!\, b \in B.\ (a, b) \in f$ (Recall that "$\exists$!" means "there exists a unique . . . ", i.e. "there is one and only one . . . ") Such a relation is called a function from $A$ to $B$. We call $A$ the domain of the function and $B$ the codomain of the function.
 
 > 🇨🇳 我们想要传达关于函数的所有基本信息：输入可以是什么，输出可以是什么（不一定是所有输出是什么，而是它们可以是什么类型的对象），以及"规则"是什么。如果你把函数想象成一个映射，那它就像一份导航说明，告诉你如何从一个数集（本例中为 $\mathbb{R}$）沿着某条"道路"到达另一个数集（本例中也是 $\mathbb{R}$），这条"道路"就是对第一个数取平方。在这种理解中，我们仍然想传达刚才提到的所有信息，但我们指出还有其他思考方式。在给出定义之前，让我们再抛出一个难题。想一想这样的"规则"：输入班上的一个人，输出其眼睛的颜色。你如何用 $f(x) = \ldots$ 的形式来写呢？这很难！你基本上只能把前面的整句话完整地重写一遍作为"规则"的定义。允许的输入和输出是什么？它们不是实数或整数之类的东西。它们完全是别的东西。然而，这个函数是完全合理的，我们希望它被我们的定义所涵盖。想一想这种情况与 $f(x) = x^2$ 在 $\mathbb{R}$ 上的情况有何不同（或者说没什么不同）。（你甚至可能反驳这根本不是函数！如果有一个人两只眼睛颜色不同怎么办？那么这个"映射"的输出是什么？天哪！）好了，现在轮到你了。试着利用我们在前几章中讨论过的概念、术语和数学对象来给出函数的定义。### 7.2.1 定义 以下是我们将使用的定义。也许它与你给出的定义相近，也许完全相同，也许措辞略有不同。但最终，这个定义完美地概括了我们之前对函数的直觉概念（将其视为一种赋值规则），同时用我们一直在发展的集合与逻辑语言来表述它。这有几个目的：(a) 将函数建立在严格的基础之上，使我们能够自信地在数学意义上使用它们；(b) 允许我们使用数学术语和概念来讨论函数的性质并证明相关结论；(c) 允许我们将函数的概念推广，并应用于比我们熟悉的标准数集更抽象的情境中。好，解释够了，让我们来看定义。
-**定义 7.2.1.** 设 $A$、$B$ 为集合。设 $f$ 是 $A$ 与 $B$ 之间的关系，即 $f \subseteq A \times B$。并假设 $f$ 具有如下性质：$\forall a \in A.\ \exists!\, b \in B.\ (a, b) \in f$（回忆 $\exists!$ 表示"存在唯一的……"，即"有且仅有一个……"）这样的关系称为从 $A$ 到 $B$ 的函数（Function）。我们称 $A$ 为函数的定义域（Domain），$B$ 为函数的陪域（Codomain）。
+**定义 7.2.1.** 设 $A$、$B$ 为集合。设 $f$ 是 $A$ 与 $B$ 之间的关系，即 $f \subseteq A \times B$。并假设 $f$ 具有如下性质：$\f\forall a \in A.\ \exists!\, b \in B.\ (a, b) \in f$（回忆 $\exists!$ 表示"存在唯一的……"，即"有且仅有一个……"）这样的关系称为从 $A$ 到 $B$ 的函数（Function）。我们称 $A$ 为函数的定义域（Domain），$B$ 为函数的陪域（Codomain）。
 
 

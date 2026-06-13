@@ -57,7 +57,7 @@ A.1.3 Elements and Subsets
 • To say "$x$ is an element of the set $S$" we write $x \in S$.
 To say "$x$ is not an element of the set $S$" we write $x \notin S$.
 
-• To say "$S$ is a subset of $T$" we write $S \subseteq T$. This is defined by the conditional statement "Every element of $S$ is also an element of $T$". This can be expressed as $\forall x \in U.\, x \in S \Rightarrow x \in T$. That is, for every element $x$ of the universal set (supposing $S, T \subseteq U$), whenever $x \in S$, we also know that $x \in T$.
+• To say "$S$ is a subset of $T$" we write $S \subseteq T$. This is defined by the conditional statement "Every element of $S$ is also an element of $T$". This can be expressed as $\f\forall x \in U.\, x \in S \Rightarrow x \in T$. That is, for every element $x$ of the universal set (supposing $S, T \subseteq U$), whenever $x \in S$, we also know that $x \in T$.
 
 • To prove that a set is a subset of another set, like $S \subseteq T$, we need to do something like this:
 Let $x \in S$ be arbitrary and fixed.
@@ -126,20 +126,20 @@ Suppose $I$ is an index set and $U$ is a universal set, and we have defined (for
 
 • The indexed union of all of the $A_i$ sets is defined by $\bigcup_{i \in I} A_i = \{x \in U \mid \exists k \in I.\, x \in A_k\}$. It is the set of all elements $x$ in the universal set such that $x$ is an element of at least one of the indexed sets in the union.
 
-• The indexed intersection of all of the $A_i$ sets is defined by $\bigcap_{i \in I} A_i = \{x \in U \mid \forall i \in I.\, x \in A_i\}$. It is the set of all elements $x$ in the universal set such that $x$ is an element of all of the indexed sets in the intersection.
+• The indexed intersection of all of the $A_i$ sets is defined by $\bigcap_{i \in I} A_i = \{x \in U \mid \f\forall i \in I.\, x \in A_i\}$. It is the set of all elements $x$ in the universal set such that $x$ is an element of all of the indexed sets in the intersection.
 
 A.1.8 Partition
 
 • Let $S$ be a set. A partition of $S$ is a collection of sets that are pairwise disjoint and whose union is $S$. That is, a partition is formed by an index set $I$ and non-empty sets $S_i$ (defined for every $i \in I$) that satisfy:
--- $\forall i \in I.\, S_i \neq \emptyset$
--- $\forall i \in I.\, S_i \subseteq S$
--- $\forall i, j \in I.\, i \neq j \Rightarrow S_i \cap S_j = \emptyset$
+-- $\f\forall i \in I.\, S_i \neq \emptyset$
+-- $\f\forall i \in I.\, S_i \subseteq S$
+-- $\f\forall i, j \in I.\, i \neq j \Rightarrow S_i \cap S_j = \emptyset$
 -- $\bigcup_{i \in I} S_i = S$
 
 
-> 🇨🇳 **A.1.7 指标集运算（Indexed Set Operations）** 设 $I$ 为指标集，$U$ 为全集，对每个 $i \in I$ 定义 $A_i \subseteq U$。**指标并集**：$\bigcup_{i \in I} A_i = \{x \in U \mid \exists k \in I.\, x \in A_k\}$，至少属于一个 $A_k$ 的所有元素。**指标交集**：$\bigcap_{i \in I} A_i = \{x \in U \mid \forall i \in I.\, x \in A_i\}$，属于所有 $A_i$ 的元素。
+> 🇨🇳 **A.1.7 指标集运算（Indexed Set Operations）** 设 $I$ 为指标集，$U$ 为全集，对每个 $i \in I$ 定义 $A_i \subseteq U$。**指标并集**：$\bigcup_{i \in I} A_i = \{x \in U \mid \exists k \in I.\, x \in A_k\}$，至少属于一个 $A_k$ 的所有元素。**指标交集**：$\bigcap_{i \in I} A_i = \{x \in U \mid \f\forall i \in I.\, x \in A_i\}$，属于所有 $A_i$ 的元素。
 >
-> **A.1.8 划分（Partition）** 集合 $S$ 的划分是一组两两不交且并集为 $S$ 的集合。即由指标集 $I$ 和非空集合 $S_i$（$i \in I$）组成，满足：(1) $\forall i \in I.\, S_i \neq \emptyset$；(2) $\forall i \in I.\, S_i \subseteq S$；(3) $\forall i, j \in I.\, i \neq j \Rightarrow S_i \cap S_j = \emptyset$；(4) $\bigcup_{i \in I} S_i = S$。
+> **A.1.8 划分（Partition）** 集合 $S$ 的划分是一组两两不交且并集为 $S$ 的集合。即由指标集 $I$ 和非空集合 $S_i$（$i \in I$）组成，满足：(1) $\f\forall i \in I.\, S_i \neq \emptyset$；(2) $\f\forall i \in I.\, S_i \subseteq S$；(3) $\f\forall i, j \in I.\, i \neq j \Rightarrow S_i \cap S_j = \emptyset$；(4) $\bigcup_{i \in I} S_i = S$。
 
 
 A.2 Logic
@@ -156,7 +156,7 @@ Define $Q(x, y)$ to be "$xy \leq \frac{x+y}{2}$, for every $x, y \in \mathbb{R}$
 
 A.2.2 Quantifiers
 
-• To say "for every" or "for all" we use the universal quantifier $\forall$. "$\forall x \in S.\, P(x)$" says that "For every element $x \in S$, the property $P(x)$ holds true".
+• To say "for every" or "for all" we use the universal quantifier $\f\forall$. "$\f\forall x \in S.\, P(x)$" says that "For every element $x \in S$, the property $P(x)$ holds true".
 • To say "there exists" or "there is at least one" we use the existential quantifier $\exists$. "$\exists x \in S.\, P(x)$" says that "There exists an element $x \in S$ with the property $P(x)$".
 • We use the "." dot to separate parts of a quantified statement.
 • When reading a quantified statement out loud, we say "such that" only after a $\exists$ quantifier.
@@ -176,7 +176,7 @@ A.2.2 Quantifiers
 
 > 🇨🇳 **A.2.2 量词（Quantifiers）**
 >
-> - **全称量词** $\forall$ 表示"对每一个"。"$\forall x \in S.\, P(x)$"即"对 $S$ 中每个元素 $x$，$P(x)$ 成立"。
+> - **全称量词** $\f\forall$ 表示"对每一个"。"$\f\forall x \in S.\, P(x)$"即"对 $S$ 中每个元素 $x$，$P(x)$ 成立"。
 > - **存在量词** $\exists$ 表示"存在"。"$\exists x \in S.\, P(x)$"即"存在 $S$ 中的元素 $x$ 使 $P(x)$ 成立"。
 > - 用"."点号分隔量词语句的各部分。
 > - 读出量词语句时，"such that"仅在 $\exists$ 量词之后使用。

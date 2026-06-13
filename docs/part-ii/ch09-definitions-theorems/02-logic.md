@@ -24,8 +24,8 @@ A.2.4 Logical Negation
 
 • We use "$\neg$" to indicate the logical negation of a statement.
 • The statement $\neg P$ has the opposite truth value from the statement $P$.
-• Negating a $\forall$ claim: $\neg \{\forall x \in S.\, P(x)\} \Leftrightarrow \exists x \in S.\, \neg P(x)$
-• Negating a $\exists$ claim: $\neg \{\exists x \in S.\, P(x)\} \Leftrightarrow \forall x \in S.\, \neg P(x)$
+• Negating a $\f\forall$ claim: $\neg \{\f\forall x \in S.\, P(x)\} \Leftrightarrow \exists x \in S.\, \neg P(x)$
+• Negating a $\exists$ claim: $\neg \{\exists x \in S.\, P(x)\} \Leftrightarrow \f\forall x \in S.\, \neg P(x)$
 • Negating a $\vee$ claim: $\neg \{P \vee Q\} \Leftrightarrow \neg P \wedge \neg Q$. This is one of DeMorgan's Laws for Logic.
 • Negating a $\wedge$ claim: $\neg \{P \wedge Q\} \Leftrightarrow \neg P \vee \neg Q$. This is one of DeMorgan's Laws for Logic.
 • Negating a $\Rightarrow$ claim: $\neg \{P \Rightarrow Q\} \Leftrightarrow \neg (\neg P \vee Q) \Leftrightarrow P \wedge \neg Q$
@@ -47,8 +47,8 @@ A.2.4 Logical Negation
 >
 > **A.2.4 逻辑否定（Logical Negation）**
 > - $\neg P$ 与 $P$ 真值相反。
-> - 否定 $\forall$：$\neg(\forall x \in S.\, P(x)) \Leftrightarrow \exists x \in S.\, \neg P(x)$。
-> - 否定 $\exists$：$\neg(\exists x \in S.\, P(x)) \Leftrightarrow \forall x \in S.\, \neg P(x)$。
+> - 否定 $\f\forall$：$\neg(\f\forall x \in S.\, P(x)) \Leftrightarrow \exists x \in S.\, \neg P(x)$。
+> - 否定 $\exists$：$\neg(\exists x \in S.\, P(x)) \Leftrightarrow \f\forall x \in S.\, \neg P(x)$。
 > - 否定 $\vee$：$\neg(P \vee Q) \Leftrightarrow \neg P \wedge \neg Q$（德摩根律）。
 > - 否定 $\wedge$：$\neg(P \wedge Q) \Leftrightarrow \neg P \vee \neg Q$（德摩根律）。
 > - 否定 $\Rightarrow$：$\neg(P \Rightarrow Q) \Leftrightarrow P \wedge \neg Q$。
@@ -62,7 +62,7 @@ APPENDIX A. DEFINITIONS AND THEOREMS A.2.5 Proof Strategies We use the phrase AF
 Direct proof: Define a specific example, $y = \ldots$. Prove that $y \in S$. Prove that $P(y)$ holds true.
 Indirect proof: AFSOC that for every $y \in S$, $\neg P(y)$ holds. Find a contradiction.
 
-• Proving a $\forall$ claim: $\forall x \in S.\, P(x)$
+• Proving a $\f\forall$ claim: $\f\forall x \in S.\, P(x)$
 Direct proof: Let $y \in S$ be arbitrary and fixed. Prove that $P(y)$ holds true.
 Indirect proof: AFSOC that $\exists y \in S$ such that $\neg P(y)$ holds. Find a contradiction.
 
@@ -88,39 +88,39 @@ Indirect proof: AFSOC that $\neg(P \Rightarrow Q) \vee \neg(Q \Rightarrow P)$. C
 > 🇨🇳 **A.2.5 证明策略（Proof Strategies）** AFSOC 表示"反证假设"。
 >
 > - 证 $\exists$：定义具体例子，证其属于 $S$ 且满足 $P$；或反证。
-> - 证 $\forall$：任取 $y \in S$ 为任意且固定的，证 $P(y)$ 成立；或反证。
+> - 证 $\f\forall$：任取 $y \in S$ 为任意且固定的，证 $P(y)$ 成立；或反证。
 > - 证 $\vee$：证 $P$ 或证 $Q$；或设 $\neg P$ 证 $Q$；或反证 $\neg P \wedge \neg Q$。
 > - 证 $\wedge$：分别证 $P$、$Q$；或反证 $\neg P \vee \neg Q$（分情形导出矛盾）。
 > - 证 $\Rightarrow$：设 $P$ 成立证 $Q$；或用逆否（设 $\neg Q$ 证 $\neg P$）；或反证。
 > - 证 $\Leftrightarrow$：分别证 $P \Rightarrow Q$ 和 $Q \Rightarrow P$；或反证。
 >
 > **A.3 归纳法（Induction）**
-> **A.3.1 数学归纳法原理** 定理：设 $P(n)$ 是对所有 $n \in \mathbb{N}$ 定义的变量命题。若 $P(1)$ 成立且 $\forall k \in \mathbb{N}.\, P(k) \Rightarrow P(k+1)$，则 $\forall n \in \mathbb{N}.\, P(n)$。归纳证明步骤：基例（证 $P(1)$）— 归纳假设（设 $P(k)$）— 归纳步（证 $P(k+1)$）— 结论。
+> **A.3.1 数学归纳法原理** 定理：设 $P(n)$ 是对所有 $n \in \mathbb{N}$ 定义的变量命题。若 $P(1)$ 成立且 $\f\forall k \in \mathbb{N}.\, P(k) \Rightarrow P(k+1)$，则 $\f\forall n \in \mathbb{N}.\, P(n)$。归纳证明步骤：基例（证 $P(1)$）— 归纳假设（设 $P(k)$）— 归纳步（证 $P(k+1)$）— 结论。
 >
-> **A.3.2 强归纳法原理** 定理：若 $P(1)$ 成立且 $\forall k \in \mathbb{N}.\, [P(1) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)$，则 $\forall n \in \mathbb{N}.\, P(n)$。强归纳可能需要多个基例，归纳假设设 $P(1) \wedge \cdots \wedge P(k)$ 全部成立。
+> **A.3.2 强归纳法原理** 定理：若 $P(1)$ 成立且 $\f\forall k \in \mathbb{N}.\, [P(1) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)$，则 $\f\forall n \in \mathbb{N}.\, P(n)$。强归纳可能需要多个基例，归纳假设设 $P(1) \wedge \cdots \wedge P(k)$ 全部成立。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS A.3 Induction
 
 A.3.1 Principle of Specific Mathematical Induction
 
-• Theorem: Suppose that $P(n)$ is a variable proposition that is defined for all $n \in \mathbb{N}$. Suppose that $P(1)$ holds. Suppose that $\forall k \in \mathbb{N}.\, P(k) \Rightarrow P(k+1)$. Then $\forall n \in \mathbb{N}.\, P(n)$.
+• Theorem: Suppose that $P(n)$ is a variable proposition that is defined for all $n \in \mathbb{N}$. Suppose that $P(1)$ holds. Suppose that $\f\forall k \in \mathbb{N}.\, P(k) \Rightarrow P(k+1)$. Then $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 • Proving a claim by induction: Suppose we have a variable proposition $P(n)$ that is defined for all $n \in \mathbb{N}$, and we want to prove $P(n)$ holds for every $n \in \mathbb{N}$.
 Base Case: Prove that $P(1)$ holds.
 Induction Hypothesis: Suppose that $k$ is an arbitrary and fixed natural number, and suppose that $P(k)$ holds.
 Induction Step: Prove that $P(k+1)$ holds.
-Conclusion: By induction, $\forall n \in \mathbb{N}.\, P(n)$.
+Conclusion: By induction, $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 A.3.2 Principle of Strong Mathematical Induction
 
-• Theorem: Suppose that $P(n)$ is a variable proposition that is defined for all $n \in \mathbb{N}$. Suppose that $P(1)$ holds. Suppose that $\forall k \in \mathbb{N}.\, [P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)$. Then $\forall n \in \mathbb{N}.\, P(n)$.
+• Theorem: Suppose that $P(n)$ is a variable proposition that is defined for all $n \in \mathbb{N}$. Suppose that $P(1)$ holds. Suppose that $\f\forall k \in \mathbb{N}.\, [P(1) \wedge P(2) \wedge \cdots \wedge P(k)] \Rightarrow P(k+1)$. Then $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 • Proving a claim by strong induction: Suppose we have a variable proposition $P(n)$ that is defined for all $n \in \mathbb{N}$, and we want to prove $P(n)$ holds for every $n \in \mathbb{N}$.
 Base Case(s): Prove that $P(1)$ holds. (Depending on what happens in the Induction Step, you might need more than one Base Case.)
 Induction Hypothesis: Suppose that $k$ is an arbitrary and fixed natural number that satisfies some inequality ($k \geq \ldots$, depending on what happens in the Induction Step), and suppose that $P(1) \wedge \cdots \wedge P(k)$ holds.
 Induction Step: Prove that $P(k+1)$ holds.
-Conclusion: By induction, $\forall n \in \mathbb{N}.\, P(n)$.
+Conclusion: By induction, $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 
 > 🇨🇳 （归纳法内容已合并于上方翻译）
