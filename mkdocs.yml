@@ -83,6 +83,11 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eyawkmath/book
+
 extra_css:
   - assets/css/bilingual.css
   - assets/css/math.css

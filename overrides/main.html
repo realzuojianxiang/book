@@ -1,6 +1,14 @@
 <!-- overrides/main.html — Extends MkDocs Material base template -->
 {% extends "base.html" %}
 
+{% block htmltitle %}
+{{ super() }}
+<meta property="og:image" content="{{ config.site_url }}homepage.png" />
+<meta property="og:image:type" content="image/png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="{{ config.site_url }}homepage.png" />
+{% endblock %}
+
 {% block announce %}
 <!-- Optional: announcement banner for new contributors -->
 {% endblock %}

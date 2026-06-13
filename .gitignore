@@ -21,3 +21,9 @@ fix_links.py
 latex_convert.py
 clean_pdf_garbage.py
 clean_control_chars.py
+
+# Playwright CLI debug logs
+.playwright-cli/
+
+# Project-root assets (copies in docs/ are tracked instead)
+/homepage.png
