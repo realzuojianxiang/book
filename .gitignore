@@ -29,3 +29,4 @@ fix_*.py
 
 # Project-root assets (copies in docs/ are tracked instead)
 /homepage.png
+check_bare.py

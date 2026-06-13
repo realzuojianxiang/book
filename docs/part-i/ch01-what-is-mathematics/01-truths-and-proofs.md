@@ -44,13 +44,13 @@ We've introduced the idea of a proof by talking about what we hope proofs to acc
     The area of the larger square can be computed in two ways:
 
  
- (a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab
+ (a + b)^2 = c^2 + 4 $\cdot$ \frac{ab}{2} = c^2 + 2ab
  
 
     Expanding and canceling:
 
  
-    a^2 + 2ab + b^2 = c^2 + 2ab \implies a^2 + b^2 = c^2
+    a^2 + 2ab + b^2 = c^2 + 2ab $\implies$ a^2 + b^2 = c^2
  
 
     > 🇨🇳 画一个边长为 $a + b$ 的正方形。在其内部画四个直角三角形的副本，形成边长为 c 的内正方形。大正方形面积可通过两种方式计算：$(a+b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$。展开并消去公共项：$a^2 + 2ab + b^2 = c^2 + 2ab$，因此 $a^2 + b^2 = c^2$。
