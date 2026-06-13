@@ -21,6 +21,12 @@ fix_links.py
 latex_convert.py
 clean_pdf_garbage.py
 clean_control_chars.py
+check_math_quality.py
+fix_ch06_04.py
+fix_ch7_math.py
+fix_ch8_math.py
+fix_ch8_math2.py
+fix_ch8_math3.py
 
 # Playwright CLI debug logs
 .playwright-cli/
