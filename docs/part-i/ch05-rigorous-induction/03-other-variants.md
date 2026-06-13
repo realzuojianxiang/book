@@ -1,5 +1,9 @@
 ---
 title: Other Variants of Induction
+tags:
+  - 强归纳法
+  - 良序原理
+  - 归纳法变体
 ---
 
 # Other Variants of Induction

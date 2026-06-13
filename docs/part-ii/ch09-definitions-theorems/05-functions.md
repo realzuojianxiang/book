@@ -1,5 +1,8 @@
 ---
 title: A.5 Functions
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.5 Functions

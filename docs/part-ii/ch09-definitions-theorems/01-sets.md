@@ -1,5 +1,8 @@
 ---
 title: A.1 Sets
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.1 Sets

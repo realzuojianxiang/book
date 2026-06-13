@@ -1,5 +1,10 @@
 ---
 title: Introduction
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Introduction

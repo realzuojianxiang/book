@@ -1,5 +1,10 @@
 ---
 title: Compositions and Inverses
+tags:
+  - 函数
+  - 单射
+  - 满射
+  - 基数
 ---
 
 # Compositions and Inverses

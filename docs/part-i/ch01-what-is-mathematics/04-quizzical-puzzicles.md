@@ -1,5 +1,9 @@
 ---
 title: 1.4 Quizzical Puzzicles
+tags:
+  - 数学思维
+  - 真理与证明
+  - 基础概念
 ---
 
 # 1.4 Quizzical Puzzicles

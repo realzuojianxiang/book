@@ -1,5 +1,10 @@
 ---
 title: Writing Proofs: Strategies and Examples
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Writing Proofs: Strategies and Examples

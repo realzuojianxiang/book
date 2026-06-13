@@ -1,5 +1,10 @@
 ---
 title: Negation of Any Mathematical Statement
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Negation of Any Mathematical Statement

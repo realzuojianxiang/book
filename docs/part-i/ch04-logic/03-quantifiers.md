@@ -1,5 +1,10 @@
 ---
 title: Quantifiers: Existential and Universal
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Quantifiers: Existential and Universal

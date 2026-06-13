@@ -1,5 +1,10 @@
 ---
 title: Subsets
+tags:
+  - 集合
+  - 子集
+  - 幂集
+  - 笛卡尔积
 ---
 
 # Subsets

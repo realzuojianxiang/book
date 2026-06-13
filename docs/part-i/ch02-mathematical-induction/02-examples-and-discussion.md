@@ -1,5 +1,8 @@
 ---
 title: Examples and Discussion
+tags:
+  - 数学归纳法
+  - 归纳原理
 ---
 
 # Examples and Discussion

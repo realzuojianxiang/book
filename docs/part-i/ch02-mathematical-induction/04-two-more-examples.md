@@ -1,5 +1,8 @@
 ---
 title: Two More (Different) Examples
+tags:
+  - 数学归纳法
+  - 归纳原理
 ---
 
 # Two More (Different) Examples

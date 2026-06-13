@@ -1,5 +1,8 @@
 ---
 title: A.6 Cardinality
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.6 Cardinality

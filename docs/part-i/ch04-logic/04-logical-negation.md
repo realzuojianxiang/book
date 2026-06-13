@@ -1,5 +1,10 @@
 ---
 title: Logical Negation of Quantified Statements
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Logical Negation of Quantified Statements

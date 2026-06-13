@@ -1,5 +1,8 @@
 ---
 title: A.2 Logic
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.2 Logic

@@ -1,5 +1,10 @@
 ---
 title: Images and Pre-images
+tags:
+  - 函数
+  - 单射
+  - 满射
+  - 基数
 ---
 
 # Images and Pre-images

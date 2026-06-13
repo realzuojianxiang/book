@@ -1,5 +1,8 @@
 ---
 title: A.3 Induction
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.3 Induction

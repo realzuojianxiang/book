@@ -1,5 +1,10 @@
 ---
 title: A.6 Cardinality
+tags:
+  - 函数
+  - 单射
+  - 满射
+  - 基数
 ---
 
 # A.6 Cardinality

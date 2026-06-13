@@ -1,5 +1,8 @@
 ---
 title: Summary
+tags:
+  - 数学归纳法
+  - 归纳原理
 ---
 
 # Summary

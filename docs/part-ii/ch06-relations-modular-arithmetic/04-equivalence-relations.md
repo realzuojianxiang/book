@@ -1,5 +1,10 @@
 ---
 title: Equivalence Relations
+tags:
+  - 关系
+  - 等价关系
+  - 序关系
+  - 模运算
 ---
 
 # Equivalence Relations

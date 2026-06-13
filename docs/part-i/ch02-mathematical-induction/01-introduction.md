@@ -1,5 +1,8 @@
 ---
 title: Introduction
+tags:
+  - 数学归纳法
+  - 归纳原理
 ---
 
 # Introduction

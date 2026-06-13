@@ -1,5 +1,8 @@
 ---
 title: Defining Induction
+tags:
+  - 数学归纳法
+  - 归纳原理
 ---
 
 # Defining Induction

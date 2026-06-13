@@ -1,5 +1,8 @@
 ---
 title: A.7 Combinatorics
+tags:
+  - 定义速查
+  - 定理速查
 ---
 
 # A.7 Combinatorics

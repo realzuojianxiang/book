@@ -1,5 +1,10 @@
 ---
 title: Truth Values and Sets
+tags:
+  - 逻辑
+  - 命题
+  - 量词
+  - 证明写作
 ---
 
 # Truth Values and Sets

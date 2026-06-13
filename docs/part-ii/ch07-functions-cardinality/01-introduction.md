@@ -1,5 +1,10 @@
 ---
 title: Introduction
+tags:
+  - 函数
+  - 单射
+  - 满射
+  - 基数
 ---
 
 # Introduction

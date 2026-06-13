@@ -1,5 +1,10 @@
 ---
 title: Introduction
+tags:
+  - 组合数学
+  - 计数
+  - 鸽巢原理
+  - 容斥原理
 ---
 
 # Introduction
