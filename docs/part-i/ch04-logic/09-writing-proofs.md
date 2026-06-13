@@ -294,7 +294,7 @@ Simplifying both sides slightly yields 1 $\leq 1$
 
 Strategy:
 Claim: $P \Leftrightarrow \mathbb{Q}$
-Direct proof strategy: Prove that P =$\Rightarrow \mathbb{Q} (using one of the methods above)$. Prove that Q =$\Rightarrow P (using one of the methods above)$.
+Direct proof strategy: Prove that $P \Rightarrow Q$ (using one of the methods above). Prove that $Q \Rightarrow P$ (using one of the methods above).
 Example 4.9.11. Even squares of integers:
 Statement: An integer is even if and only if its square is even. Let's rewrite this claim using logical symbolic notation. Let E(z) be the proposition "z is even". Then we claim that $\forall z \in \mathbb{Z}$. { $E(z) \Leftrightarrow E (z2)$ } Implementation:
 <div class="def-proof" markdown>
