@@ -100,7 +100,7 @@ Next, we can apply our assumption that Domino n has fallen (which tells us that 
 > 🇨🇳 其次，证明骨牌 $n$ 推倒骨牌 $n+1$，即假设 "$R(n) = 1 + \frac{n(n+1)}{2}$" 为真，证明 "$R(n+1) = 1 + \frac{(n+1)(n+2)}{2}$" 也必为真。如何做到？利用之前导出的关系 $R(n+1) = R(n) + n + 1$。结合骨牌 $n$ 倒下的假设：
 
 
-" must also be a true statement. How can we do this? Well, let's follow along with the argument we used before to relate R(n + 1) to R(n). By considering the geometric consequences of adding an extra line to any diagram with n lines (that also fit our rules about the lines) we proved that R(n +1) = R(n)+n +1. Using this knowledge and our assumption about Domino n falling, we can say that R(n + 1) = R(n) + n + 1 = 1 + n(n + 1)
+" must also be a true statement. How can we do this? Well, let's follow along with the argument we used before to relate R(n + 1) to $\mathbb{R}$(n). By considering the geometric consequences of adding an extra line to any diagram with n lines (that also fit our rules about the lines) we proved that R(n +1) = R(n)+n +1. Using this knowledge and our assumption about Domino n falling, we can say that R(n + 1) = R(n) + n + 1 = 1 + n(n + 1)
 
 
 > 🇨🇳 $R(n+1) = R(n) + n + 1 = 1 + \frac{n(n+1)}{2} + n + 1$。这与骨牌 $n+1$ 上的表达式相同吗？化简两边验证。左边：

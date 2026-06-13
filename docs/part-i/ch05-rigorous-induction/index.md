@@ -64,7 +64,7 @@ Here, let's recall the statement of the Principle of Mathematical Induction
 that we gave in Chapter 3. Think about how it follows the Domino Analogy,
 or whichever analogy works best to help you understand an inductive process.
 You might have missed this Theorem statement if you didn't complete the Op-
-tional Reading about Defining N, in Section 3.8, but that's okay. We're confident
+tional Reading about Defining $\mathbb{N}$, in Section 3.8, but that's okay. We're confident
 you can still read this and formulate it in a way that corresponds to an inductive
 process.
 Theorem 5.2.1 (Principle of Mathematical Induction). Let P(n) be some

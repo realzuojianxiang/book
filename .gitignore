@@ -23,6 +23,8 @@ clean_pdf_garbage.py
 clean_control_chars.py
 check_math_quality.py
 fix_*.py
+check_bare.py
+find_bare_*.py
 
 # Playwright CLI debug logs
 .playwright-cli/

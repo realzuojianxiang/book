@@ -26,7 +26,7 @@ To accomplish this, we will start by talking about relations.
 This will
 lead us into the particular area of equivalence relations, which allow us to
 talk about some qualitative properties of sets. In particular, we will use some
-equivalence relations on the set Z to state and prove many interesting properties
+equivalence relations on the set $\mathbb{Z}$ to state and prove many interesting properties
 about integers. This will give us occasion to briefly explore the mathematical
 branch of Number Theory. It is a rich, deep, and broad field, and we will
 really only skim the surface by stating and proving a few helpful theorems and

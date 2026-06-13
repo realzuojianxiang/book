@@ -2,7 +2,7 @@
 
 > *But didn't even know to ask*
 
-📖 **双语对照阅读** | 🌐 [在线阅读](https://eyawkmath.github.io) | 📥 [PDF 原版](./Everything%20You%20Always%20Wanted%20To%20Know%20About%20Mathematics.pdf)
+📖 **双语对照阅读** | 🌐 [在线阅读](https://realzuojianxiang.github.io/book/)
 
 ---
 
@@ -55,7 +55,7 @@ A. **Definitions and Theorems** — 全书定义定理速查
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/eyawkmath/book.git
+git clone https://github.com/realzuojianxiang/book.git
 cd book
 
 # 2. 安装依赖
