@@ -94,6 +94,6 @@ Try It Try answering the following short-answer questions. They require you to a
 
 
 > 🇨🇳 反例（Counterexample）的概念正来源于此：要反驳一个全称量化语句，我们必须证明一个存在量化语句——该证明涉及明确定义一个不满足指定性质的集合元素，故称"反例"。当我们说"给我看任何一个"时，实际上是在执行全称量化——你在说无论考虑哪个 kwyjibo，某事都成立。这正是 \forall x \in S.$ 
-eg R(x)$ 与 $\exists$x \in$ S. R(x) 具有相反真值的原因。
+\neg R(x)$ 与 $\exists$x \in$ S. R(x) 具有相反真值的原因。
 
 

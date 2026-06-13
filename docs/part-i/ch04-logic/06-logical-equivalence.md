@@ -35,9 +35,9 @@ lences, which hold no matter what the propositions P and $\mathbb{Q}$ and R are:
 If and Only If Logical equivalence has a nice relationship with the phrase "if and only if". To say "P if and only if Q" means we are asserting that both "P if Q" and "P only if Q" hold. One of these corresponds to P =$\Rightarrow \mathbb{Q}$ and the other corresponds to $\mathbb{Q}$ =$\Rightarrow P$, so asserting both are true means exactly what we have described: $P \Leftrightarrow \mathbb{Q}$ is the same as saying (P =$\Rightarrow Q) \wedge(Q = \Rightarrow P$) Now, which one is which, though? When we say "P if Q", this means "If $\mathbb{Q}$, then P." That is, "P if Q" is the same as saying Q =$\Rightarrow P$ Sussing out the other direction is a little harder! What does "P only if Q" really mean? This sentence is asserting that, in a situation where P holds, it must also be the case that Q holds. That is, knowing P holds means we also immediately know Q holds. Put even another way, whenever P is true, we necessarily know that Q is true. This is the same as saying P =$\Rightarrow \mathbb{Q}$ holds! Another way of thinking about it is as follows. Saying "P only if Q" $is the same as saying it cannot be the case that P holds and \mathbb{Q} does not. Written logically, we have \neg$ {$P \wedge\negQ$ } Later on in this section, we will state and prove DeMorgan's Laws for Logic. One of those laws tells us how to negate that statement inside the parentheses. (You might already know these logical laws, in fact. If not, you can glance ahead at Sections 4.6.5 and 4.6.6 for a preview.) The conclusion is: $\negP \veeQ Hey look, that's logically equivalent to P = \Rightarrow \mathbb{Q}$, as we observed already! Cool. Just further confirmation that "P only if Q" means P =$\Rightarrow \mathbb{Q}$. Using "$\Leftrightarrow$" in Definitions We will also often use the "$\Leftrightarrow$" symbol in a definition to indicate that the term defined is an equivalent term for the property that is used in the definition. For example: We say $x \in \mathbb{Z} is even \Leftrightarrow \exists k \in \mathbb{Z}$. x = 2k That is, the notion of an integer being even is equivalent to knowing that the number is twice an integer. Similarly, we can define odd: We say $x \in \mathbb{Z} is odd \Leftrightarrow \exists k \in \mathbb{Z}$. x = 2k + 1 These are formal definitions, mind you, and are the only way of guaranteeing an integer is even (or odd). We will use these definitions soon to rigorously prove some facts about integers and arithmetic. Every time we want to assert a particular integer (call it x) is even, we need to show there exists an integer k that satisfies x = 2k. That is, we have to satisfy the definition by appealing to the logical equivalence given in the definition.
 
 
-> 🇨🇳 **例** 验证 $\neg(P \wedge Q) \Leftrightarrow (\neg P \vee \neg Q)$（德摩根律之一）：
+> 🇨🇳 **例** 验证 $\neg(P \wedge Q) \Leftrightarrow (\n\neg P \vee \n\neg Q)$（德摩根律之一）：
 
-| $P$ | $Q$ | $P \wedge \mathbb{Q}$ | $\neg(P \wedge Q)$ | $\neg P$ | $\neg \mathbb{Q}$ | $\neg P \vee \neg \mathbb{Q}$ |
+| $P$ | $Q$ | $P \wedge \mathbb{Q}$ | $\neg(P \wedge Q)$ | $\n\neg P$ | $\neg \mathbb{Q}$ | $\n\neg P \vee \neg \mathbb{Q}$ |
 |---|---|---|---|---|---|---|
 | T | T | T | F | F | F | F |
 | T | F | F | T | F | T | T |
@@ -53,10 +53,10 @@ Biconditional Statements: A Technical Distinction We can also use the symbol "$\
 > 🇨🇳 **重要等价律**
 
 **德摩根律（De Morgan's Laws）：**
-- $\neg(P \wedge Q) \Leftrightarrow \neg P \vee \neg \mathbb{Q}$
-- $\neg(P \vee Q) \Leftrightarrow \neg P \wedge \neg \mathbb{Q}$
+- $\neg(P \wedge Q) \Leftrightarrow \n\neg P \vee \neg \mathbb{Q}$
+- $\neg(P \vee Q) \Leftrightarrow \n\neg P \wedge \neg \mathbb{Q}$
 
-**条件语句等价：** $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg P \vee \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \neg P$
+**条件语句等价：** $P \Rightarrow \mathbb{Q} \Leftrightarrow \n\neg P \vee \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \n\neg P$
 
 
 equivalence", and they might be confused or take offense to the way in which you use it. This is not a big worry, mind you! Since we are learning about these fundamental ideas now for the first time, we don't necessarily have to keep in mind all of the technical details that lie underneath these concepts. Also, in the remainder of this book, we might use "logical equivalence" and "biconditional" interchangeably. This is fine and acceptable for now. The main point behind using the "$\Leftrightarrow$" symbol is to assert that two statements have the same truth value. The only difference between a "logical equivalence" and a "biconditional" is whether or not those statements contained therein have any arbitrary, undefined propositions. This is a minor distinction to be made, in the grand scheme of things, so we will consider it only briefly here.
@@ -91,15 +91,15 @@ logical results that we can apply in the near future to develop proof techniques
 $P \wedge(Q \wedgeR) \Leftrightarrow (P \wedgeQ) \wedgeR and P \vee(Q \veeR) \Leftrightarrow (P \veeQ) \veeR We will actually prove these claims in two separate ways$: (1) via truth tables, and (2) via semantics (i.e. words). They are both perfectly valid, but we want to show you both of them to let you decide which style you like better. Proof 1. First, we will prove these claims via truth tables. Observe the table for conjunctions: $P \mathbb{Q} \mathbb{R} P \wedgeQ \mathbb{Q} \wedgeR P \wedge(Q \wedgeR) (P \wedgeQ) \wedgeR T T T T T T T T T F T F F F T F T F F F F T F F F F F F F T T F T F F F T F F F F F F F T F F F F F F F F F F F Thus, P \wedge(Q \wedgeR) \Leftrightarrow (P \wedgeQ) \wedgeR because their corresponding columns are identical, in every case.$
 
 
-> 🇨🇳 **双重否定律（Double Negation）：** $\neg(\neg P) \Leftrightarrow P$
+> 🇨🇳 **双重否定律（Double Negation）：** $\neg(\n\neg P) \Leftrightarrow P$
 
 **幂等律（Idempotent Laws）：**
 - $P \wedge P \Leftrightarrow P$
 - $P \vee P \Leftrightarrow P$
 
 **恒真律与恒假律：**
-- $P \vee \neg P \Leftrightarrow \text{True}$（排中律）
-- $P \wedge \neg P \Leftrightarrow \text{False}$（矛盾律）
+- $P \vee \n\neg P \Leftrightarrow \text{True}$（排中律）
+- $P \wedge \n\neg P \Leftrightarrow \text{False}$（矛盾律）
 
 
 Next, observe the table for disjunctions: $P \mathbb{Q} \mathbb{R} P \veeQ \mathbb{Q} \veeR P \vee(Q \veeR) (P \veeQ) \veeR T T T T T T T T T F T T T T T F T T T T T T F F T F T T F T T T T T T F T F T T T T F F T F T T T F F F F F F F Thus, P \vee(Q \veeR) \Leftrightarrow (P \veeQ) \veeR because their corresponding columns are identical, in every case. Proof 2. Second, let's prove these claims by analyzing them, semantically. Consider the first claim, P \wedge(Q \wedgeR) \Leftrightarrow (P \wedgeQ) \wedgeR To show that the two sides are logically equivalent, we need to show both of the following conditional statements are True$: $P \wedge(Q \wedgeR) = \Rightarrow (P \wedgeQ) \wedgeR and (P \wedgeQ) \wedgeR = \Rightarrow P \wedge(Q \wedgeR) ( = \Rightarrow ) Let's prove the first conditional statement. Suppose P \wedge(Q\wedgeR) is True. This means P is True and \mathbb{Q} \wedgeR is True. By definition, this means P is True and \mathbb{Q} is True and \mathbb{R} is True. Certainly, then P \wedgeQ is True and \mathbb{R} is True, by definition. Thus, (P \wedgeQ) \wedgeR is True, as well. (\Leftarrow=) Now, let's prove the second conditional statement. Suppose (P \wedgeQ)\wedgeR is True. This means P \wedgeQ is True and \mathbb{R} is True. By definition, this means P is True and \mathbb{Q} is True and \mathbb{R} is True. Certainly, then P is True and \mathbb{Q} \wedgeR is True, by definition. Thus, P \wedge(Q \wedgeR) is True, as well. Since we have shown both conditional statements, we conclude the two sides are, indeed, logically equivalent. Next, consider the second claim of the theorem, P \vee(Q \veeR) \Leftrightarrow (P \veeQ) \veeR To show that the two sides are logically equivalent, we need to show both of the following conditional statements are True$: $P \vee(Q \veeR) = \Rightarrow (P \veeQ) \veeR and (P \veeQ) \veeR = \Rightarrow P \vee(Q \veeR) ( = \Rightarrow ) Let's prove the first conditional statement. Suppose P \vee(Q\veeR) is True. This means either P is True or \mathbb{Q} \veeR is True. This gives us two cases.$
@@ -111,11 +111,11 @@ Next, observe the table for disjunctions: $P \mathbb{Q} \mathbb{R} P \veeQ \math
 $1. Suppose P is True. This means P \veeQ is True, by definition. Thus, (P \veeQ) \veeR is True, also by definition. 2. Suppose \mathbb{Q} \veeR is True. This means either \mathbb{Q} is True or \mathbb{R} is True. Again, this gives us two cases. (a) Suppose \mathbb{Q} is True. This means P \veeQ is True, by definition. Thus, (P \veeQ) \veeR is True, also by definition. (b) Suppose \mathbb{R} is True. This means (P \veeQ) \veeR is True, by definition. In any case, we find that (P \veeQ) \veeR is True. Thus, this conditional statement is True. (\Leftarrow=) Let's prove the second conditional statement. Suppose (P \veeQ) \veeR is True. This means either P \veeQ is True or \mathbb{R} is True. This gives us two cases. 1. Suppose P \veeQ is True. This means either P is True or \mathbb{Q} is True. This gives us two cases. (a) Suppose P is True. This means P \vee(Q \veeR) is true, by definition. (b) Suppose \mathbb{Q} is True. This means \mathbb{Q} \veeR is True, by definition. Thus, P \vee(Q \veeR) is true, also by definition. 2. Suppose \mathbb{R} is True. This means \mathbb{Q} \veeR is True, by definition. Thus, P \vee (Q \veeR) is True, also by definition. In any case, we conclude that P \vee(Q \veeR) is True. Thus, this conditional statement is True. Since we have shown both conditional statements hold, we conclude the two sides are, indeed, logically equivalent. Okay, what have we accomplished with these proofs$? What have we proven, and how? Why did it work? Let's mention a consequence of these proofs, before going on to discuss and compare the proffs, themselves. We proved that the "$\wedge$" and "$\vee$" connectives are associative, so the order in which we evaluate parenthetical statements involving only one such connective does not matter. For example, we now know that "$P \wedge(Q \wedgeR)$" has the same meaning as "$(P \wedgeQ) \wedgeR$". Accordingly, in the future, we will just write these statements without the parentheses: "$P \wedgeQ\wedgeR$". Reflecting: Truth Tables vs. Semantics Let's talk about the truth tables first. Since P, $\mathbb{Q}$, and R are logical statements, they are each, individually, True or False. The eight rows of the truth tables consider all possible assignments of truth values to those three constituent statements. The first three columns tell us whether P, $\mathbb{Q}$, $\mathbb{R}$ are True or False. The next two columns correspond to the more complicated constituent parts of the logical statements in the claim, and the last two columns correspond to the two parts of the actual claim in the theorem. By comparing those last two columns,
 
 
-> 🇨🇳 **例** 化简 $\neg((P \wedge Q) \vee (\neg P \wedge Q))$：
+> 🇨🇳 **例** 化简 $\neg((P \wedge Q) \vee (\n\neg P \wedge Q))$：
 
-$= \neg(P \wedge Q) \wedge \neg(\neg P \wedge Q)$（德摩根律）
-$= (\neg P \vee \neg Q) \wedge (P \vee \neg Q)$（德摩根律）
-$= ((\neg P \vee P) \vee \neg Q)$（分配律方向）
+$= \neg(P \wedge Q) \wedge \neg(\n\neg P \wedge Q)$（德摩根律）
+$= (\n\neg P \vee \n\neg Q) \wedge (P \vee \n\neg Q)$（德摩根律）
+$= ((\n\neg P \vee P) \vee \n\neg Q)$（分配律方向）
 $= \text{True} \wedge \neg \mathbb{Q}$（排中律）
 $= \neg \mathbb{Q}$
 
@@ -133,12 +133,12 @@ $P \wedge(Q \veeR) \Leftrightarrow (P \wedgeQ) \vee(P \wedgeR) and P \vee(Q \wed
 </div>
 
 
-> 🇨🇳 **用等价律证明逆否等价** 我们可以用等价律逐步变形来证明 $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \neg P$：
+> 🇨🇳 **用等价律证明逆否等价** 我们可以用等价律逐步变形来证明 $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \n\neg P$：
 
-$P \Rightarrow \mathbb{Q} \Leftrightarrow \neg P \vee \mathbb{Q}$（条件等价）
-$\Leftrightarrow \mathbb{Q} \vee \neg P$（交换律）
-$\Leftrightarrow \neg(\neg Q) \vee \neg P$（双重否定）
-$\Leftrightarrow \neg \mathbb{Q} \Rightarrow \neg P$（条件等价）
+$P \Rightarrow \mathbb{Q} \Leftrightarrow \n\neg P \vee \mathbb{Q}$（条件等价）
+$\Leftrightarrow \mathbb{Q} \vee \n\neg P$（交换律）
+$\Leftrightarrow \neg(\n\neg Q) \vee \n\neg P$（双重否定）
+$\Leftrightarrow \neg \mathbb{Q} \Rightarrow \n\neg P$（条件等价）
 
 
 $claim, that P \mathbb{Q} \mathbb{R} \mathbb{Q} \veeR P \wedgeQ P \wedgeR P \wedge(Q \veeR) (P \wedgeQ) \vee(P \wedgeR) T T T T T T T T T T F T T F T T T F T T F T T T T F F F F F F F F T T T F F F F F T F T F F F F F F T T F F F F F F F F F F F F Notice that the last two columns are identical, thus proving the desired logical equivalence. Observe, for the second claim, that P \mathbb{Q} \mathbb{R} \mathbb{Q} \wedgeR P \veeQ P \veeR P \vee(Q \wedgeR) (P \veeQ) \wedge(P \veeR) T T T T T T T T T T F F T T T T T F T F T T T T T F F F T T T T F T T T T T T T F T F F T F F F F F T F F T F F F F F F F F F F Again, notice that the last two columns are identical, thus proving the desired logical equivalence.$
@@ -151,7 +151,7 @@ $\neg$ {$P \wedgeQ$ } $\Leftrightarrow \negP \vee\negQ and \neg$ {$P \veeQ) \Lef
 
 > 🇨🇳 **条件语句的否定** 我们来推导 $\neg(P \Rightarrow Q)$ 的等价形式：
 
-$\neg(P \Rightarrow Q) \Leftrightarrow \neg(\neg P \vee Q)$（条件等价）
+$\neg(P \Rightarrow Q) \Leftrightarrow \neg(\n\neg P \vee Q)$（条件等价）
 $\Leftrightarrow P \wedge \neg \mathbb{Q}$（德摩根律 + 双重否定）
 
 即：否定条件语句得到"假设成立但结论不成立"。
@@ -171,7 +171,7 @@ complement operation is defined in the context of U. Then, $A \cap B = A \cup B 
 </div>
 $x \in A \cup B \Leftrightarrow x \notin A \cup B$
 Definition of complement
-$\Leftrightarrow \neg (x \in A \cup B$)
+$\Leftrightarrow \n\neg (x \in A \cup B$)
 Definition of $\notin$
 $\Leftrightarrow \neg [(x \in A) \vee(x \in B$)]
 Definition of $\cup$ and $\vee$
@@ -187,14 +187,14 @@ $Definition of \wedgeand \cap$
 
 $\Leftrightarrow \neg((P \Rightarrow Q) \wedge (Q \Rightarrow P))$
 $\Leftrightarrow \neg(P \Rightarrow Q) \vee \neg(Q \Rightarrow P)$（德摩根律）
-$\Leftrightarrow (P \wedge \neg Q) \vee (Q \wedge \neg P)$
+$\Leftrightarrow (P \wedge \n\neg Q) \vee (Q \wedge \n\neg P)$
 
 即"恰好一个成立，另一个不成立"——这正是"异或"（XOR）的定义。
 
 
 Remember that" $\wedge$" is a logical operation, while "$\cap$" is a set operation. We had to be careful about which one made sense in every sentence we wrote. Also, notice that we used DeMorgan's Law for Logic in the middle of the proof, to convert a negation of a disjunction into the conjunction of two negations. This chain of logical equivalences shows that $x \in A$ \cup B \Leftrightarrow x \in A \cap B$ so, in the context of U, the property of being an element of $A \cup$ B is logically equivalent to the property of being an element of $A \cap$ B. Therefore, $A \cup$ B = $A \cap$ B Let's prove the second equality now, with a similar method. Let $x \in$ U be arbitrary and fixed. Then, $x \in A$ \cap B \Leftrightarrow x \notin A \cap B$
 Definition of complement
-$\Leftrightarrow \neg (x \in A \cap B$)
+$\Leftrightarrow \n\neg (x \in A \cap B$)
 Definition of $\notin$
 $\Leftrightarrow \neg [(x \in A) \wedge(x \in B$)]
 Definition of $\cap$ and $\wedge$
@@ -210,8 +210,8 @@ This chain of logical equivalences shows that $x \in A \cap B \Leftrightarrow x 
 
 > 🇨🇳 **量词与联结词的交互** 量词和联结词之间也有重要等价：
 
-- $\neg(\f\forall x.\, P(x)) \Leftrightarrow \exists x.\, \neg P(x)$
-- $\neg(\exists x.\, P(x)) \Leftrightarrow \f\forall x.\, \neg P(x)$
+- $\neg(\f\forall x.\, P(x)) \Leftrightarrow \exists x.\, \n\neg P(x)$
+- $\neg(\exists x.\, P(x)) \Leftrightarrow \f\forall x.\, \n\neg P(x)$
 
 这是前几节讨论过的量词否定规则，用等价的语言重述。
 
@@ -225,7 +225,7 @@ universal set. Then, $A \cap (B -C)$ = ($A \cap B$) -C Much like the previous ex
 We define the following variable propositions: Let P(x) be "$x \in A$" Let Q(x) be "$x \in$ B" Let R(x) be "$x \in \mathbb{C}$" Let $x \in$ U be arbitrary and fixed. With these definitions, we can write the following chain of logical equivalences (where "Defn" is just space-saving shorthand for "Definition"): $x \in A$ \cap (B -$C)$ \Leftrightarrow x \in A \wedge(x \in B$ -C) Defn of $\cap \Leftrightarrow x \in A \wedge(x \in B \wedgex / \in \mathbb{C}$) Defn of - $\Leftrightarrow P(x) \wedge($\mathbb{Q}$(x) \wedge\negR(x)) Defn of P(x), Q(x), R(x), / \in \Leftrightarrow (P(x) \wedgeQ(x)) \wedge\negR(x) Associative Law for \wedge \Leftrightarrow(x \in A \wedgex \in B) \wedgex / \in \mathbb{C} Defn of P(x), Q(x), R(x) \Leftrightarrow x \in A \cap B \wedgex / \in \mathbb{C} Defn of \cap \Leftrightarrow x \in(A \cap B$) -C Defn of - This shows that $x \in A \cap (B -$C)$ \Leftrightarrow x \in(A \cap B$) -C
 
 
-> 🇨🇳 **练习** (1) 用真值表验证 $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg P \vee \mathbb{Q}$。(2) 用等价律化简 $\neg(P \vee (Q \wedge \neg P))$。
+> 🇨🇳 **练习** (1) 用真值表验证 $P \Rightarrow \mathbb{Q} \Leftrightarrow \n\neg P \vee \mathbb{Q}$。(2) 用等价律化简 $\neg(P \vee (Q \wedge \n\neg P))$。
 
 
 holds True for any element x in the universe U. Therefore, $A \cap (B -C)$ = ($A \cap B$) -C Think about why we needed to make sure all of these claims are truly if and only if statements. We are ensuring that any element x that is an element of a set on one side of the equality is also necessarily an element of the set on the other side; but, furthermore, we are ensuring that any element x that is not an element of one set is also not an element of the other set. The biconditional statements "go both ways", so we prove both the "is an element of" and "is not an element of" parts of the claim all at once. To illustrate our previous warnings, consider the following claim as an example of a proof where one "direction" $of a \Leftrightarrow c$laim fails.
@@ -243,7 +243,7 @@ Let $x \in U$ be arbitrary and fixed. We can write the following chain of logica
 From here, what further logical equivalences could we assert? We could simplify the right-hand side and express it as $x \in X$ -$Z \veex$\in X$ -Z and, therefore, $x \in (X -$\mathbb{Z}$)$\cup (Y -Z)$ This is not what the claim was, but this procedure so far would be a valid proof of a different claim, namely that ($X \cup$ Y ) -Z = (X -$\mathbb{Z}$) $\cup (Y -Z)$ However, our right-hand side is $X \cup (Y -Z)$ but we are not trying to prove an equality, merely a containment. Thus, the goal of the rest of our proof is to prove this conditional claim: { ($x \in X \wedgex / \in \mathbb{Z}) \vee(x \in Y \wedgex / \in \mathbb{Z}$) } =$\Rightarrow x \in X \cup (Y -Z)$ To help us figure out how to get there, let's do some scratch work here to rewrite the statement on the right-hand side; then, we can see how to get there from where we are already: $x \in X$ \cup (Y -$Z)$ \Leftrightarrow x \in X \veex \in Y$ -Z Defn of $\cup \Leftrightarrow x \in X \vee(x \in Y \wedgex / \in \mathbb{Z}$) Defn of - This is similar to the last logical equivalence we derived up above, but this one differs in the term on the left. Can you see how the one up above implies this one? Think about it, and then read on for the rest of our proof, resumed. Now, we want to show that { ($x \in X \wedgex / \in \mathbb{Z}) \vee(x \in Y \wedgex / \in \mathbb{Z}$) } =$\Rightarrow x$\in X \cup (Y -Z)$ To do this, let's suppose the expression on the left-hand side is True. This means either $x \in X \wedgex / \in \mathbb{Z} or x \in Y \wedgex / \in \mathbb{Z} (or possibly both)$. Thus, we have two cases:
 
 
-> 🇨🇳 (5) 用等价律证明 $\neg(\neg P \vee Q) \Leftrightarrow P \wedge \neg \mathbb{Q}$。(6) 解释为什么 $P \Rightarrow \mathbb{Q}$ 与 $Q \Rightarrow P$ 不等价，并给出一个具体例子。
+> 🇨🇳 (5) 用等价律证明 $\neg(\n\neg P \vee Q) \Leftrightarrow P \wedge \neg \mathbb{Q}$。(6) 解释为什么 $P \Rightarrow \mathbb{Q}$ 与 $Q \Rightarrow P$ 不等价，并给出一个具体例子。
 
 
 1. Suppose the first expression is True, so that $x \in X \wedgex / \in \mathbb{Z}$. This certainly means that $x \in$ X, and thus $x \in X \veex \in Y$ -Z holds. 2. Suppose the second expression is True, so that $x \in Y \wedgex / \in \mathbb{Z}$. This means that $x \in$ Y -$\mathbb{Z}$, and thus $x \in X \veex \in Y$ -Z holds. In either case, we find that $x \in X \veex \in Y$ -Z holds, and therefore, $x \in X$ \cup (Y -$\mathbb{Z}$)$ holds, in either case, by the definition of $\cup$. Overall, this shows that $x \in ($X \cup$ Y )$ -Z =$\Rightarrow x \in X \cup (Y -$\mathbb{Z}$)$ holds for every element $x \in$ U. Therefore, by the definition of $\subseteq$, we have ($X \cup$ Y ) -$$\mathbb{Z}$ \subseteq X$ \cup (Y -Z)$ Recognizing where we are, and where we wanted to go, helped us finish this proof. We had no hope of completing it using logical equivalences alone because, in fact, the sets given in the claim are not always equal! Looking back at the proof, can we identify the step whose logical equivalence was invalid, and can we use it to help construct a counterexample to the (False) claim that those sets are always equal? We had reached as far as this valid statement ($x \in X \wedgex / \in \mathbb{Z}) \vee(x \in Y \wedgex / \in \mathbb{Z}$) and we used it to deduce this statement $x \in X \vee(x \in Y \wedgex / \in \mathbb{Z}$) It seems clear, from our argument in the proof, that the first statement does imply the second one; that is, if we suppose the first statement holds, we can figure out that the second statement one holds, as well. The only difference between them is in the first term, and knowing two parts of an "$\wedge$" statement hold certainly lets us conclude a particular one of them holds. This deduction does not work in the other direction. Suppose that second statement holds. If it's the right term that is valid---that $x \in Y \wedgex / \in \mathbb{Z}$--- then this also makes the first statement hold. However, since we have an "$\vee$" statement, we have to consider the case where the left term is the one that holds. In that case, knowing only $x \in$ X does not let us deduce that $x \in X \wedgex / \in \mathbb{Z}$ holds. Supposing an "$\wedge$" holds lets us deduce either one of its parts holds, but just knowing only one part cannot tell us that both hold! We can use this to construct a counterexample. We see that we just need to ensure that there is some particular element $x \in U$ that satisfies the left term
@@ -271,7 +271,7 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 - $P \wedge (P \vee Q) \Leftrightarrow P$
 - $P \vee (P \wedge Q) \Leftrightarrow P$
 
-**蕴含律：** $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \neg P$
+**蕴含律：** $P \Rightarrow \mathbb{Q} \Leftrightarrow \neg \mathbb{Q} \Rightarrow \n\neg P$
 
 **逆否等价的推论：** 条件语句的否定 $\neg(P \Rightarrow Q) \Leftrightarrow P \wedge \neg \mathbb{Q}$ 是证明中反证法的理论基础。
 

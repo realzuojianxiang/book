@@ -35,7 +35,7 @@ Statement: Fix a, b, c, d, e, $f \in \mathbb{R}$ with the property that ad -bc $
 4.9. WRITING PROOFS: STRATEGIES AND EXAMPLES
 
 
-> 🇨🇳 **条件语句 $P \Rightarrow \mathbb{Q}$ 的证明** 最常用三种方法：(a) 直接证明：假设 P，推导 Q。(b) 逆否证明：假设 \neg Q，推导 \neg P。(c) 反证：假设 $P \wedge \neg \mathbb{Q}$，找矛盾。
+> 🇨🇳 **条件语句 $P \Rightarrow \mathbb{Q}$ 的证明** 最常用三种方法：(a) 直接证明：假设 P，推导 Q。(b) 逆否证明：假设 \n\neg Q，推导 \n\neg P。(c) 反证：假设 $P \wedge \neg \mathbb{Q}$，找矛盾。
 
 
 the two lines: adx + bdy = de + {-bcx -bdy = -bf } (ad -bc)x = de -bf Dividing tells us x = de-bf ad-bc, which is okay because ad -bc $\neq$ 0. Doing something similar, canceling the x terms, tells us how to get y: acx + bcy = ce + {-acx -ady = -af } (bc -ad)y = ce -af Dividing tells us y = af-ce ad-bc. The main lesson here is that we do not need to show this scratch work in our proof below! We don't assume that a reader would care to wade through our messy notes about how we came up with the solution to the system of linear equations. Rather, we assume the the reader only cares about what the solution is and why it's a solution. Also, this makes the proof much more concise, so it can be read more easily and quickly. Implementation:
@@ -65,7 +65,7 @@ i.e. $\f\forall i \in$[n]. ai < 1 n n X i=1 ai Define the constant S = Pn i=1 ai
 4.9. WRITING PROOFS: STRATEGIES AND EXAMPLES
 
 
-> 🇨🇳 **逆否证明模板** "要证 $P \Rightarrow \mathbb{Q}$，我们证其逆否 $\neg \mathbb{Q} \Rightarrow \neg P$。假设 $\neg \mathbb{Q}$。[推导过程]。因此 $\neg P$。"$\square$"
+> 🇨🇳 **逆否证明模板** "要证 $P \Rightarrow \mathbb{Q}$，我们证其逆否 $\neg \mathbb{Q} \Rightarrow \n\neg P$。假设 $\neg \mathbb{Q}$。[推导过程]。因此 $\n\neg P$。"$\square$"
 
 
 ### 4.9.2 Proving $\f\forall \mathbb{C}$laims A "$\f\forall$" claim is one of universality. It asserts that all elements of a set have some common property. To prove such a claim, we need to show that every element of the set has that property. To accomplish this "all at once", we will consider an arbitrary and fixed element of the set, and prove that it has the desired property. Because this object is arbitary, our argument applies to every element of the set. Because this object is fixed, we are allowed to refer to it by name throughout the proof. Direct Method Strategy:
@@ -87,7 +87,7 @@ Factoring, we get 4xy $\leq (x + y)$2.
 Dividing by 4 and putting that into the square, we get xy $\leq$ (x + y
 
 
-> 🇨🇳 **反证法（Contradiction）** 要证 $P$，假设 $\neg P$（AFSOC），推出矛盾。矛盾意味着 $\neg P$ 不可能成立，故 $P$ 为真。
+> 🇨🇳 **反证法（Contradiction）** 要证 $P$，假设 $\n\neg P$（AFSOC），推出矛盾。矛盾意味着 $\n\neg P$ 不可能成立，故 $P$ 为真。
 
 
 )$2 This result is known as the AGM Inequality because it deals with the Arithmetic Mean (AM) and the Geometric Mean (GM) of two real numbers. The Arithmetic Mean of x and y is x+y 2. The Geometric Mean of x and y is \sqrtxy. (Notice that this only applies when$
@@ -130,7 +130,7 @@ Claim: $P \veeQ$
 Direct proof: Prove that P is True, or else prove that Q is True. This relies on you being able to decide ahead of time which one of the statements (P or $\mathbb{Q}$) is True, of course. If you can do so, then this isn't even really a "strategy". Just implement whatever strategy applies to P (or $\mathbb{Q}$, as the case may be). Indirect Method (Proof by "Otherwise") This method is far more interesting than the direct one. In general, it is helpful when the statements P and Q are actually variable propositions, and for some instances P is True whereas for other instances Q is the True one. In that case, rather than characterize exactly which instances satisfy P and which satisfy $\mathbb{Q}$, we can just say, "Well, if P is True, then our proof is already complete. Thus, all we need to worry about are the cases where P is False; for those cases, we need to show that Q is still True."
 
 
-> 🇨🇳 **全称证明 $\f\forall x \in S.\, P(x)$** 任取 $x \in S$（"任意且固定的"），推导 $P(x)$。或反证：AFSOC $\exists x \in S$ 使 $\neg P(x)$，找矛盾。
+> 🇨🇳 **全称证明 $\f\forall x \in S.\, P(x)$** 任取 $x \in S$（"任意且固定的"），推导 $P(x)$。或反证：AFSOC $\exists x \in S$ 使 $\n\neg P(x)$，找矛盾。
 
 
 Strategy:
@@ -165,7 +165,7 @@ Claim: $P \wedgeQ$
 Direct proof strategy:
 
 
-> 🇨🇳 **证明 $\neg P$** 直接列出 $P$ 为假的情形，或用反证法假设 $P$ 再找矛盾。
+> 🇨🇳 **证明 $\n\neg P$** 直接列出 $P$ 为假的情形，或用反证法假设 $P$ 再找矛盾。
 
 
 Prove that P holds. Prove that Q holds.
@@ -376,7 +376,7 @@ Thus, we have shown that $\exists x \in S. Q(x) \wedge\negP(x) and this disprove
 We have been using cases all along in some of our proofs. Now, we see exactly why they work! We use cases when there is an underlying disjunction of statements. "There exists... " vs. "Let... be given" This is a subtle but important distinction. If you write down a claim like $\exists x \in S$. P(x) in the middle of a proof, what have you asserted? Technically speaking, you have really only stated that the line above is a True statement; you have asserted that there does exist some $x \in$ S with the property P(x). But, if you move and start referring to x afterwards... this is not valid! Nowhere in the assertion of existence did you introduce a particular instance of that claim. It might be the case that several such x elements exist. Do you want to talk about all of them? Or just a particular one? Don't leave it up to the reader of your proof to intuit exactly what you're doing! If you know, or have assumed, some existence statement (like the line above) and you want to actually introduce a variable that satisfies that existence claim, use the following wonderful phrase: "Let such an x be given." This signals to the reader that not only are you saying such an x exists, but you are also bringing it into play in your proof. You want the letter x, for the rest of your written argument, to represent an element with that property. Thereafter, you get to refer to that object x by name. If you assert the existence of several variables and want to introduce them, just use a similar phrase with a slightly different verb. For instance, you might write something like this:... and so we deduce that $\exists x$, y, $z \in \mathbb{Z}$ such that P(x, y, z) holds. Let such x, y, z be given. Observe that... "P =$\Rightarrow \mathbb{Q}$" vs. "P, therefore Q" This distinction hinges on an idea similar to the previous example we just mentioned. Specifically, there is a difference between writing a statement to assert its validity and writing a statement to show the reader you are making a conclusion from it. In the last example, this was the distinction between saying something exists versus introducing such an object. Here, the distinction lies between asserting a conditional statement---like P =$\Rightarrow Q$---to say that this conditional relationship exists versus using this statement to deduce that Q holds. Technically speaking, just writing "P =$\Rightarrow Q$" on your paper does not assert that Q is valid. You must make it very clear to your reader that you also know P and are using the conditional statement to deduce $\mathbb{Q}$.
 
 
-> 🇨🇳 **常见逻辑错误** (1) 肯定后件：$P \Rightarrow \mathbb{Q}$ 和 $Q$ 成立不能推出 $P$。(2) 否定前件：$P \Rightarrow \mathbb{Q}$ 和 $\neg P$ 不能推出 $\neg \mathbb{Q}$。(3) 混淆必要与充分条件。
+> 🇨🇳 **常见逻辑错误** (1) 肯定后件：$P \Rightarrow \mathbb{Q}$ 和 $Q$ 成立不能推出 $P$。(2) 否定前件：$P \Rightarrow \mathbb{Q}$ 和 $\n\neg P$ 不能推出 $\neg \mathbb{Q}$。(3) 混淆必要与充分条件。
 
 
 4.9. WRITING PROOFS: STRATEGIES AND EXAMPLES

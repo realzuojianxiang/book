@@ -9,12 +9,12 @@ tags:
 
 # Logical Negation of Quantified Statements
 
-are referring to, we can necessarily conclude that the proposition R(x) is true. Now, how could this statement be False, and how could we prove that? If it's False that every element $x \in S$ satisfies a certain property, it must be that at least one element does not satisfy that property. To prove this, we would be expected to produce such a value; we would have to define (i.e. identify) an element x and explain why R(x) does not hold for that particular element. (Think about how we understand this negation linguistically. We do this all the time in everyday language without even thinking about it.) The conclusion, then, is that the negation of the original statement is $\exists$x \in S such that R(x) is False We now introduce the notational symbol \neg to mean$ "logical negation" or "not"$. With this in hand we can rewrite the negated statement \neg$ {$\f\forall x$\in S$. R(x) } as $\exists x$\in S. \negR(x) The concluding phrase of that statement, \negR(x), could be simplified, depending on what R(x) is. For instance, if S = \mathbb{R} and R(x) is$ "x2 $\geq 0$", then the negated statement would read " $\exists x \in \mathbb{R}$ such that x2 < 0 " since "x2 < 0" is logically equivalent to "$\neg (x2 $\geq 0$)$". In general, though, we must leave it as "\negR(x)" without knowing anything further about the proposition R. We will also point out that, in general, the phrases "R(x) is False" and "$\negR(x) is True$" are logically equivalent; they both assert that the proposition R(x) is not true. This notion we are developing right now is what is meant by a counterexample, a term you have likely heard before. To disprove a universally quantified statement, we must prove an existentially quantified statement; that proof involves explicitly defining an element of a set that does not satisfy the specified property, whence the word counterexample.
+are referring to, we can necessarily conclude that the proposition R(x) is true. Now, how could this statement be False, and how could we prove that? If it's False that every element $x \in S$ satisfies a certain property, it must be that at least one element does not satisfy that property. To prove this, we would be expected to produce such a value; we would have to define (i.e. identify) an element x and explain why R(x) does not hold for that particular element. (Think about how we understand this negation linguistically. We do this all the time in everyday language without even thinking about it.) The conclusion, then, is that the negation of the original statement is $\exists$x \in S such that R(x) is False We now introduce the notational symbol \neg to mean$ "logical negation" or "not"$. With this in hand we can rewrite the negated statement \neg$ {$\f\forall x$\in S$. R(x) } as $\exists x$\in S. \negR(x) The concluding phrase of that statement, \negR(x), could be simplified, depending on what R(x) is. For instance, if S = \mathbb{R} and R(x) is$ "x2 $\geq 0$", then the negated statement would read " $\exists x \in \mathbb{R}$ such that x2 < 0 " since "x2 < 0" is logically equivalent to "$\n\neg (x2 $\geq 0$)$". In general, though, we must leave it as "\negR(x)" without knowing anything further about the proposition R. We will also point out that, in general, the phrases "R(x) is False" and "$\negR(x) is True$" are logically equivalent; they both assert that the proposition R(x) is not true. This notion we are developing right now is what is meant by a counterexample, a term you have likely heard before. To disprove a universally quantified statement, we must prove an existentially quantified statement; that proof involves explicitly defining an element of a set that does not satisfy the specified property, whence the word counterexample.
 ### 4.4.2 Negation of an existential quantification A statement like $\exists x \in S. R(x) makes an existence claim. It says that there must be some element x that satisfies the property R(x). To disprove a claim like this, we would seek to show that any value of x actually fails to satisfy the property R. Accordingly, we can say that the statement \neg$ {$\exists x$\in S$. R(x) }
 
 
 > 🇨🇳 即逻辑上等价于语句 \forall x \in S.$ 
-eg R(x)$。这从直觉上是合理的：要反驳一个存在性主张，你需要证明无论取哪个值，该性质都不成立。假想你正在与朋友辩论：朋友告诉你某个 kwyjibo 具有 zooqa 的性质。你会怎么说？"才不是呢！给我看任何一个 kwyjibo，我知道它不可能是一个 zooqa，因为以下原因……" 当你说"给我看任何一个"时，你实际上执行了一次全称量化！你在说无论考虑哪个 kwyjibo，某事都成立——即 \forall $x \in$ K（K 是所有 kwyjibo 的集合），某事为真。请思考并理解为什么我们发现的逻辑否定是有道理的。
+\neg R(x)$。这从直觉上是合理的：要反驳一个存在性主张，你需要证明无论取哪个值，该性质都不成立。假想你正在与朋友辩论：朋友告诉你某个 kwyjibo 具有 zooqa 的性质。你会怎么说？"才不是呢！给我看任何一个 kwyjibo，我知道它不可能是一个 zooqa，因为以下原因……" 当你说"给我看任何一个"时，你实际上执行了一次全称量化！你在说无论考虑哪个 kwyjibo，某事都成立——即 \forall $x \in$ K（K 是所有 kwyjibo 的集合），某事为真。请思考并理解为什么我们发现的逻辑否定是有道理的。
 
 
 is logically equivalent to the statement $\f\forall x \in S. \negR(x) This makes sense if we think about how to disprove such an existential claim. Pretend you are having a debate with a friend who told you that some kwyjibo has the property that it is a zooqa. How would you disprove him/her$? You might say something like, "Nuh uh! Show me any kwyjibo you want to. I know it can't possibly be a zooqa because of the following reasons... " and then you would explain why the property fails, no matter what. Now, when you say "show me any" you are really performing a universal quantification! You are saying that no matter which kwyjibo you consider, something is true; that is, for every kwyjibo, or $\f\forall$x \in$ K (where K is the set of all kwyjibos), something is True. Think about this and consider why the logical negations we have discovered/defined make sense to you. Later on in the chapter, when we consider proof techniques, we will explain the strategy of considering an arbitrary kwyjibo and why this actually proves the logical negation we just wrote above. For now, we hope it is clear that $\f\forall$x \in S. \negR(x) and \exists x \in S$. R(x) have opposite truth values.
@@ -22,7 +22,7 @@ is logically equivalent to the statement $\f\forall x \in S. \negR(x) This makes
 
 
 > 🇨🇳 这一步使用了我们上面看到的另一个否定方法。然后将所有部分组合起来，我们可以说 $
-eg A$ 是语句 \forall y \in \mathbb{R}. \exists x \in \mathbb{R}. y$ 
+\neg A$ 是语句 \forall y \in \mathbb{R}. \exists x \in \mathbb{R}. y$ 
 eq x^3$。这个命题可以被证明为真，从而说明原始语句必定为假。（我们将此证明留作练习。提示：给定任何 y \in \mathbb{R} ，定义一个 x 的值使得 $y 
 eq x^3$ 为真。注意你对 x 的选择将依赖于 $y$ 的值。）观察否定是如何产生的：我们认识到原始语句是一系列嵌套量词（Nested Quantifiers），末尾是一个变元命题，然后将否定从外层量词"传递"到内层量词。
 
@@ -37,7 +37,7 @@ $This step just uses the other negation procedure that we saw above. Then, putti
 
 
 > 🇨🇳 原始主张只对集合 T 中的元素做了断言，因此它的否定也一样。你不能从别的房间拿来一本法语小说说"看，你说错了！"那不能证明关于我们书架的主张有任何问题——论域不同。同理，当我们否定 $\forall b \in T. P(b)$ 时，得到 \exists b \in T.$ 
-eg P(b)$，而不改变论域 T。
+\neg P(b)$，而不改变论域 T。
 
 
 about what's going on in any bookshelves in other rooms. We only asserted something about this particular shelf. For the same reason, when negate a statement like $\f\forall b \in T$. P(b) we obtain $\exists b \in T. \negP(b) without changing that realm of discourse, the set T. The original claim only asserts something about elements of T, so its negation does only that, as well.$
@@ -105,12 +105,12 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 
 
 > 🇨🇳 (a) $\forall a \in A. \exists b \in B. Q(a, b)$ 的否定是 \exists a \in A. \forall b \in B.$ 
-eg Q(a, b)$ (b) \forall a \in A.$ 
-eg P(a)$ 的否定是 \exists a \in A. P(a) (c) \forall c \in \mathbb{C}. \forall d \in D.$ 
-eg Q(c, d)$ 的否定是 \exists c \in \mathbb{C}. \exists d \in D. Q(c, d) (d) \exists a_1, a_2 \in A. \forall d \in D. R(a_1, a_2, d) 的否定是 \forall a_1, a_2 \in A. \exists d \in D.$ 
-eg R(a_1, a_2, d)$ (e) \forall b_1, b_2, b_3 \in B.$ 
-eg R(b_1, b_2, b_3)$ 的否定是 \exists b_1, b_2, b_3 \in B. R(b_1, b_2, b_3) (f) \exists b \in B. \forall c \in \mathbb{C}. \forall d \in D. R(d, b, c) 的否定是 \forall b \in B. \exists c \in \mathbb{C}. \exists d \in D.$ 
-eg R(d, b, c)$
+\neg Q(a, b)$ (b) \forall a \in A.$ 
+\neg P(a)$ 的否定是 \exists a \in A. P(a) (c) \forall c \in \mathbb{C}. \forall d \in D.$ 
+\neg Q(c, d)$ 的否定是 \exists c \in \mathbb{C}. \exists d \in D. Q(c, d) (d) \exists a_1, a_2 \in A. \forall d \in D. R(a_1, a_2, d) 的否定是 \forall a_1, a_2 \in A. \exists d \in D.$ 
+\neg R(a_1, a_2, d)$ (e) \forall b_1, b_2, b_3 \in B.$ 
+\neg R(b_1, b_2, b_3)$ 的否定是 \exists b_1, b_2, b_3 \in B. R(b_1, b_2, b_3) (f) \exists b \in B. \forall c \in \mathbb{C}. \forall d \in D. R(d, b, c) 的否定是 \forall b \in B. \exists c \in \mathbb{C}. \exists d \in D.$ 
+\neg R(d, b, c)$
 
 
 (a) $\f\forall x \in \mathbb{R}. \exists n \in \mathbb{N}$. n > x (b) $\exists n \in \mathbb{N}. \f\forall x \in \mathbb{R}$. n > x (c) $\f\forall x \in \mathbb{R}. \exists y \in \mathbb{R}$. y = x3 (d) $\exists y \in \mathbb{R}. \f\forall x \in \mathbb{R}$. y = x3 (2) For each of the following statements, write its negation. Which one---the original or the negation---is True? (a) $\exists S \in P(N). \f\forall x \in \mathbb{N}. x \in S (b) \f\forall S \in P(N). \exists x \in \mathbb{N}. x \in S (c) \f\forall x \in \mathbb{N}. \exists S \in P(N). x \in S (d) \exists x \in \mathbb{N}. \f\forall S \in P(N). x \in S (3)$ Let I = {$x \in \mathbb{R}$ | 0 < x < 1}. For each of the following defined sets, write out the defining condition that determines whether a number $y \in \mathbb{R}$ is an element of the set, using quantifiers. Then, determine what the set is, and write your answer using set-builder notation. (Try to prove your claim, as well, using a double-containment argument!) (a) S = [ x$\in I$ {$y \in \mathbb{R}$ | x < y < 2} (b) T = \ x$\in I$ {$y \in \mathbb{R}$ | -x < y < x} (c) V = [ x$\in I$ {$y \in \mathbb{R}$ | -3x < y < 4x} (4) Let P = {$y \in \mathbb{R}$ | y > 0}. Consider this statement: $\f\forall$ε $\in P$. $\exists$δ $\in P$. $\f\forall x$ \in{$y \in \mathbb{R}$ | -δ < y < δ}. |x3| < ε Write out the logical negation of this statement. What does this statement say? What does its negation say? Which one is True? Can you prove it? (5) Let A, B, C, D be arbitrary sets. Let P(x), Q(x, y), R(x, y, z) be arbitrary variable propositions. Write the negation of each of the following statements.

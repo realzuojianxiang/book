@@ -86,9 +86,9 @@ Throughout this example, let A and B be arbitrary sets. Also, let P be "$A \subs
 
 
 > 🇨🇳 **相关条件语句** 条件语句 $P \Rightarrow \mathbb{Q}$ 有三种相关形式：
-- **逆否命题（Contrapositive）**：$\neg \mathbb{Q} \Rightarrow \neg P$——与原命题同真值
+- **逆否命题（Contrapositive）**：$\neg \mathbb{Q} \Rightarrow \n\neg P$——与原命题同真值
 - **逆命题（Converse）**：$Q \Rightarrow P$——不一定与原命题同真值
-- **否命题（Inverse）**：$\neg P \Rightarrow \neg \mathbb{Q}$——与逆命题同真值
+- **否命题（Inverse）**：$\n\neg P \Rightarrow \neg \mathbb{Q}$——与逆命题同真值
 
 重要：条件语句与其逆否命题逻辑等价，但与逆命题不等价！
 
@@ -99,7 +99,7 @@ Yes! Let's pretend A and B satisfy the relationship $A \subseteq B$. This means 
 > 🇨🇳 **示例** 设 $P$ 为"$n$ 是偶数"，$Q$ 为"$n^2$ 是偶数"。
 - 命题 $P \Rightarrow \mathbb{Q}$："若 $n$ 是偶数，则 $n^2$ 是偶数"——真
 - 逆命题 $Q \Rightarrow P$："若 $n^2$ 是偶数，则 $n$ 是偶数"——真（此例中恰好也为真，但不总是如此）
-- 逆否命题 $\neg \mathbb{Q} \Rightarrow \neg P$："若 $n^2$ 不是偶数，则 $n$ 不是偶数"——真（与原命题逻辑等价）
+- 逆否命题 $\neg \mathbb{Q} \Rightarrow \n\neg P$："若 $n^2$ 不是偶数，则 $n$ 不是偶数"——真（与原命题逻辑等价）
 
 
 above), but it does not tell us anything about the truth values of P and $\mathbb{Q}$. So, if you just write down the claim Blah blah =$\Rightarrow$ Yada yada on your paper, we have no idea if you're trying to assert whether "Blah blah" or "Yada yada" are True or False! To a mathematician, this just says: The conditional statement " 'Blah blah' implies 'Yada yada' " is True. If you wish to make some kind of inference or deduction, then use some helping words and sentences to indicate that. Write something like this: P =$\Rightarrow \mathbb{Q}$ because... Also, P holds because... Therefore, Q holds. If you have studied formal logic before, or have seen this type of argument in a philosophy course, then you might recognize this as Modus Ponens. • The idea of a false hypothesis yielding a True conditional is kind of weird; we realize this. It's a direct consequence of the Law of the Excluded Middle. Under a false hypothesis, we don't get to say the overall statement is False, so it must be True, since it must be one or the other. • Remember that we can always write a conditional statement without the " =$\Rightarrow$" symbol by converting it to an "or" statement. The statements "P =$\Rightarrow \mathbb{Q}$" and "$\negP \veeQ$" always have they always have the same truth value. Converse and Contrapositive Let's give some names to the different types of conditional statements related to a given conditional statement. We will refer to these frequently later on.
@@ -155,6 +155,6 @@ $(2) What is the difference between \wedgeand \cap$? $What is the difference bet
 ## 4.6 Logical Equivalence In this section, the major goal is to introduce the idea of logical equivalence and prove a few fundamental claims. Essentially, we want to decide when some complicated logical statements are actually "the same", in the sense of truth values. Since mathematical statements may depend on some propositional variables, we might not be able to conclude anything specific about their truth values. However, we can sometimes prove that two mathematical statements will have the same truth value, for all possible values of the variables they contain. That's a really nice conclusion to make! We get to say that they have the same truth value, regardless of what it is. In that sense, we are proving the two statements to be equivalent, in a logical sense.
 
 
-> 🇨🇳 (3) 找一个使 $P \Rightarrow \mathbb{Q}$ 为真但 $Q \Rightarrow P$ 为假的例子。(4) 用真值表验证 $P \Rightarrow \mathbb{Q}$ 和 $\neg \mathbb{Q} \Rightarrow \neg P$ 逻辑等价。(5) 解释"空虚真"为何是逻辑系统的必要约定，给出一个说明性例子。
+> 🇨🇳 (3) 找一个使 $P \Rightarrow \mathbb{Q}$ 为真但 $Q \Rightarrow P$ 为假的例子。(4) 用真值表验证 $P \Rightarrow \mathbb{Q}$ 和 $\neg \mathbb{Q} \Rightarrow \n\neg P$ 逻辑等价。(5) 解释"空虚真"为何是逻辑系统的必要约定，给出一个说明性例子。
 
 

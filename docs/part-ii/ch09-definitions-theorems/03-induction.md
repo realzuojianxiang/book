@@ -9,16 +9,16 @@ tags:
 
 A.3.3 "Minimal Criminal" Argument
 
-The second condition in the hypothesis of the Principle of Induction is a conditional statement, so we can prove it by contrapositive. The contrapositive says $\neg P(k) \Rightarrow \neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$ which is to say, "If the proposition fails for some particular value $k$, then we can find some prior instance of the proposition (from 1 to $k-1$) that also fails."
+The second condition in the hypothesis of the Principle of Induction is a conditional statement, so we can prove it by contrapositive. The contrapositive says $\n\neg P(k) \Rightarrow \n\neg P(1) \vee \n\neg P(2) \vee \cdots \vee \n\neg P(k-1)$ which is to say, "If the proposition fails for some particular value $k$, then we can find some prior instance of the proposition (from 1 to $k-1$) that also fails."
 
 • Proving a claim by a "minimal criminal" argument: Suppose we have a variable proposition $P(n)$ that is defined for all $n \in \mathbb{N}$, and we want to prove $P(n)$ holds for every $n \in \mathbb{N}$.
 Base Case(s): Prove that $P(1)$ holds. (Depending on what happens in the Induction Step, you might need more than one Base Case.)
-Induction Hypothesis: Suppose that $k$ is an arbitrary and fixed natural number that satisfies some inequality ($k \geq \ldots$, depending on what happens in the Induction Step), and suppose that $\neg P(k)$ holds; that is, suppose $P(k)$ fails to hold.
-Induction Step: Prove that $\neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$; that is, show that the proposition fails to hold at some prior instance, as well.
+Induction Hypothesis: Suppose that $k$ is an arbitrary and fixed natural number that satisfies some inequality ($k \geq \ldots$, depending on what happens in the Induction Step), and suppose that $\n\neg P(k)$ holds; that is, suppose $P(k)$ fails to hold.
+Induction Step: Prove that $\n\neg P(1) \vee \n\neg P(2) \vee \cdots \vee \n\neg P(k-1)$; that is, show that the proposition fails to hold at some prior instance, as well.
 Conclusion: By induction, $\f\forall n \in \mathbb{N}.\, P(n)$.
 
 
-> 🇨🇳 A.3.3 "最小罪犯"（Minimal Criminal）论证——归纳原理假设的第二个条件是条件语句，可用逆否命题（Contrapositive）证明：$\neg P(k) \Rightarrow \neg P(1) \vee \neg P(2) \vee \cdots \vee \neg P(k-1)$，即"若命题在某值 $k$ 处不成立，则必存在某个先前实例也不成立"。证明步骤：基底——证 $P(1)$ 成立；归纳假设——设 $k$ 为某固定自然数且 $\neg P(k)$ 成立；归纳步骤——证 $\neg P(1) \vee \cdots \vee \neg P(k-1)$（即某先前实例也不成立）；结论——由归纳得 $\f\forall n \in \mathbb{N}.\ P(n)$。
+> 🇨🇳 A.3.3 "最小罪犯"（Minimal Criminal）论证——归纳原理假设的第二个条件是条件语句，可用逆否命题（Contrapositive）证明：$\n\neg P(k) \Rightarrow \n\neg P(1) \vee \n\neg P(2) \vee \cdots \vee \n\neg P(k-1)$，即"若命题在某值 $k$ 处不成立，则必存在某个先前实例也不成立"。证明步骤：基底——证 $P(1)$ 成立；归纳假设——设 $k$ 为某固定自然数且 $\n\neg P(k)$ 成立；归纳步骤——证 $\n\neg P(1) \vee \cdots \vee \n\neg P(k-1)$（即某先前实例也不成立）；结论——由归纳得 $\f\forall n \in \mathbb{N}.\ P(n)$。
 
 
 APPENDIX A. DEFINITIONS AND THEOREMS A.4 Relations
