@@ -44,7 +44,7 @@ We've introduced the idea of a proof by talking about what we hope proofs to acc
     The area of the larger square can be computed in two ways:
 
  $$
- $(a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab$
+ (a + b)^2 = c^2 + 4 \cdot \frac{ab}{2} = c^2 + 2ab
  $$
 
     Expanding and canceling:

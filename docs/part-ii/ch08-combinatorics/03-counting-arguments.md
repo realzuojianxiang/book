@@ -57,7 +57,7 @@ Note:
 } and so on. With that observation made, we might as well write the number in the first step as {13
 
 
-> 🇨🇳 **不可数：$\mathbb{R}$** 康托尔对角线法证明 \mathbb{R} 不可数。反证：设 \mathbb{R} 可数，列出 $r_1, r_2, \ldots$。构造 x 使 $x$ 的第 n 位小数与 $r_n$ 不同——则 $x$ 不在列表中，矛盾！
+> 🇨🇳 **不可数：$\mathbb{R}$** 康托尔对角线法证明 $\mathbb{R}$ 不可数。反证：设 \mathbb{R} 可数，列出 $r_1, r_2, \ldots$。构造 x 使 $x$ 的第 n 位小数与 $r_n$ 不同——则 $x$ 不在列表中，矛盾！
 
 
 }, right? Now, we observe that any selections made in these steps produce a unique pair. That is, we can't possibly have a pair that could arise from two different versions of this proces. Thus, the Rule of Product applies, and we can conclude that there are {13
@@ -69,13 +69,13 @@ Note:
 } ways to select a pair of cards. What if we had performed these two steps in the opposite order? We could just as well identify a pair of cards by asking which two suits are represented and then asking what their common rank is? (Of course, this only works if we know, a priori, that the cards have a common rank.) In that case, the Rule of Product would tell us there are {4
 
 
-> 🇨🇳 **子集的基数** 若存在单射 $f: A \to B$，则 $|A| \leq |B|$。若存在满射 $f: A \to B$，则 $|A| \geq |B|$。
+> 🇨🇳 **子集的基数** 若存在单射 $f: $A \to B$$，则 $|A| \leq |B|$。若存在满射 $f: $A \to B$$，则 $|A| \geq |B|$。
 
 
-} such pairs. Hey, that's the same number! The commutativity of multiplication of real numbers (that is, x $\cdot y = y \cdot$ x for any x, y $\in \mathbb{R}$) confirms our intuition that these steps are reversible. We aren't quite done constructing a poker hand with one pair. We need to choose three more cards. What property should they have? What more specific questions could we ask our friend, besides "What are they?". We need to know the three cards' ranks and their suits. Is there any restriction on their suits? No! (Because we have a pair already, there is no chance for a flush.) Is there any restriction on their ranks? Yes! We know the three cards all have different ranks, and none of them match the rank of the pair already chosen. With these observations, we can reverse the process and construct the rest of the hand.
+} such pairs. Hey, that's the same number! The commutativity of multiplication of real numbers (that is, $x \cdot y = y \cdot x$ for any $x, y \in \mathbb{R}$) confirms our intuition that these steps are reversible. We aren't quite done constructing a poker hand with one pair. We need to choose three more cards. What property should they have? What more specific questions could we ask our friend, besides "What are they?". We need to know the three cards' ranks and their suits. Is there any restriction on their suits? No! (Because we have a pair already, there is no chance for a flush.) Is there any restriction on their ranks? Yes! We know the three cards all have different ranks, and none of them match the rank of the pair already chosen. With these observations, we can reverse the process and construct the rest of the hand.
 
 
-> 🇨🇳 **Cantor-Schröder-Bernstein 定理** 若存在单射 $f: A \to B$ 和单射 $g: B \to A$，则存在双射 $h: A \to B$，故 $|A| = |B|$。这提供了"等势"的更方便的判定方式。
+> 🇨🇳 **Cantor-Schröder-Bernstein 定理** 若存在单射 $f: $A \to B$$ 和单射 $g: $B \to A$$，则存在双射 $h: $A \to B$$，故 $|A| = |B|$。这提供了"等势"的更方便的判定方式。
 
 
 1. Choose 3 ranks from the 12 remaining (i.e. not the same rank as the pair cards): {12
@@ -93,7 +93,7 @@ Note:
 } options 4. Choose a suit for the middle-ranked card: {4
 
 
-> 🇨🇳 **Dedekind 无限** 集合 $A$ 是无限的（Dedekind 定义），当且仅当存在 C \subset A（真子集）使 $|A| = |C|$。
+> 🇨🇳 **Dedekind 无限** 集合 $A$ 是无限的（Dedekind 定义），当且仅当存在 $C \subset A$（真子集）使 $|A| = |C|$。
 
 
 } options 5. Choose a suit for the highest-ranked card: {4
@@ -197,7 +197,7 @@ Answer: We claim there are (13
 }3 ways in total. Applying ROP, we find the answer given above. Does this make sense? Notice how much shorter it is than our explanation above. This is fine! We will continue to sometimes write out some details in our written examples here (to help you understand how to approach these problems, before writing them up), but your written solutions can be a little more condensed, as long as they identify all the key elements of the problem's solution. Notice that we pointed out a use of the ROP, cited it, and identified all the steps in the process; for each step, we noted how many ways there are to do that step. It just so happens each of these steps are pretty simple, and
 
 
-> 🇨🇳 **Cantor-Schröder-Bernstein 的应用** 要证 $|A| = |B|$，不必直接构造双射——只需构造 A \to B 的单射和 B \to A 的单射。例：$|\mathbb{R}| = |\mathbb{R}^2|$：$\mathbb{R} \to \mathbb{R}^2$ 单射明显；$\mathbb{R}^2 \to \mathbb{R}$ 可用交织数字构造。
+> 🇨🇳 **Cantor-Schröder-Bernstein 的应用** 要证 $|A| = |B|$，不必直接构造双射——只需构造 $A \to B$ 的单射和 $B \to A$ 的单射。例：$|\mathbb{R}| = |\mathbb{R}^2|$：$\mathbb{R} \to \mathbb{R}^2$ 单射明显；$\mathbb{R}^2 \to \mathbb{R}$ 可用交织数字构造。
 
 
 the number of ways to perform them is clear in each case. In general, we might expect a more thorough description. For instance, we would consider writing that the number of ways to do step (3) is {12
@@ -629,17 +629,17 @@ How many poker hands have exactly one Queen and exactly one Spade? Try this on y
 ) = 58, 905 + 257, 040 = 315, 945 This is a trickier problem than the previous examples, so we encourage you to read over this proof multiple times until you are fully comfortable with it. In fact, ask your friend if he/she can solve the problem, and then try to convince them of your answer by following the steps of this proof. Do you understand them well enough to be able to explain them to someone else? If so, you are a master of combinatorial arguments! In the next subsection, we seek to further develop your comfort with combinatorial arguments and proofs. Along the way, we will also introduce some standard combinatorial objects, so that we can count something other than poker hands. Counting questions about a deck of cards are common and easy to ask, but we'd like to talk about other stuff, too!
 ### 8.3.3 Other Counting Objects n-Tuples from [k] A deck of cards is a nice, standard, physical set of objects to count. Most people are familiar with them, and the fact that each card has two properties--suit and rank--allows for many interesting combinatorial problems to be posed. A more "abstract" example of a standard set of objects to count involves lists of natural numbers with specified lengths. We will make the following definition to allow us to refer to these sets in a concise form.
 <div class="def-definition" markdown>
-**Definition 8.3.9. Let n, k $\in \mathbb{N}$ be given. Then**
+**Definition 8.3.9. Let $n, k \in \mathbb{N}$ be given. Then**
 </div>
-Tk,n = [k]n = {(a1, a2,..., an) | $\forall i. ai \in$[k]} That is, Tk,n is the set of all n-tuples whose elements belong to [k].
+Tk,n = [k]n = {(a1, a2,..., an) | $\forall i. a_i \in [k]$} That is, Tk,n is the set of all n-tuples whose elements belong to [k].
 Note: We chose the letter T because these objects are n-tuples, i.e. ordered
-lists of length n. We will also point out that when k is a small number, like 2 or 3, it is common to replace the set [k] with [k -1] $\cup${0}. For instance, the concept of a binary n-tuple is quite common in mathematics, in part due to its prevalence in comptuer science. With that in mind, the case where k = 2 often considers ordered lists of length n whose elements are drawn from the set {0, 1},
+lists of length n. We will also point out that when k is a small number, like 2 or 3, it is common to replace the set [k] with $[k-1] \cup \{0\}$. For instance, the concept of a binary n-tuple is quite common in mathematics, in part due to its prevalence in comptuer science. With that in mind, the case where k = 2 often considers ordered lists of length n whose elements are drawn from the set {0, 1},
 
 
 > 🇨🇳 补充内容 (项 100)：此段原文为详细计数论证的进阶练习和补充说明。
 
 
-instead of {1, 2}. Since we are interested in combinatorial aspects of these sets (i.e. "How many sequences with property P are there?") we don't, in fact, care which convention is chosen. It is actually a simple exercise to prove that |Tk,n| = |[k]n| = kn = |([k -1] $\cup${0})n| by establishing a bijection between the underlying sets, [k] and [k -1] \cup{0}. We will leave this for you to do, Many counting arguments we will see in the next section can be conveniently phrased in this framework by identifying an appropriate k and n and an additional property that the ordered lists must have. For now, let's investigate a couple of simple cases and explore some applications. In each case, we will be looking at some subset, S $\subseteq T$k,n, whose elements have a certain property (or properties); specifically, we will be looking to find |S| by counting the elements of S. We will study some very simple cases first, then progress into some more challenging ones. The exercises in this section will explore these ideas even further.
+instead of {1, 2}. Since we are interested in combinatorial aspects of these sets (i.e. "How many sequences with property P are there?") we don't, in fact, care which convention is chosen. It is actually a simple exercise to prove that |Tk,n| = |[k]n| = kn = |($[k-1] \cup \{0\}$)n| by establishing a bijection between the underlying sets, [k] and [k -1] \cup{0}. We will leave this for you to do, Many counting arguments we will see in the next section can be conveniently phrased in this framework by identifying an appropriate k and n and an additional property that the ordered lists must have. For now, let's investigate a couple of simple cases and explore some applications. In each case, we will be looking at some subset, $S \subseteq T_{k,n}$, whose elements have a certain property (or properties); specifically, we will be looking to find |S| by counting the elements of S. We will study some very simple cases first, then progress into some more challenging ones. The exercises in this section will explore these ideas even further.
 Example 8.3.10. Let n = 4 and k = 3.
 (1) What is |T3,4|? To count all the elements of T3,4, we can construct this set via a four step process, where the i-th step corresponds to selecting the i-th element in the 4-tuple. At each such step, we have 3 options (each element is one of {1, 2, 3}), so the Rule of Product tells us there are 3 $\cdot 3 \cdot 3 \cdot$ 3 = 34 = 81 total elements of T3,4. (Note: See the exercises, which ask for a proof that |Tn,k| = nk, in general.) (2) How many elements of T3,4 have no 1s? To count the elements of T3,4 with no 1s, we can alter our 4 step process by restricting the number of options in each step. That is, each of the 4 positions of any element of T3,4 with no 1 can only be filled from the set {2, 3}. Thus, the Rule of Product says there are 2 $\cdot 2 \cdot 2 \cdot$ 2 = 24 = 16 such elements. (3) How many have exactly one 1? Exactly two 1s? Exactly three 1s? Exactly four 1s? To count the elements of T3,4 with exactly one 1, can we use the same idea as the previous paragraph? Not exactly! The number of options available at each step in our process might change, depending on whether a 1 has already been placed in our 4-tuple. We must find a new approach. Instead, let's consider placing a 1 somewhere in our 4-tuple, then filling the remaining spots with elements from {2, 3}. That is, our four step process to construct a 4-tuple with the property that it has exactly one 1 is as follows: (a) Choose one of the 4 spots to be occupied by the 1: {4
 
@@ -839,7 +839,7 @@ try to infer a pattern. We might strart writing out the outcomes as: 3 Red and 1
 > 🇨🇳 补充内容 (项 130)：此段原文为详细计数论证的进阶练习和补充说明。
 
 
-} = 3 choices for which term is nonzero, so there are 3 such possibilities. • If one term is 0, then the other two terms must sum to 4 and both be nonzero. There are 3 ways to do this: 1 + 3 and 2 + 2 and 3 + 1. Since there are 3 choices for which term is 0, by ROP, there are 3 $\cdot$ 3 = 9 such possibilities. • If all three terms are nonzero, then we see that the only such sum is 1+1+2, in some order. There are 3 choices for which term is 2, and then the other terms must be 1. Thus, there are 3 such possibilities. By ROS, there are 3 + 9 + 3 = 15 total possibilities. Lattice Paths Consider the set N $\cup {0} \times \mathbb{N} \cup{0} = (N \cup${0})2 consisting of all ordered pairs of natural numbers or 0.In fact, let's represent this set visually on the plane:
+} = 3 choices for which term is nonzero, so there are 3 such possibilities. • If one term is 0, then the other two terms must sum to 4 and both be nonzero. There are 3 ways to do this: 1 + 3 and 2 + 2 and 3 + 1. Since there are 3 choices for which term is 0, by ROP, there are 3 $\cdot$ 3 = 9 such possibilities. • If all three terms are nonzero, then we see that the only such sum is 1+1+2, in some order. There are 3 choices for which term is 2, and then the other terms must be 1. Thus, there are 3 such possibilities. By ROS, there are 3 + 9 + 3 = 15 total possibilities. Lattice Paths Consider the set $\mathbb{N}$ $\cup {0} \times \mathbb{N} \cup{0} = (N \cup${0})2 consisting of all ordered pairs of natural numbers or 0.In fact, let's represent this set visually on the plane:
 
 
 > 🇨🇳 补充内容 (项 131)：此段原文为详细计数论证的进阶练习和补充说明。
@@ -847,7 +847,7 @@ try to infer a pattern. We might strart writing out the outcomes as: 3 Red and 1
 
 This "grid" of dots on the plane is known as a lattice. Here's a natural question: Given any point in the lattice, how many ways are there to "get there" from the origin, (0, 0)? Let's be more specific. Let's define a lattice path to be a path from (0, 0) to a particular point that is only allowed to move rightwards or upwards at any step. This is what the next definition conveys:
 <div class="def-definition" markdown>
-**Definition 8.3.19. Let (x, y) $\in(N \cup${0})2. A lattice path to (x, y) is an**
+**Definition 8.3.19. Let (x, y) $\in (\mathbb{N} \cup \{0\})^2. A lattice path to (x, y) is an**
 </div>
 ordered tuple of points in the plane lattice where the first element of the tuple is (0, 0), the last element of the tuple is (a, b), and every element in the tuple only differs from the previous one by having exactly one coordinate that is exactly one larger than the corresponding coordinate of the previous element. More rigorously, given (x, y) a lattice path is an n-tuple (P1, P2,..., Pn), for some n $\in \mathbb{N}$, where each Pi = (xi, yi) is a point in the lattice, and \forall i \in[n -$1]. (xi+1, yi+1) = (xi + 1, yi) \vee(xi+1, yi+1) = (xi, yi + 1) and, furthermore, (x1, y1) = (0, 0) and (xn, yn) = (x, y). That is, a lattice path is a sequence of points in the lattice from (0, 0) to (n, n) where we are only allowed to move rightwards or upwards by one grid point at every step.$
 Example 8.3.20. Consider the point (2, 4) in the plane lattice. In the diagram
@@ -857,7 +857,7 @@ below, we plot a few sample lattice paths to (2, 4).
 > 🇨🇳 补充内容 (项 132)：此段原文为详细计数论证的进阶练习和补充说明。
 
 
-Our question is as follows: Given (a, b) $\in(N \cup${0})2, how many distinct lattice paths are there to (a, b)? To begin to answer this, let's look at a simple case with small values so we can actually enumerate all of the paths. Let's consider lattice paths to (2, 2):
+Our question is as follows: Given (a, b) $\in (\mathbb{N} \cup \{0\})^2, how many distinct lattice paths are there to (a, b)? To begin to answer this, let's look at a simple case with small values so we can actually enumerate all of the paths. Let's consider lattice paths to (2, 2):
 
 
 > 🇨🇳 补充内容 (项 133)：此段原文为详细计数论证的进阶练习和补充说明。
@@ -870,9 +870,9 @@ How might we represent lattice paths in a combinatorial way? That is, how can we
 
 
 In general, then, we know that any lattice path to (x, y) can be represented by a (x + y)-tuple of Rs and Us with exactly x Rs and y Us. To identify how many such sequences there are, we have a two step process: 1. From x + y empty slots, choose x of them to be filled with Rs: {x+y x } options 2. Fill the remaining (x + y) -x = y slots with Us: 1 option (deterministic) Thus, we have the following result.
-Proposition 8.3.21. For every (x, y) $\in(N \cup${0})2, there are exactly
+Proposition 8.3.21. For every (x, y) $\in (\mathbb{N} \cup \{0\})^2, there are exactly
 (x + y x ) lattice paths from (0, 0) to (x, y). We will explore some interesting applications and properties of lattice paths in the exercises. For now, we want to point out their existence and their relationship with sequences and selections. But here's one more observation about them: Why did we choose to count the number of sequences of length x+y with exactly x Rs? Would it be any different to count the the number of sequences of length x + y with exactly y Us? Think about it: every lattice path to (x, y) needs exactly x Rs and exactly y Us, and ensuring one of those properties holds guarantees the other will, as well. Thus, we could have presented the following result:
-Proposition 8.3.22. For every (x, y) $\in(N \cup${0})2, there are exactly
+Proposition 8.3.22. For every (x, y) $\in (\mathbb{N} \cup \{0\})^2, there are exactly
 (x + y y ) lattice paths from (0, 0) to (x, y). This not only proves the following fact (x + y x ) = (x + y y ) but it also introduces us to a new and helpful proof strategy: Counting in Two Ways. We identified one set of objects (the set of lattice paths from (0, 0) to (x, y)) and proceeded to explain two different ways of counting that same set of objects. Each way yielded a different expression for the cardinality of that set, and we can therefore declare those two expressions to be equal. This first example illustrates the main idea behind Counting in Two Ways, and we will explore several more examples, and the general technique, in the following section.
 ### 8.3.4 Questions & Exercises
 Remind Yourself Answering the following questions briefly, either out loud or in writing. These are all based on the section you just read, so if you can't recall a specific definition or concept or example, go back and reread that part. Making sure you can confidently answer these before moving on will help your understanding and memory!
@@ -901,7 +901,7 @@ Remind Yourself Answering the following questions briefly, either out loud or in
 
 (a) How many words of length 2 are there? (Answer this question in two ways: with an exponential number, and with a sum of two terms.) (b) How many words of length 7 have exactly 3 As? (c) How many words of length 7 have at most 2 vowels? (Note: A, E, I, O, U are vowels. Y is not.) Consider the set Sn of all binary strings of length n. For each of the following stated properties, count how many elements of Sn have that property. (Note: Each property is separate; don't consider satisfying all of them at once, say.) (a) Exactly 3 positions are 0s. (b) At most 3 positions are 0s. (c) At least 4 positions are 0s.
 Note: Use the last two parts to write 2n as a sum of binomial coefficients!
-(d) More positions are 0s than are 1s. (6) Let n $\in \mathbb{N}$ be given. How many lattice paths go from (0, 0) to (2n, 2n)? How many such paths also go through (n, n)? (7) Consider the following explanation: The number of 6-card hands, as dealt from a standard deck of cards, that have at least one card from each of the four suits is (13
+(d) More positions are 0s than are 1s. (6) Let $n \in \mathbb{N}$ be given. How many lattice paths go from (0, 0) to (2n, 2n)? How many such paths also go through (n, n)? (7) Consider the following explanation: The number of 6-card hands, as dealt from a standard deck of cards, that have at least one card from each of the four suits is (13
 
 
 > 🇨🇳 补充内容 (项 139)：此段原文为详细计数论证的进阶练习和补充说明。
@@ -914,12 +914,12 @@ Note: Use the last two parts to write 2n as a sum of binomial coefficients!
 
 
 ## 8.4 Counting in Two Ways If you're just jumping into this section, reread the last example from the previous section because it provides a perfect introduction to (and example of) Counting in Two Ways. In that example, we counted the number of lattice paths to a particular point in two different ways, deducing that the two expressions we found must be equal. Specifically, we deduced that {x+y x } = {x+y y }. With that example already under our belt, we will outline a general strategy here and apply it to several examples. Along the way, we will not only practice this technique, but we will also be proving some useful combinatorial results that we can apply to other problems! Let's start by actually presenting an alternative proof of the example from the previous section. There is a much shorter argument that doesn't delve into lattice paths at all and is a more memorable and understandable explanation of this result.
-Proposition 8.4.1. Let n, k $\in \mathbb{N} \cup${0}. Then
+Proposition 8.4.1. Let $n, k \in \mathbb{N} \cup${0}. Then
 (n k ) = ( n n -k ).
 <div class="def-proof" markdown>
 *Proof.* Let S be the set of subsets of [n] with size k, i.e.
 </div>
-S = {T $\subseteq$[n] | |T| = k} By the definition of k-selections, |S| = {n k }, since constructing a set T \subseteq[n] with |T| = k amounts to selecting k elements from a set of n elements. Equivalently, we can construct a set T $\subseteq$[n] with |T| = k by selecting n -k elements to not include in T; this means n -(n -k) = k elements have been selected to belong to T. The number of ways to do this is { n n-k }. Since every such set T can be constructed this way, we have shown |S| = { n n-k }. Therefore, {n k } = { n n-k }. We find this to be a more memorable proof of this fact because we can summarize the entire proof in just one sentence rather nicely "Count the k-element subsets of [n] by identifying the elements to include or the elements to omit." This is the idea we remember; from it, we can reconstruct the proof. It doesn't make sense to try to "memorize" a proof sentence by sentence; rather, it is helpful to remember the kernel of the proof's main idea and then fill in the details.
+S = {$T \subseteq [n]$ | |T| = k} By the definition of k-selections, |S| = {n k }, since constructing a set T \subseteq[n] with |T| = k amounts to selecting k elements from a set of n elements. Equivalently, we can construct a set $T \subseteq [n]$ with |T| = k by selecting n -k elements to not include in T; this means n -(n -k) = k elements have been selected to belong to T. The number of ways to do this is { n n-k }. Since every such set T can be constructed this way, we have shown |S| = { n n-k }. Therefore, {n k } = { n n-k }. We find this to be a more memorable proof of this fact because we can summarize the entire proof in just one sentence rather nicely "Count the k-element subsets of [n] by identifying the elements to include or the elements to omit." This is the idea we remember; from it, we can reconstruct the proof. It doesn't make sense to try to "memorize" a proof sentence by sentence; rather, it is helpful to remember the kernel of the proof's main idea and then fill in the details.
 ### 8.4.1 Method Summary Why It Works Let's abstract one level and discuss Counting in Two Ways as a proof technique. Let's talk about why it works and how to employ it. Then, we'll go through
 
 
